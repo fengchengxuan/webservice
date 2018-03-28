@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../static/css/submit.css">
+    <!--<link rel="stylesheet" href="css/setindexstyle.css">-->
+    <style>
+        .contentbox .top span{
+            color: #656565;
+            font-family: 微软雅黑;
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body ng-init="sysa=true;basea=true;contenta=true;producta=false;ordera=true;membera=true;adva=true;pagefoota=true;keya=true;allnava=true;adma=true;
+newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=true;videoadva=true;subjecta=true;deputynava=true">
+<div ng-include="'../comm/top.html'"></div>
+<div class="contener" style="overflow: hidden">
+    <div ng-include="'../comm/left.html'"></div>
+    <div class="contentbox">
+        <div class="top">
+            <img src="../../../static/images/FZ.png" alt="">
+            <span>当前位置</span>
+            <span>></span>
+            <span>产品管理</span>
+            <span>></span>
+            <span>添加产品</span>
+        </div>
+        <div class="inner">
+            <div class="img"></div>
+            <div class="subtext">
+                <p class="title">恭喜您产品添加成功</p>
+                <p class="word">&nbsp;&nbsp;&nbsp;&nbsp;恭喜您刚刚产品添加成功，系统会在30秒后自动进入添加产品，或者在30秒期间内您还可以选择修改产品，系统会自动进入当前该篇产品编辑页面，或者查看该篇草稿产品进入当前该篇产品草稿箱。</p>
+                <button>修改产品</button>
+                <button>查看草稿产品</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../../static/js/angular.min.js"></script>
+</body>
+</html>

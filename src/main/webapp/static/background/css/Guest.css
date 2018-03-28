@@ -1,0 +1,25 @@
+#Ulist tr:nth-of-type(even){
+    background: #F5F5F5;
+    height: 40px;
+    text-align: center;
+}
+#Ulist tr:nth-of-type(odd){
+    background: #fff;
+    height: 50px;
+}
+select{
+    color: #fff;
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    padding: 0;
+}
+.vip-select{
+
+    border: 0;
+}
+#totalNum{
+    color: #333;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+
+<urlrewrite>
+    <rule>
+        <from>^/get/(.*)</from><!-- 产品页伪匿名-->
+        <to  type="forward">/buildweb?typeValue=$1</to>
+    </rule>
+
+    <rule><!-- 新闻页伪匿名-->
+        <from>^/xw/([0-9]+)-([0-9]+)$</from>
+        <to>/news/newsData?date=$1&amp;id=$2</to>
+    </rule>
+    <rule><!-- 十二数据页伪匿名-->
+        <from>^/twelve/([0-9]+)-([0-9]+)$</from>
+        <to>/dataArticles?type=十二数据&amp;date=$1&amp;id=$2</to>
+    </rule>
+    <rule><!-- 我们与峰程页伪匿名-->
+        <from>^/wearefengcheng/([0-9]+)-([0-9]+)$</from>
+        <to>/fengchengArticles?type=我们与峰程&amp;date=$1&amp;id=$2</to>
+    </rule>
+
+</urlrewrite>
