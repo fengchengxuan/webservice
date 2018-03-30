@@ -11,7 +11,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.3.14.RELEASE</spring.version>
-    <hibernate.version>4.2.Final</hibernate.version>
+    <hibernate.version>4.2.20.Final</hibernate.version>
     <mysqldriver.version>5.1.6</mysqldriver.version>
     <commons-lang3.version>3.1</commons-lang3.version>
     <guava.version>16.0.1</guava.version>
@@ -135,7 +135,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>4.2.0.Final</version>
+      <version>4.2.20.Final</version>
     </dependency>
 
     <dependency>

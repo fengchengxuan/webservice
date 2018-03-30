@@ -10,388 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e394e1af-a6e0-4214-8d33-b4620b2620dd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/9a2e7885-7960-479d-8173-d1bd680fbd66.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/fengcheng_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/fengcheng_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_14_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_12_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_12_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_2_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_20_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/fengcheng.iml" afterPath="$PROJECT_DIR$/fengcheng.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/IniterListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/IniterListener.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/action/ConsultAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/dao/ConsultDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/dao/daoimpl/ConsultDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/entity/ConsultEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/service/ConsultService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/service/serviceimpl/ConsultServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/consult/util/ConsultUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/dao/ArticleDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/entity/ArticleEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/service/ArticleService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/uitl/ArtUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/uitl/SreachArt.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/dao/NewsDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/entity/NewsEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/service/NewsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/uitl/NewsUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/uitl/SreachNews.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Controller/CopyrightAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Controller/LinkAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Dao/ICopyrightDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Dao/ILinkDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Dao/impl/CopyDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Dao/impl/LinkDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Service/ICopyrightService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Service/ILinkService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Service/impl/CopyrightServiceimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/Service/impl/LinkServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/model/Copyright.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/model/Link.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/footer/util/LinkUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/dao/IUserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/dao/impl/UserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/model/Permissions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/model/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/service/IUserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/service/impl/UserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/util/Util.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/Controller/NavigateAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/INavDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/INavigateDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/IOperatorDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/IStatusDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/impl/NavDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/impl/NavigateDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/impl/OperatorDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateDao/impl/StatusDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/INavService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/INavigateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/IOperatorService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/IStatusService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/impl/NavServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/impl/NavigateServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/impl/OperatorServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/INavigateService/impl/StatusServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/model/Nav.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/model/Navigate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/model/Operator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/navigate/model/Status.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/Action/OrderAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/dao/OrderBase.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/dao/orderImpl/OrderBaseImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/service/OrderBaseSevice.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/service/serviceImpl/OrderBaseSeviceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/order/util/OrderUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/GivenFree.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/GivenFreeEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/OrderEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/OrderInfoEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/ProApplyEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/ProCommentEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/ProInfoEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/ProductEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/entity/ProductInofEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productAction/ApplyAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productAction/ProductAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/ApplyDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/OrderDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/ProCommentDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/ProductDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/productDaoImpl/ApplyDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/productDaoImpl/ProCommentDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productDao/productDaoImpl/ProductDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/ApplyService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/OrderService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/ProCommentService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/ProductService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/productServiceImpl/ApplyServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/productServiceImpl/ProCommentServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/productService/productServiceImpl/ProductServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/util/Amount.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/util/OrderUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/util/ProUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/util/SreachApply.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/product/util/SreachPro.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/Dao/DaoImpl/SpecialDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/Dao/SpecialDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/action/SpecialAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/entity/SpecialEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/entity/SpecialEvalEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/service/SpecialService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/service/serviceImpl/SpecialServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/special/uitl/SpecialUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/action/Action.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/dao/Dao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/dao/daoimpl/DaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/service/VIPService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/service/serviceimpl/ServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/util/VipEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/vip/util/VipUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/AnonyUserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/ILogDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/ILoginDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/impl/AnonyUserDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/impl/LogDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Dao/impl/LoginDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Service/ILogService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Service/ILoginService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Service/impl/LogServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Service/impl/LoginServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/model/AnonymousEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/model/Log.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/model/Login.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/model/banks.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/util/LoginUser.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/util/LoginUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/AlipayConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/BaseDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/BaseModel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/IniterListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/MyInterceptor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/SessionListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/SmsDemo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng.war" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/action/ConsultAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/dao/ConsultDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/dao/daoimpl/ConsultDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/entity/ConsultEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/service/ConsultService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/service/serviceimpl/ConsultServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/consult/util/ConsultUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/dao/ArticleDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/entity/ArticleEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/service/ArticleService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/uitl/ArtUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/uitl/SreachArt.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/dao/NewsDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/entity/NewsEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/service/NewsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/uitl/NewsUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/uitl/SreachNews.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Controller/CopyrightAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Controller/LinkAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Dao/ICopyrightDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Dao/ILinkDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Dao/impl/CopyDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Dao/impl/LinkDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Service/ICopyrightService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Service/ILinkService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Service/impl/CopyrightServiceimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/Service/impl/LinkServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/model/Copyright.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/model/Link.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/footer/util/LinkUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/dao/IUserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/dao/impl/UserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/model/Permissions.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/model/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/service/IUserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/service/impl/UserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/util/Util.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/Controller/NavigateAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/INavDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/INavigateDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/IOperatorDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/IStatusDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/impl/NavDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/impl/NavigateDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/impl/OperatorDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateDao/impl/StatusDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/INavService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/INavigateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/IOperatorService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/IStatusService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/impl/NavServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/impl/NavigateServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/impl/OperatorServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/INavigateService/impl/StatusServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/model/Nav.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/model/Navigate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/model/Operator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/navigate/model/Status.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/Action/OrderAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/dao/OrderBase.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/dao/orderImpl/OrderBaseImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/service/OrderBaseSevice.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/service/serviceImpl/OrderBaseSeviceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/order/util/OrderUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/GivenFree.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/GivenFreeEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/OrderEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/OrderInfoEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/ProApplyEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/ProCommentEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/ProInfoEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/ProductEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/entity/ProductInofEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productAction/ApplyAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productAction/ProductAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/ApplyDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/OrderDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/ProCommentDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/ProductDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/productDaoImpl/ApplyDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/productDaoImpl/ProCommentDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productDao/productDaoImpl/ProductDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/ApplyService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/OrderService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/ProCommentService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/ProductService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/productServiceImpl/ApplyServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/productServiceImpl/ProCommentServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/productService/productServiceImpl/ProductServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/util/Amount.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/util/OrderUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/util/ProUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/util/SreachApply.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/product/util/SreachPro.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/Dao/DaoImpl/SpecialDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/Dao/SpecialDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/action/SpecialAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/entity/SpecialEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/entity/SpecialEvalEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/service/SpecialService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/service/serviceImpl/SpecialServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/special/uitl/SpecialUitl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/action/Action.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/dao/Dao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/dao/daoimpl/DaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/service/VIPService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/service/serviceimpl/ServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/util/VipEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/vip/util/VipUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/AnonyUserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/ILogDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/ILoginDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/impl/AnonyUserDaoImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/impl/LogDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Dao/impl/LoginDaoimpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Service/ILogService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Service/ILoginService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Service/impl/LogServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Service/impl/LoginServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/model/AnonymousEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/model/Log.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/model/Login.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/model/banks.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/util/LoginUser.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/util/LoginUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/AlipayConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/BaseDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/BaseModel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/IniterListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/MyInterceptor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/SessionListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/SmsDemo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-aop-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-aspects-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-beans-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-context-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-context-support-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-core-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-expression-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-jdbc-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-jms-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-messaging-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-orm-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-oxm-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-test-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-tx-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-web-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/spring-webmvc-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/static/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509695055437070461.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509699775885073608.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509700207860093189.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509700310097036303.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509700339397082373.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509700343635005912.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509701237207066698.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509703561307034442.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509703662687085239.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509705459779084723.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509705515062014739.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171103/1509705742704070468.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171113/1510553260691079061.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171114/1510625014755065542.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171114/1510625634398092751.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171114/1510625641242052257.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171114/1510625747795053277.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/20171114/1510625876923091202.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/ueditor/jsp/upload/image/watermark.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214143331164.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214144457736.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214145651692.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214145712206.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150120400.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150541478.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150547018.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150624735.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150704139.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214150710292.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151417620.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151555689.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151619942.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151625626.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151634959.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214151640404.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214153720313.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/upload/20171214153900795.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/jdbc.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/robots.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/hibernate-core-4.2.0.Final.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -442,8 +70,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2806">
-              <caret line="128" column="21" lean-forward="false" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+            <state relative-caret-position="-2737">
+              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -627,7 +255,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
@@ -1095,7 +723,7 @@
       <workItem from="1521514438013" duration="33570000" />
       <workItem from="1521702344607" duration="65590000" />
       <workItem from="1522218917205" duration="28671000" />
-      <workItem from="1522379393178" duration="4666000" />
+      <workItem from="1522379393178" duration="5637000" />
     </task>
     <task id="LOCAL-00001" summary="little change">
       <created>1522379555592</created>
@@ -1122,7 +750,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2966867000" />
+    <option name="totallyTimeSpent" value="2967838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1134,7 +762,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1863,8 +1491,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2806">
-          <caret line="128" column="21" lean-forward="false" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+        <state relative-caret-position="-2737">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding />
         </state>
       </provider>
