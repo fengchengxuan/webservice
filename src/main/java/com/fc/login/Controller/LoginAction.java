@@ -56,13 +56,12 @@ public class LoginAction {
 
     @Autowired
     private ILogService logService;
+    
    @Autowired
     private OrderService orderService;
 
     @Autowired
     private Map<String,Object> map;
-
-    //private LoginUser loginUser;
 
     @ModelAttribute
     public void init(){
@@ -771,15 +770,11 @@ public class LoginAction {
     public String cc(){
         return "html/contract/CreateContract";
     }
+
     @RequestMapping("newsData")//显示文章
     public String showNews(String currentPage,String age){
         return "html/data/dataArticles";
     }
 
-    @RequestMapping("tproduct")
-    public String tproduct(){
-        return "html/Product/Product_Page13";
-
-    }
 }
 
