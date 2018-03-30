@@ -69,7 +69,6 @@ public class LoginAction {
         map.put("ok", true);
     }
 
-
     @RequestMapping("/register")
     public String register(){
         return "register";
