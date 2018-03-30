@@ -62,6 +62,8 @@ public class LoginAction {
     @Autowired
     private Map<String,Object> map;
 
+    //private LoginUser loginUser;
+
     @ModelAttribute
     public void init(){
         map=new HashMap<>();
@@ -170,6 +172,8 @@ public class LoginAction {
     @RequestMapping("exit")
     public @ResponseBody Map<String,Object>exit(HttpServletRequest request){
         HttpSession session = request.getSession(true);
+        Map<String,Object> map1= LoginUser.getLoginUser().map;
+        map1.remove(  session.getAttribute("userName"));
         session.removeAttribute("user");
         return map;
     }
@@ -772,5 +776,10 @@ public class LoginAction {
         return "html/data/dataArticles";
     }
 
+    @RequestMapping("tproduct")
+    public String tproduct(){
+        return "html/Product/Product_Page13";
+
+    }
 }
 

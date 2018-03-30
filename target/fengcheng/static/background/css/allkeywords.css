@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+}
+th,td{
+    padding: 0;
+}
+select{
+    color: white;
+}
+.c-false tr:nth-of-type(even){
+    background: #F5F5F5;
+    height: 40px;
+    text-align: center;
+}
+.c-false tr:nth-of-type(odd){
+    background: #fff;
+    height: 50px;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+/* 去除iPhone中默认的input样式 */
+input[type="submit"], input[type="reset"], input[type="button"]{ -webkit-appearance:none; resize: none; }
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+header,nav,article,aside,section,footer,details,figcaption,figure,hgroup,menu{display: block; }
+/* 初始化 */
+body,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,img,button,form,table,th,tr,td,tbody,details,figcaption,figure,hgroup,menu{margin:0; padding:0;}
+table {border-collapse: collapse; border-spacing: 0; empty-cells: show; font-size: inherit;}
+body{ min-width: 320px; color: #333; font: normal 14px/1.5 "Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体","Helvetica Neue", Helvetica,SimSun, Tahoma, sans-serif; overflow-x:hidden; background-color: #f0f0f0;}
+a{ text-decoration:none; color:#333;}
+h1, h2, h3, h4, h5, h6{ font-size:100%;}
+em,i{font-style:normal;}
+input,button,textarea,select {font-size: 100%; }
+button{ background-color: transparent;}
+a,input,textarea {text-decoration: none; outline: 0; }
+fieldset,img {border: 0;}
+li,img,label,input {vertical-align: middle; }
+ul,ol{list-style:none;}
+img { max-width: 100%; height: auto;} /* 图s片自适应 */
+/* 常用工具类 */
+.wrap{ margin-left: auto; margin-right: auto; }
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.fl{ float: left; }
+.fr{ float: right;}
+.tac{text-align: center;}
+.oh{overflow: hidden;}
+.por{position: relative;}
+.ti2{text-indent: 2em;}
+.dn{display: none;}
+.db{display: block;}
+.bxz{box-sizing: border-box;}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<!-- 自动扫描 -->
+	<context:component-scan base-package="com.fc.*">
+	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<!-- 从配置文件读取数据源相关配置 -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+
+
+
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+		<!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="${initialSize}" />
+		<!-- 连接池的最大值 -->
+		<property name="maxActive" value="${maxActive}" />
+		<!-- 连接池的最大空闲值 -->
+		<property name="maxIdle" value="${maxIdle}" />
+		<!-- 连接池的最小空闲值 -->
+		<property name="minIdle" value="${minIdle}" />
+	</bean>
+
+	<!-- 配置jdbc -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 配置hibernate相关参数 -->
+		<property name="hibernateProperties">
+			<props>
+				<!-- 数据库方言 -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<!-- 打印sql到控制台 -->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop><!-- 是否自动创建数据库表结构 -->
+				<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+            </props>
+		</property>
+
+		<!-- 自动扫描实体 -->
+		<property name="packagesToScan" value="com.fc.*"/>
+        <property name="annotatedClasses">
+            <list>
+			</list>
+        </property>
+    </bean>
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<!-- 注解方式实现事务管理(就可以使用@Transactional注解进行类和方法的事务控制) -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+	<!-- 配置事务传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager" >
+		<tx:attributes>
+			<!-- 增删改启用事务 -->
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<!-- 查询不启用事务 -->
+			<tx:method name="get*" read-only="false" propagation="NOT_SUPPORTED"/>
+			<tx:method name="select*" read-only="false" propagation="NOT_SUPPORTED"/>
+			<tx:method name="query*" read-only="false" propagation="NOT_SUPPORTED"/>
+			<tx:method name="list*" read-only="false" propagation="NOT_SUPPORTED"/>
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置切面 -->
+	<aop:config proxy-target-class="true">
+		<aop:pointcut id="serviceMethods" expression="execution(* com.fc.login.Service.*.*(..))"/>
+		<aop:advisor pointcut-ref="serviceMethods" advice-ref="txAdvice"/>
+	</aop:config>
+</beans>

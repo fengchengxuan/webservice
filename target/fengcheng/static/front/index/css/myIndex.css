@@ -1,0 +1,19 @@
+
+/*.detail_sprite_detail_floating_wxcode:hover{*/
+    /*display: block;*/
+/*}*/
+/*#floating_wxcode:hover .ewmjj{*/
+    /*display: block;*/
+/*}*/
+.ljgmbutton{
+    border: 0;
+    margin-left: 25px;
+    background: url(../../../../static/front/images/buttun-m.png) no-repeat center;
+    width: 128px;
+    height: 39px;
+    color: #fff;
+    font-size: 18px;
+    font-family: '微软雅黑',sans-serif;
+    text-shadow: 1px 1px 3px #333;
+    cursor: pointer
+}

@@ -1,0 +1,253 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+body{
+    font-family: "微软雅黑",sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navlist a{
+    height: 45px;
+    display: block;
+
+}
+.navlist div{
+    margin:0 auto;height: 3px;background: #51c7f4;
+}
+.header{
+    width: 1200px;
+    height: 93px;
+    margin: 0 auto;
+}
+.logo{
+    width: 216px;
+    height: 78px;
+    float: left;
+    margin-top: 10px;
+    background-image: url("../../../../static/front/images/logo.png");
+}
+.null{
+    width: 104px;
+    height: 93px;
+    float: right;
+}
+.header .phone{
+    float: right;
+    margin-top: 42px;
+}
+.header .phone span,a{
+    font-size: 12px;
+    color: #333;
+}
+.header .phonebg{
+    width: 240px;
+    height: 45px;
+    float: right;
+    margin: 35px 10px 0 0;
+    background-image: url("../../../../static/front/images/contact.png");
+}
+.navlist{
+    width: 1286px;
+    height: 47px;
+    float: right;
+    background-image: url("../../../../static/front/images/nav.png");
+}
+.navlist li{
+    line-height: 47px;
+    float: left;
+    font-size: 18px;
+    color: white;
+}
+.navlist li a{
+    font-size: 18px;
+    color: white;
+}
+.navlist li{
+    margin-left: 52px;
+}
+.navlist .index{
+    margin-left: 51px;
+}
+
+/*左边菜单栏*/
+.tc{
+    height: 80px;
+    width: 100%;
+}
+.leftmenu{
+    float: left;
+}
+.leftmenu .menutop{
+    width: 180px;
+    height: 134px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px 1px #ccc;
+}
+.leftmenu .menutop img{
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0 0 0;
+}
+.leftmenu .menutop span{
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 0 0 0;
+}
+.leftmenu .navbox{
+    box-shadow: 0 0 10px 1px #ccc;
+}
+.leftmenu .title,.title-t{
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+}
+.leftmenu .title{
+    line-height: 40px;
+}
+
+.leftmenu .title p,.title-t p{
+    float: left;
+    margin-left: 20px;
+    width: 132px;
+    height: 40px;
+}
+.open{
+    background-image: url("../../../../static/front/images/open.png");
+}
+.close{
+    background-image: url("../../../../static/front/images/close.png");
+}
+.leftmenu .title-img{
+    width: 8px;
+    height: 8px;
+    float: left;
+    margin-top: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.leftmenu .sul .slm{
+    width: 100%;
+}
+
+/*鼠标经过变化*/
+.leftmenu .slm:hover{
+    background: #f53494;
+}
+.leftmenu .slm:hover .slma{
+    color: white;
+}
+
+.leftmenu .sul .slm a{
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.leftmenu .sul{
+    display: block;
+}
+.leftmenu .sul .slm .tlm{
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+.leftmenu .sul .slm .tlm a{
+    width: 180px;
+}
+.leftmenu .tul{
+    position: absolute;
+    margin:-30px 0 0 182px;
+    background: white;
+    box-shadow: 0 0 10px 1px #ccc;
+    display: none;
+}
+.leftmenu .nameslm:hover .nametul{
+    display: block;
+}
+.leftmenu .buslm:hover .butul{
+    display: block;
+}
+.leftmenu .exslm:hover .extul{
+    display: block;
+}
+
+.mcontainer .way span{
+    font-size: 12px;
+    color: #656565;
+}
+
+/*脚部*/
+.footer{
+    width: 100%;
+    height: 210px;
+}
+.footer .content{
+    width: 1200px;
+    height: 210px;
+    margin: 0 auto;
+}
+.footer .content .top{
+    width: 699px;
+    height: 20px;
+    margin: 0 auto;
+}
+.footer .content .top div{
+    font-size: 13px;
+    color: #656565;
+    float: left;
+    margin-top: 30px;
+}
+.footer .content .top .cut{
+    margin-left: 56px;
+    margin-right: 56px;
+    color: #D8D6D6;
+}
+.footer .content .center{
+    width: 100%;
+    height: 69px;
+    margin: 46px 0 0 0;
+    border-top: 1px solid #BEBEBE;
+    border-bottom: 1px solid #BEBEBE;
+}
+.footer .content .center div{
+    font-size: 18px;
+    color: #656565;
+    float: left;
+    line-height: 69px;
+}
+.footer .content .center .lianjie{
+    width: 985px;
+    height: 48px;
+    margin: 12px 0 0 30px;
+    background-image: url("../../../../static/front/images/link.png");
+}
+.footer .content .last div{
+    font-size: 13px;
+    color: #656565;
+    float: left;
+    margin: 20px 0 0 40px;
+    line-height: 25px;
+}
+.footer .content .last span{
+    line-height: 20px;
+}
+input[type=text]:focus{
+    background: white;
+    border: 1px solid #cccccc;
+}

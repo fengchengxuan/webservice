@@ -1,0 +1,95 @@
+.tab .nav-tabs{
+    text-align: center;line-height: 40px;
+    height: 40px;position: relative;
+}
+.tab .nav-tabs li{
+    cursor: pointer;
+    width:164px;background-color: #ccebf2;position: absolute;
+    right:0; top: 0; overflow:hidden;border-radius: 8px 8px 0 0;
+}
+.tab .nav-tabs li a{
+    font-size: 18px;
+    color: #333333;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.tab .nav-tabs li a:hover{
+    border-top: none;
+    border-bottom: none;
+    border-right-color: #ddd;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:hover{
+    border: none;
+    z-index: 2;
+    border-right: 1px solid #ddd;
+}
+.tab .nav-tabs li.active a:before{
+    content: "";
+    width: 58%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.tab .nav-tabs li.active a:after{
+    content: "";
+    border-top: 10px solid #1fc1dd;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+}
+.tab .tab-content{
+    font-size: 13px;
+    color: #999898;
+    line-height: 25px;
+    padding: 20px;
+    border-top: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+input:-ms-input-placeholder{
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+input::-webkit-input-placeholder{
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+#output table{
+    width: 151px;
+    height: 151px;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+.loginbg .loginbox .type div span{
+    top:0;
+}
+#login11241{
+    display: block;position: relative;height: 24px;width: 260px;color: red;font-size: 12px;top: -11px;left: 7px;
+    padding-left: 30px;
+
+}
+#login1124{
+    display: block;position: relative;height: 24px;width: 260px;color: red;font-size: 12px;top: -11px;left: 7px;
+    padding-left: 30px;
+}
+.width0height0{
+    height: 0;
+    width: 0;
+}
+.width0height0>span{
+    display: block;position: relative;z-index: 88;height: 18px;width: 200px;color: red;font-size: 12px;top: -15px;
+}

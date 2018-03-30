@@ -1,0 +1,68 @@
+body{
+    min-width: 1170px;
+}
+.title-1{
+    text-align: center;
+    width: 260px;height: 50px;
+    font-size: 16px;
+    float: left;
+    margin-top:-10px;
+    font-family: "微软雅黑",sans-serif;
+}
+.note1{
+    text-align: left;
+    width: 196px;
+    height: 50px;
+    font-size: 12px;
+    float: left;
+    margin: 0 0 0 5px;
+    font-family: "微软雅黑",sans-serif;
+    color: #F70707;
+}
+.contener-input input,.contener-input textarea{
+    border: 1px solid #ccc;
+    text-overflow:ellipsis;
+    font-size: 14px;
+}
+.contener-input input{
+    padding: 10px;
+    width: 540px;height: 40px;border-radius: 8px;
+    outline: none;
+    color: #333333;
+}
+.contener-input textarea{
+    width: 540px;
+    height: 204px;
+    max-width: 540px;
+    max-height: 204px;
+    border-radius: 8px;
+    margin-top:35px;
+    padding: 20px;
+    line-height: 28px;
+    outline: none;
+    color: #333333;
+}
+.contentbox .top span{
+    color: #656565;
+    font-family: "微软雅黑",sans-serif;
+    font-size: 8px;
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}
+input:-ms-input-placeholder{
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}
+input::-webkit-input-placeholder{
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}
+textarea:-ms-input-placeholder{
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}
+textarea::-webkit-input-placeholder{
+    color: #BDBDBD;font-size: 14px;opacity: 1;
+}

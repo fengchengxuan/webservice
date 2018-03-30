@@ -19,4 +19,5 @@ public class SessionListener implements HttpSessionListener {
         Map<String,Object> map= LoginUser.getLoginUser().map;
         map.remove(userName);
     }
+
 }

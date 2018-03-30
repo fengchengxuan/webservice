@@ -1,0 +1,168 @@
+/*四书*/
+.content-jpg-dw-p1{
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+.content-jpg-dw-p1-p1{
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 44px;
+    font-weight: 100;
+    font-size: 26px;
+}
+.sili a{
+    margin-left: 105px;
+}
+.content-jpg-dw-p1-p1-lan{
+    color: #1088ED;
+}
+.content-jpg-dw-box{
+    float: left;
+    width: 299px;height: 333px;
+    margin-top: 5px;
+}
+.content-jpg-dw-box1,.content-jpg-dw-box2,.content-jpg-dw-box3{
+    border-right: 1px solid #CBCBCB;
+}
+.content-jpg-dw-box h4{
+    font-size: 24px;
+    font-weight: 500;
+}
+.content-jpg-dw-box p{
+    text-align: left;
+    margin-left: 2px;
+}
+.content-jpg-dw-box2 p,.content-jpg-dw-box3 p,.content-jpg-dw-box4 p{
+    position: relative;
+    top: 15px;
+    line-height: 19px;
+    margin-left: 45px;
+}
+.content-jpg-dw-box3 p{
+    top: 12px;
+}
+.content-jpg-dw-box4 p{
+    top: 5px;
+}
+.content-jpg-dw-box2 p span,.content-jpg-dw-box3 p span,.content-jpg-dw-box4 p span{
+    margin-left: 20px;
+    letter-spacing: 0;
+}
+.content-jpg-dw-box-img{
+    position: relative;
+}
+.content-jpg-dw-box-qp-san{
+    letter-spacing: 6px;
+}
+
+
+
+/*产品 立即购买*/
+#dw-bagui{
+    position: relative;left: -20px;
+}
+.dw-bagui-box{
+    width: 144px;
+    height: 164px;
+    float: left;
+    margin:23px 0 0 130px;
+    font-family: "微软雅黑",sans-serif;
+    background: white;
+}
+.dw-bagui-box p span{
+    /*margin-left: 40px;*/
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    width: 122px;
+    height: 18px;
+    line-height: 36px;
+    text-align: center;
+}
+.dw-bagui-box img{
+    width: 122px;
+    margin-left: 14px;
+}
+.dw-bagui-box-bn{
+    width: 260px;
+    height: 55px;
+}
+.dw-bagui-box-bn button{
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    width: 144px;
+    height: 24px;
+    background: #0F87ED;
+}
+.dw-bagui-box1{margin-left: 0}
+#dw-bagui .dw-bagui-box p{
+    position: relative;
+    z-index: 10;
+    height: 164px;
+    width: 134px;
+    color: #efefef;
+    font-weight: 200;
+    font-size: 13px;
+    text-align: justify;
+    margin-left: 0;
+    margin-top: -195px;
+    opacity: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 0 5px;
+}
+#dw-bagui .dw-bagui-box p:hover{
+    opacity: 1;
+}
+
+
+td{
+    height: 40px;
+    line-height: 40px;
+}
+.content-right-text-order1{
+    width: 383px;
+    height: 620px;
+    margin-left: 12px;
+    margin-top: 10px;
+    background: #f8f8f8;
+    float: left;
+}
+
+th{
+    border: 0;
+
+}
+.margin-top0 {
+    border-top:0;
+}
+.table-bgcolor tr td{
+    background: transparent;
+    text-align: center;
+}
+.content-right-text{
+    width: 100%;
+    height: 64px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+.Dowhat-table{
+    width: 98%;
+    margin-left: 10px;
+}
+.ljgmbutton{
+    border: 0;
+    margin-left: 20px;
+    background: url(../../../static/front/images/buttun-m.png);
+    width: 141px;
+    height: 51px;
+    color: #fff;
+    font-size: 20px;
+    font-family: '微软雅黑',sans-serif;
+    text-shadow: 1px 1px 3px #333;
+    cursor: pointer
+}
+
+

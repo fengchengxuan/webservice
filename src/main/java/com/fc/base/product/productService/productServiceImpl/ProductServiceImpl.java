@@ -147,7 +147,9 @@ public class ProductServiceImpl implements ProductService{
     @Override//保存产品详细信息表
     public String saveProInfoService(String proTitle, String demand, String proService, String servicePrice, String hard_Configuration, String soft_Configuration, String personnel, String time_Allocation,
                                      String user_range, String dataInfo, String pro_manager, String technical_service, String serviceGuarante,String preferential ,String timeValue,String num,String freeCode,String freeText) {
-       ProductEntity entity=productDao.sreachTitleProductDao(proTitle).get(0);//根据取产品表
+        if(productDao.sreachTitleProductDao(proTitle)!=null){
+           entity=productDao.sreachTitleProductDao(proTitle).get(0);//查询取产品表
+        }
        String proInfoTotal="";
        String[] proInfoArr;
        int flag;
