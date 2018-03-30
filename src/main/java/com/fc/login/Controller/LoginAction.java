@@ -62,8 +62,6 @@ public class LoginAction {
     @Autowired
     private Map<String,Object> map;
 
-    //private LoginUser loginUser;
-
     @ModelAttribute
     public void init(){
         map=new HashMap<>();
@@ -774,10 +772,5 @@ public class LoginAction {
         return "html/data/dataArticles";
     }
 
-    @RequestMapping("tproduct")
-    public String tproduct(){
-        return "html/Product/Product_Page13";
-
-    }
 }
 

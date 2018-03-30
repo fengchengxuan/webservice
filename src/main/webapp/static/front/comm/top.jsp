@@ -202,9 +202,10 @@
             type : 'POST',
             dataType: 'json',
             success : function() {
-                var url = window.location.href;
-                url.substring(url);
-                window.location.href=url;
+                // var url = window.location.href;
+                // url.substring(url);
+
+                window.location.href= "${ctx}/login";
             }
         });
     }
