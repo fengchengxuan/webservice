@@ -99,7 +99,7 @@
 		<!--&lt;!&ndash; 直接在mvc:interceptors下定义的拦截器是全局的 &ndash;&gt;-->
 		<!--<bean id="MyInterceptor" class="com.fc.util.MyInterceptor"></bean>-->
 		  <!--<mvc:interceptor>-->
-			 <!--&lt;!&ndash;在 mvc:interceptor定义的拦截器是局部的&ndash;&gt;-->
+			<!--&lt;!&ndash; 在 mvc:interceptor定义的拦截器是局部的&ndash;&gt;-->
 			<!--<mvc:mapping path="/vip"/>-->
 			 <!--<bean id="myInterceptor" class="com.fc.util.MyInterceptor"></bean>-->
 		 <!--</mvc:interceptor>-->
