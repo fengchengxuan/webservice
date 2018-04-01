@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e394e1af-a6e0-4214-8d33-b4620b2620dd" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" />
@@ -33,6 +34,10 @@
       <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/addnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/addnews.jsp" />
       <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
       <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/revnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,16 +75,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+<<<<<<< HEAD
       <file leaf-file-name="NewsServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="33" />
               <folding />
+=======
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1277">
+              <caret line="943" column="19" lean-forward="false" selection-start-line="943" selection-start-column="19" selection-end-line="943" selection-end-column="19" />
+              <folding>
+                <marker date="1522563343867" expanded="true" signature="43111:43140" ph="..." />
+              </folding>
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,10 +122,19 @@
                 <element signature="e#29071#29312#0" expanded="true" />
                 <element signature="e#29311#29312#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="new.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -119,11 +145,81 @@
                 <element signature="e#24570#25587#0#HTML" expanded="false" />
                 <element signature="e#24626#25577#0#HTML" expanded="false" />
                 <marker date="1522570070395" expanded="true" signature="23426:23450" ph="..." />
+=======
+      <file leaf-file-name="indexUtil.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="812">
+              <caret line="345" column="16" lean-forward="false" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+              <folding>
+                <marker date="1522563343845" expanded="true" signature="2236:2300" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="2464:2583" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="2678:2729" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="2755:2770" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="2819:2861" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3093:3129" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3176:3193" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3210:3224" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3390:3420" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3521:3557" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3606:3635" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3653:3668" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3729:3746" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3793:3812" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="3950:3980" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="6385:6447" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="6611:6730" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="6825:6876" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="6902:6917" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="6966:7008" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7240:7276" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7323:7340" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7357:7371" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7537:7567" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7668:7704" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7753:7782" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7800:7815" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7876:7893" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="7940:7959" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="8097:8127" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="10548:10610" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="10774:10893" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="10988:11039" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11065:11080" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11129:11171" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11403:11439" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11486:11503" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11520:11534" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11700:11730" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11831:11867" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11916:11945" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="11963:11978" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="12039:12056" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="12103:12122" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="12260:12290" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="14729:14791" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="14955:15074" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15169:15220" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15246:15261" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15310:15352" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15584:15620" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15667:15684" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15701:15715" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="15881:15911" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16012:16048" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16097:16126" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16144:16159" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16220:16237" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16284:16303" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="16441:16471" ph="..." />
+                <marker date="1522563343845" expanded="true" signature="18503:18532" ph="..." />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="indexUtil.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -300,6 +396,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -400,6 +498,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/product.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/front/css/Article.css" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/news/newsArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java" />
@@ -407,6 +509,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/IniterListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/uitl/SreachNews.java" />
@@ -423,6 +526,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
+=======
+        <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
       </list>
     </option>
   </component>
@@ -455,7 +562,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
@@ -581,6 +688,21 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -602,7 +724,11 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+<<<<<<< HEAD
     <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/index.jsp&#10;userA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/login/controller/UserAction.java&#10;allP&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;allOrder&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;newser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java&#10;ser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java&#10;dao&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java&#10;newD&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.dao.NewsDaoImpl.NewsDaoImpl&#10;newA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;AA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;addnew&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp&#10;aD&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java&#10;all&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp&#10;arta&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;top&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/static/front/comm/top.jsp&#10;sess&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/util/SessionListener.java&#10;newa&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;user&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/login/controller/UserAction.java&#10;newsS&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java&#10;newsa&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;ArA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;artser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java&#10;ArticleD&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.dao.articleDaoImpl.ArticleDaoImpl&#10;newsSER&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.service.NewsServiceImpl.NewsServiceImpl&#10;news&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;xml&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/web.xml&#10;allp&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;allnews&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp&#10;newsE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.entity.NewsEntity&#10;newsA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;artE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.entity.ArticleEntity&#10;ArticleSer&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.service.articleServiceImpl.ArticleServiceImpl&#10;ArticleA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;Art&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;fengcheng&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp&#10;login&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;ad&#9;PSI&#9;JAVA://com.fc.base.product.productDao.ApplyDao&#10;session&#9;PSI&#9;JAVA://com.fc.util.SessionListener&#10;LoginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;Artic&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;orderD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderS&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java&#10;proA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;payorder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/order/payorder.jsp&#10;userD&#9;PSI&#9;JAVA://com.fc.base.login.dao.impl.UserDao&#10;OrderEntity&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;orderB&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;orderA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;usera&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java" />
+=======
+    <property name="SearchEverywhereHistoryKey" value="I&#9;FILE&#9;file://D:/gitclone/webservice/src/main/webapp/static/front/js/indexUtil.js&#10;alipay&#9;FILE&#9;file://D:/gitclone/webservice/src/main/webapp/WEB-INF/html/order/alipay.jsp&#10;pay&#9;FILE&#9;file://D:/gitclone/webservice/src/main/webapp/WEB-INF/html/order/pay.jsp&#10;top&#9;FILE&#9;file://D:/gitclone/webservice/src/main/webapp/static/front/comm/top.jsp&#10;xml&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;userA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java&#10;allP&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;newsE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.entity.NewsEntity&#10;newsA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;artE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.entity.ArticleEntity&#10;ArticleSer&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.service.articleServiceImpl.ArticleServiceImpl&#10;ArticleA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;Art&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;fengcheng&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp&#10;login&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;ad&#9;PSI&#9;JAVA://com.fc.base.product.productDao.ApplyDao&#10;session&#9;PSI&#9;JAVA://com.fc.util.SessionListener&#10;LoginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;Artic&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;index&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/index.jsp&#10;orderD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderS&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java&#10;proA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;payorder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/order/payorder.jsp&#10;userD&#9;PSI&#9;JAVA://com.fc.base.login.dao.impl.UserDao&#10;OrderEntity&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;orderB&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;orderA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;allOrder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;usera&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java&#10;web&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;lo&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;newA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;inde&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/index.jsp&#10;newD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java&#10;news&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.service.NewsServiceImpl.NewsServiceImpl&#10;new&#9;ACTION&#9;NewGroup&#10;xm&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;Orders&#9;PSI&#9;JAVA://com.fc.base.product.productService.OrderService&#10;orderbaSE&#9;PSI&#9;JAVA://com.fc.base.order.dao.OrderBase&#10;Orderen&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;Order&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;OrDER&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;orde&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;act&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;allorder&#9;null&#9;null&#10;saleorder&#9;null&#9;null&#10;order.c&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/order.css&#10;allorder.&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;loginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -984,10 +1110,14 @@
       <workItem from="1521514438013" duration="33570000" />
       <workItem from="1521702344607" duration="65590000" />
       <workItem from="1522218917205" duration="28671000" />
+<<<<<<< HEAD
       <workItem from="1522379393178" duration="5637000" />
       <workItem from="1522462401429" duration="15934000" />
       <workItem from="1522487038361" duration="5523000" />
       <workItem from="1522545348811" duration="13557000" />
+=======
+      <workItem from="1522379393178" duration="9524000" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
     </task>
     <task id="LOCAL-00001" summary="little change">
       <created>1522379555592</created>
@@ -1014,7 +1144,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="3002852000" />
+=======
+    <option name="totallyTimeSpent" value="2971725000" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1026,7 +1160,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41920376" sideWeight="0.12660944" order="7" side_tool="true" content_ui="tabs" />
@@ -1046,11 +1180,20 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25761124" sideWeight="0.87339056" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12285408" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41920376" sideWeight="0.87339056" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25697425" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.173258" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="5" side_tool="true" content_ui="tabs" />
@@ -1200,6 +1343,72 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/service/OrderBaseSevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/dao/OrderBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/dao/impl/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/service/serviceImpl/OrderBaseSeviceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/Action/OrderAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1301">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/util/OrderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderInfoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46">
@@ -1280,11 +1489,26 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/top.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="490" column="34" lean-forward="true" selection-start-line="490" selection-start-column="34" selection-end-line="490" selection-end-column="34" />
+=======
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
         </state>
       </provider>
     </entry>
@@ -1435,6 +1659,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1450,18 +1675,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="205" column="28" lean-forward="true" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="48" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/entity/NewsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="109" column="22" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="180" column="6" lean-forward="false" selection-start-line="180" selection-start-column="6" selection-end-line="180" selection-end-column="6" />
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9a2e7885-7960-479d-8173-d1bd680fbd66/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -1473,10 +1719,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1568">
@@ -1559,10 +1812,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/IniterListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="490" column="34" lean-forward="true" selection-start-line="490" selection-start-column="34" selection-end-line="490" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/comm/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="161" column="24" lean-forward="true" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1575,20 +1851,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="28" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/order/pay.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521428710706" expanded="true" signature="11531:11548" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="11644:11674" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="11719:11773" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="11835:11903" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="11946:11963" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="12014:12031" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="12074:12091" ph="..." />
+            <marker date="1521428710706" expanded="true" signature="12677:12694" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/order/alipay.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+          <folding>
+            <marker date="1522306720415" expanded="true" signature="9267:9297" ph="..." />
+            <marker date="1522306720415" expanded="true" signature="9599:9614" ph="..." />
+          </folding>
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="201">
           <caret line="982" column="36" lean-forward="false" selection-start-line="982" selection-start-column="36" selection-end-line="982" selection-end-column="36" />
           <folding>
@@ -1781,6 +2092,99 @@
             <marker date="1522570722508" expanded="true" signature="16284:16303" ph="..." />
             <marker date="1522570722508" expanded="true" signature="16441:16471" ph="..." />
             <marker date="1522570722508" expanded="true" signature="18503:18532" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="2833">
+          <caret line="143" column="29" lean-forward="false" selection-start-line="143" selection-start-column="29" selection-end-line="143" selection-end-column="29" />
+          <folding />
+>>>>>>> 93809a15bb5b4e082436c9a648ac3f8b1faba500
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="345" column="16" lean-forward="false" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+          <folding>
+            <marker date="1522563343845" expanded="true" signature="2236:2300" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="2464:2583" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="2678:2729" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="2755:2770" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="2819:2861" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3093:3129" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3176:3193" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3210:3224" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3390:3420" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3521:3557" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3606:3635" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3653:3668" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3729:3746" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3793:3812" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="3950:3980" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="6385:6447" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="6611:6730" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="6825:6876" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="6902:6917" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="6966:7008" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7240:7276" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7323:7340" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7357:7371" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7537:7567" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7668:7704" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7753:7782" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7800:7815" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7876:7893" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="7940:7959" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="8097:8127" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="10548:10610" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="10774:10893" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="10988:11039" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11065:11080" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11129:11171" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11403:11439" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11486:11503" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11520:11534" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11700:11730" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11831:11867" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11916:11945" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="11963:11978" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="12039:12056" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="12103:12122" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="12260:12290" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="14729:14791" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="14955:15074" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15169:15220" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15246:15261" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15310:15352" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15584:15620" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15667:15684" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15701:15715" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="15881:15911" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16012:16048" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16097:16126" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16144:16159" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16220:16237" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16284:16303" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="16441:16471" ph="..." />
+            <marker date="1522563343845" expanded="true" signature="18503:18532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1277">
+          <caret line="943" column="19" lean-forward="false" selection-start-line="943" selection-start-column="19" selection-end-line="943" selection-end-column="19" />
+          <folding>
+            <marker date="1522563343867" expanded="true" signature="43111:43140" ph="..." />
           </folding>
         </state>
       </provider>
