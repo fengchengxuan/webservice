@@ -112,6 +112,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                                     <li>运营管理员</li>
                                     <li>普通管理员</li>
                                     <li>编辑管理员</li>
+                                    <li>管理员</li>
                                 </ul>
                             </div>
 
@@ -125,7 +126,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                                 <ul>
                                     <li style="border-top: none">正常</li>
                                     <li>草稿</li>
-                                    <li>已删除</li>
+                                    <li>删除</li>
                                 </ul>
                             </div>
                         </div>
@@ -156,13 +157,14 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
 <script src="${ctx}/static/background/js/jquery-3.2.1.min.js"></script>
 <script src="${ctx}/static/background/js/angular.min.js"></script>
 <script type="text/javascript">
+    var typeObj;
     var state="正常";
     var oldState;
     var type="十二数据";
     var oldType;
-    var system="系统管理员";
+    var system="管理员";
     var oldSystem;
-    $(document).ready(function () {
+    $(document).ready(function (){
         $("#Selected").click(function(){
             var oldType= $(this).val();
             if("block" == $("#ddoli").css("display")){
@@ -187,8 +189,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     $("#currentPage").val(1);
                     pagingSreach(value,newsType,systemId);
                 }
-
-
             });
         });
 
@@ -272,7 +272,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
     $("#KeySearch").click(function () {
         var keyValue=$("#newsKeyValue").val();
         sreach("",keyValue)
-
     });
     //条件查询
     function sreach(titleValue,keyValue) {
@@ -318,13 +317,18 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
     });
     //开始异步
     function pagingSreach(state,type,system){   //根据条件取到相应的新闻
-        var newsState=state;
-        var newsType=type;
-        var systemId=system;
+      var  url;
+        if(type=="新闻快报"){
+            typeObj="新闻快报";
+            url="${ctx}/news/SearchAll"
+        }else{
+            typeObj="文章";
+            url="${ctx}/Article/SearchAll"
+        }
         $.ajax({
-            url : '${ctx}/news/SearchAll',
+            url : url,
             type : 'POST',
-            data : "newsState="+newsState+"&newsType="+newsType+"&systemId="+systemId,
+            data : "state="+state+"&type="+type+"&systemId="+system,
             async:true,
             cache:false,
             dataType : 'json',
@@ -337,11 +341,16 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     total=totalNum;
                     $("#totalNum").text("共"+totalNum+"页");   //设值总页数
                     $("#totalNum").val(totalNum);
-                    showNews(currentPage,list,totalNum);      //当前页 总新闻 总页数
+                    if(type=="新闻快报"){
+                        showNews(currentPage,list,totalNum);      //当前页 总新闻 总页数
+                    }else{
+                        showArtcle(currentPage,list,totalNum);
+                    }
                     showpage(currentPage,totalNum);
                 }
             }
         })
+
     }
     //显示数据
     function showNews(pageData, list,total) {
@@ -385,8 +394,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     "<td>" + list[i].newsTitle + "</td>" +
                     "<td>" + list[i].userName + "</td>" +
                     "<td>" + list[i].crateDate + "</td>" +
-                    "<td>" + list[i].newsState + "</td>" +
-                    "<td>" +
+                    "<td>" + list[i].newsState + "</td><td>" +
                     "<a href=\"javascript:void(null)\" onclick=\"upDate("+i+")\"><span style=\"color: #0D62F0\">修改</span></a>" +
                     "&nbsp;|&nbsp;" +
                     "<a href=\"javascript:void(null)\" onclick=\"deleteNews("+i+")\"><span style=\"color: #EC2323\">删除</span></a>" +
@@ -402,7 +410,73 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
             }else{
                 $("#showId").find("tr:eq("+j+")").css("background-color","#fffaff");
             }
-        }//添加 checkbox
+        }
+        // /添加 checkbox
+        var clickAll="<tr style=\"height: 52px;background: transparent\"><td>&nbsp;&nbsp;&nbsp;<input type=\"checkbox\" id=\"clickId\" onclick=\"clickAll()\" " +
+            "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td></tr><tr style=\"background: transparent\"><td><a href=\"javascript:void(null)\" onclick=\"deleteAll()\">删除</a></td></tr>";
+        $("#showId").append(clickAll);
+    }
+    //显示数据
+    function showArtcle(pageData, list,total) {
+        $("#showId").empty();
+        var currentPage=pageData;
+        var list =list;
+        var totalNum=total;
+        var i=(currentPage-1)*20;        //每页显示20条数据
+        if(currentPage!=totalNum&&currentPage<totalNum) {       //当前页不等于总页数
+            var row="<tr style=\"width: 980px;height: 5px\"></tr>";
+            $("#showId").append(row);
+            var strip=i+20;
+            for (i;i < strip ; i++) {
+                var j = i + 1;
+                var showRow = "<tr style=\"height: 36px;background-color: #F4F4F4 \">" +
+                    "<td><input type=\"checkbox\" value=\""+list[i].id+"\" css=\"checkboxCss\" ng-checked=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + j + "</td>" +
+                    "<td>" + list[i].artType + "</td>" +
+                    "<td>" + list[i].artTitle + "</td>" +
+                    "<td>" + list[i].userName + "</td>" +
+                    "<td>" + list[i].crateDate + "</td>" +
+                    "<td>" + list[i].artState + "</td>" +
+                    "<td>" +
+                    "<a href=\"javascript:void(null)\" onclick=\"upDate("+i+")\"><span style=\"color: #0D62F0\">修改</span></a>" +
+                    "&nbsp;|&nbsp;" +
+                    "<a href=\"javascript:void(null)\" onclick=\"deleteNews("+i+")\"  ><span style=\"color: #EC2323\">删除</span></a>" +
+                    " </td>" +
+                    " <td>" + list[i].artBrowser + "</td>" +
+                    "</tr>";
+                $("#showId").append(showRow);
+            }
+
+        }
+        if(currentPage==totalNum){   //当前页等于总页数
+            var row="<tr style=\"width: 980px;height: 5px\"></tr>";
+            $("#showId").append(row);
+            for(i;i<list.length;i++){
+                var j = i + 1;
+                var showRow = "<tr style=\"height: 36px;background-color: #F4F4F4\">" +
+                    "<td><input type=\"checkbox\"value=\""+list[i].id+"\" css=\"checkboxCss\" ng-checked=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + j + "</td>" +
+                    "<td>" + list[i].artType + "</td>" +
+                    "<td>" + list[i].artTitle + "</td>" +
+                    "<td>" + list[i].userName + "</td>" +
+                    "<td>" + list[i].crateDate + "</td>" +
+                    "<td>" + list[i].artState + "</td>" +
+                    "<td>" +
+                    "<a href=\"javascript:void(null)\" onclick=\"upDate("+i+")\"><span style=\"color: #0D62F0\">修改</span></a>" +
+                    "&nbsp;|&nbsp;" +
+                    "<a href=\"javascript:void(null)\" onclick=\"deleteNews("+i+")\"><span style=\"color: #EC2323\">删除</span></a>" +
+                    " </td>" +
+                    " <td>" + list[i].artBrowser + "</td>" +
+                    "</tr>";
+                $("#showId").append(showRow);
+            }
+        }//显示相隔颜色
+        for(var j=1;j<=$("#showId").find("tr").length ;j++){
+            if(j%2!=0){
+                $("#showId").find("tr:eq("+j+")").css("background-color","#cccccc");
+            }else{
+                $("#showId").find("tr:eq("+j+")").css("background-color","#fffaff");
+            }
+        }
+        // /添加 checkbox
         var clickAll="<tr style=\"height: 52px;background: transparent\"><td>&nbsp;&nbsp;&nbsp;<input type=\"checkbox\" id=\"clickId\" onclick=\"clickAll()\" " +
             "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td></tr><tr style=\"background: transparent\"><td><a href=\"javascript:void(null)\" onclick=\"deleteAll()\">删除</a></td></tr>";
         $("#showId").append(clickAll);
@@ -432,6 +506,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                }
            }
        }
+        $("#page"+currentPage).find("a").css("color","red");
     }
     //删除页码
     function reMovePage(currentPage){
@@ -457,7 +532,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 }
             }
         }
-
     }
     //点击页码
    function otherPages(data) { //当前页的值
@@ -466,7 +540,11 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
        var totalNum=$("#totalNum").val();
        $("#currentPage").val(currentPage);
        reMovePage(currentPage);
-       showNews(currentPage,list,totalNum);
+       if(typeObj=="新闻快报"){
+           showNews(currentPage,list,totalNum);
+       }else{
+           showArtcle(currentPage,list,totalNum);
+       }
        showpage(currentPage,totalNum);
    }
    //上一页
@@ -500,16 +578,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         }
 
     });
-    //类型显示
-   /* $("#ddoli2").change(function () {
-        var value=state;
-        var currentPage=$("#totalNum").val();
-        var newsType=type;
-        var systemId=system;
-        reMovePage(currentPage);
-        $("#currentPage").val(1);
-        pagingSreach(value,newsType,systemId);
-    });
     //管理员显示
     $("#ddoli1").change(function () {
         var value=$("#state").val();
@@ -519,20 +587,30 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         reMovePage(currentPage);
         $("#currentPage").val(1);
         pagingSreach(value,newsType,systemId);
-    });*/
+    });
     //删除
     function deleteNews(data) {
-     if($("#state").val()=="3"){
-         alert("已经删除了 ，等待数据库删除");
-         return;
-     }
+        var state;  //状态
+        var url;
+        var title;
+        if( typeObj=="新闻快报"){
+            url='${ctx}/news/deleteNews';
+            state= listNews[data].newsState;
+            title= listNews[data].newsTitle;
+        }else{
+            url='${ctx}/Article/deleteArt';
+            state=listNews[data].artState;
+            title=listNews[data].artTitle;
+        }
+        if(state=="删除"){
+            alert("已经删除了 ，等待数据库删除");
+            return;
+        }
         if (confirm("是否要删除，亲")) {
-            var code=data;
-            var list=listNews;
             $.ajax({
-                url : '${ctx}/news/deleteNews',
+                url : url,
                 type : 'POST',
-                data : "newsTitle="+list[code].newsTitle,
+                data : "title="+title,
                 async:true,
                 cache:false,
                 dataType : 'json',
@@ -543,35 +621,33 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     }
                 }
             })
-
         }
     }
     //更新
     function upDate(data){
         var code=data;
         var list=listNews;
-        if($("#state").val()=="3"){
-            alert("已经删除了 ,不能再更改");
-            return;
+        if("新闻快报"){
+            if(list[code].newsState=="删除"){
+                alert("已经删除了 ,不能再更改");
+                return;
+            }
         }
-        window.location.href = "${ctx}/admin/editnews?code="+list[code].id;
+        window.location.href = "${ctx}/admin/editnews?code="+list[code].id+"&type="+typeObj;
     }
     //全刷新
     function reFreshAll(){
         $("#currentPage").val(1);
-        var newsState=$("#state").val();
-        var newsType=$("#newsType").val();
-        var systemId=$("#systemId").val();
         $("#showId").empty();
         var currentPage= $("#currentPage").val();
         reMovePage(currentPage);
-        pagingSreach(newsState,newsType,systemId);
+        pagingSreach( state,type,system);
     }
    //当前页刷新
     function reFresh(){
         var currentPage= $("#currentPage").val();
-        var newsState=$("#state").val();
-        var newsType=$("#newsType").val();
+        var newsState=state;
+        var newsType=type;
         $("#showId").empty();
         reMovePage(currentPage);
         otherPages(currentPage);
@@ -612,10 +688,9 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                         reFreshAll();
                     }
                   }
-                })
+            })
         }
     }
-
 </script>
 </body>
 </html>

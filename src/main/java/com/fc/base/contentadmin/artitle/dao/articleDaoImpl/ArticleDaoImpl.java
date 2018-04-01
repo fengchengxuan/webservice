@@ -26,15 +26,13 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
             hql.append(" and artState = ?");
             listPara.add(artState);
         }
-        if(artType!=null && artType.length()>0){
+       if(artType!=null && artType.length()>0){
             hql.append("and artType = ?");
             listPara.add(artType);
         }
         if(systemId!=null && systemId.length()>0){
-            if(!"0".equals(systemId)) {
                 hql.append("and adminType = ?");
                 listPara.add(systemId);
-            }
         }
         return super.findList(hql.toString(),listPara);
     }

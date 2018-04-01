@@ -1,11 +1,13 @@
 package com.fc.base.contentadmin.news.action;
 
+import com.fc.base.contentadmin.artitle.service.ArticleService;
 import com.fc.base.contentadmin.news.entity.NewsEntity;
 import com.fc.base.contentadmin.news.service.NewsService;
 import com.fc.base.contentadmin.news.uitl.NewsUitl;
 import com.fc.base.contentadmin.news.uitl.SreachNews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -22,16 +24,21 @@ public class NewstAction {
 
     @Autowired
     private NewsService service;
+    @Autowired
+    private ArticleService articleService;
     private NewsEntity entity;
     private String flse;
     private List<NewsEntity> listNews;
     private SreachNews SreachNews;
     private List<String> list;
-
+@ModelAttribute
+public void init(){
+    list=new ArrayList<>();
+}
 
     @RequestMapping("/add")//产品添加
     public @ResponseBody
-    List<String> add(String htmlText, String newsTitle, String newsKey, String newsAbstract, String newsType, HttpSession session) {
+    List<String> add(String htmlText, String title, String key, String abstract1, String type, HttpSession session) {
         list = new ArrayList<String>();
         entity = new NewsEntity();
 //        user=(User)session.getAttribute("user");
@@ -55,26 +62,26 @@ public class NewstAction {
             return list;
         }
 
-        if (newsTitle != null && newsTitle != "") {
-            entity.setNewsTitle(newsTitle);
+        if (title != null && title != "") {
+            entity.setNewsTitle(title);
         } else {
             list.add("必须输入产品标题");
             return list;
         }
-        if (newsType != null && newsType != "") {
-            entity.setNewsType(newsType);
+        if (type != null && type != "" && !"请选择发布类型".equals(type)) {
+            entity.setNewsType(type);
         } else {
             list.add("请选择发布类型");
             return list;
         }
-        if (newsKey != null && newsKey != "") {
-            entity.setNewsKey(newsKey);
+        if (key != null && key != "") {
+            entity.setNewsKey(key);
         } else {
             list.add("请输入关键词");
             return list;
         }
-        if (newsAbstract != null && newsAbstract != "") {
-            entity.setNewsAbstract(newsAbstract);
+        if (abstract1 != null && abstract1 != "") {
+            entity.setNewsAbstract(abstract1);
         } else {
             list.add("输入摘要");
             return list;
@@ -94,11 +101,11 @@ public class NewstAction {
 
     @RequestMapping("/SearchAll")//按类型查询
     public @ResponseBody
-    SreachNews SearchType(String newsState, String newsType, String systemId) {
-        if (newsType.equals("管理员")) {
-            newsType = "";
+    SreachNews SearchType(String state, String type, String systemId) {
+        if (systemId.equals("管理员")) {
+            systemId = "";
         }
-        SreachNews = service.searchStateNews(newsState, newsType, systemId);
+            SreachNews = service.searchStateNews(state, type, systemId);
         return SreachNews;
     }
 
@@ -132,20 +139,19 @@ public class NewstAction {
 
     @RequestMapping("/deleteNews")
     public @ResponseBody
-    List<String> deleteNews(String newsTitle,HttpSession session) {
+    List<String> deleteNews(String title,HttpSession session) {
         String username = (String) session.getAttribute("loginName");
         if (username==null|| username.length()<1){
             list.add("您还未登录!");
             return list;
         }
-
-        list = service.deleteNews(newsTitle);
+        list = service.deleteNews(title);
         return list;
     }
 
     @RequestMapping("/upDateJump")
     public @ResponseBody
-    List<NewsEntity> upDateJump(String id) {
+    List<NewsEntity> upDateJump(String id,String  type) {
         listNews=new ArrayList<NewsEntity>();
         listNews = service.SreachId(id);
         return listNews;
