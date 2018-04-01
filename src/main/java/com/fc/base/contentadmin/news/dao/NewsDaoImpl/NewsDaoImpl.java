@@ -32,10 +32,8 @@ public class NewsDaoImpl extends BaseDao<NewsEntity> implements NewsDao {
             listPara.add(newsType);
         }
         if(systemId!=null && systemId.length()>0){
-            if(!"0".equals(systemId)) {
                 hql.append("and adminType = ?");
                 listPara.add(systemId);
-            }
         }
         return super.findList(hql.toString(),listPara);
     }

@@ -343,7 +343,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
             txt=traditionalized(txt);//转换成繁体
         ue.setContent(txt);
     }
-
     //摁键调色
     $("#newsTitle").blur(function (){
         $(this).css("background-color","#FFFFFF");
@@ -378,11 +377,9 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         $("#newsType").val(1);
     }
 
-
     $("#newsTitle").keydown(function(){
         $("#newsTitle").css("background-color","#c9ff8d");
     });
-
     //查数据
     $("#newsTitle").keyup(function(){
         var newsTitle=$("#newsTitle").val();
@@ -435,12 +432,19 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
     //完全加载触发
     window.onload=function(){
         var code='${param.code}';
+        var type='${param.type}';
+        var url;
         if(code!=null && code!=""){
             flat=false;
+            if(type=="新快报"){
+                url='${ctx}/news/upDateJump';
+            }else{
+                url="${ctx}/Article/upDateJump";
+            }
             $.ajax({
-                url : '${ctx}/news/upDateJump',
+                url : url,
                 type : 'POST',
-                data : "id="+code,
+                data : "id="+code+"&type="+type,
                 async:true,
                 cache:false,
                 dataType : 'json',

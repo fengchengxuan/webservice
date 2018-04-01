@@ -343,7 +343,7 @@ function proOrder(row,time,num,titleId) {//产品编号，产品需求定位，�
             "<p><a href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\"><span class=\"promise-title\">"+data[i].newsTitle+"</span></a><span class=\"promise-time\">"+data[i].crateDate+"</span> <a href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\"><span style=\"color:#4089e3;cursor: pointer\">more</span></a></p>" +
             "</div><hr>";
          $("#newsTab").append(row);
-         if(i>=4){
+         if(i>=3){
           return ;
          }
     }

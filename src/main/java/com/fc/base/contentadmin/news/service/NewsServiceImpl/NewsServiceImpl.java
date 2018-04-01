@@ -31,7 +31,7 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public SreachNews searchStateNews(String newsState,String newsType,String systemId) {
         news=new SreachNews();
-        list=newsDao.sreachState(newsState,newsType,systemId);
+        list= newsDao.sreachState(newsState,newsType,systemId);
         news.setList(list);
         return news;
     }

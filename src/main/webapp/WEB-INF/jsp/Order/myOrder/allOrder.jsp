@@ -470,7 +470,7 @@ $(document).ready(function (){
                 $("#show").find("tr:eq("+j+")").css("background-color","#fffaff");
             }
         }
-        $(".darpages").find(".page").empty();
+       // alert($(".darpages").find(".page").val());
         $("#nextPage").before("<span class=\"page\">" + currentPage + "</sqan>");
         $(".page").css("color","red");
     }
@@ -480,7 +480,8 @@ $("#oldPage").click(function () {
     var nextPage=currentPage-1;               //上一页的数
     if(currentPage>1){
         $("#currentPage").val(nextPage);
-        showObj(orderList,totalNum,$("#currentPage").val());
+        alert(currentPage);
+      //  showObj(orderList,totalNum,$("#currentPage").val());
     }else if(currentPage==1){
         alert("这里是首页哦！！！！");
     }
@@ -491,7 +492,8 @@ $("#nextPage").click(function () {
     var nextPage=parseInt(currentPage)+parseInt(1);
     if(currentPage<totalNum){
         $("#currentPage").val(nextPage);
-        showObj(orderList,totalNum,$("#currentPage").val());
+        alert(nextPage)
+       // showObj(orderList,totalNum,$("#currentPage").val());
     }else if(currentPage==totalNum){
         alert("已经是最后一页了。");
     }

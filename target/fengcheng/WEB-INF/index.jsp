@@ -941,7 +941,7 @@
                 "<p><a href=\"javascript:window.open('" + path + date + "-" + data[i].id + "','_blank')\"><span class=\"promise-title\">" + data[i].artTitle + "</span></a><span class=\"promise-time\">" + data[i].crateDate + "</span> <a href=\"javascript:window.open('" + path + date + "-" + data[i].id + "','_blank')\"><span style=\"color:#4089e3;cursor: pointer\">more</span></a></p>" +
                 "</div><hr>";
             $("" + type + "").append(row);
-            if(i>=4){
+            if(i>=3){
                 return;
             }
         }

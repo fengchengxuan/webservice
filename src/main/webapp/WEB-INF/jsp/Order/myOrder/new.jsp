@@ -580,7 +580,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                 $("#allOrder").append(row);
             }
         }
-        $(".darpages").find(".page").empty();//删除之前的
+        $(".darpages").find(".page").remove();//删除之前的
         $("#nextPage").before("<span class=\"page\">" + currentPage + "</sqan>");//显示页码
         $(".page").css("color","red");
     }
@@ -590,7 +590,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
         var nextPage=currentPage-1;               //上一页的数
         if(currentPage>1){
             $("#currentPage").val(nextPage);
-            showObj(orderList,totalNum,$("#currentPage").val());
+            showObj(orderList,$("#currentPage").val());
         }else if(currentPage==1){
             alert("这里是首页哦！！！！");
         }
@@ -601,7 +601,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
         var nextPage=parseInt(currentPage)+parseInt(1);
         if(currentPage<totalNum){
             $("#currentPage").val(nextPage);
-            showObj(orderList,totalNum,$("#currentPage").val());
+            showObj(orderList,$("#currentPage").val());
         }else if(currentPage==totalNum){
             alert("已经是最后一页了。");
         }

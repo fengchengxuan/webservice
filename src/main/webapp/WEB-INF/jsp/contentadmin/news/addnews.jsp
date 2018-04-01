@@ -86,10 +86,10 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
             <label style="    height: 65px;font-weight: 400">
 
                 <div class="select_model">
-                    <div class="Selected" id="Selected"><span style="font-size: 12px">选择发布类型</span>&nbsp;<img src="${ctx}/static/background/images/right-l.png" alt="下拉"></div>
+                    <div class="Selected" id="Selected"><span style="font-size: 12px">选择发布类型</span><img src="${ctx}/static/background/images/right-l.png" alt="下拉"></div>
                     <div style="display: none" class="ddoli" id="ddoli">
                         <ul id="newsType">
-                            <li style="line-height: 20px">新闻</li>
+                            <li style="line-height: 20px">新闻快报</li>
                             <li>十二数据</li>
                             <li>我们与峰程</li>
                         </ul>
@@ -129,8 +129,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <button id="Submit">发布</button>
                     <button id="Preservation">自动保存</button>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -216,25 +214,33 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         var newsTitle=$("#newsTitle").val();   //新闻标题
         var newsKey=$("#newsKey").val();      //新闻关键字
         var newsAbstract=$("#newsAbstract").val();//新闻摘要
-        var newsType=$("#newsType").val();  //新闻类型
+        var newsType=$("#Selected").text();  //新闻类型
         var htmlText=ue.getContent();                //新闻描述  htmlText
+        var url;
+        if(newsType=="新闻快报"){
+            url=  "${ctx}/news/add"
+        }else{
+            url="${ctx}/Article/add";
+        }
+
         $.ajax({
-            url : '${ctx}/news/add',
+            url : url,
             type : 'POST',
-            data : "htmlText="+htmlText+"&newsTitle="+newsTitle+"&newsKey="+newsKey+"&newsAbstract="+newsAbstract+"&newsType="+newsType,
+            data : "htmlText="+htmlText+"&title="+newsTitle+"&key="+newsKey+"&abstract1="+newsAbstract+"&type="+newsType,
             async:true,
             cache:false,
             dataType : 'json',
             success : function(data){
                 if(data!=null){
                     alert(data[0]);
+                    var url=window.location.href;
+                    window.location.replace(url)
                 }
-
             }
         });
         $(".pop_box").css("display","block");
         $(".pop_box .btn_xs").click(function(){
-            $(".pop_box").css("display","none");
+        $(".pop_box").css("display","none");
         });
     });
     //简繁体转化
@@ -291,13 +297,14 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         if(nOption==1)
             txt=traditionalized(txt);//转换成繁体
         ue.setContent(txt);
-
     }
 </script>
 <script>
+    var oldType;
+    var type;
     $(document).ready(function () {
         $("#Selected").click(function(){
-            var oldType= $(this).val();
+             oldType= $(this).text();
             if("block" == $("#ddoli").css("display")){
                 $("#ddoli").hide();
             }else{
@@ -320,16 +327,11 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     $("#currentPage").val(1);
                     pagingSreach(value,newsType,systemId);
                 }
-
-
             });
         });
-
         $("#Selected").blur(function(){
             $("#ddoli").hide();
         });
-
-
     });
 </script>
 </body>

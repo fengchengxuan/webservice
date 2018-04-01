@@ -10,16 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e394e1af-a6e0-4214-8d33-b4620b2620dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/fengcheng_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/fengcheng_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_2_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_20_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/fengcheng.iml" afterPath="$PROJECT_DIR$/fengcheng.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/hibernate-core-4.2.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/action/NewstAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/action/NewstAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/addnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/addnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/revnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,45 +70,232 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
+      <file leaf-file-name="NewsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2737">
-              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fengchengArticles.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+            <state relative-caret-position="201">
+              <caret line="982" column="36" lean-forward="false" selection-start-line="982" selection-start-column="36" selection-end-line="982" selection-end-column="36" />
               <folding>
-                <marker date="1522306720415" expanded="true" signature="9267:9297" ph="..." />
-                <marker date="1522306720415" expanded="true" signature="9599:9614" ph="..." />
+                <element signature="e#9321#9562#0" expanded="true" />
+                <element signature="e#9561#9562#0" expanded="true" />
+                <element signature="e#11328#11569#0" expanded="true" />
+                <element signature="e#11568#11569#0" expanded="true" />
+                <element signature="e#12857#12865#0" expanded="true" />
+                <element signature="e#21513#21754#0" expanded="true" />
+                <element signature="e#21753#21754#0" expanded="true" />
+                <element signature="e#23526#23767#0" expanded="true" />
+                <element signature="e#23766#23767#0" expanded="true" />
+                <element signature="method#sendmail#0;class#UserAction#0" expanded="false" />
+                <element signature="e#25550#25791#0" expanded="true" />
+                <element signature="e#25790#25791#0" expanded="true" />
+                <element signature="docComment;method#sendMsg#0;class#UserAction#0" expanded="false" />
+                <element signature="method#sendMsg#0;class#UserAction#0" expanded="false" />
+                <element signature="docComment;method#sendmails#0;class#UserAction#0" expanded="false" />
+                <element signature="method#sendmails#0;class#UserAction#0" expanded="false" />
+                <element signature="e#29071#29312#0" expanded="true" />
+                <element signature="e#29311#29312#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="new.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="109" column="22" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+            <state relative-caret-position="53">
+              <caret line="539" column="40" lean-forward="false" selection-start-line="539" selection-start-column="40" selection-end-line="539" selection-end-column="40" />
+              <folding>
+                <element signature="e#23553#24518#0#HTML" expanded="false" />
+                <element signature="e#24570#25587#0#HTML" expanded="false" />
+                <element signature="e#24626#25577#0#HTML" expanded="false" />
+                <marker date="1522570070395" expanded="true" signature="23426:23450" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexUtil.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="345" column="16" lean-forward="false" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+              <folding>
+                <marker date="1522570722508" expanded="true" signature="2236:2300" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="2464:2583" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="2678:2729" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="2755:2770" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="2819:2861" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3093:3129" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3176:3193" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3210:3224" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3390:3420" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3521:3557" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3606:3635" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3653:3668" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3729:3746" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3793:3812" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="3950:3980" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="6385:6447" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="6611:6730" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="6825:6876" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="6902:6917" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="6966:7008" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7240:7276" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7323:7340" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7357:7371" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7537:7567" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7668:7704" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7753:7782" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7800:7815" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7876:7893" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="7940:7959" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="8097:8127" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="10548:10610" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="10774:10893" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="10988:11039" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11065:11080" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11129:11171" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11403:11439" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11486:11503" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11520:11534" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11700:11730" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11831:11867" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11916:11945" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="11963:11978" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="12039:12056" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="12103:12122" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="12260:12290" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="14729:14791" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="14955:15074" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15169:15220" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15246:15261" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15310:15352" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15584:15620" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15667:15684" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15701:15715" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="15881:15911" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16012:16048" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16097:16126" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16144:16159" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16220:16237" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16284:16303" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="16441:16471" ph="..." />
+                <marker date="1522570722508" expanded="true" signature="18503:18532" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2381">
+              <caret line="943" column="19" lean-forward="false" selection-start-line="943" selection-start-column="19" selection-end-line="943" selection-end-column="19" />
+              <folding>
+                <marker date="1522570722614" expanded="true" signature="43111:43140" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allOrder.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="486" column="5" lean-forward="false" selection-start-line="486" selection-start-column="5" selection-end-line="486" selection-end-column="5" />
+              <folding>
+                <marker date="1522569587098" expanded="true" signature="14632:14656" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="14852:14864" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="14925:14953" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="14973:14979" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="14979:14985" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="14985:14991" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="15034:15046" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15103:15129" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15188:15200" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15263:15275" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15423:15436" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15495:15518" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15576:15603" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15870:15882" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15943:15971" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="15991:15997" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="15997:16003" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="16003:16009" ph="&amp;nbsp;" />
+                <marker date="1522569587098" expanded="true" signature="16052:16064" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16121:16147" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16206:16218" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16281:16293" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16441:16454" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16513:16536" ph="..." />
+                <marker date="1522569587098" expanded="true" signature="16594:16621" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allProduct.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="451" column="65" lean-forward="false" selection-start-line="451" selection-start-column="65" selection-end-line="451" selection-end-column="65" />
+              <folding>
+                <element signature="e#24186#25762#0#HTML" expanded="false" />
+                <marker date="1522391271983" expanded="true" signature="13952:13976" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="14264:14303" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="14422:14428" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14428:14434" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14434:14440" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14440:14446" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14446:14452" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14452:14458" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="14691:14705" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="15035:15049" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="15090:15096" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15097:15103" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15207:15221" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="15514:15538" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="15798:15836" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="15954:15960" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15960:15966" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15966:15972" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15972:15978" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15978:15984" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="15984:15990" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="16163:16177" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="16507:16521" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="16562:16568" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="16569:16575" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="16677:16691" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="17255:17291" ph="..." />
+                <marker date="1522391271983" expanded="true" signature="17298:17304" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17304:17310" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17310:17316" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17411:17417" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17417:17423" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17423:17429" ph="&amp;nbsp;" />
+                <marker date="1522391271983" expanded="true" signature="17429:17435" ph="&amp;nbsp;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,36 +322,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>orderensure</find>
-      <find>order</find>
-      <find>saveOrder</find>
-      <find>payorder</find>
-      <find>fengchengArticles</find>
-      <find>.list-ul-textp</find>
-      <find>changeType()</find>
-      <find>changeType(</find>
-      <find>exit</find>
-      <find>changeType</find>
-      <find>logs</find>
-      <find>deletePro</find>
-      <find>TitleSearch</find>
-      <find>totalN</find>
-      <find>return</find>
-      <find>fclists</find>
+      <find>state</find>
+      <find>eleteNews</find>
+      <find>ref</find>
+      <find>delete</find>
+      <find>deleteNews</find>
+      <find>reF</find>
+      <find>Submit</find>
+      <find>newsType</find>
+      <find>ddoli</find>
+      <find>addnews</find>
+      <find>oldType</find>
+      <find>type</find>
+      <find>alert</find>
+      <find>upD</find>
+      <find>add</find>
+      <find>url</find>
+      <find>searchStateArt</find>
+      <find>editnews</find>
+      <find>upDateJump</find>
+      <find>up</find>
+      <find>sreachState</find>
+      <find>SearchAll</find>
+      <find>typeObj</find>
+      <find>newsTitle</find>
+      <find>oldNewsTitle</find>
+      <find>searchStateNews</find>
+      <find>darpages</find>
       <find>nextPage</find>
-      <find>product</find>
-      <find>data12</find>
-      <find>fenyeDiv</find>
-      <find>showDateOrFC</find>
-      <find>allproduct</find>
-      <find>Selected</find>
-      <find>totalNum</find>
-      <find>视频</find>
-      <find>reMovePage</find>
-      <find>map1</find>
-      <find>allOrder</find>
-      <find>newsData</find>
-      <find>topPage</find>
+      <find>allorder</find>
+      <find>arpages</find>
     </findStrings>
     <replaceStrings>
       <replace>hr</replace>
@@ -172,16 +372,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/addarticle.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page1.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productDao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productDao/productDaoImpl/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/front/css/order.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/order/charge.jsp" />
@@ -194,12 +385,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/util/SreachPro.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productDao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/urlrewrite.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
         <option value="$PROJECT_DIR$/target/fengcheng/WEB-INF/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/order/Action/OrderAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/order/service/OrderBaseSevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/order/service/serviceImpl/OrderBaseSeviceImpl.java" />
@@ -212,17 +400,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/product.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/front/css/Article.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/news/newsArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productService/productServiceImpl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/IniterListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/uitl/SreachNews.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js" />
       </list>
     </option>
   </component>
@@ -275,55 +475,117 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="fc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="contentadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="contentadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="artitle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="contentadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="artitle" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="contentadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="artitle" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="articleServiceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitworkspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitworkspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,13 +596,13 @@
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/ws/webservice" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="top&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/comm/top.jsp&#10;xml&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;userA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java&#10;allP&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;newsE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.entity.NewsEntity&#10;newsA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;artE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.entity.ArticleEntity&#10;ArticleSer&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.service.articleServiceImpl.ArticleServiceImpl&#10;ArticleA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;Art&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;fengcheng&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp&#10;login&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;ad&#9;PSI&#9;JAVA://com.fc.base.product.productDao.ApplyDao&#10;session&#9;PSI&#9;JAVA://com.fc.util.SessionListener&#10;LoginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;Artic&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;index&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/index.jsp&#10;orderD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderS&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java&#10;proA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;payorder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/order/payorder.jsp&#10;userD&#9;PSI&#9;JAVA://com.fc.base.login.dao.impl.UserDao&#10;OrderEntity&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;orderB&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;orderA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;allOrder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;usera&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java&#10;web&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;lo&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;newA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;inde&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/index.jsp&#10;newD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java&#10;news&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.service.NewsServiceImpl.NewsServiceImpl&#10;new&#9;ACTION&#9;NewGroup&#10;xm&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/web.xml&#10;Orders&#9;PSI&#9;JAVA://com.fc.base.product.productService.OrderService&#10;orderbaSE&#9;PSI&#9;JAVA://com.fc.base.order.dao.OrderBase&#10;Orderen&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;Order&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;OrDER&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;orde&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;act&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;allorder&#9;null&#9;null&#10;saleorder&#9;null&#9;null&#10;order.c&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/order.css&#10;allorder.&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;loginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;c&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/order/charge.jsp&#10;orderSer&#9;PSI&#9;JAVA://com.fc.base.product.productService.productServiceImpl.OrderServiceImpl&#10;ProA&#9;PSI&#9;JAVA://com.fc.base.product.productAction.ProductAction" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/index.jsp&#10;userA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/login/controller/UserAction.java&#10;allP&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;allOrder&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp&#10;newser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java&#10;ser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java&#10;dao&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java&#10;newD&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.dao.NewsDaoImpl.NewsDaoImpl&#10;newA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;AA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;addnew&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp&#10;aD&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java&#10;all&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp&#10;arta&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;top&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/static/front/comm/top.jsp&#10;sess&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/util/SessionListener.java&#10;newa&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;user&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/login/controller/UserAction.java&#10;newsS&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java&#10;newsa&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;ArA&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;artser&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java&#10;ArticleD&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.dao.articleDaoImpl.ArticleDaoImpl&#10;newsSER&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.service.NewsServiceImpl.NewsServiceImpl&#10;news&#9;FILE&#9;file://G:/gitworkspace/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;xml&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/web.xml&#10;allp&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp&#10;allnews&#9;FILE&#9;file://G:/gitworkspace/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp&#10;newsE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.news.entity.NewsEntity&#10;newsA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java&#10;artE&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.entity.ArticleEntity&#10;ArticleSer&#9;PSI&#9;JAVA://com.fc.base.contentadmin.artitle.service.articleServiceImpl.ArticleServiceImpl&#10;ArticleA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java&#10;Art&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;fengcheng&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp&#10;login&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;ad&#9;PSI&#9;JAVA://com.fc.base.product.productDao.ApplyDao&#10;session&#9;PSI&#9;JAVA://com.fc.util.SessionListener&#10;LoginA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/login/Controller/LoginAction.java&#10;Artic&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/static/front/css/Article.css&#10;orderD&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderS&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java&#10;proA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;payorder&#9;FILE&#9;file://D:/fengcheng/src/main/webapp/WEB-INF/html/order/payorder.jsp&#10;userD&#9;PSI&#9;JAVA://com.fc.base.login.dao.impl.UserDao&#10;OrderEntity&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/product/entity/OrderEntity.java&#10;orderB&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java&#10;orderA&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/order/Action/OrderAction.java&#10;usera&#9;FILE&#9;file://D:/fengcheng/src/main/java/com/fc/base/login/controller/UserAction.java" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -495,7 +757,7 @@
       <listeners />
     </configuration>
     <configuration name="fengcheng" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.70" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="fengcheng:war exploded">
@@ -506,7 +768,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_fengcheng" />
-        <option name="HTTP_PORT" value="8084" />
         <option name="JNDI_PORT" value="1113" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
@@ -724,6 +985,9 @@
       <workItem from="1521702344607" duration="65590000" />
       <workItem from="1522218917205" duration="28671000" />
       <workItem from="1522379393178" duration="5637000" />
+      <workItem from="1522462401429" duration="15934000" />
+      <workItem from="1522487038361" duration="5523000" />
+      <workItem from="1522545348811" duration="13557000" />
     </task>
     <task id="LOCAL-00001" summary="little change">
       <created>1522379555592</created>
@@ -750,7 +1014,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2967838000" />
+    <option name="totallyTimeSpent" value="3002852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,27 +1029,31 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.49785408" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41920376" sideWeight="0.12660944" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41920376" sideWeight="0.87339056" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25697425" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.173258" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4055794" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49590644" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10675966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.382904" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.49785408" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25761124" sideWeight="0.87339056" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12285408" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.173258" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -800,32 +1068,36 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3852459" sideWeight="0.119098715" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41920376" sideWeight="0.12660944" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09710301" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4055794" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49590644" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10675966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.382904" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.49785408" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31967214" sideWeight="0.8809013" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25761124" sideWeight="0.87339056" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21298283" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.173258" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12285408" sideWeight="0.826742" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.173258" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793018" sideWeight="0.49785408" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21512875" sideWeight="0.15807962" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -928,83 +1200,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="316" column="13" lean-forward="false" selection-start-line="316" selection-start-column="13" selection-end-line="316" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="453" column="90" lean-forward="false" selection-start-line="453" selection-start-column="78" selection-end-line="453" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/service/OrderBaseSevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/dao/OrderBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/dao/impl/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/dao/orderImpl/OrderBaseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/service/serviceImpl/OrderBaseSeviceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/Action/OrderAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1301">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/order/util/OrderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderInfoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46">
@@ -1073,188 +1268,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32660">
           <caret line="1422" column="60" lean-forward="false" selection-start-line="1422" selection-start-column="49" selection-end-line="1422" selection-end-column="60" />
-          <folding>
-            <marker date="1520564721522" expanded="true" signature="26814:26850" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27018:27137" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27240:27291" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27317:27332" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27385:27427" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27667:27703" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27754:27771" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27788:27802" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="27972:28002" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28107:28143" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28196:28225" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28243:28258" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28323:28340" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28387:28406" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="28548:28578" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="31226:31262" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="31430:31549" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="31652:31703" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="31729:31744" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="31797:31839" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32079:32115" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32166:32183" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32200:32214" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32384:32414" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32519:32555" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32608:32637" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32655:32670" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32735:32752" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32799:32818" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="32960:32990" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="35659:35695" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="35863:35982" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36085:36136" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36162:36177" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36230:36272" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36512:36548" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36599:36616" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36633:36647" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36817:36847" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="36952:36988" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="37041:37070" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="37088:37103" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="37168:37185" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="37232:37251" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="37393:37423" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40083:40119" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40287:40406" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40509:40560" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40586:40601" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40654:40696" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="40936:40972" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41023:41040" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41057:41071" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41241:41271" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41376:41412" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41465:41494" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41512:41527" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41592:41609" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41656:41675" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="41817:41847" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="44503:44539" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="44707:44826" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="44929:44980" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45006:45021" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45074:45116" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45356:45392" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45443:45460" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45477:45491" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45661:45691" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45796:45832" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45885:45914" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="45932:45947" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="46012:46029" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="46076:46095" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="46237:46267" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="48917:48953" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49121:49240" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49343:49394" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49420:49435" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49488:49530" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49770:49806" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49857:49874" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="49891:49905" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50075:50105" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50210:50246" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50299:50328" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50346:50361" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50426:50443" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50490:50509" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="50651:50681" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="53328:53364" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="53532:53651" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="53754:53805" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="53831:53846" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="53899:53941" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54181:54217" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54268:54285" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54302:54316" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54486:54516" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54621:54657" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54710:54739" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54757:54772" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54837:54854" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="54901:54920" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="55062:55092" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="57742:57778" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="57946:58065" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58168:58219" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58245:58260" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58313:58355" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58595:58631" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58682:58699" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58716:58730" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="58900:58930" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59035:59071" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59124:59153" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59171:59186" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59251:59268" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59315:59334" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="59476:59506" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="62155:62191" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="62359:62478" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="62581:62632" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="62658:62673" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="62726:62768" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63008:63044" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63095:63112" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63129:63143" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63313:63343" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63448:63484" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63537:63566" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63584:63599" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63664:63681" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63728:63747" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="63889:63919" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="66581:66617" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="66785:66904" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67007:67058" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67084:67099" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67152:67194" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67434:67470" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67521:67538" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67555:67569" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67739:67769" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67874:67910" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="67963:67992" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="68010:68025" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="68090:68107" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="68154:68173" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="68315:68345" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71001:71037" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71205:71324" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71427:71478" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71504:71519" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71572:71614" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71854:71890" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71941:71958" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="71975:71989" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72159:72189" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72294:72330" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72383:72412" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72430:72445" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72510:72527" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72574:72593" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="72735:72765" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="75438:75474" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="75642:75761" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="75864:75915" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="75941:75956" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76009:76051" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76291:76327" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76378:76395" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76412:76426" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76596:76626" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76731:76767" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76820:76849" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76867:76882" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="76947:76964" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="77011:77030" ph="..." />
-            <marker date="1520564721522" expanded="true" signature="77172:77202" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,25 +1280,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/top.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="490" column="34" lean-forward="true" selection-start-line="490" selection-start-column="34" selection-end-line="490" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1330,39 +1330,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="168" column="29" lean-forward="false" selection-start-line="168" selection-start-column="15" selection-end-line="168" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="213" column="36" lean-forward="false" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/entity/ArticleEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/urlrewrite.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="436" column="29" lean-forward="true" selection-start-line="436" selection-start-column="29" selection-end-line="436" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1370,10 +1341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="280" column="93" lean-forward="true" selection-start-line="280" selection-start-column="93" selection-end-line="280" selection-end-column="93" />
-          <folding>
-            <marker date="1522306854843" expanded="true" signature="9595:9625" ph="..." />
-            <marker date="1522306854843" expanded="true" signature="9945:9960" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,37 +1353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="597" column="9" lean-forward="false" selection-start-line="597" selection-start-column="9" selection-end-line="597" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="984" column="0" lean-forward="false" selection-start-line="984" selection-start-column="0" selection-end-line="984" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-851">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="873" column="29" lean-forward="false" selection-start-line="873" selection-start-column="29" selection-end-line="873" selection-end-column="29" />
-          <folding>
-            <marker date="1522306720434" expanded="true" signature="43111:43140" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/entity/NewsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1423,61 +1360,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="344" column="35" lean-forward="false" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/comm/top.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="207" column="43" lean-forward="true" selection-start-line="207" selection-start-column="43" selection-end-line="207" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
-          <folding>
-            <marker date="1522306720415" expanded="true" signature="9267:9297" ph="..." />
-            <marker date="1522306720415" expanded="true" signature="9599:9614" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="109" column="22" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9a2e7885-7960-479d-8173-d1bd680fbd66/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9a2e7885-7960-479d-8173-d1bd680fbd66/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1485,15 +1372,416 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2737">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="-690">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/uitl/SreachArt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/uitl/SreachNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/fengcheng/fengchengArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="268" column="8" lean-forward="false" selection-start-line="268" selection-start-column="8" selection-end-line="268" selection-end-column="8" />
+          <folding>
+            <marker date="1522462835480" expanded="true" signature="9267:9297" ph="..." />
+            <marker date="1522462835480" expanded="true" signature="9599:9614" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/comm/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="205" column="28" lean-forward="true" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/addnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="180" column="6" lean-forward="false" selection-start-line="180" selection-start-column="6" selection-end-line="180" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="136" column="56" lean-forward="false" selection-start-line="136" selection-start-column="44" selection-end-line="136" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/service/articleServiceImpl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1568">
+          <caret line="369" column="8" lean-forward="true" selection-start-line="369" selection-start-column="8" selection-end-line="369" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="641" column="49" lean-forward="true" selection-start-line="641" selection-start-column="49" selection-end-line="641" selection-end-column="49" />
+          <folding>
+            <element signature="e#7023#10018#0#HTML" expanded="false" />
+            <element signature="e#7967#8010#0#HTML" expanded="false" />
+            <element signature="e#10056#10064#0#HTML" expanded="false" />
+            <element signature="e#10112#10118#0#HTML" expanded="false" />
+            <element signature="e#10168#10247#0#HTML" expanded="false" />
+            <element signature="e#10300#10382#0#HTML" expanded="false" />
+            <element signature="e#16684#20207#0#HTML" expanded="false" />
+            <element signature="e#20282#21362#0#HTML" expanded="false" />
+            <element signature="e#21410#22114#0#HTML" expanded="false" />
+            <element signature="e#22155#22530#0#HTML" expanded="false" />
+            <element signature="e#22575#23020#0#HTML" expanded="false" />
+            <element signature="e#23070#23518#0#HTML" expanded="false" />
+            <element signature="e#24890#25191#0#HTML" expanded="false" />
+            <marker date="1522563176893" expanded="true" signature="13400:13424" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="13613:13652" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="13771:13777" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="13777:13783" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="13783:13789" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="13789:13795" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="13795:13801" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="13801:13807" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="14242:14256" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="14297:14303" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="14304:14310" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="14415:14429" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="14723:14747" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="14908:14946" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="15064:15070" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15070:15076" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15076:15082" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15082:15088" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15088:15094" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15094:15100" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15510:15524" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="15565:15571" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15572:15578" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="15681:15695" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="16271:16307" ph="..." />
+            <marker date="1522563176893" expanded="true" signature="16314:16320" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16320:16326" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16326:16332" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16427:16433" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16433:16439" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16439:16445" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16445:16451" ph="&amp;nbsp;" />
+            <marker date="1522563176893" expanded="true" signature="16475:16498" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="103" column="71" lean-forward="false" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
+          <folding>
+            <element signature="e#1132#1133#0" expanded="false" />
+            <element signature="e#1162#1163#0" expanded="false" />
+            <element signature="e#6524#6525#0" expanded="false" />
+            <element signature="e#6569#6570#0" expanded="false" />
+            <element signature="e#7062#7063#0" expanded="false" />
+            <element signature="e#7109#7110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/dao/NewsDaoImpl/NewsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/service/NewsServiceImpl/NewsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/entity/ArticleEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/dao/articleDaoImpl/ArticleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="982" column="36" lean-forward="false" selection-start-line="982" selection-start-column="36" selection-end-line="982" selection-end-column="36" />
+          <folding>
+            <element signature="e#9321#9562#0" expanded="true" />
+            <element signature="e#9561#9562#0" expanded="true" />
+            <element signature="e#11328#11569#0" expanded="true" />
+            <element signature="e#11568#11569#0" expanded="true" />
+            <element signature="e#12857#12865#0" expanded="true" />
+            <element signature="e#21513#21754#0" expanded="true" />
+            <element signature="e#21753#21754#0" expanded="true" />
+            <element signature="e#23526#23767#0" expanded="true" />
+            <element signature="e#23766#23767#0" expanded="true" />
+            <element signature="method#sendmail#0;class#UserAction#0" expanded="false" />
+            <element signature="e#25550#25791#0" expanded="true" />
+            <element signature="e#25790#25791#0" expanded="true" />
+            <element signature="docComment;method#sendMsg#0;class#UserAction#0" expanded="false" />
+            <element signature="method#sendMsg#0;class#UserAction#0" expanded="false" />
+            <element signature="docComment;method#sendmails#0;class#UserAction#0" expanded="false" />
+            <element signature="method#sendmails#0;class#UserAction#0" expanded="false" />
+            <element signature="e#29071#29312#0" expanded="true" />
+            <element signature="e#29311#29312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/allOrder.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="486" column="5" lean-forward="false" selection-start-line="486" selection-start-column="5" selection-end-line="486" selection-end-column="5" />
+          <folding>
+            <marker date="1522569587098" expanded="true" signature="14632:14656" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="14852:14864" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="14925:14953" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="14973:14979" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="14979:14985" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="14985:14991" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="15034:15046" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15103:15129" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15188:15200" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15263:15275" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15423:15436" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15495:15518" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15576:15603" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15870:15882" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15943:15971" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="15991:15997" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="15997:16003" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="16003:16009" ph="&amp;nbsp;" />
+            <marker date="1522569587098" expanded="true" signature="16052:16064" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16121:16147" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16206:16218" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16281:16293" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16441:16454" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16513:16536" ph="..." />
+            <marker date="1522569587098" expanded="true" signature="16594:16621" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/allProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="451" column="65" lean-forward="false" selection-start-line="451" selection-start-column="65" selection-end-line="451" selection-end-column="65" />
+          <folding>
+            <element signature="e#24186#25762#0#HTML" expanded="false" />
+            <marker date="1522391271983" expanded="true" signature="13952:13976" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="14264:14303" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="14422:14428" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14428:14434" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14434:14440" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14440:14446" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14446:14452" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14452:14458" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="14691:14705" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="15035:15049" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="15090:15096" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15097:15103" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15207:15221" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="15514:15538" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="15798:15836" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="15954:15960" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15960:15966" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15966:15972" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15972:15978" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15978:15984" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="15984:15990" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="16163:16177" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="16507:16521" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="16562:16568" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="16569:16575" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="16677:16691" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="17255:17291" ph="..." />
+            <marker date="1522391271983" expanded="true" signature="17298:17304" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17304:17310" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17310:17316" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17411:17417" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17417:17423" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17423:17429" ph="&amp;nbsp;" />
+            <marker date="1522391271983" expanded="true" signature="17429:17435" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="539" column="40" lean-forward="false" selection-start-line="539" selection-start-column="40" selection-end-line="539" selection-end-column="40" />
+          <folding>
+            <element signature="e#23553#24518#0#HTML" expanded="false" />
+            <element signature="e#24570#25587#0#HTML" expanded="false" />
+            <element signature="e#24626#25577#0#HTML" expanded="false" />
+            <marker date="1522570070395" expanded="true" signature="23426:23450" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2381">
+          <caret line="943" column="19" lean-forward="false" selection-start-line="943" selection-start-column="19" selection-end-line="943" selection-end-column="19" />
+          <folding>
+            <marker date="1522570722614" expanded="true" signature="43111:43140" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/indexUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="345" column="16" lean-forward="false" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+          <folding>
+            <marker date="1522570722508" expanded="true" signature="2236:2300" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="2464:2583" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="2678:2729" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="2755:2770" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="2819:2861" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3093:3129" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3176:3193" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3210:3224" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3390:3420" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3521:3557" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3606:3635" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3653:3668" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3729:3746" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3793:3812" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="3950:3980" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="6385:6447" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="6611:6730" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="6825:6876" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="6902:6917" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="6966:7008" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7240:7276" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7323:7340" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7357:7371" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7537:7567" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7668:7704" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7753:7782" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7800:7815" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7876:7893" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="7940:7959" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="8097:8127" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="10548:10610" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="10774:10893" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="10988:11039" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11065:11080" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11129:11171" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11403:11439" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11486:11503" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11520:11534" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11700:11730" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11831:11867" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11916:11945" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="11963:11978" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="12039:12056" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="12103:12122" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="12260:12290" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="14729:14791" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="14955:15074" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15169:15220" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15246:15261" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15310:15352" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15584:15620" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15667:15684" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15701:15715" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="15881:15911" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16012:16048" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16097:16126" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16144:16159" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16220:16237" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16284:16303" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="16441:16471" ph="..." />
+            <marker date="1522570722508" expanded="true" signature="18503:18532" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

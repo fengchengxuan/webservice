@@ -31,16 +31,9 @@ public class ArticleAction {
 
     @RequestMapping("/add")//添加文章
     public @ResponseBody
-    List<String> add(String htmlText, String artTitle, String artKey, String artAbstract, String artType, HttpSession session) {
+    List<String> add(String htmlText, String title, String key, String abstract1, String type, HttpSession session) {
         list = new ArrayList<String>();
         entity = new ArticleEntity();
-//        user=(User)session.getAttribute("user");
-//        if(user.getLoginName()!=null &&user.getLoginName()!=""){
-//            entity.setUserName(user.getLoginName());
-//        }else{
-//            list.add("请先登录你的账号，哥们");
-//            return list;
-//        }
         String username = (String) session.getAttribute("loginName");
         if (username==null|| username.length()<1){
             list.add("您还未登录!");
@@ -55,26 +48,26 @@ public class ArticleAction {
             return list;
         }
 
-        if (artTitle != null && artTitle != "") {
-            entity.setArtTitle(artTitle);
+        if (title != null && title != "") {
+            entity.setArtTitle(title);
         } else {
             list.add("必须输入文章标题");
             return list;
         }
-        if (artType != null && artType != "") {
-            entity.setArtType(artType);
+        if (type != null && type != "") {
+            entity.setArtType(type);
         } else {
             list.add("请选择发布类型");
             return list;
         }
-        if (artKey != null && artKey != "") {
-            entity.setArtKey(artKey);
+        if (key != null && key != "") {
+            entity.setArtKey(key);
         } else {
             list.add("请输入关键词");
             return list;
         }
-        if (artAbstract != null && artAbstract != "") {
-            entity.setArtAbstract(artAbstract);
+        if (abstract1 != null && abstract1 != "") {
+            entity.setArtAbstract(abstract1);
         } else {
             list.add("输入摘要");
             return list;
@@ -93,14 +86,13 @@ public class ArticleAction {
 
     @RequestMapping("/SearchAll")//按类型查询
     public @ResponseBody
-    SreachArt SearchType(String artState, String artType, String systemId) {
-        if (artType.equals("管理员")) {
-            artType = "";
+    SreachArt SearchType(String state, String type, String systemId) {
+        if (systemId.equals("管理员")){
+            systemId = "";
         }
-        SreachArt = service.searchStateArt(artState, artType, systemId);
+        SreachArt = service.searchStateArt(state,type, systemId);
         return SreachArt;
     }
-
     @RequestMapping("/SearchTitle")//标题查询
     public @ResponseBody
     List<ArticleEntity> SearchTitle(String artTitle) {
@@ -130,19 +122,19 @@ public class ArticleAction {
 
     @RequestMapping("/deleteArt")
     public @ResponseBody
-    List<String> deleteArt(String artTitle,HttpSession session) {
+    List<String> deleteArt(String title,HttpSession session) {
         if (session.getAttribute("loginName")==null&&((String) session.getAttribute("loginName")).length()<1){
             list.add("您还未登录!");
             return list;
         }
         list = new ArrayList<String>();
-        list = service.deleteArt(artTitle);
+        list = service.deleteArt(title);
         return list;
     }
 
     @RequestMapping("/upDateJump")
     public @ResponseBody
-    List<ArticleEntity> upDateJump(String id) {
+    List<ArticleEntity> upDateJump(String id,String type) {
         listArt = service.SreachId(id);
         return listArt;
     }

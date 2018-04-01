@@ -112,7 +112,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<String> deleteArt(String artTitle) {
         entity= articleDao.sreachTitleArticleDao(artTitle).get(0);
-        entity.setArtState("3");
+        entity.setArtState("删除");
         return articleDao.deleteArt(entity);
     }
 
