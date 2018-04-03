@@ -1,13 +1,16 @@
 package com.fc.util;
 
 
+import com.fc.base.login.model.User;
+import com.fc.base.login.service.IUserService;
 import com.fc.login.util.LoginUser;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import java.util.Map;
-
 public class SessionListener implements HttpSessionListener {
+
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
         httpSessionEvent.getSession().setMaxInactiveInterval(120);

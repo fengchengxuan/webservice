@@ -141,8 +141,7 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     </tbody>
                 </table>
                 <div class="darbtnbox">
-                    <button class="thisfresh" onclick="reFresh()">当前页一键刷新</button>
-                    <button class="allfresh" onclick="reFreshAll()">全部文章一键刷新</button>
+                    <button class="thisfresh" onclick="reFresh()">删除</button>
                 </div>
                 <div class="darpages" id="darpageswwww">
                     <input type="hidden" id="currentPage"/>

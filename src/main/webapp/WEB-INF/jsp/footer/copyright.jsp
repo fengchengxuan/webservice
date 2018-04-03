@@ -44,8 +44,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <input type="text" placeholder="" name="copyrighted"  style="margin-top:30px;height: 35px" id="copyrighted"><span> &nbsp;可修改</span>
                 <input type="text" placeholder="" name="master"  style="margin-top:30px;height: 35px" id="master"><span> &nbsp;可修改</span>
                            </div>
-            <button style="width: 91px;height: 36px;color:#fff;background: #24a1e4;font-size: 18px;text-align: center;line-height: 36px;border-radius: 6px;float: left;position: relative;margin-left:110px;border:0; cursor: pointer  " class="sub" >保存</button>
-            <button style="width: 91px;height: 36px;color:#fff;background: #24a1e4;font-size: 18px;text-align: center;line-height: 36px;border-radius: 6px;float: left;position: relative;left: 90px;border:0; cursor: pointer  " type="reset">取消</button>
+            <button style="width: 91px;height: 36px;color:#fff;background: #24a1e4;font-size: 18px;text-align: center;line-height: 36px;border-radius: 6px;float: left;position: relative;margin-left:21%;border:0; cursor: pointer  " class="sub" >保存</button>
         </div>
     </div>
 </div>

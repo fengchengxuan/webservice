@@ -326,8 +326,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
 
             </div>
             <div  class="link-b-t" style="clear: both">
-                <input type="submit" value="添加" onclick="hidetext()" style="margin:10px 0 0 344px;position: relative;z-index: 3">
-                <input type="submit" value="修改" onclick="hidetext2()" style="margin: 0 0 0 20px;">
+                <input type="submit" value="添加" onclick="hidetext()" style="margin:10px 0 0 42%;position: relative;z-index: 3">
             </div>
             <div style="position: relative;left:300px;font-size: 16px;font-family:'黑体';color:#fff;">
 

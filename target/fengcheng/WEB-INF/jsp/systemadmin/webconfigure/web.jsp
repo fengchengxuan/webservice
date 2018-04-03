@@ -60,7 +60,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     </div>
                     <div class="btnbox">
                         <button class="save">保存更改</button>
-                        <button class="exit" type="reset">取消</button>
                     </div>
                 </form>
             </div>

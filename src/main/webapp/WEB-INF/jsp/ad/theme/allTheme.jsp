@@ -7,9 +7,6 @@
     <title>全部专题</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css">
     <style>
-        .list34{
-            background: #3eb7f3;
-        }
         table{
             border-collapse: collapse;
         }
@@ -42,7 +39,7 @@
         }
         .allTHEMW1{
             line-height: 23px;
-            background: url(${ctx}/static/background/images/allTHEMW1.jpg);
+            background: url("../../../../static/background/images/allTHEMW1.jpg");
             width: 179px;height: 53px;
             color: white;text-align: center;
             text-align: justify;
@@ -56,7 +53,7 @@
             padding: 0 12px;
         }
         .allTHEMW2{
-            background: url(${ctx}/static/background/images/allTHEMW2.jpg);
+            background: url("../../../../static/background/images/allTHEMW2.jpg");
             width: 179px;height: 53px;
             text-align: justify;
             text-justify: inter-word;
@@ -73,21 +70,24 @@
         }
 
         .allzt{
-            width: 671px;
-            height: 743px;
+            width: 480px;
+            height: 610px;
             background: #eef7fa;
-            margin: 22px 0 0 20px;
+            margin: 22px 0 0 10px;
+            box-shadow:0px 1px 3px 1px #ccc;
         }
         .allzt>div >div{
-            margin-top: 30px;
-            margin-left: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 13px;
         }
+
         .inner>div>div{
-            margin-top: 5px;
+            margin-top: 10px;
         }
         .allzt input,.allzt select{
             padding-left: 3px;
-            width: 184px;
+            width: 122px;
             height: 25px;
             border: 1px solid #999999;
             border-radius: 4px;
@@ -97,15 +97,33 @@
              margin-left: 0;
              border-radius: 0;
              -webkit-appearance: none;
-             background: url(${ctx}/static/background/images/Arrow.jpg) no-repeat scroll right center transparent;
+             background: url(../../../../static/background/images/Arrow.jpg) no-repeat scroll right center transparent;
          }
-        .allthemebox{    margin: 0 auto;
+        .allthemebox{
+            clear: both;
+            margin: 0 auto;
             width: 290px;}
         .allthemebox input {
             width: 91px;
             height: 36px;background: #1994d3;color: white;border: 0;margin:20px 40px 0 0;
             text-align: center;cursor: pointer;
         }
+
+        .alltheme-box{
+            width: 980px;
+            height: auto;
+            background: transparent;
+        }
+        .tdel{
+            cursor: pointer;
+            width: 0;
+            height: 0;
+            margin-left: 465px;
+        }
+        .user-img{
+            position: relative;top: -22px;
+        }
+
     </style>
 </head>
 <body ng-init="sysa=true;basea=true;contenta=true;producta=true;ordera=true;membera=true;adva=false;pagefoota=true;keya=true;allnava=true;adma=true;
@@ -124,84 +142,206 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             <span>全部专题</span>
         </div>
 
-        <div class="inner" style="height:940px">
+        <div class="inner" style="height:auto">
             <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;全部专题</div>
 
 
-<div style="    height: 775px;background: white">
-            <div style="width: 180px;height: 612px;margin: 20px 0 0 25px;float: left;" class="alltheme-box">
-                <div class="allTHEMW1">网站建设/程序及功能定制研发/APP研发与定制<i> </i></div>
-                <div class="allTHEMW2">网 络 计 划 与 制 定<i> </i></div>
-                <div class="allTHEMW2">网 络 推 广<i> </i></div>
-                <div class="allTHEMW2">网 络 营 销<i> </i></div>
-                <div class="allTHEMW2">搜 索 优 化<i> </i></div>
-                <div class="allTHEMW2">网 络 媒 体<i> </i></div>
-                <div class="allTHEMW2">网 络 文 案<i> </i></div>
-                <div class="allTHEMW2">视 频 制 作 与 推 广<i> </i></div>
-                <div class="allTHEMW2">网 络 计 划 与 制 定<i> </i></div>
-                <div class="allTHEMW2">网 络 运 营<i> </i></div>
-                <div class="allTHEMW2">词 条 / 百 科<i> </i></div>
-                <div class="allTHEMW2">数 据 统 计<i> </i></div>
-                <div class="allTHEMW2">实 体 媒 体 及 广 告 投 放"<i> </i></div>
-            </div>
-            <div style="float: left" class="allzt">
-                <div style="width: 310px;height: 420px;clear: both">
-                <div>服务标准:
-                    <select name="" id="" style="width: 75px">
-                        <option>标准版</option>
-                        <option>加强版</option>
-                        <option>基础版</option>
-                        <option>定制版</option>
-                        <option>商业版</option>
-                    </select>
-                </div>
-                    <div>客服名称:
-                        <input type="text" placeholder="">
+            <div class="alltheme-box">
+                <div style="float: left" class="allzt">
+                    <div class="tdel">
+                        <img src="../../../../static/background/images/the-del.jpg" alt="">
                     </div>
+                    <div style="width: 310px;height: 420px;clear: both">
+                        <div>服务标准:
+                            <select name="" id="">
+                                <option>标准版</option>
+                                <option>加强版</option>
+                                <option>基础版</option>
+                                <option>定制版</option>
+                                <option>商业版</option>
+                            </select>
+                        </div>
+                        <div>客服名称:
+                            <input type="text">
+                        </div>
 
-                    <div>制作日期:
-                        <input type="text" placeholder="">
+                        <div>制作日期:
+                            <input type="text">
+                        </div>
+
+                        <div>交款日期:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                        </div>
+
+                        <div>
+                        <span class="user-img">
+                        客户形象照片:
+                        </span>
+                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                        </div>
+
+                        <div>客户评价感言:
+                            <textarea style="width: 415px;height: 123px;border: 1px solid #999999;border-radius: 4px;"></textarea>
+                        </div>
+
                     </div>
-
-                    <div>交款日期:
-                        <input type="text" placeholder="">
-                    </div>
-
-                    <div>演示地址:
-                        <input type="text" placeholder="">
-                    </div>
-
-                    <div>演示地址:
-                        <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
-                        <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
-                        <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
-                        <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
-                        <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
-                    </div>
-
-                    <div>客户形象照片:
-                        <img src="${ctx}/static/background/images/addall-titluser1.jpg" alt="">
-                    </div>
-
-                    <div>客户评价感言:
-                        <textarea style="width: 563px;height: 123px;border: 1px solid #999999;border-radius: 4px;" placeholder=""></textarea>
-                    </div>
-
-                </div>
-                <div style="margin: -385px 0 0 246px;">
+                    <div style="margin: -418px 0 0 246px;">
                     <span style="position: relative;left: 183px;top: -185px;">
-                    网站建设缩略图
+                    <!--网站建设缩略图-->
                     </span>
-                    <img src="${ctx}/static/background/images/add-thimguser1.jpg" alt="">
+                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                    </div>
+                    <p>
+                        <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>
+                    </p>
+
                 </div>
-<p>
-                <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 255px  0 0 252px ">修改/保存</button>
-            </p>
-                <div >
-                    <input type="checkbox" style="width: 15px;height: 14px;margin: 5px 0 0 50px;" placeholder=""> &nbsp;全选
+                <!--</div>-->
+                <!--<div style="    height: 775px;background: white">-->
+
+                <div style="float: left" class="allzt">
+                    <div class="tdel">
+                        <img src="../../../../static/background/images/the-del.jpg" alt="">
+                    </div>
+                    <div style="width: 310px;height: 420px;clear: both">
+                        <div>服务标准:
+                            <select name="" id="">
+                                <option>标准版</option>
+                                <option>加强版</option>
+                                <option>基础版</option>
+                                <option>定制版</option>
+                                <option>商业版</option>
+                            </select>
+                        </div>
+                        <div>客服名称:
+                            <input type="text">
+                        </div>
+
+                        <div>制作日期:
+                            <input type="text">
+                        </div>
+
+                        <div>交款日期:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                        </div>
+
+                        <div>
+                            <span class="user-img">
+                            客户形象照片:
+                                </span>
+                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                        </div>
+
+                        <div>客户评价感言:
+                            <textarea style="width: 415px;height: 123px;border: 1px solid #999999;border-radius: 4px;"></textarea>
+                        </div>
+
+                    </div>
+                    <div style="margin: -418px 0 0 246px;">
+                    <span style="position: relative;left: 183px;top: -185px;">
+                    <!--网站建设缩略图-->
+                    </span>
+                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                    </div>
+                    <p>
+                        <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>
+                    </p>
+
                 </div>
+                <!--</div>-->
+
+
+
+                <!--<div style="    height: 775px;background: white">-->
+
+                <div style="float: left" class="allzt">
+                    <div class="tdel">
+                        <img src="../../../../static/background/images/the-del.jpg" alt="">
+                    </div>
+                    <div style="width: 310px;height: 420px;clear: both">
+                        <div>服务标准:
+                            <select name="" id="">
+                                <option>标准版</option>
+                                <option>加强版</option>
+                                <option>基础版</option>
+                                <option>定制版</option>
+                                <option>商业版</option>
+                            </select>
+                        </div>
+                        <div>客服名称:
+                            <input type="text">
+                        </div>
+
+                        <div>制作日期:
+                            <input type="text">
+                        </div>
+
+                        <div>交款日期:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <input type="text">
+                        </div>
+
+                        <div>演示地址:
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                        </div>
+
+                        <div>
+                            <span class="user-img">
+                            客户形象照片:
+                                </span>
+                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                        </div>
+
+                        <div>客户评价感言:
+                            <textarea style="width: 415px;height: 123px;border: 1px solid #999999;border-radius: 4px;"></textarea>
+                        </div>
+
+                    </div>
+                    <div style="margin: -418px 0 0 246px;">
+                    <span style="position: relative;left: 183px;top: -185px;">
+                    <!--网站建设缩略图-->
+                    </span>
+                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                    </div>
+                    <p>
+                        <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>
+                    </p>
+
+                </div>
+                <!--</div>-->
             </div>
-        </div>
+
 
 
 

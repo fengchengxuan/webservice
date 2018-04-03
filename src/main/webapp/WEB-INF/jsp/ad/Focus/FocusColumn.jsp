@@ -75,6 +75,16 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
                     <input type="file" name=""   class="a-upload" style="margin-left: 5px;">
                     <!--</a>-->
                 </div>
+
+
+                <lable>
+                    <select >
+                        <option>选择轮播类型</option>
+                        <option>首页</option>
+                        <option>我们能做什么</option>
+                        <option>您从我们这的到什么</option>
+                    </select>
+                </lable>
             </div>
 
             <div class="title-tb bplj">
@@ -122,6 +132,15 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
                     </div>
                     <input type="file" name=""   class="a-upload" style="margin-left: 5px;">
                 </div>
+
+                <lable>
+                    <select >
+                        <option>选择轮播类型</option>
+                        <option>首页</option>
+                        <option>我们能做什么</option>
+                        <option>您从我们这的到什么</option>
+                    </select>
+                </lable>
             </div>
 
             <div class="title-tb bplj">
@@ -168,6 +187,14 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
                     </div>
                     <input type="file" name="" id=""  class="a-upload" style="margin-left: 5px;">
                 </div>
+                <lable>
+                    <select >
+                        <option>选择轮播类型</option>
+                        <option>首页</option>
+                        <option>我们能做什么</option>
+                        <option>您从我们这的到什么</option>
+                    </select>
+                </lable>
             </div>
 
             <div class="title-tb bplj">

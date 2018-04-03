@@ -54,7 +54,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 </div>
 
                 <button style="width: 91px;height: 36px;color:#fff;background: #24a1e4;font-size: 16px;text-align: center;line-height: 36px;float: left;position: relative;margin-left:120px;border:0;  " class="submit">保存</button>
-                <button style="width: 91px;height: 36px;color:#fff;background: #24a1e4;font-size: 16px;text-align: center;line-height: 36px;float: left;position: relative;left: 100px;border:0;  " type="reset">取消</button>
             </form>
         </div>
     </div>

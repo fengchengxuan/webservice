@@ -252,6 +252,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                             </div>
                         </div>
                     </th>
+                        <th style="width: 126px;border-left: 1px solid #24a1e4">添加URL</th>
                     <th style="width: 171px;border-left: 1px solid #24a1e4">
 
                         <div class="select_model">
@@ -289,6 +290,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </div>
                     </th>
                     <th style="width: 126px;border-left: 1px solid #24a1e4">编辑状态</th>
+
                     <th style="width: 130px;border-left: 1px solid #24a1e4">
                         <div class="select_model">
                             <div class="Selected" id="Selected4"><span style="font-size: 12px">操作人</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
@@ -309,6 +311,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <tr style="height: 36px;">
                         <td><input type="checkbox" placeholder="" ng-checked="c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
                         <td>下湾一中</td>
+                        <td></td>
                         <td>首页</td>
                         <td>自动添加</td>
                         <td>正常</td>
@@ -322,6 +325,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <tr style="height: 36px;">
                         <td><input type="checkbox" placeholder="" ng-checked="c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
                         <td>下湾一中</td>
+                        <td></td>
                         <td>首页</td>
                         <td>自动添加</td>
                         <td>正常</td>
@@ -335,6 +339,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <tr style="height: 36px;">
                         <td><input type="checkbox" placeholder="" ng-checked="c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
                         <td>下湾一中</td>
+                        <td></td>
                         <td>首页</td>
                         <td>自动添加</td>
                         <td>正常</td>
@@ -345,32 +350,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </td>
                         <td>系统管理员</td>
                     </tr>
-                    <tr style="height: 36px;">
-                        <td><input type="checkbox" placeholder="" ng-checked="c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
-                        <td>下湾一中</td>
-                        <td>首页</td>
-                        <td>自动添加</td>
-                        <td>正常</td>
-                        <td>
-                            <a href=""><span style="color: #0D62F0" data-toggle="modal" data-target="#myModaeditkeywords">修改</span></a>
-                            &nbsp;|&nbsp;
-                            <a href=""><span style="color: #EC2323">删除</span></a>
-                        </td>
-                        <td>系统管理员</td>
-                    </tr>
-                    <tr style="height: 36px;">
-                        <td><input type="checkbox" placeholder="" ng-checked="c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
-                        <td>下湾一中</td>
-                        <td>首页</td>
-                        <td>自动添加</td>
-                        <td>正常</td>
-                        <td>
-                            <a href=""><span style="color: #0D62F0" data-toggle="modal" data-target="#myModaeditkeywords">修改</span></a>
-                            &nbsp;|&nbsp;
-                            <a href=""><span style="color: #EC2323">删除</span></a>
-                        </td>
-                        <td>系统管理员</td>
-                    </tr>
+
 
                     <tr style="height: 52px;background: #fff">
                         <td>&nbsp;&nbsp;&nbsp;<input type="checkbox" placeholder="" ng-model="c">&nbsp;&nbsp;&nbsp;&nbsp;全选</td>
@@ -424,10 +404,17 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <div class="inner inner-1" style=" width: 632px;height:auto;background-color: white;padding: 0 0 30px 0;">
                     <!--关键词名称-->
                     <form action="" method="post">
+                        <%--添加url--%>
+                        <div class="title-tb">
+                            <span class="title-tb-1">添加静态页面URL</span>
+                            <input type="text" placeholder="" style="border: 1px solid rgb(153,153,153);">
+
+                        </div>
                         <div class="title-tb">
                             <span class="title-tb-1 title-tb-gjc">关键词</span>
                             <input type="text" placeholder="" style="border: 1px solid rgb(153,153,153);">
                             <span class="title-tb-2">可自定义关键词名称</span>
+
                         </div>
                         <!--自定义标题-->
                         <div class="title-tb bt-gjc">

@@ -6,6 +6,7 @@ import com.fc.base.contentadmin.artitle.uitl.ArtUitl;
 import com.fc.base.contentadmin.artitle.uitl.SreachArt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -27,6 +28,10 @@ public class ArticleAction {
     private List<ArticleEntity> listArt;
     private SreachArt SreachArt;
     private List<String> list;
+    @ModelAttribute
+    public void init(){
+        list=new ArrayList<>();
+    }
 
 
     @RequestMapping("/add")//添加文章
@@ -90,6 +95,9 @@ public class ArticleAction {
         if (systemId.equals("管理员")){
             systemId = "";
         }
+        if(state.equals("全部")){
+            state= "";
+        }
         SreachArt = service.searchStateArt(state,type, systemId);
         return SreachArt;
     }
@@ -142,10 +150,13 @@ public class ArticleAction {
     @RequestMapping("/deleteAll")//删除勾选部分
     public @ResponseBody
     List<String> deleteAll(int[] listId) {
+        System.out.println("进入");
         list = new ArrayList<String>();
         listArt = new ArrayList<ArticleEntity>();
         for (int i : listId) {
+            System.out.println(i);
             if (service.SreachId(i + "").size() > 0) {
+                listArt.add(service.SreachId(i + "").get(0));
             }
         }
         if (listArt.size() > 0) {

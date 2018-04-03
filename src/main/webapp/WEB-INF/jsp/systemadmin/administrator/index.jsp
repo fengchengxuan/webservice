@@ -117,14 +117,13 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
         <div class="adm-list"></div>
     </div>
     <div class="admlistbox">
-        <table class="admtable">
+        <table class="admtable" style="width:980px">
             <thead>
             <tr>
                 <th style="width: 107px">序号</th>
             <th style="border-left:1px solid #2090cc;width: 110px">账号</th>
-            <th style="border-left:1px solid #2090cc;width: 127px;">账号等级</th>
                 <th style="position: relative;width: 117px;text-align: center">
-                    <div class="ddo" id="Selected"><span>权限</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
+                    <div class="ddo" id="Selected"><span>账号等级</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                     <div style="display: none" id="ddoli">
                         <ul>
                             <li style="border-top: none">系统管理员</li>
@@ -140,8 +139,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             <th style="border-left:1px solid #2090cc;width: 96px">状态</th>
             <th style="border-left:1px solid #2090cc;width: 226px">登录IP</th>
             <th  style="border-left:1px solid #2090cc;width: 105px" >重设密码</th>
-            <th  style="border-left:1px solid #2090cc;width: 92px"  >忘记密码</th>
-                <th  style="border-left:1px solid #2090cc;width: 92px" >忘记账号</th>
             </tr>
             </thead>
             <tbody ng-init="m=false" id="show">
@@ -156,8 +153,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut passwordShow" style="color: #0D62F0" >重设密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记账号</td>
+
             </tr>
             <tr style="height: 52px">
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</td>
@@ -169,8 +165,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut passwordShow" style="color: #0D62F0" >重设密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记账号</td>
+
             </tr>
             <tr style="height: 36px;background-color: #F4F4F4">
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
@@ -182,8 +177,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut" style="color: #0D62F0" >重设密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记账号</td>
             </tr>
             <tr style="height: 52px;">
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
@@ -195,8 +188,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut" style="color: #0D62F0" >重设密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记密码</td>
-                <td class="modbut" style="color: #EC2323" >忘记账号</td>
             </tr>
             <tr style="height: 52px">
                 <td style="text-align: center"><input type="checkbox" placeholder="" ng-model="m">&nbsp;&nbsp;全选</td>
@@ -234,7 +225,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             <div class="modal-body" style="margin-left: 30px;font-family: '微软雅黑',sans-serif;font-size: 14px;">
                 <div>账号昵称<input id="addUserName" type="text" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="">
                 </div>
-
                 <p style="font-size: 12px;color:red;margin-left: 85px;">昵称设置只能以英文或数字两者结合</p>
                 <div class="modal-body" style="margin-left: -15px;font-family: '微软雅黑',sans-serif;font-size: 14px;">
                     <div>账号密码<input id="addPassword" type="password" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="" onfocus="this.value=''" onblur="">
@@ -419,11 +409,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
 
                                     <input type="reset"
                                            style="width: 100px;height: 25px;background: #24a1e4; color: #fff;border: 0;margin-left: 15px;" value="取消">
-
                                 </div>
-
-
-
                             </div>
                           <div  style="display: none" class="li">
                               <div>账 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号<input type="text" placeholder="" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 18px" name="userNames" ></div>
@@ -648,12 +634,9 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     " <td><input type=\"checkbox\" placeholder=\"\" value=\""+userObj[i].loginName+"\" ng-checked=\"m\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+j+"</td>" +
                     " <td>"+userObj[i].loginName+"</td>" +
                     " <td>"+userObj[i].level+"</td>" +
-                    " <td>"+userObj[i].power+"</td>" +
                     " <td>"+userObj[i].state+"</td>" +
                     " <td>"+userObj[i].ip+"</td>" +
                     " <td class=\"passwordShow\" style=\"color: #0D62F0\" ><input type=\"hidden\">重设密码</td>"+
-                    " <td class=\"forget-password-s\" style=\"color: #EC2323\" ><input type=\"hidden\">忘记密码</td>" +
-                    " <td class=\"forget-user-s\" style=\"color: #EC2323\" ><input type=\"hidden\">忘记账号</td>" +
                     " </tr>";
                 $("#show").append(row);
             }
@@ -665,12 +648,9 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     " <td><input type=\"checkbox\" placeholder=\"\" value=\""+userObj[i].loginName+"\" ng-checked=\"m\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+j+"</td>" +
                     " <td>"+userObj[i].loginName+"</td>" +
                     " <td>"+userObj[i].level+"</td>" +
-                    " <td>"+userObj[i].power+"</td>" +
                     " <td>"+userObj[i].state+"</td>" +
                     " <td>"+userObj[i].ip+"</td>" +
                     " <td class=\"passwordShow\" style=\"color: #0D62F0\" ><input type=\"hidden\">重设密码</td>" +
-                    " <td class=\"forget-password-s\" style=\"color: #EC2323\" ><input type=\"hidden\">忘记密码</td>" +
-                    " <td class=\"forget-user-s\" style=\"color: #EC2323\"><input type=\"hidden\"/>忘记账号</td>" +
                     " </tr>";
                 $("#show").append(row);
             }
@@ -729,7 +709,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                   if(data[0]=="添加成功"){
                      var url= window.location.href;
                      window.location.href=url;
-
                   }
                 }
             }
@@ -820,7 +799,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
     //--------------------------------------修改
 
         $("#modifyHide-x1").click(function(){
-
             $("#modify-x1").hide();
         });
         $("#modifyShow-x1").click(function(){
