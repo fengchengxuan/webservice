@@ -83,7 +83,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         </div>
         <div class="inner" style="height: auto;padding-bottom: 110px">
             <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;修改新闻</div>
-            <label style="    height: 65px;font-weight: 400">
 
                 <div class="select_model">
                     <div class="Selected" id="Selected"><span style="font-size: 12px">选择发布类型</span>&nbsp;<img src="${ctx}/static/background/images/right-l.png" alt="下拉"></div>
@@ -96,7 +95,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                         </ul>
                     </div>
                 </div>
-            </label>
             <div class="setnewsbox">
                 <div class="newstitle">
                     <span class="head" style="letter-spacing: 5px">新闻标题</span>
@@ -170,16 +168,12 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     $("#currentPage").val(1);
                     pagingSreach(value,newsType,systemId);
                 }
-
-
             });
         });
 
         $("#Selected").blur(function(){
             $("#ddoli").hide();
         });
-
-
     });
 </script>
 <script type="text/javascript">
@@ -284,7 +278,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     oldNewsTitle=null;
                     emptyData();
                 }
-
             }
         })
     });

@@ -15,7 +15,6 @@
         height: 31px;
         line-height: 27px;
         cursor: pointer;
-        text-align: center;
         font-size: 12px;
         margin: 20px 0 0 97px;
     }
@@ -86,9 +85,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 <%--<option value="3">我们与峰程</option>--%>
             <%--</select>--%>
             <%--</label>--%>
-
-            <label style="    height: 65px;font-weight: 400">
-
                 <div class="select_model">
                     <div class="Selected" id="Selected"><span style="font-size: 12px">选择文章发布类型</span>&nbsp;<img src="${ctx}/static/background/images/right-l.png" alt="下拉"></div>
                     <div style="display: none" class="ddoli" id="ddoli">
@@ -99,7 +95,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                         </ul>
                     </div>
                 </div>
-            </label>
             <div class="setnewsbox">
                 <div class="newstitle">
                     <span class="head" style="letter-spacing: 5px">文章标题</span>
@@ -166,10 +161,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
             txt.spellcheck=true;
         });
         $("#Typesetting").click(function(){
-//            var body = "\n"+document.getElementById("container").value;
-//            body = body.replace(/ |　/ig,"");
-//            body = body.replace(/\n/ig,"　　");
-//            document.getElementById("container").value=body;
             ue.execCommand( 'autotypeset');
         });
         $("#html").click(function(){
@@ -211,7 +202,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 }
             });
         });
-
     });
     $("#Submit").click(function(){
         $(".pop_box").css("display","block");
@@ -248,7 +238,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     oldArtTitle=null;
                     emptyData();
                 }
-
             }
         })
     });
@@ -371,7 +360,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 $("#searchresult").empty();
             }
         }
-
     });
     //显示标题
     function showTitle(data) {
@@ -447,16 +435,12 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     $("#currentPage").val(1);
                     pagingSreach(value,newsType,systemId);
                 }
-
-
             });
         });
 
         $("#Selected").blur(function(){
             $("#ddoli").hide();
         });
-
-
     });
 </script>
 </body>
