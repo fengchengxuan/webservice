@@ -20,7 +20,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.14.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.3.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jms:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.14.RELEASE" />

@@ -11,5 +11,15 @@
       <user-name>root</user-name>
       <introspection-schemas>*:kpbase</introspection-schemas>
     </data-source>
+    <data-source name="kpbase@localhost [2]" uuid="19ff77a9-3586-4606-abfc-9793d715c399">
+      <database-info product="MySQL" version="5.5.56" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>LAPTOP-GOH6Q9QU</user-name>
+      <introspection-schemas>*:kpbase</introspection-schemas>
+    </data-source>
   </component>
 </project>
