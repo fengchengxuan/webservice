@@ -333,10 +333,10 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
             // {
                 FieldCount++; //text box added increment
                 //add input box
-                $(InputsWrapper).append('<hr style="width: 0;height: 0;margin: 0 0 0 0;border: 0">' +
+                $(InputsWrapper).append('<div><hr style="width: 0;height: 0;margin: 0 0 0 0;border: 0">' +
                     '<input type="text" class="givenFree" name="mytext[]" id="field_'+ FieldCount +'" style="margin-left: 93px;width: 120px;height: 26px;resize:none;border: 1px solid #ccc;" >' +
                     '<input type="text" name="mytext[]" class="givenFree" style="margin:5px 0 0 4px;width: 240px;height: 26px;resize:none;border: 1px solid #ccc;" id="field'+ FieldCount +'" />' +
-                    '<a href="#" class="removeclass">&times;</a>');
+                    '<a href="#" class="removeclass">&times;</a></div>');
                 x++; //text box increment
             // }
             return false;

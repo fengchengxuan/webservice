@@ -121,10 +121,11 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <th style="width: 150px;border-left: 1px solid #24a1e4">发布日期</th>
                     <th style="width: 119px;border-left: 1px solid #24a1e4">
                         <div class="select_model">
-                            <div class="Selected" id="Selected3"><span>正常</span>&nbsp;<img src=${ctx}/static/background/images/adm_icon.png alt="下拉"></div>
+                            <div class="Selected" id="Selected3"><span>全部</span>&nbsp;<img src=${ctx}/static/background/images/adm_icon.png alt="下拉"></div>
                             <div style="display: none" class="ddoli" id="ddoli3">
                                 <ul>
-                                    <li style="border-top: none">正常</li>
+                                    <li style="border-top: none">全部</li>
+                                    <li>正常</li>
                                     <li>草稿</li>
                                     <li>删除</li>
                                 </ul>
@@ -139,8 +140,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     </tbody>
                 </table>
                 <div class="darbtnbox">
-                    <button class="thisfresh" onclick="reFresh()">当前页一键刷新</button>
-                    <button class="allfresh" onclick="reFreshAll()">全部新闻一键刷新</button>
+                    <button class="allfresh" onclick="deleteAll()">删除</button>
                 </div>
                 <div class="darpages" id="darpageswwww">
                     <input type="hidden" id="currentPage"/>
@@ -158,7 +158,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
 <script src="${ctx}/static/background/js/angular.min.js"></script>
 <script type="text/javascript">
     var typeObj;
-    var state="正常";
+    var state="全部";
     var oldState;
     var type="十二数据";
     var oldType;
@@ -173,7 +173,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 $("#ddoli").show();
             }
         });
-
         $("#ddoli>ul>li").each(function(i,v){
             $(this).click(function(){
                 $("#Selected>span").html($(this).html());
@@ -413,7 +412,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         }
         // /添加 checkbox
         var clickAll="<tr style=\"height: 52px;background: transparent\"><td>&nbsp;&nbsp;&nbsp;<input type=\"checkbox\" id=\"clickId\" onclick=\"clickAll()\" " +
-            "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td></tr><tr style=\"background: transparent\"><td><a href=\"javascript:void(null)\" onclick=\"deleteAll()\">删除</a></td></tr>";
+            "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td></tr>";
         $("#showId").append(clickAll);
     }
     //显示数据
@@ -478,7 +477,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         }
         // /添加 checkbox
         var clickAll="<tr style=\"height: 52px;background: transparent\"><td>&nbsp;&nbsp;&nbsp;<input type=\"checkbox\" id=\"clickId\" onclick=\"clickAll()\" " +
-            "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td></tr><tr style=\"background: transparent\"><td><a href=\"javascript:void(null)\" onclick=\"deleteAll()\">删除</a></td></tr>";
+            "ng-model=\"c\">&nbsp;&nbsp;&nbsp;&nbsp;全选</td>";
         $("#showId").append(clickAll);
     }
     //显示页码数  (根据当前页的在总页数的位置显示)
@@ -632,6 +631,11 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 alert("已经删除了 ,不能再更改");
                 return;
             }
+        }else{
+            if(list[code].artState=="删除"){
+                alert("已经删除了 ,不能再更改");
+                return;
+            }
         }
         window.location.href = "${ctx}/admin/editnews?code="+list[code].id+"&type="+typeObj;
     }
@@ -675,8 +679,14 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                 newsId= checkboxAll[i].value;
                 listId.push(newsId);
            }
+          var url;
+            if( typeObj=="新闻快报"){
+                url='${ctx}/news/deleteAll';
+            }else{
+                url='${ctx}/Article/deleteAll';
+            }
             $.ajax({
-                url : '${ctx}/news/deleteAll',
+                url : url,
                 type : 'POST',
                 data : "listId="+listId,
                 async:true,

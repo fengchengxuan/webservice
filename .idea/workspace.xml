@@ -1,15 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="fengcheng:war exploded" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="868d7dda-aee8-49e9-b0f0-be55a2a7d530" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/Getwhat2.jsp" afterPath="" />
+    <list default="true" id="eecd0dfb-1e40-492e-bfef-88f8fbce0100" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/background/images/the-del.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/fengcheng/static/background/images/the-del.jpg" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/artitle/action/ArticleAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/contentadmin/news/action/NewstAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/login/controller/UserAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/SessionListener.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page1.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page1.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page10.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page10.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page11.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page11.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page12.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page12.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page2.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page2.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page3.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page3.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page4.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page4.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page5.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page5.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page6.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page6.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page7.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page7.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page8.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page8.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page9.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Product/Product_Page9.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/KeyWord/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/KeyWord/all.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/new.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Order/myOrder/order.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/Focus/FocusColumn.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/Focus/FocusColumn.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/Focus/FocusTopic.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/Focus/FocusTopic.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/theme/allTheme.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ad/theme/allTheme.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/left.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/left.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/allarticle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/allarticle.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer/AuxiliaryNav.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer/AuxiliaryNav.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer/copyright.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer/copyright.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/addProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productadmin/addProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/administrator/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/administrator/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/webconfigure/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/webconfigure/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/webconfigure/web.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemadmin/webconfigure/web.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/taglib.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/taglib.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/contentadmin/news/action/NewstAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$1.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$2.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$3.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$4.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$5.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$5.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$6.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction$6.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/base/login/controller/UserAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/SessionListener.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/SessionListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/artitle/action/ArticleAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/action/NewstAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/contentadmin/news/action/NewstAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$1.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$2.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$3.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$4.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$5.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$5.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$6.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction$6.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/base/login/controller/UserAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/SessionListener.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/SessionListener.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page1.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page1.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page10.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page10.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page11.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page11.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page12.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page12.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page2.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page2.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page3.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page3.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page4.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page4.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page5.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page5.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page6.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page6.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page7.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page7.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page8.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page8.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page9.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Product/Product_Page9.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/KeyWord/all.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/KeyWord/all.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/Order/myOrder/new.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/Order/myOrder/order.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/Focus/FocusColumn.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/Focus/FocusColumn.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/Focus/FocusTopic.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/Focus/FocusTopic.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/theme/allTheme.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/ad/theme/allTheme.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/comm/left.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/comm/left.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/article/allarticle.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/article/allarticle.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/contentadmin/news/allnews.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/footer/AuxiliaryNav.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/footer/AuxiliaryNav.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/footer/copyright.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/footer/copyright.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/productadmin/addProduct.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/productadmin/addProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/administrator/index.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/administrator/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/webconfigure/index.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/webconfigure/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/webconfigure/web.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/systemadmin/webconfigure/web.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/taglib.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/taglib.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/user/login.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/jsp/user/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,54 +97,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3473">
-              <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="revarticle.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/background/css/article.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="revnews.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3744">
-              <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>oldArtTitle</find>
-      <find>.Selected</find>
-    </findStrings>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,25 +107,11 @@
       <projects_view />
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -112,8 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,49 +140,18 @@
               <item name="webservice" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/template" />
-    <property name="SearchEverywhereHistoryKey" value="Login&#9;PSI&#9;JAVA://com.fc.login.Controller.LoginAction" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -258,81 +241,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="fc7080" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.70" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="fengcheng:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_webservice_2" />
-        <option name="HTTP_PORT" value="8084" />
-        <option name="JNDI_PORT" value="1113" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61341" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="fengcheng:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -348,31 +256,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="868d7dda-aee8-49e9-b0f0-be55a2a7d530" name="Default" comment="" />
-      <created>1522576332238</created>
+      <changelist id="eecd0dfb-1e40-492e-bfef-88f8fbce0100" name="Default" comment="" />
+      <created>1522746086916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522576332238</updated>
-      <workItem from="1522576333529" duration="5701000" />
+      <updated>1522746086916</updated>
+      <workItem from="1522746088136" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5701000" />
+    <option name="totallyTimeSpent" value="674000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36533958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -408,137 +315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="108" column="60" lean-forward="true" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/allnews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="603" column="7" lean-forward="false" selection-start-line="603" selection-start-column="7" selection-end-line="603" selection-end-column="7" />
-          <folding>
-            <marker date="1522576114714" expanded="true" signature="13400:13424" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="13613:13652" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="13771:13777" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="13777:13783" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="13783:13789" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="13789:13795" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="13795:13801" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="13801:13807" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="14242:14256" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="14297:14303" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="14304:14310" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="14415:14429" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="14723:14747" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="14908:14946" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="15064:15070" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15070:15076" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15076:15082" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15082:15088" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15088:15094" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15094:15100" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15510:15524" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="15565:15571" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15572:15578" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="15681:15695" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="16271:16307" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="16314:16320" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16320:16326" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16326:16332" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16427:16433" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16433:16439" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16439:16445" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16445:16451" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="16475:16498" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="16964:16988" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="17177:17216" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="17335:17341" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17341:17347" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17347:17353" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17353:17359" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17359:17365" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17365:17371" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17803:17817" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="17858:17864" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17865:17871" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="17976:17990" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="18283:18307" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="18468:18506" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="18624:18630" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="18630:18636" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="18636:18642" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="18642:18648" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="18648:18654" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="18654:18660" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="19092:19106" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="19147:19153" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="19154:19160" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="19263:19277" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="19852:19888" ph="..." />
-            <marker date="1522576114714" expanded="true" signature="19895:19901" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="19901:19907" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="19907:19913" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="20008:20014" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="20014:20020" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="20020:20026" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="20026:20032" ph="&amp;nbsp;" />
-            <marker date="1522576114714" expanded="true" signature="20056:20079" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/news/revnews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3744">
-          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3473">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/background/css/article.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/background/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/background/css/revnews.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/contentadmin/article/revarticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>

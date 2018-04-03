@@ -105,6 +105,9 @@ public void init(){
         if (systemId.equals("管理员")) {
             systemId = "";
         }
+        if(state.equals("全部")){
+            state = "";
+        }
             SreachNews = service.searchStateNews(state, type, systemId);
         return SreachNews;
     }
@@ -171,7 +174,6 @@ public void init(){
             if (service.SreachId(i + "").size() > 0) {
                 listNews.add(service.SreachId(i + "").get(0));
             }
-
         }
         if (listNews.size() > 0) {
             for (int i = 0; i < listNews.size(); i++) {

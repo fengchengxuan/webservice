@@ -483,7 +483,6 @@
 							<textarea name="" rows="" cols="" placeholder="我有话要说..."></textarea>
 							<div class="btn_box">
 								<div id="submit">提交评论</div>
-								<div id="cancel">取消评论</div>
 							</div>
 							<div class="QA">
 								<ul>

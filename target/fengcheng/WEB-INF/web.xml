@@ -105,8 +105,8 @@
   </mime-mapping>
 
   <welcome-file-list>
-   <!--<welcome-file>/WEB-INF/index.jsp</welcome-file>-->
-    <welcome-file>/WEB-INF/jsp/user/login.jsp</welcome-file>
+   <welcome-file>/WEB-INF/index.jsp</welcome-file>
+    <!--<welcome-file>/WEB-INF/jsp/user/login.jsp</welcome-file>-->
   </welcome-file-list>
 </web-app>
 

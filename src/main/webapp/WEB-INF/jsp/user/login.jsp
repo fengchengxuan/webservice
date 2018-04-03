@@ -183,9 +183,6 @@
                             <img src="${ctx}/static/background/login/images/reset.png" style="cursor: pointer" >
                         </button>
                     </div>
-
-
-
                 </form>
             </div>
         </div>

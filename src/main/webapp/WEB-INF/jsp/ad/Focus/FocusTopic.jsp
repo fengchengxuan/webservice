@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/column1.css" type="text/css">
     <style>
+        label select{
+            height: 40px;
+            background: #eee;
+        }
+        label{
+            width: 0;
+            height: 0;
+            position: relative;
+            top: -30px;
+            left: 355px;
+        }
         .list30{
             background: #3eb7f3;
         }
@@ -74,6 +85,12 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
 
                 <input type="file" name=""   class="a-upload" style="margin-left: 5px;">
             </div>
+
+
+
+
+
+
         </div>
 
         <div class="title-tb bplj">
@@ -122,6 +139,9 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
                 </div>
                 <input type="file" name=""   class="a-upload" style="margin-left: 5px;">
             </div>
+
+
+
         </div>
 
         <div class="title-tb bplj">
@@ -171,6 +191,8 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=fals
                 </div>
                 <input type="file" name="" id=""  class="a-upload" style="margin-left: 5px;">
             </div>
+
+
         </div>
 
         <div class="title-tb bplj">

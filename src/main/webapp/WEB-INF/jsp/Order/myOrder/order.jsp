@@ -215,7 +215,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                     <tr>
                         <th style="width: 62px;">序号</th>
                         <th style="width: 120px;border-left: 1px solid #24a1e4">编号</th>
-                        <th style="width: 78px;border-left: 1px solid #24a1e4">用户名称</th>
+                        <th style="width: 78px;border-left: 1px solid #24a1e4">会员名称</th>
                         <th style="width: 134px;border-left: 1px solid #24a1e4">需求信息</th>
                         <th style="width: 160px;border-left: 1px solid #24a1e4">订单标题</th>
 

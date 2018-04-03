@@ -223,8 +223,7 @@
                 <ul class="product-content" ng-if="producta==false">
                     <li class="list19"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/allproduct">全部产品</a></li>
                     <%--<li><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/allproduct1">产品列表</a></li>--%>
-                    <li class="list20"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/addclass">添加类产品</a></li>
-                    <li class="list21"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/addproduct">添加子产品</a></li>
+                    <li class="list21"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/addproduct">添加产品</a></li>
                     <%--<li><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/editproduct">修改产品</a></li>--%>
                     <%--<li><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/updateProduct">修改产品信息</a></li>--%>
                     <li class="list22"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/draftproduct">草稿产品</a></li>

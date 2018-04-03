@@ -64,7 +64,7 @@ public class UserAction {
      */
     @RequestMapping("login")
     public @ResponseBody Map<String,Object> log(HttpServletRequest request){
-        String username = (String) request.getSession().getAttribute("loginName");
+        String username = (String) request.getSession().getAttribute("loginName");//查看是否已经登录
         if (username!=null&&!username.equals("")){
             map.put("msg",false);
         }else {
@@ -72,8 +72,11 @@ public class UserAction {
             String loginName = request.getParameter("loginName");
             String password = request.getParameter("password");
             User user = userService.getUser(loginName, password);
-            if (user != null) {
+            if (user != null) {//账号密码正确
                 request.getSession().setAttribute("loginName", loginName);
+                 user.setState("在线");
+                 userService.updateUser(user);
+                 request.setAttribute("user",user);
                 map.put("data", true);
                 Permissions permissions = user.getPermissions();
                 request.getSession().setAttribute("loginName", user.getLoginName());
@@ -980,7 +983,7 @@ public class UserAction {
 
     @RequestMapping("/allorder")
     public String allorder(){
-        return "jsp/Order/myOrder/new";
+        return "jsp/Order/myOrder/order";
     }
 
     @RequestMapping("/paidorder")
