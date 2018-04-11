@@ -8,7 +8,13 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import com.fc.base.product.entity.OrderEntity;
+import com.fc.base.product.entity.ProductInofEntity;
 import com.fc.base.product.productService.OrderService;
+import com.fc.base.user.entity.AppType;
+import com.fc.base.user.entity.CompType;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.entity.ProKind;
+import com.fc.base.user.service.UserService;
 import com.fc.login.Service.ILogService;
 import com.fc.login.Service.ILoginService;
 import com.fc.login.model.AnonymousEntity;
@@ -56,7 +62,8 @@ public class LoginAction {
 
     @Autowired
     private ILogService logService;
-
+    @Autowired
+    private UserService userService;
    @Autowired
     private OrderService orderService;
 
@@ -85,15 +92,18 @@ public class LoginAction {
      * @return
      */
     @RequestMapping("log")
-    public @ResponseBody Map<String,Object> log(HttpServletRequest request){
+    public @ResponseBody Map<String,Object> log(HttpServletRequest request,String type ,String userName,String password){
         HttpSession session = request.getSession(true);
-        String userName = (String) session.getAttribute("user");
-        if (userName!=null&&!userName.equals("")){
+        System.out.println(type);
+        System.out.println(userName);
+        System.out.println(password);
+        if ((String) session.getAttribute("user")!=null&&!"".equals((String) session.getAttribute("user"))){
             map.put("msg",false);
         }else {
+
             map.put("msg",true);
-            String email = request.getParameter("phonenumber");
-            String password = request.getParameter("password");
+         /*   String email = request.getParameter("phonenumber");
+            password = request.getParameter("password");
             // 当前登录的用户
             Log log = logService.getUser(email,password);
             if (log!= null) {
@@ -106,7 +116,7 @@ public class LoginAction {
                 }
             }else {
                 map.put("message", false);
-            }
+            }*/
         }
         return map;
     }
@@ -116,48 +126,25 @@ public class LoginAction {
      * @param request
      *@return
      */
-    @RequestMapping("logs")
-    public @ResponseBody Map<String,Object>logs(HttpServletRequest request) {
+    @RequestMapping("logs")//登录
+    public @ResponseBody Map<String,Object>logs(HttpServletRequest request,String type ,String user,String password) {
+
         HttpSession session = request.getSession(true);
-        String userName = (String) session.getAttribute("user");//判断是否已经存在
-        if (userName != null && !userName.equals("")) {//判断是否登录
-            map.put("msg", false);
+        if ((String) session.getAttribute("user")!=null&&!"".equals((String) session.getAttribute("user"))) {//判断是否登录
+            map.put("msg", false);//判断是否有用户登录  false为已经登录
         } else {
             map.put("msg", true);
-            map.put("data", true);
-            String phonenumber = request.getParameter("phonenumber");//账号
-            String password = request.getParameter("password");//密码
-            Login login = loginService.getUsers(phonenumber, password);//查数据库
-            if (login != null) {//用户是否存在
-                session.setAttribute("user", login.getPhonenumber());
-                map.put("data", true);
-                if (login.getVipname() != null && login.getVipname().length() > 0) {
-                    //-----------------------------------------//单点
-                    if(LoginUser.getLoginUser().map.get(login.getVipname())==null){//取单例
-                        LoginUser.getLoginUser().map.put(login.getVipname(),login.getVipname());
-                        map.put("arr",LoginUser.getLoginUser().map.get(login.getVipname()));
-                    }else{
-                        map.put("arr",false);
-                    }
-                    //-------------------------
-                    session.setAttribute("userName", login.getVipname());
-                    session.setAttribute("path", login.getImg());
-                } else {
-                    //-----------------------------------------//单点
-                    if(LoginUser.getLoginUser().map.get(login.getPhonenumber())==null){//取单例
-                        LoginUser.getLoginUser().map.put(login.getPhonenumber(),login.getPhonenumber());
-                        map.put("arr",LoginUser.getLoginUser().map.get(login.getPhonenumber()));
-                    }else{
-                        map.put("arr",false);
-                    }
-                    //-------------------------
-                    session.setAttribute("userName", login.getPhonenumber());
-                    session.setAttribute("path", login.getImg());
-                }
+             FcUser fcUser=userService.loginUser(type ,user, password);
 
-            } else {
-                map.put("data", false);
-            }
+           if(fcUser!=null){       //判断是否正确.
+               session.setAttribute("userName",fcUser.getUserName());//用户名
+               session.setAttribute("user",user);//登录号
+               session.setAttribute("password",password);
+               session.setAttribute("type",type);//类型
+               map.put( "message",true);
+           }else{
+               map.put( "message",false);
+           }
         }
         return map;
     }
@@ -185,8 +172,8 @@ public class LoginAction {
     @RequestMapping("virnum")
     public @ResponseBody Map<String,Object> virnum(HttpServletRequest request){
         String phonenumber = request.getParameter("phonenum");
-        Login login = loginService.findUser(phonenumber);
-        if (login==null){
+  List<FcUser> list= userService.findList(phonenumber,"","0");
+        if (list.size()<1){
             map.put("data",true);
         }else {
             map.put("data",false);
@@ -203,8 +190,8 @@ public class LoginAction {
     @RequestMapping("viremail")
     public @ResponseBody Map<String,Object>viremail(HttpServletRequest request){
         String email = request.getParameter("email");
-        Log log = logService.seekUser(email);
-        if (log==null){
+      List<FcUser> list= userService.findList(email,"","1");
+        if (list.size()<1){
             map.put("data",true);
         }
         else {
@@ -233,25 +220,20 @@ public class LoginAction {
         }else {
             map.put("data",false);
         }
+        map.put("data",false);
         return map;
     }
 
     /**
      * 邮箱注册
-     * @param request
+     * @param
      * @return
      */
 
-    @RequestMapping("regs")
-    public @ResponseBody Map<String,Object>regs(HttpServletRequest request){
-        HttpSession session = request.getSession(true);
-        String email = request.getParameter("email");
-        String code = (String)session.getAttribute("e-code");
-        String inputcode = request.getParameter("emailcode");
-        String password = request.getParameter("password");
-        String rpwd = request.getParameter("repassword");
-        if (inputcode.equals(code)&&rpwd.equals(password)){
-            logService.saveUsers(email,inputcode,password,rpwd);
+    @RequestMapping("regs")//注册
+    public @ResponseBody Map<String,Object>regs(String type,String userName,String password,String repassword,String code){
+        if (userService.findList(userName,password,type).size()<1){
+            userService.saveUser(userName,password,repassword,type);
             map.put("data",true);
         }else {
             map.put("data",false);
@@ -504,28 +486,53 @@ public class LoginAction {
     public @ResponseBody  Map<String,Object>  updateInfo(String vipname,String phonenumber,String stablephone,String
             email,String social,String companyname,String htype,String ctype, String stype,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
+        String userName=(String)session.getAttribute("userName");
         String user=(String)session.getAttribute("user");
-        if(user==null || user.length()<1){  //判断用户是否为空
+       String password =(String) session.getAttribute("password");
+        String type=(String) session.getAttribute("type");
+       String pares=(String) session.getAttribute("parsePath");//图片
+        if(userName==null || userName.length()<1){  //判断用户是否为存在
             map.put("data",false);
         }else{
             map.put("data",true);
-         boolean  flag =false;
-         Log logEntity= logService.seekUser(user);
-         Login loginEntity=loginService.findUser(user);
-         if(logEntity!=null){ //邮箱用户
-            flag= logService.updateUser(logEntity,vipname,(String) session.getAttribute("parsePath"),phonenumber,stablephone,email,social,
-                     companyname,htype,ctype,stype, web,address);
-             session.setAttribute("path",(String) session.getAttribute("parsePath"));
-             map.put("flag",flag);
-             return map;
-         }else if(loginEntity!=null){//手机用户
-           flag=  loginService.updateUser(loginEntity,vipname,(String)session.getAttribute("parsePath"),phonenumber,stablephone,email,social,
-                     companyname,htype,ctype,stype, web,address);
-             session.setAttribute("path",(String) session.getAttribute("parsePath"));
-             map.put("flag",flag);
-             return map;
-         }
-        map.put("flag",flag);
+
+        FcUser fcUser = userService.loginUser(user,password,type);//取用户信息
+            fcUser.setUserName(vipname);
+            fcUser.setPhone(stablephone);//固定电话
+            fcUser.setTel(phonenumber);//手机
+            fcUser.setEmail(email);//邮箱
+            fcUser.setWechart(social);//QQ/weixin
+            fcUser.setCompany(companyname);
+            fcUser.setWebsite(web);//网站
+            fcUser.setOperAddr(address);//地址
+            if(fcUser.getProdKindId()!=null){
+
+                fcUser.getProdKindId().setProKind(htype);
+            }else{
+                ProKind proKind=new ProKind();//行业类型
+                proKind.setProKind(htype);
+                fcUser.setProdKindId(proKind);
+            }
+
+            if( fcUser.getComptypeId()!=null){
+                fcUser.getComptypeId().setCompType(ctype);
+            }else{
+                CompType compType=new CompType();//公司类型
+                compType.setCompType(ctype);
+                fcUser.setComptypeId(compType);
+            }
+
+            if( fcUser.getAppTypeId()!=null){
+                fcUser.getAppTypeId().setAppType(stype);
+            }else {
+                AppType appType = new AppType();//申请人类型
+                appType.setAppType(stype);
+                fcUser.setAppTypeId(appType);
+            }
+
+            userService.saveUser(fcUser);
+
+        map.put("flag",true);
         }
         return map;
     }

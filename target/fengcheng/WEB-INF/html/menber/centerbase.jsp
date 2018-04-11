@@ -67,18 +67,18 @@
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
                             <select name="htype" id="htype">
-                                <option value="0">政府|非盈利机构</option>
-                                <option value="1">文体教育|工艺美术</option>
-                                <option value="2">金融业</option>
-                                <option value="3">房地产|建筑业</option>
-                                <option value="4">商业服务|个体</option>
-                                <option value="5">贸易|批发|零售|租赁业</option>
-                                <option value="6">生产|加工|制造</option>
-                                <option value="7">交通|运输|物流|仓储</option>
-                                <option value="8">服务业|个体</option>
-                                <option value="9">能源|矿产|环保</option>
-                                <option value="10">农|林|牧|渔|其他</option>
-                                <option value="11">文化|传媒|娱乐|体育</option>
+                                <option value="政府|非盈利机构">政府|非盈利机构</option>
+                                <option value="政府|非盈利机构">政府|非盈利机构</option>
+                                <option value="金融业">金融业</option>
+                                <option value="房地产|建筑业">房地产|建筑业</option>
+                                <option value="商业服务|个体">商业服务|个体</option>
+                                <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
+                                <option value="生产|加工|制造">生产|加工|制造</option>
+                                <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
+                                <option value="服务业|个体">服务业|个体</option>
+                                <option value="能源|矿产|环保">能源|矿产|环保</option>
+                                <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
+                                <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
                             </select>
                             </label>
                         </div>

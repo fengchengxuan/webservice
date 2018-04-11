@@ -104,11 +104,6 @@
 			 <!--<bean id="myInterceptor" class="com.fc.util.MyInterceptor"></bean>-->
 		 <!--</mvc:interceptor>-->
 	 <!--</mvc:interceptors>-->
-	
-	
-	
-	
-	
-	
+
        
 </beans>

@@ -61,72 +61,74 @@
                             <th>折扣/优惠金额</th>
                             <th>订单金额</th>
                             <th>订单时间</th>
+                            <th>付款状态</th>
+                            <th>订单状态</th>
                         </tr>
 
                         </thead>
                         <tbody id="order">
 
 
-                        <tr>
-                            <td rowspan="5">fc00002</td>
-                            <td >
-                                网站建设/程序及功能/微信小程序/APP研发与定制
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <%--<tr>--%>
+                            <%--<td rowspan="5">fc00002</td>--%>
+                            <%--<td >--%>
+                                <%--网站建设/程序及功能/微信小程序/APP研发与定制--%>
+                            <%--</td>--%>
+                            <%--<td></td>--%>
+                            <%--<td></td>--%>
+                            <%--<td></td>--%>
+                            <%--<td></td>--%>
+                            <%--<td></td>--%>
+                            <%--<td></td>--%>
 
-                        </tr>
-                        <tr>
-                            <td style="border-top:1px dashed #656565; ">网站建设</td>
-                            <td style="border-top:1px dashed #656565; ">基础版</td>
-                            <td style="border-top:1px dashed #656565; ">1年</td>
-                            <td style="border-top:1px dashed #656565; ">1</td>
-                            <td style="color: red;border-top:1px dashed #656565; ">￥50.00</td>
-                            <td style="color: red;border-top:1px dashed #656565; ">￥1615.00</td>
-                            <td style="border-top:1px dashed #656565; ">2017年5月22日14：36：23</td>
-                        </tr>
-                        <tr>
-                            <td style="border-top:1px dashed #656565;">程序及功能/微信小程序</td>
-                            <td style="border-top:1px dashed #656565;">加强版</td>
-                            <td style="border-top:1px dashed #656565;">1年</td>
-                            <td style="border-top:1px dashed #656565;">1</td>
-                            <td style="color: red;border-top:1px dashed #656565;">￥150.00</td>
-                            <td style="color: red;border-top:1px dashed #656565;">￥3615.00</td>
-                            <td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>
-                        </tr>
-                        <tr>
-                            <td style="border-top:1px dashed #656565;">APP研发与定制</td>
-                            <td style="border-top:1px dashed #656565;">商业版</td>
-                            <td style="border-top:1px dashed #656565;">1年</td>
-                            <td style="border-top:1px dashed #656565;">1</td>
-                            <td style="color: red;border-top:1px dashed #656565;">￥250.00</td>
-                            <td style="color: red;border-top:1px dashed #656565;">￥9615.00</td>
-                            <td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>
-                        </tr>
-                        <tr style="border-bottom:1px dashed #656565;">
-                            <td style="border-top:1px dashed #656565;">
-                                <div>
-                                    <div style="float: left;margin-top: 12px;">
-                                        <img src="${ctx}/static/front/images/s.png" alt="" style="width: 35px">
-                                    </div>
-                                    <div style="float: right;width: 310px;height: auto;text-align: left;padding-bottom: 5px">
-                                        <p>1、注册APP版权，并根据系统升级要求，一年内升级2个版本。</p>
-                                        <p>2、上传目前各大应用APP市场及商店，并保持每一个上传应用市场及应用商店有10000个下载量。</p>
-                                        <p>3、技术服务及指导APP使用为期二年。</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                            <td style="border-top:1px dashed #656565;"></td>
-                        </tr>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="border-top:1px dashed #656565; ">网站建设</td>--%>
+                            <%--<td style="border-top:1px dashed #656565; ">基础版</td>--%>
+                            <%--<td style="border-top:1px dashed #656565; ">1年</td>--%>
+                            <%--<td style="border-top:1px dashed #656565; ">1</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565; ">￥50.00</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565; ">￥1615.00</td>--%>
+                            <%--<td style="border-top:1px dashed #656565; ">2017年5月22日14：36：23</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="border-top:1px dashed #656565;">程序及功能/微信小程序</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">加强版</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">1年</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">1</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565;">￥150.00</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565;">￥3615.00</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="border-top:1px dashed #656565;">APP研发与定制</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">商业版</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">1年</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">1</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565;">￥250.00</td>--%>
+                            <%--<td style="color: red;border-top:1px dashed #656565;">￥9615.00</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr style="border-bottom:1px dashed #656565;">--%>
+                            <%--<td style="border-top:1px dashed #656565;">--%>
+                                <%--<div>--%>
+                                    <%--<div style="float: left;margin-top: 12px;">--%>
+                                        <%--<img src="${ctx}/static/front/images/s.png" alt="" style="width: 35px">--%>
+                                    <%--</div>--%>
+                                    <%--<div style="float: right;width: 310px;height: auto;text-align: left;padding-bottom: 5px">--%>
+                                        <%--<p>1、注册APP版权，并根据系统升级要求，一年内升级2个版本。</p>--%>
+                                        <%--<p>2、上传目前各大应用APP市场及商店，并保持每一个上传应用市场及应用商店有10000个下载量。</p>--%>
+                                        <%--<p>3、技术服务及指导APP使用为期二年。</p>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+                            <%--</td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
+                        <%--</tr>--%>
 
 
 
@@ -555,8 +557,15 @@ function evaluate(){
                    }
                }
                 var row="<tr> <td rowspan="+rowLength+">"+orderEntity.code+"</td>"+//编号和产品
-                    "<td >"+orderEntity.proTitle+"</td> <td></td><td></td>"+
-                    "<td></td><td></td> <td></td> <td></td></tr>";
+                    "<td >"+orderEntity.proTitle+"</td>" +
+                    " <td></td>" +
+                    "<td></td>"+
+                    "<td></td>" +
+                    "<td></td> " +
+                    "<td></td> " +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td></tr>";
                 var row1=""
                for(var j=0;j<orderEntity.list.length;j++){
                    row2=" <tr><td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].demand+"</td>" +
@@ -565,20 +574,26 @@ function evaluate(){
                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[i].num+"</td>" +
                        "<td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[i].preferential+"</td>" +
                        " <td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[i].price+"</td>" +
-                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td></tr>";
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td>" +
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.state+"</td>" +
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.transaction+"</td>" +
+                       "</tr>";
                    if(orderEntity.list[j].givenFree!="" && orderEntity.list[j].givenFree!=null){
                     var map= " ${ctx}/static/front/images/s.png";
            row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;\">" +
                       "<td style=\"border-top:1px dashed #656565;\"><div>" +
                       " <div style=\"float: left;margin-top: 12px;\">" +
                  " <img src="+map+" alt=\"\" style=\"width: 35px\"></div>" +
-             " <div style=\"float: right;width: 310px;height: 220px;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
+             " <div style=\"float: right;width: 310px;height: auto;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
           "</div></div></td><td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
-          "<td style=\"border-top:1px dashed #656565;\"></td></tr>";
+          "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "</tr>";
                     }
                   row1=row1+row2;
                  }
@@ -600,7 +615,7 @@ function evaluate(){
                 };
                 var row="<tr> <td rowspan="+rowLength+">"+orderEntity.code+"</td>"+//编号和产品
                     "<td >"+orderEntity.proTitle+"</td> <td></td><td></td>"+
-                    "<td></td><td></td> <td></td> <td></td></tr>";
+                    "<td></td><td></td> <td></td> <td></td><td></td><td></td></tr>";
                 var row1="";
                 for(var j=0;j<orderEntity.list.length;j++){
                     var row2=" <tr><td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].demand+"</td>" +
@@ -609,20 +624,26 @@ function evaluate(){
                         "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].num+"</td>" +
                         "<td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[j].preferential+"</td>" +
                         " <td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[j].price+"</td>" +
-                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td></tr>";
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td>" +
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.state+"</td>" +
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.transaction+"</td>" +
+                        "</tr>";
                     if(orderEntity.list[j].givenFree!="" && orderEntity.list[j].givenFree!=null){
                         var map= " ${ctx}/static/front/images/s.png";
-                        row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;\">" +
+                        row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;padding: 0 0 5px 5px\">" +
                             "<td style=\"border-top:1px dashed #656565;\"><div>" +
                             " <div style=\"float: left;margin-top: 12px;\">" +
                             " <img src="+map+" alt=\"\" style=\"width: 35px\"></div>" +
-                            " <div style=\"float: right;width: 310px;height: 220px;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
+                            " <div style=\"float: right;width: 310px;height: auto;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
                             "</div></div></td><td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
-                            "<td style=\"border-top:1px dashed #656565;\"></td></tr>";
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "</tr>";
                     }
                     row1=row1+row2;
                 }

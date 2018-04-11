@@ -308,19 +308,7 @@ $(document).ready(function() {
 		 if(pass == "" || pass_ag == "" || phone == "" || inputCode =="") {
              $("phonenum_comment").html("*号项不能为空!").css("color", 'red');
 			} else{
-             $.ajax({
-                 type : 'POST',
-                 url : ctx+'/reg',
-                 dataType: 'json',
-                 data:$("#mainform").serialize(),
-                 success: function(msg) {
-                 	if (msg.data){
-                        alert("注册成功!");
-                    }else {
-                        alert("注册失败!请完善注册信息!")
-					}
-                 }
-             })
+            register(0);
 		 }
 	});
 	$("#yzm").click(function(){
@@ -407,19 +395,38 @@ if(testphone){
         if(password == "" || password_again == "" || email == "" || inputCode =="") {
             $("#yxhm").html("*号项不能为空!").css("color", 'red');
         }else {
-            $.ajax({
-                type: 'POST',
-                url: ctx + '/regs',
-                dataType: 'json',
-                data: $("#secondform").serialize(),
-                success: function (msg) {
-                    if (msg.data) {
-                        alert("注册成功!");
-                    } else {
-                        alert("注册失败!请完善注册信息!")
-                    }
-                }
-            })
+
+            register(1);
         }
     })
+	function register(type){
+    	var userName;
+    	var password;
+    	var repassword;
+    	var code;
+    	if(type==0){//手机注册
+			userName=$("#phonenum").val();
+			password=$("#password").val()
+			repassword=$("#repassword").val()
+			code=$("#telecode").val()
+	    }else if(type==1){//邮箱注册
+            userName=$("#email").val();
+            password=$("#passwordE").val()
+            repassword=$("#repasswordE").val()
+			code=$("#emailcode").val()
+		}
+        $.ajax({
+            type: 'POST',
+            url: ctx + '/regs',
+            dataType: 'json',
+            data: "type="+type+"&userName="+userName+"&password="+password+"&repassword="+repassword+"&code="+code,
+            success: function (msg) {
+                if (msg.data) {
+                    alert("注册成功!");
+                } else {
+                    alert("注册失败!请完善注册信息!")
+                }
+            }
+        })
+	}
 });

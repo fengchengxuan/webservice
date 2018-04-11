@@ -35,7 +35,7 @@ $(".save").click(function () {
                     alert("设置成功!");
                     window.location.href = ctx + "vips";
                 } else {
-                    return false;
+                   alert("失败");
                 }
             }else {
                 alert("您还未登录!");

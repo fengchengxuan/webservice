@@ -31,12 +31,13 @@ public class ApplyAction {
     public @ResponseBody List<String> proApply(String userName,String industry,String companyType ,String application ,
                 String company,String address,String fHpone,String mHpone,String email,String website,String userQQ,String appContent){
         listArr=new ArrayList<String>();
-       orderList= orderService.srechFreeExperienceService(""); //查询是否还有名额
+       /*orderList= orderService.srechFreeExperienceService(""); //查询是否还有名额
        if(orderList.size()>500){
            listArr.add("已经没有名额了");
            return listArr;
        }
-       listArr.add(applyService.saveApplyService(userName,industry,companyType,application,company,address,fHpone,mHpone,email,website,userQQ,appContent));
+       listArr.add(applyService.saveApplyService(userName,industry,companyType,application,company,address,fHpone,mHpone,email,website,userQQ,appContent));*/
+       listArr.add("返回");
         return listArr;
     }
     @RequestMapping("/showApply")//显示全部的体验申请

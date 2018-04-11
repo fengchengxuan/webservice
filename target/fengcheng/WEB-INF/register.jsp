@@ -59,7 +59,7 @@
                     </div>
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>确认登录密码:</div>
-                        <input type="password" placeholder="请您再输入一次密码" id="password_again" name="repassword">
+                        <input type="password" placeholder="请您再输入一次密码" id="repassword" name="repassword">
                         <div class="comment"></div>
                     </div>
                         <div class="list password_level">
@@ -94,18 +94,18 @@
                     </div>
                     <div class="list">
                         <div class="list-name"  style="margin-top: 8px"><span class="must">*</span>邮箱验证码:</div>
-                        <input type="text" name="emailcode" placeholder="请输入验证码" style="width: 105px"><input type="button" style="cursor: pointer" id="e-yzm" value="点击获取验证码">
+                        <input type="text" id="emailcode"  name="emailcode" placeholder="请输入验证码" style="width: 105px"><input type="button" style="cursor: pointer" id="e-yzm" value="点击获取验证码">
                     </div>
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>设置登录密码:</div>
-                        <input type="password" name="password" placeholder="请输入密码" class="password">
+                        <input type="password" name="password" placeholder="请输入密码" class="password" id="passwordE">
                         <div class="comment">
                             请设置登录密码为数字+字母+特殊符号，请不要使用 手机号或生日及常用的数字作为密码。
                         </div>
                     </div>
                     <div class="list">
                         <div class="list-name"><span class="must" >*</span>确认登录密码:</div>
-                        <input type="password" name="repassword" placeholder="请您再输入一次密码" class="password_again">
+                        <input type="password" name="repassword" placeholder="请您再输入一次密码" class="password_again" id="repasswordE">
                         <div class="comment"></div>
                     </div>
                     <div class="list password_level">
