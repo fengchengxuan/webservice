@@ -468,7 +468,6 @@ public class LoginAction {
 
     /**
      * 会员基本设置
-     * @param vipname
      * @param phonenumber
      * @param stablephone
      * @param email
@@ -483,75 +482,74 @@ public class LoginAction {
      * @return
      */
     @RequestMapping("updateUserInfo")
-    public @ResponseBody  Map<String,Object>  updateInfo(String vipname,String phonenumber,String stablephone,String
+    public @ResponseBody  Map<String,Object>  updateInfo(String username,String phonenumber,String stablephone,String
             email,String social,String companyname,String htype,String ctype, String stype,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
         String userName=(String)session.getAttribute("userName");
         String user=(String)session.getAttribute("user");
-       String password =(String) session.getAttribute("password");
+        String password =(String) session.getAttribute("password");
         String type=(String) session.getAttribute("type");
        String pares=(String) session.getAttribute("parsePath");//图片
         if(userName==null || userName.length()<1){  //判断用户是否为存在
             map.put("data",false);
         }else{
             map.put("data",true);
+        FcUser fcUser = userService.loginUser(type,user,password);//取用户信息
 
-        FcUser fcUser = userService.loginUser(user,password,type);//取用户信息
-            if(!"".equals(pares)){
-                fcUser.setProfilePhoto(pares);
-            }
-            if(!"".equals(vipname)){
-                fcUser.setUserName(vipname);
-            }
-            if(!"".equals(stablephone)) {
-                fcUser.setPhone(stablephone);//固定电话
-            }
-            if(!"".equals(phonenumber)) {
-                fcUser.setTel(phonenumber);//手机
-            }
-            if(!"".equals(email)) {
-                fcUser.setEmail(email);//邮箱
-            }
-            if(!"".equals(social)) {
-                fcUser.setWechart(social);//QQ/weixin
-            }
-            if(!"".equals(companyname)) {
-                fcUser.setCompany(companyname);
-            }
-            if(!"".equals(web)) {
-                fcUser.setWebsite(web);//网站
-            }
-            if(!"".equals(address)) {
-                fcUser.setOperAddr(address);//地址
-            }
-            if(fcUser.getProdKindId()!=null){
+            if(fcUser!=null){
+                if(pares!=null && !"".equals(pares)){
+                    fcUser.setProfilePhoto(pares);
+                }
+                if(username!=null && !"".equals(username)){
+                    fcUser.setUserName(username);
+                }
+                if(stablephone!=null&&!"".equals(stablephone)) {
+                    fcUser.setPhone(stablephone);//固定电话
+                }
+                if(phonenumber!=null&&!"".equals(phonenumber)) {
+                    fcUser.setTel(phonenumber);//手机
+                }
+                if(email!=null&&!"".equals(email)) {
+                    fcUser.setEmail(email);//邮箱
+                }
+                if(social!=null&&!"".equals(social)) {
+                    fcUser.setWechart(social);//QQ/weixin
+                }
+                if(companyname!=null&&!"".equals(companyname)) {
+                    fcUser.setCompany(companyname);
+                }
+                if(web!=null&&!"".equals(web)) {
+                    fcUser.setWebsite(web);//网站
+                }
+                if(address!=null&&!"".equals(address)) {
+                    fcUser.setOperAddr(address);//地址
+                }
+                if(fcUser.getProdKindId()!=null){
+                    fcUser.getProdKindId().setProKind(htype);
+                }else{
+                    ProKind proKind=new ProKind();//行业类型
+                    proKind.setProKind(htype);
+                    fcUser.setProdKindId(proKind);
+                }
 
-                fcUser.getProdKindId().setProKind(htype);
-            }else{
-                ProKind proKind=new ProKind();//行业类型
-                proKind.setProKind(htype);
-                fcUser.setProdKindId(proKind);
+                if( fcUser.getComptypeId()!=null){
+                    fcUser.getComptypeId().setCompType(ctype);
+                }else{
+                    CompType compType=new CompType();//公司类型
+                    compType.setCompType(ctype);
+                    fcUser.setComptypeId(compType);
+                }
+
+                if( fcUser.getAppTypeId()!=null){
+                    fcUser.getAppTypeId().setAppType(stype);
+                }else {
+                    AppType appType = new AppType();//申请人类型
+                    appType.setAppType(stype);
+                    fcUser.setAppTypeId(appType);
+                }
+                userService.saveUser(fcUser);
             }
-
-            if( fcUser.getComptypeId()!=null){
-                fcUser.getComptypeId().setCompType(ctype);
-            }else{
-                CompType compType=new CompType();//公司类型
-                compType.setCompType(ctype);
-                fcUser.setComptypeId(compType);
-            }
-
-            if( fcUser.getAppTypeId()!=null){
-                fcUser.getAppTypeId().setAppType(stype);
-            }else {
-                AppType appType = new AppType();//申请人类型
-                appType.setAppType(stype);
-                fcUser.setAppTypeId(appType);
-            }
-
-            userService.saveUser(fcUser);
-
-        map.put("flag",true);
+            map.put("flag",true);
         }
         return map;
     }
@@ -564,19 +562,28 @@ public class LoginAction {
     @RequestMapping("showUserInfo")
     public @ResponseBody Map<String,Object>  showUserInfo(HttpServletRequest request){
         HttpSession session = request.getSession(true);
-        String user =(String)session.getAttribute("user");
-        if(user!=null && user.length()>0){
-            Log logEntity= logService.seekUser(user);
-            Login loginEntity=loginService.findUser(user);
-            if(logEntity!=null){
-                map.put("entity",logEntity);
-            }else if(loginEntity!=null){
-                map.put("entity",loginEntity);
-        }
+        String user =(String)session.getAttribute("user");//账号
+        String password=(String)session.getAttribute("password");
+        String type=(String) session.getAttribute("type");//类型
+        if(user!=null && user.length()>0){//判断是否登录
+          FcUser fcUser=userService.loginUser(type,user,password);
+          if(fcUser!=null){
+              map.put("entity",fcUser);
+              if(fcUser.getAppTypeId()!=null){
+                  map.put("appType",fcUser.getAppTypeId());
+              }
+              if(fcUser.getComptypeId()!=null){
+                  map.put("comptype",fcUser.getComptypeId());
+              }
+              if(fcUser.getProdKindId()!=null){
+                  map.put("prodkind",fcUser.getProdKindId());
+              }
+
+          }
             map.put("flag",true);
-            return map;
+        }else{
+            map.put("flag",false);
         }
-        map.put("flag",false);
         return map;
     }
 
@@ -592,8 +599,9 @@ public class LoginAction {
     public @ResponseBody List<String> findpwd(HttpServletRequest request,String oldpassword,String password,String repassword){
         List<String> list = new ArrayList<>();
         HttpSession session = request.getSession(true);
-        String userName=(String)session.getAttribute("user");
-            if(userName==null || userName.length()<1){
+        String user =(String)session.getAttribute("user");//账号
+        String type=(String) session.getAttribute("type");//类型
+            if(user==null || user.length()<1){
             list.add("您还未登录!");
             return list;
              }
@@ -605,30 +613,16 @@ public class LoginAction {
             list.add("两次密码不一致!");
             return list;
         }
-        String phonenumber = (String) session.getAttribute("user");
-        String email = (String) session.getAttribute("user");
-        Log log = logService.getUser(email,oldpassword);
-        Login login = loginService.getUsers(phonenumber,oldpassword);
-        if(log!=null){
-            if(log.getPassword().equals(oldpassword)){
-                    log.setPassword(password);
-                    log.setRepassword(repassword);
-                    logService.findpwd(log);
-            session.setAttribute("user",log.getEmail());
-            list.add("修改成功");
-            return list;
-        }
-        }else if(login!=null){
-            if(login.getPassword().equals(oldpassword)){
-                    login.setPassword(password);
-                    login.setRepassword(repassword);
-                    loginService.findpwd(login);
-                session.setAttribute("user",login.getPhonenumber());
-                list.add("修改成功");
-                return list;
+       FcUser fcUser= userService.loginUser(type,user,oldpassword);
+            if(fcUser==null){
+                list.add("密码错误!");
+            }else{
+                fcUser.setPassword(password);
+                fcUser.setRePassword(repassword);
+                userService.saveUser(fcUser);
+                list.add("更改成功");
             }
-        }
-        list.add("密码错误!");
+
         return list;
     }
     @RequestMapping("anonymousLogin")//匿名注册登录
