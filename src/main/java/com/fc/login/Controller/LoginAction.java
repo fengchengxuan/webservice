@@ -497,14 +497,33 @@ public class LoginAction {
             map.put("data",true);
 
         FcUser fcUser = userService.loginUser(user,password,type);//取用户信息
-            fcUser.setUserName(vipname);
-            fcUser.setPhone(stablephone);//固定电话
-            fcUser.setTel(phonenumber);//手机
-            fcUser.setEmail(email);//邮箱
-            fcUser.setWechart(social);//QQ/weixin
-            fcUser.setCompany(companyname);
-            fcUser.setWebsite(web);//网站
-            fcUser.setOperAddr(address);//地址
+            if(!"".equals(pares)){
+                fcUser.setProfilePhoto(pares);
+            }
+            if(!"".equals(vipname)){
+                fcUser.setUserName(vipname);
+            }
+            if(!"".equals(stablephone)) {
+                fcUser.setPhone(stablephone);//固定电话
+            }
+            if(!"".equals(phonenumber)) {
+                fcUser.setTel(phonenumber);//手机
+            }
+            if(!"".equals(email)) {
+                fcUser.setEmail(email);//邮箱
+            }
+            if(!"".equals(social)) {
+                fcUser.setWechart(social);//QQ/weixin
+            }
+            if(!"".equals(companyname)) {
+                fcUser.setCompany(companyname);
+            }
+            if(!"".equals(web)) {
+                fcUser.setWebsite(web);//网站
+            }
+            if(!"".equals(address)) {
+                fcUser.setOperAddr(address);//地址
+            }
             if(fcUser.getProdKindId()!=null){
 
                 fcUser.getProdKindId().setProKind(htype);

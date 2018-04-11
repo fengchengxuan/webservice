@@ -91,7 +91,7 @@ public class OrderUtil {
         this.givenfreeList = givenfreeList;
     }
     public OrderEntity createOrder(String userName,String code){//生成订单
-     order.setUserName(userName);//订单 用户名
+  //   order.setUserName(userName);//订单 用户名
      order.setProTitle(proTitle);
      Date date=new Date();         //时间
      Format format=new SimpleDateFormat("yyyy-MM-dd  hh:mm");

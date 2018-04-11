@@ -21,15 +21,15 @@ public class FcUser extends Base{
     @Column(name = "repassword")
     private String rePassword;
     @Column(name ="profile_photo")
-    private String profilePhoto;
+    private String profilePhoto;//用户头像地址
     @Column(name = "tel")   //手机号
     private String tel;
     @Column(name = "email")
-    private String email;
+    private String email;//邮箱
     @Column(name = "user_status_id")
-    private int userStatusId;
+    private int userStatusId;//用户类型
     @Column(name = "ip")
-    private String ip;
+    private String ip;//用户ip
     @Column(name = "location")
     private String location;
     @OneToOne

@@ -107,7 +107,7 @@ public class OrderDaoImpl extends BaseDao implements OrderDao{
         List<String>  proInfo=new ArrayList<>();
         StringBuffer hql=new StringBuffer("from OrderEntity  where 1=1");
        if( userName!=null &&  userName!=""){
-            hql.append(" and userName = ?");
+            hql.append(" and fcUserId = ?");
             proInfo.add(userName);
         }
       return super.findList(hql.toString(),proInfo);
