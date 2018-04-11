@@ -42,14 +42,13 @@
                 <div style="height:160px;">
                     <div class="setimg">
                         <div id="preview5" style="float: left;height: 80px">
-                            <a href="javascript:" class="file">
-                                <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
+                            <a href="javascript:" class="file">修改头像
+
                                 <input id="st18" name="evidence"  onchange="previewImage(this,5)" type="file" style="height:80px;"/>
-                                <div style="width: 0;height: 0">
-                                    <div class="alr-tou">修改头像</div>
-                                </div>
+
                             </a>
                             <span class="dui" id="imgOrder_dui" style="display: none;"></span>
+                            <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
                         </div>
                     </div>
                 </div>

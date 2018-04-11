@@ -26,4 +26,44 @@ public class BillLogistics extends Base{//发票物流信息
     private String logisticsNo;//单号
     @Column(name = "logistics_info")
     private String logisticsInfo;//物流信息
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public BillApp getBaId() {
+        return baId;
+    }
+
+    public void setBaId(BillApp baId) {
+        this.baId = baId;
+    }
+
+    public String getLogistics_Comp() {
+        return logistics_Comp;
+    }
+
+    public void setLogistics_Comp(String logistics_Comp) {
+        this.logistics_Comp = logistics_Comp;
+    }
+
+    public String getLogisticsNo() {
+        return logisticsNo;
+    }
+
+    public void setLogisticsNo(String logisticsNo) {
+        this.logisticsNo = logisticsNo;
+    }
+
+    public String getLogisticsInfo() {
+        return logisticsInfo;
+    }
+
+    public void setLogisticsInfo(String logisticsInfo) {
+        this.logisticsInfo = logisticsInfo;
+    }
 }

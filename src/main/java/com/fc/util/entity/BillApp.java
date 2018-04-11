@@ -19,4 +19,36 @@ public class BillApp extends Base{//申请发票
     private String billType;//发票类型
     @Column(name = "bill_title")
     private String billTitle;//发票抬头
+
+    public String getBaId() {
+        return baId;
+    }
+
+    public void setBaId(String baId) {
+        this.baId = baId;
+    }
+
+    public String getAppType() {
+        return appType;
+    }
+
+    public void setAppType(String appType) {
+        this.appType = appType;
+    }
+
+    public String getBillType() {
+        return billType;
+    }
+
+    public void setBillType(String billType) {
+        this.billType = billType;
+    }
+
+    public String getBillTitle() {
+        return billTitle;
+    }
+
+    public void setBillTitle(String billTitle) {
+        this.billTitle = billTitle;
+    }
 }

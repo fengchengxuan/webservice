@@ -12,7 +12,8 @@
         .mcontainer{
             width: 1210px;
             margin: 0 auto;
-            height: 1536px;
+            height: auto;
+            min-height: 1536px;
         }
         .charge{
             background: #F53292;
@@ -69,66 +70,66 @@
                         <tbody id="order">
 
 
-                        <%--<tr>--%>
-                            <%--<td rowspan="5">fc00002</td>--%>
-                            <%--<td >--%>
-                                <%--网站建设/程序及功能/微信小程序/APP研发与定制--%>
-                            <%--</td>--%>
-                            <%--<td></td>--%>
-                            <%--<td></td>--%>
-                            <%--<td></td>--%>
-                            <%--<td></td>--%>
-                            <%--<td></td>--%>
-                            <%--<td></td>--%>
+                        <tr>
+                            <td rowspan="5">fc00002</td>
+                            <td >
+                                网站建设/程序及功能/微信小程序/APP研发与定制
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td style="border-top:1px dashed #656565; ">网站建设</td>--%>
-                            <%--<td style="border-top:1px dashed #656565; ">基础版</td>--%>
-                            <%--<td style="border-top:1px dashed #656565; ">1年</td>--%>
-                            <%--<td style="border-top:1px dashed #656565; ">1</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565; ">￥50.00</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565; ">￥1615.00</td>--%>
-                            <%--<td style="border-top:1px dashed #656565; ">2017年5月22日14：36：23</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td style="border-top:1px dashed #656565;">程序及功能/微信小程序</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">加强版</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">1年</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">1</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565;">￥150.00</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565;">￥3615.00</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td style="border-top:1px dashed #656565;">APP研发与定制</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">商业版</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">1年</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">1</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565;">￥250.00</td>--%>
-                            <%--<td style="color: red;border-top:1px dashed #656565;">￥9615.00</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr style="border-bottom:1px dashed #656565;">--%>
-                            <%--<td style="border-top:1px dashed #656565;">--%>
-                                <%--<div>--%>
-                                    <%--<div style="float: left;margin-top: 12px;">--%>
-                                        <%--<img src="${ctx}/static/front/images/s.png" alt="" style="width: 35px">--%>
-                                    <%--</div>--%>
-                                    <%--<div style="float: right;width: 310px;height: auto;text-align: left;padding-bottom: 5px">--%>
-                                        <%--<p>1、注册APP版权，并根据系统升级要求，一年内升级2个版本。</p>--%>
-                                        <%--<p>2、上传目前各大应用APP市场及商店，并保持每一个上传应用市场及应用商店有10000个下载量。</p>--%>
-                                        <%--<p>3、技术服务及指导APP使用为期二年。</p>--%>
-                                    <%--</div>--%>
-                                <%--</div>--%>
-                            <%--</td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                            <%--<td style="border-top:1px dashed #656565;"></td>--%>
-                        <%--</tr>--%>
+                        </tr>
+                        <tr>
+                            <td style="border-top:1px dashed #656565; ">网站建设</td>
+                            <td style="border-top:1px dashed #656565; ">基础版</td>
+                            <td style="border-top:1px dashed #656565; ">1年</td>
+                            <td style="border-top:1px dashed #656565; ">1</td>
+                            <td style="color: red;border-top:1px dashed #656565; ">￥50.00</td>
+                            <td style="color: red;border-top:1px dashed #656565; ">￥1615.00</td>
+                            <td style="border-top:1px dashed #656565; ">2017年5月22日14：36：23</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:1px dashed #656565;">程序及功能/微信小程序</td>
+                            <td style="border-top:1px dashed #656565;">加强版</td>
+                            <td style="border-top:1px dashed #656565;">1年</td>
+                            <td style="border-top:1px dashed #656565;">1</td>
+                            <td style="color: red;border-top:1px dashed #656565;">￥150.00</td>
+                            <td style="color: red;border-top:1px dashed #656565;">￥3615.00</td>
+                            <td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:1px dashed #656565;">APP研发与定制</td>
+                            <td style="border-top:1px dashed #656565;">商业版</td>
+                            <td style="border-top:1px dashed #656565;">1年</td>
+                            <td style="border-top:1px dashed #656565;">1</td>
+                            <td style="color: red;border-top:1px dashed #656565;">￥250.00</td>
+                            <td style="color: red;border-top:1px dashed #656565;">￥9615.00</td>
+                            <td style="border-top:1px dashed #656565;">2017年5月22日14：36：23</td>
+                        </tr>
+                        <tr style="border-bottom:1px dashed #656565;">
+                            <td style="border-top:1px dashed #656565;">
+                                <div>
+                                    <div style="float: left;margin-top: 12px;">
+                                        <img src="${ctx}/static/front/images/s.png" alt="" style="width: 35px">
+                                    </div>
+                                    <div style="float: right;width: 310px;height: auto;text-align: left;padding-bottom: 5px">
+                                        <p>1、注册APP版权，并根据系统升级要求，一年内升级2个版本。</p>
+                                        <p>2、上传目前各大应用APP市场及商店，并保持每一个上传应用市场及应用商店有10000个下载量。</p>
+                                        <p>3、技术服务及指导APP使用为期二年。</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                            <td style="border-top:1px dashed #656565;"></td>
+                        </tr>
 
 
 

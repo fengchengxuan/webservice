@@ -31,4 +31,67 @@ public class BillSendAddr extends Base{//发票邮寄地址
     @Column(name = "tel" ,length = 11)
     private String tel;//手机号
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public BillApp getBaId() {
+        return baId;
+    }
+
+    public void setBaId(BillApp baId) {
+        this.baId = baId;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getMailCode() {
+        return mailCode;
+    }
+
+    public void setMailCode(String mailCode) {
+        this.mailCode = mailCode;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 }

@@ -30,4 +30,5 @@ public class Role extends Base{
         this.privilegeId = privilegeId;
     }
 
+
 }
