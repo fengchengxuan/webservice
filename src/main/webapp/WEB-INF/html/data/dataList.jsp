@@ -37,9 +37,9 @@
         <div class="Article-left-li Article-left-li-b-m">网 络 传 媒 及 线 上 线 下 各 类 广 告 投 放 等<i> </i></div>
 
 
-        <div style="margin-top: 10px;">
-            <img src="${ctx}/static/front/images/wz-l-bom.jpg" alt="">
-        </div>
+        <%--<div style="margin-top: 10px;">--%>
+            <%--<img src="${ctx}/static/front/images/wz-l-bom.jpg" alt="">--%>
+        <%--</div>--%>
     </div>
 
 
