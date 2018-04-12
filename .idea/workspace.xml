@@ -13,6 +13,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/centerbase.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/centerbase.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/front/js/vip.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/front/js/vip.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction.class" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/menber/centerbase.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/menber/centerbase.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/fengcheng/static/front/js/vip.js" afterPath="$PROJECT_DIR$/target/fengcheng/static/front/js/vip.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +79,8 @@
       <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="622" column="33" lean-forward="false" selection-start-line="622" selection-start-column="33" selection-end-line="622" selection-end-column="33" />
+            <state relative-caret-position="171">
+              <caret line="630" column="95" lean-forward="false" selection-start-line="630" selection-start-column="94" selection-end-line="630" selection-end-column="95" />
               <folding>
                 <element signature="e#10376#10617#0" expanded="true" />
                 <element signature="e#10616#10617#0" expanded="true" />
@@ -139,26 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/password.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="61" column="63" lean-forward="false" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="password.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/password.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -199,9 +183,9 @@
       <find>ProdKindId</find>
       <find>update</find>
       <find>stype</find>
-      <find>prodKind</find>
       <find>pwd</find>
       <find>show</find>
+      <find>prodKind</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -705,12 +689,12 @@
       <workItem from="1523193310802" duration="11000" />
       <workItem from="1523236633961" duration="229000" />
       <workItem from="1523236892913" duration="74038000" />
-      <workItem from="1523448280584" duration="6426000" />
+      <workItem from="1523448280584" duration="6532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113184000" />
+    <option name="totallyTimeSpent" value="113290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="825" y="0" width="976" height="1038" extended-state="1" />
@@ -1402,14 +1386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/password.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="61" column="63" lean-forward="false" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/password.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1418,10 +1394,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/password.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="61" column="63" lean-forward="false" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="622" column="33" lean-forward="false" selection-start-line="622" selection-start-column="33" selection-end-line="622" selection-end-column="33" />
+        <state relative-caret-position="171">
+          <caret line="630" column="95" lean-forward="false" selection-start-line="630" selection-start-column="94" selection-end-line="630" selection-end-column="95" />
           <folding>
             <element signature="e#10376#10617#0" expanded="true" />
             <element signature="e#10616#10617#0" expanded="true" />
