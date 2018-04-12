@@ -1,16 +1,18 @@
 package com.fc.base.user.service.impl;
 
-import com.fc.base.user.dao.UserDao;
-import com.fc.base.user.entity.FcUser;
-import com.fc.base.user.entity.FcUser;
-import com.fc.base.user.service.UserService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.fc.base.user.dao.UserDao;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.service.UserService;
+import com.fc.login.model.AnonymousEntity;
+import com.fc.util.BaseDao;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends BaseDao implements UserService {
     @Autowired
     UserDao  userDao;
 
@@ -39,6 +41,12 @@ public class UserServiceImpl implements UserService {
 
         userDao.saveEntity(fcUser);
     }
+    
+
+    @Override
+    public void saveUser(FcUser user) {
+        userDao.saveEntity(user);
+    }    
 
     @Override
     public List<FcUser> findList(String userName, String password, String type) {
@@ -46,7 +54,35 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void saveUser(FcUser fcUser) {
-        userDao.saveEntity(fcUser);
+    public FcUser getUser(String phonenum, String email, String password) {
+        String hql = "from FcUser where (email=? and password=?) or (phone=? and password=?) ";
+        Object[]args = {phonenum, email,password};
+        return (FcUser)super.findEntity(hql,args);
     }
+    
+    @Override
+    public FcUser getUser(String param) {
+        String hql = "from FcUser where email=?  or phone=?  ";
+        Object[]args = {param};     
+        return (FcUser)super.findEntity(hql,args);
+    }
+    
+    @Override//鍖垮悕鐧诲綍
+    public FcUser anonymousLogin() {   //用户申请免费体验名额
+        List<FcUser> list = userDao.getUserList();
+        StringBuffer userName = new StringBuffer("FC_U");
+        String str;
+        if(list.size()<1){
+            str=String.format("%07d",0);
+        }else{
+            str=String.format("%07d",list.size())                                                                                                                                                                                                                                                                                                                                                        ;
+        }
+        userName.append(str);
+        FcUser user = new FcUser();
+        user.setUserName(userName.toString());
+        user.setPassword("123456");
+        return userDao.saveUser(user);
+    }
+
+    
 }

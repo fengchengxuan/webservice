@@ -1,27 +1,25 @@
 package com.fc.login.Controller;
 
-import com.aliyuncs.DefaultAcsClient;
-import com.aliyuncs.IAcsClient;
-import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;
-import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
-import com.aliyuncs.exceptions.ClientException;
-import com.aliyuncs.profile.DefaultProfile;
-import com.aliyuncs.profile.IClientProfile;
-import com.fc.base.product.entity.OrderEntity;
-import com.fc.base.product.entity.ProductInofEntity;
-import com.fc.base.product.productService.OrderService;
-import com.fc.base.user.entity.AppType;
-import com.fc.base.user.entity.CompType;
-import com.fc.base.user.entity.FcUser;
-import com.fc.base.user.entity.ProKind;
-import com.fc.base.user.service.UserService;
-import com.fc.login.Service.ILogService;
-import com.fc.login.Service.ILoginService;
-import com.fc.login.model.AnonymousEntity;
-import com.fc.login.model.Log;
-import com.fc.login.model.Login;
-import com.fc.login.util.LoginUser;
-import com.fc.login.util.LoginUtil;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,14 +29,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.IAcsClient;
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.profile.DefaultProfile;
+import com.aliyuncs.profile.IClientProfile;
+import com.fc.base.product.entity.OrderEntity;
+import com.fc.base.product.productService.OrderService;
+import com.fc.base.user.entity.AppType;
+import com.fc.base.user.entity.CompType;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.entity.ProKind;
+import com.fc.base.user.service.UserService;
+import com.fc.login.Service.ILogService;
+import com.fc.login.Service.ILoginService;
+import com.fc.login.util.LoginUser;
+import com.fc.login.util.LoginUtil;
 
 @Controller
 public class LoginAction {
@@ -66,7 +74,6 @@ public class LoginAction {
     private UserService userService;
    @Autowired
     private OrderService orderService;
-
     @Autowired
     private Map<String,Object> map;
 
@@ -93,15 +100,15 @@ public class LoginAction {
      */
     @RequestMapping("log")
     public @ResponseBody Map<String,Object> log(HttpServletRequest request,String type ,String userName,String password){
-        HttpSession session = request.getSession(true);
-        System.out.println(type);
-        System.out.println(userName);
-        System.out.println(password);
-        if ((String) session.getAttribute("user")!=null&&!"".equals((String) session.getAttribute("user"))){
-            map.put("msg",false);
-        }else {
-
-            map.put("msg",true);
+//        HttpSession session = request.getSession(true);
+//        System.out.println(type);
+//        System.out.println(userName);
+//        System.out.println(password);
+//        if ((String) session.getAttribute("user")!=null&&!"".equals((String) session.getAttribute("user"))){
+//            map.put("msg",false);
+//        }else {
+//
+//            map.put("msg",true);
          /*   String email = request.getParameter("phonenumber");
             password = request.getParameter("password");
             // 当前登录的用户
@@ -117,8 +124,8 @@ public class LoginAction {
             }else {
                 map.put("message", false);
             }*/
-        }
-        return map;
+//        }
+        return logs(request, type, userName, password);
     }
 
     /**
@@ -566,13 +573,16 @@ public class LoginAction {
         HttpSession session = request.getSession(true);
         String user =(String)session.getAttribute("user");
         if(user!=null && user.length()>0){
-            Log logEntity= logService.seekUser(user);
-            Login loginEntity=loginService.findUser(user);
-            if(logEntity!=null){
-                map.put("entity",logEntity);
-            }else if(loginEntity!=null){
-                map.put("entity",loginEntity);
-        }
+//            Log logEntity= logService.seekUser(user);
+//            Login loginEntity=loginService.findUser(user);
+//            if(logEntity!=null){
+//                map.put("entity",logEntity);
+//            }else if(loginEntity!=null){
+//                map.put("entity",loginEntity);
+//            }
+        	FcUser fcuser = userService.getUser(user);
+        	if(fcuser!=null) 
+        		map.put("entity", fcuser);
             map.put("flag",true);
             return map;
         }
@@ -607,39 +617,53 @@ public class LoginAction {
         }
         String phonenumber = (String) session.getAttribute("user");
         String email = (String) session.getAttribute("user");
-        Log log = logService.getUser(email,oldpassword);
-        Login login = loginService.getUsers(phonenumber,oldpassword);
-        if(log!=null){
-            if(log.getPassword().equals(oldpassword)){
-                    log.setPassword(password);
-                    log.setRepassword(repassword);
-                    logService.findpwd(log);
-            session.setAttribute("user",log.getEmail());
-            list.add("修改成功");
-            return list;
-        }
-        }else if(login!=null){
-            if(login.getPassword().equals(oldpassword)){
-                    login.setPassword(password);
-                    login.setRepassword(repassword);
-                    loginService.findpwd(login);
-                session.setAttribute("user",login.getPhonenumber());
-                list.add("修改成功");
-                return list;
-            }
-        }
-        list.add("密码错误!");
-        return list;
+//        Log log = logService.getUser(email,oldpassword);
+//        Login login = loginService.getUsers(phonenumber,oldpassword);
+//        if(log!=null){
+//            if(log.getPassword().equals(oldpassword)){
+//                    log.setPassword(password);
+//                    log.setRepassword(repassword);
+//                    logService.findpwd(log);
+//            session.setAttribute("user",log.getEmail());
+//            list.add("修改成功");
+//            return list;
+//        }
+//        }else if(login!=null){
+//            if(login.getPassword().equals(oldpassword)){
+//                    login.setPassword(password);
+//                    login.setRepassword(repassword);
+//                    loginService.findpwd(login);
+//                session.setAttribute("user",login.getPhonenumber());
+//                list.add("修改成功");
+//                return list;
+//            }
+//        }
+//        list.add("密码错误!");
+//        return list;
+          FcUser user = userService.getUser(phonenumber, email, password);
+	      if(user!=null){
+	    	  user.setPassword(password);
+	    	  user.setRePassword(repassword);
+              userService.saveUser(user);
+		      session.setAttribute("user",user.getEmail());
+		      list.add("修改成功");
+	      }
+	      return list;
     }
     @RequestMapping("anonymousLogin")//匿名注册登录
     public @ResponseBody Map<String,Object> anonymousLogin(HttpServletRequest request){
         HttpSession session = request.getSession(true);
         if(session.getAttribute("user")==null || session.getAttribute("user").toString().length()<1){
-            AnonymousEntity entity=new AnonymousEntity();
-            entity= loginService.anonymousLogin();
-            if(entity!=null){
-                session.setAttribute("user",entity.getAnonymousUser());
-                map.put("user",entity.getAnonymousUser());
+//            AnonymousEntity entity=new AnonymousEntity();
+//            entity= loginService.anonymousLogin();
+//            if(entity!=null){
+//                session.setAttribute("user",entity.getAnonymousUser());
+//                map.put("user",entity.getAnonymousUser());
+//            }
+            FcUser entity=userService.anonymousLogin();
+            if(entity!=null) {
+            	session.setAttribute("user", entity.getUserName());
+            	map.put("user", entity.getUserName());
             }
         }else {
             map.put("user",session.getAttribute("user").toString());
