@@ -19,7 +19,7 @@
          width: 0;
          height: 0;
      }.order-bi p{border: 0;width: 33px;height: 33px;
-          background: url("../../../static/background/images/x.png")no-repeat;
+          background: url(${ctx}/static/background/images/x.png)no-repeat;
           cursor: pointer;
           position: relative;left:673px;top: 0;
       }
@@ -67,7 +67,6 @@
          margin-top: 10px;
          margin-left: 38px;
          width: 830px;
-         /*height: 25px;*/
      }
      .order-progress>div{
          float: left;
@@ -140,13 +139,13 @@
             </div>
             <div class="order-progress">
                 <div>
-                    <img src="../../../static/background/images/dui-x.png" alt="">
+                    <img src=${ctx}/static/background/images/dui-x.png alt="">
                 </div>
                 <div class="progress-text2">
                     发现缓存垃圾
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -169,13 +168,13 @@
             </div>
             <div class="order-progress">
                 <div>
-                    <img src="../../../static/background/images/dui-x.png" alt="">
+                    <img src=${ctx}/static/background/images/dui-x.png alt="">
                 </div>
                 <div class="progress-text2">
                     发现缓存垃圾
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -199,13 +198,13 @@
             </div>
             <div class="order-progress">
                 <div>
-                    <img src="../../../static/background/images/dui-x.png" alt="">
+                    <img src=${ctx}/static/background/images/dui-x.png alt="">
                 </div>
                 <div class="progress-text2">
                     发现缓存垃圾
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -229,13 +228,13 @@
             </div>
             <div class="order-progress">
                 <div>
-                    <img src="../../../static/background/images/dui-x.png" alt="">
+                    <img src=${ctx}/static/background/images/dui-x.png alt="">
                 </div>
                 <div class="progress-text2">
                     发现缓存垃圾
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -290,7 +289,7 @@
                     更新进度
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -316,7 +315,7 @@
                     更新进度
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -342,7 +341,7 @@
                     更新进度
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -368,7 +367,7 @@
                     更新进度
                 </div>
                 <div class="Progresspng">
-                    <img src="../../../static/background/images/Progress1.png" alt="">
+                    <img src=${ctx}/static/background/images/Progress1.png alt="">
                 </div>
                 <div class="progress-100">
                     0%
@@ -391,10 +390,10 @@
 
 <div id="header">
     <div class="header-content">
-        <a href="http://www.fengcheng7080.com" class="logo" target="_blank"><img src="../../../static/background/images/logo.png" alt=""></a>
+        <a href="http://www.fengcheng7080.com" class="logo" target="_blank"><img src=${ctx}/static/background/images/logo.png alt=""></a>
         <div class="extbtn">
-            <div style="float: left"><img src="../../../static/background/images/xx.png" alt="背景"></div>
-            <img class="extimg" onclick="exit()" src="../../../static/background/images/icon.png" alt="退出">
+            <div style="float: left"><img src=${ctx}/static/background/images/xx.png alt="背景"></div>
+            <img class="extimg" onclick="exit()" src=${ctx}/static/background/images/icon.png alt="退出">
             <p>退出</p>
         </div>
         <div class="ht-user">
@@ -422,7 +421,7 @@
         <div class="modal-content" style="width:671px;height: 382px;background: url('${ctx}/static/front/images/modal-content.jpg')no-repeat;border: 1px solid #fff;position:relative;left:-8%;top:130px;padding:50px 0;">
             <%--<div style="width: 0;height: 0">--%>
                 <button data-dismiss="modal" style="width: 35px;height: 35px;border: 0;position: relative;top: -51px;left: 635px;">
-                    <img src="../../../static/background/images/x.png" alt="">
+                    <img src=${ctx}/static/background/images/x.png alt="">
                 </button>
             <%--</div>--%>
             <%--<div>--%>
@@ -480,8 +479,8 @@
     </div><!-- /.modal -->
 </div>
 
-<script src="../../../static/background/js/jquery-3.2.1.js" type="text/javascript"></script>
-<script src="../../../static/background/js/bootstrap.min.js" type="text/javascript"></script>
+<script src=${ctx}/static/background/js/jquery-3.2.1.js type="text/javascript"></script>
+<script src=${ctx}/static/background/js/bootstrap.min.js type="text/javascript"></script>
 <script type="text/javascript">
     function exit() {
         $.ajax({
@@ -517,7 +516,7 @@
 
     });
 </script>
-<script src="../../../static/background/js/jquery-3.2.1.js" type="text/javascript"></script>
+<script src=${ctx}/static/background/js/jquery-3.2.1.js type="text/javascript"></script>
 <script type="text/javascript">
     $('input[name="selectall"]').click(function(){
         if($(this).is(':checked')){

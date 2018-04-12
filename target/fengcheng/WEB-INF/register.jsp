@@ -15,6 +15,11 @@
         .footer .content .center{
             margin: 0;
         }
+        #h1,#h2,#h3,#h4{
+            color: red;
+            float: right;
+            margin: 10px 200px 0 0;
+        }
     </style>
 </head>
 <body>
@@ -53,6 +58,7 @@
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>设置登录密码:</div>
                         <input type="password" placeholder="请输入密码" id="password" name="password">
+                        <div id="h0" style="display:none;">大写锁定已开启</div>
                         <div class="comment">
                             请设置登录密码为数字+字母+特殊符号，请不要使用 手机号或生日及常用的数字作为密码。
                         </div>
@@ -60,6 +66,7 @@
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>确认登录密码:</div>
                         <input type="password" placeholder="请您再输入一次密码" id="password_again" name="repassword">
+                        <div id="h2" style="display:none;">大写锁定已开启</div>
                         <div class="comment"></div>
                     </div>
                         <div class="list password_level">
@@ -77,7 +84,7 @@
                         <input type = "button" id="code1" onclick="createCode()" />
                     </div>
                     <div style="margin: 12px 0 0 180px">
-                        <input type="button" class="doregistr" id="ver" style="cursor: pointer" value="点我注册">
+                        <input type="button" class="doregistr" id="ver" style="cursor: pointer" value="点我注册" onclick="yzmlogin()">
                         <button class="back-out" type="reset">取消注册</button>
                     </div>
                     </form>
@@ -98,14 +105,16 @@
                     </div>
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>设置登录密码:</div>
-                        <input type="password" name="password" placeholder="请输入密码" class="password">
+                        <input type="password" name="password" placeholder="请输入密码" id="password3" class="password" >
+                        <div id="h3" style="display:none;">大写锁定已开启</div>
                         <div class="comment">
                             请设置登录密码为数字+字母+特殊符号，请不要使用 手机号或生日及常用的数字作为密码。
                         </div>
                     </div>
                     <div class="list">
                         <div class="list-name"><span class="must" >*</span>确认登录密码:</div>
-                        <input type="password" name="repassword" placeholder="请您再输入一次密码" class="password_again">
+                        <input type="password" name="repassword" placeholder="请您再输入一次密码" id="password4"  class="password_again">
+                        <div id="h4" style="display:none;">大写锁定已开启</div>
                         <div class="comment"></div>
                     </div>
                     <div class="list password_level">
@@ -124,7 +133,7 @@
                     </div>
                     <p id="yxxx"></p>
                     <div style="margin: 12px 0 0 180px">
-                        <input type="button" class="doregistr" id="ver1" style="cursor: pointer" value="点我注册">
+                        <input type="button" class="doregistr" id="ver1" style="cursor: pointer" value="点我注册" onclick="yzmlogin()">
                         <button class="back-out" style="cursor: pointer" type="reset">取消注册</button>
                     </div>
                     </form>
@@ -140,4 +149,114 @@
 <script src="${ctx}/static/front/js/register.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/bootstrap.min.js" type="text/javascript"></script>
+<script>
+    // 提示大小写
+    var input1 = document.querySelector("#password");
+    var h1 = document.querySelector("#h0");
+
+    function toggle(elem){
+        if(elem.style.display == "block"){
+            elem.style.display = "none";
+        }else{
+            elem.style.display = "block";
+        }
+    }
+
+    input1.onkeydown = function(e){
+        var e = e || window.event;
+        var capsLockKey = e.keyCode ? e.keyCode : e.which;
+        if(e.keyCode == 20){
+            toggle(h1);
+        }else{
+            h1.style.display = "none";
+        }
+    }
+
+
+
+
+
+
+    var input2 = document.querySelector("#password_again");
+    var h2 = document.querySelector("#h2");
+
+    function toggle(elem){
+        if(elem.style.display == "block"){
+            elem.style.display = "none";
+        }else{
+            elem.style.display = "block";
+        }
+    }
+
+    input2.onkeydown = function(e){
+            var e = e || window.event;
+            var capsLockKey = e.keyCode ? e.keyCode : e.which;
+            if(e.keyCode == 20){
+                toggle(h2);
+            }else{
+                h2.style.display = "none";
+            }
+        }
+
+
+
+
+
+    var input3 = document.querySelector("#password3");
+    var h3 = document.querySelector("#h3");
+
+    function toggle(elem){
+        if(elem.style.display == "block"){
+            elem.style.display = "none";
+        }else{
+            elem.style.display = "block";
+        }
+    }
+
+    input3.onkeydown = function(e){
+        var e = e || window.event;
+        var capsLockKey = e.keyCode ? e.keyCode : e.which;
+        if(e.keyCode == 20){
+            toggle(h3);
+        }else{
+            h3.style.display = "none";
+        }
+    }
+
+
+
+
+
+
+
+
+    var input4 = document.querySelector("#password4");
+    var h4 = document.querySelector("#h4");
+
+    function toggle(elem){
+        if(elem.style.display == "block"){
+            elem.style.display = "none";
+        }else{
+            elem.style.display = "block";
+        }
+    }
+
+    input4.onkeydown = function(e){
+        var e = e || window.event;
+        var capsLockKey = e.keyCode ? e.keyCode : e.which;
+        if(e.keyCode == 20){
+            toggle(h4);
+        }else{
+            h4.style.display = "none";
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
 </html>

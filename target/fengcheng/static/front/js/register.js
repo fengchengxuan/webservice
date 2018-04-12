@@ -26,10 +26,15 @@ var code; //在全局定义验证码
             if(findNodes.length==0) {
                 if (inputCode != code) { //若输入的验证码与产生的验证码不一致时
                     var appdom = document.createElement("span");
-                    appdom.innerHTML = "验证码输入错误!";
-                    document.getElementById("span").appendChild(appdom);
-                    createCode(); //刷新验证码
-                    return false;
+
+
+                        // appdom.innerHTML = "验证码输入错误!";
+                        document.getElementById("span").appendChild(appdom);
+                        createCode(); //刷新验证码
+                        return false;
+
+
+
                 }
             }
 
@@ -211,8 +216,8 @@ $(document).ready(function() {
 
 				return true;
 			} else {
-				console.log('密码由数字、大小写字母组成，长度要在6-12位之间');
-				$this.css("border-color", 'red').next().html("密码由数字、大小写字母组成，长度要在6-12位之间").css('color', 'red');
+				console.log('开启大写');
+				$this.css("border-color", 'red').next().html("开启大写").css('color', 'red');
 				return false;
 			}
 		},
@@ -262,8 +267,8 @@ $(document).ready(function() {
 
 				return true;
 			} else {
-				console.log('密码由数字、大小写字母组成，长度要在6-12位之间');
-				$this.css("border-color", 'red').next().html("密码由数字、大小写字母组成，长度要在6-12位之间").css('color', 'red');
+				console.log('开启大写');
+				$this.css("border-color", 'red').next().html("开启大写").css('color', 'red');
 				return false;
 			}
 		},
@@ -277,7 +282,7 @@ $(document).ready(function() {
 				return true;
 			} else {
 				//两次输入不一致
-				$selector.next().html("两次密码不一致").css("color", 'red');
+				// $selector.next().html("两次密码不一致").css("color", 'red');
 				return false;
 			}
 		}
@@ -423,3 +428,5 @@ if(testphone){
         }
     })
 });
+
+

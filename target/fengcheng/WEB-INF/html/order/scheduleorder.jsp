@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="${ctx}/static/front/payorder/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/payorder/css/order.css" type="text/css">
     <style>
+        .footer .content .top{
+            height: 10px;
+        }
         .logn-show {
             position: fixed;
             display: none;
@@ -216,6 +219,7 @@
                 <div class="lastbox">
                     <div class="reminder">重要提醒：每个帐号只能设置一个有效的发票抬头进行使用。<br>发票抬头在 用户中心-发票管理中设置</div>
                     <div class="right">
+                        <div style="margin:0 0 0 266px;color: red;font-size: 12px" id="qindagou"></div>
                         <button><a href="javascript:void(null)" onclick="goPay()">去支付</a></button>
                         <div class="count">
                             <span class="title">订单金额&nbsp;：&nbsp;</span>
@@ -228,9 +232,7 @@
             </div>
         </div>
     </div>
-
-
-    <div ng-include="'/static/front/comm/footer.jsp'"></div>
+    <jsp:include page="/static/front/comm/footer.jsp"/>
 </div>
 <script src="${ctx}/static/front/js/angular.min.js"></script>
 <script type="text/javascript">
@@ -303,7 +305,9 @@
             }
             window.location.href = "${ctx}/payorder";
         } else {
-            alert("请打勾");
+
+            $("#qindagou").html("请勾选网站协议").css("color", 'red');
+
         }
     }
 
