@@ -495,7 +495,7 @@ public class LoginAction {
         HttpSession session = request.getSession(true);
         String userName=(String)session.getAttribute("userName");
         String user=(String)session.getAttribute("user");
-       String password =(String) session.getAttribute("password");
+        String password =(String) session.getAttribute("password");
         String type=(String) session.getAttribute("type");
        String pares=(String) session.getAttribute("parsePath");//图片
         if(userName==null || userName.length()<1){  //判断用户是否为存在
@@ -572,17 +572,21 @@ public class LoginAction {
     public @ResponseBody Map<String,Object>  showUserInfo(HttpServletRequest request){
         HttpSession session = request.getSession(true);
         String user =(String)session.getAttribute("user");
+        String password =(String) session.getAttribute("password");
+        String type=(String) session.getAttribute("type");
         if(user!=null && user.length()>0){
-//            Log logEntity= logService.seekUser(user);
-//            Login loginEntity=loginService.findUser(user);
-//            if(logEntity!=null){
-//                map.put("entity",logEntity);
-//            }else if(loginEntity!=null){
-//                map.put("entity",loginEntity);
-//            }
-        	FcUser fcuser = userService.getUser(user);
+        	FcUser fcuser = userService.loginUser(type,user,password);
         	if(fcuser!=null) 
         		map.put("entity", fcuser);
+        	if(fcuser.getProdKindId()!=null){
+                map.put("prodkind",fcuser.getProdKindId());
+            }
+            if(fcuser.getComptypeId()!=null){
+                map.put("comptype", fcuser.getComptypeId());
+            }
+            if(fcuser.getAppTypeId()!=null){
+                map.put("appType", fcuser.getAppTypeId());
+            }
             map.put("flag",true);
             return map;
         }
@@ -602,8 +606,8 @@ public class LoginAction {
     public @ResponseBody List<String> findpwd(HttpServletRequest request,String oldpassword,String password,String repassword){
         List<String> list = new ArrayList<>();
         HttpSession session = request.getSession(true);
-        String userName=(String)session.getAttribute("user");
-            if(userName==null || userName.length()<1){
+        String user=(String)session.getAttribute("user");
+            if(user==null || user.length()<1){
             list.add("您还未登录!");
             return list;
              }
@@ -615,39 +619,16 @@ public class LoginAction {
             list.add("两次密码不一致!");
             return list;
         }
-        String phonenumber = (String) session.getAttribute("user");
-        String email = (String) session.getAttribute("user");
-//        Log log = logService.getUser(email,oldpassword);
-//        Login login = loginService.getUsers(phonenumber,oldpassword);
-//        if(log!=null){
-//            if(log.getPassword().equals(oldpassword)){
-//                    log.setPassword(password);
-//                    log.setRepassword(repassword);
-//                    logService.findpwd(log);
-//            session.setAttribute("user",log.getEmail());
-//            list.add("修改成功");
-//            return list;
-//        }
-//        }else if(login!=null){
-//            if(login.getPassword().equals(oldpassword)){
-//                    login.setPassword(password);
-//                    login.setRepassword(repassword);
-//                    loginService.findpwd(login);
-//                session.setAttribute("user",login.getPhonenumber());
-//                list.add("修改成功");
-//                return list;
-//            }
-//        }
-//        list.add("密码错误!");
-//        return list;
-          FcUser user = userService.getUser(phonenumber, email, password);
-	      if(user!=null){
-	    	  user.setPassword(password);
-	    	  user.setRePassword(repassword);
-              userService.saveUser(user);
-		      session.setAttribute("user",user.getEmail());
+        String type=(String)session.getAttribute("type");
+          FcUser fcUser = userService.loginUser(type,user,password);
+	      if(fcUser!=null){
+              fcUser.setPassword(password);
+              fcUser.setRePassword(repassword);
+              userService.saveUser(fcUser);
 		      list.add("修改成功");
-	      }
+	      }else{
+              list.add("密码错误");
+          }
 	      return list;
     }
     @RequestMapping("anonymousLogin")//匿名注册登录

@@ -1,0 +1,23 @@
+#content{
+    width: 1200px;
+    height: auto;
+}
+.content-500-1{
+    background: url("../../../static/front/images/500-logo.png") no-repeat;
+    width: 182px;
+    height: 262px;
+    float: left;
+    margin-left:210px;
+}
+.content-500-2{
+    background: url("../../../static/front/images/500.png") no-repeat;
+    float: left;
+    width: 503px;
+    height: 229px;
+    margin-left: 88px;
+}
+#content{
+    width: 1200px;
+    margin:220px auto 0 auto;
+
+}

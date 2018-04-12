@@ -1,0 +1,118 @@
+.litskf{
+    background: #F53292;
+}
+.tskf{
+    color: white;
+}
+
+
+tr:nth-of-type(even){
+    background: #f6f6f6;
+
+}
+
+.mcontainer{
+    width: 1210px;
+    margin: 0 auto;
+    height: 1536px;
+}
+.bill{
+    background: #F53292;
+}
+.nav-tabs li a{
+    display: block;
+    border-bottom: 1px solid red;
+}
+.bill .slma{
+    color: white;
+}
+a:hover{
+    height: 57px;
+    list-style: none;
+}
+.thisPlatform .TPitem select{  margin-left: 18px;  font-size: 14px;  color: #333333;  border: none;  width: 300px;  height: 30px;  text-indent: 9px;  background: #f3f3f3;  }
+.thisPlatform .TPitem select option{  border: none;  background: white;  text-indent: 9px;  }
+/*#Section1{  height: 283px;  }#Section2{  height: 423px;  }*/
+.tab-content table{border-collapse: collapse}
+.tab-content table{border-radius: 8px 8px 0 0;overflow: hidden}.tab-content table th,td{  text-align: center; height: 50px;}
+.tab-content table tbody td{  text-align: left;}
+.tab-content table th {
+    font-size: 16px;
+    color: white;
+    background: -webkit-linear-gradient(0deg, #0199dd, #51c2f4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(0deg, #0199dd, #51c2f4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(0deg, #0199dd, #51c2f4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(0deg, #0199dd, #51c2f4);
+}
+.tab-content table td{font-size: 14px;color: #666666}
+.tab-content table .th1{width: 112px;height: 50px;}.th2{width: 160px;}.th3{width: 180px;}.th4{width: 190px}.th5{width: 160px}.th6{width: 160px;}
+table{
+    width: 960px;
+    position: relative;top: -20px;
+
+}
+.tr1 tr,.tr2 tr{
+    height: 147px;
+}
+.th1{
+    width: 150px;
+}
+
+.th2,.th3{
+    width: 200px;
+}
+.th4{
+    width: 250px;
+}
+.th5{
+    width: 160px;
+}td{
+     height: 80px;
+     padding: 0 14px;
+ }
+/*.tabs{
+    height: 650px;
+}*/
+.right-top{
+    width: 100px;
+    position: relative;
+    top: -60px;right: -850px;
+}.right-top span{
+     position: relative;top: -5px;left: 5px;
+     text-decoration: underline;
+     cursor: pointer;
+     color: red;font-size: 14px;
+ }
+.tab-Section3-jpg{
+    margin: 0 0 0 260px;
+    float: left;
+}
+.tab-Section3-box img{
+    position: relative;
+    left: 40px;
+}
+.tab-Section3-box{
+    padding-bottom: 20px;
+    border-bottom: 1.5px dashed #ccc;
+    height: 189px;
+}
+/*.tab .tab-content{height: 730px}*/
+.tab-Section3-box span{
+    font-size: 16px;margin: 0 0 0 55px;color: #656565;
+}
+.tab-Section3-box p{margin-top: 30px}
+.tab-mk span{
+    line-height: 40px;
+    float: left;
+    display: block;
+    width: 160px;
+    padding-right:15px ;
+    text-align: right;
+} .tab-mk{margin-top: 30px}
+.tab-mk textarea{
+    position: relative;
+    top: -40px;left: 160px;
+}
+.tab{
+    z-index: -99;
+}

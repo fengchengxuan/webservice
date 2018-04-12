@@ -1,0 +1,232 @@
+.free-main {
+    margin-left: 208px;
+}
+.free-main .freebox{
+    width: 1000px;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0 0 10px 1px #ccc;
+}
+.free-main .way span{
+    font-size: 12px;
+    color: #656565;
+}
+.freetable{
+    margin-left: 20px;
+}
+.freetable{border-collapse: collapse}
+.freetable{border-radius: 8px 8px 0 0;overflow: hidden}.freetable th,td{  text-align: center; height: 50px;}
+.freetable th {
+    font-size: 16px;
+    color: white;
+    background: -webkit-linear-gradient(0deg, #0199dd, #51c2f4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(0deg, #0199dd, #51c2f4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(0deg, #0199dd, #51c2f4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(0deg, #0199dd, #51c2f4);
+}
+.freetable th select{
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background: none;
+}
+.freetable th select option{
+    color: #333333;
+}
+.freetable td{font-size: 14px;color: #666666}
+.freetable th{width: 100px;height: 50px;}
+.freetable .th7{width: 160px;}
+
+
+/*付费表格*/
+.Ctabox{
+    margin-left: 10px;
+    border-radius: 8px 8px 0 0;    margin-right: 10px;
+}
+.chargetable .th1{border-radius: 8px 0 0 0;}
+.chargetable .th10{border-radius: 0 8px 0 0;}
+.chargetable{border-collapse: collapse}
+.chargetable th,td{  text-align: center; height: 50px;}
+.chargetable th {
+    font-size: 16px;
+    color: white;
+    background: -webkit-linear-gradient(0deg, #0199dd, #51c2f4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(0deg, #0199dd, #51c2f4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(0deg, #0199dd, #51c2f4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(0deg, #0199dd, #51c2f4);
+}
+.chargetable th select{
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background: none;
+}
+.chargetable th select option{
+    color: #333333;
+}
+.chargetable td{font-size: 14px;color: #666666}
+.chargetable th{width: 90px;height: 50px;}
+.chargetable .th7{width: 140px;}
+.chargetable tbody td{
+    border-left: 1px dashed #cccccc;
+    border-bottom: 1px dashed #cccccc;
+}
+.chargetable .evaluate{
+    -moz-width: 89px;
+    -webkit-width: 89px;
+    -o-width: 89px;
+    border-right: 1px solid #cccccc;
+}
+.chargetable tbody{
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.freebox .all{
+    font-size: 12px;
+    color: #999999;
+    margin:10px 0 0 20px;
+}
+
+/*分页*/
+.freebox .pages{
+    margin: 15px 0 0 360px;
+    font-size: 14px;
+    color: #656565;
+}
+.freebox .pages span{
+    margin-left: 10px;
+}
+
+.freebox .btnbox{
+    width: 320px;
+    height: 40px;
+    margin: 15px 0 0 370px;
+    font-size: 16px;
+}
+.freebox .btnbox .save{
+    width: 160px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    text-align: center;
+    background: #00A1E5;
+}
+.freebox .btnbox .cancel{
+    width: 140px;
+    height: 40px;
+    color: #00A1E5;
+    text-align: center;
+    background: white;
+    border: none;
+}
+/*评价*/
+
+
+.modal-body .comment_publish{
+    margin: 0 auto;
+}
+.modal-body .comment_publish_star{
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.modal-body .comment_publish_star li{
+    float: left;
+    margin:12px 36px 0 45px;
+}
+.modal-body .comment_publish_star .row-label{
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: hidden;
+    vertical-align: top;
+    /*word-spacing:-5px;/*调整文本，以防止使用两端对齐之后字间距过大*/
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+}
+.row-star{
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #666666;
+    overflow: hidden;
+}
+.row-star .row-label,.row-star .star-box,.row-star .remark{
+    float: left;
+}
+.row-star .star-box{
+    overflow: hidden;
+    height: 20px;
+    margin-left: 5px;
+}
+.row-star .star-box .w-star{
+    display: inline-block;
+    width: 22px;
+    float: left;
+}
+.row-star .star-box .w-star i{
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    background: url(../../../static/front/images/product_star.png) no-repeat -18px 0;
+    vertical-align: middle;
+}
+.row-star .star-box .w-star.on i{
+    background-position: 2px 0;
+}
+.row-star .remark{
+    display: block;
+    height: 21px;
+    line-height: 18px;
+    border: 1px solid #FB9823;
+    color: #ff9900;
+    background-color: #FAE3C0;
+    padding: 0 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.modal-body textarea{
+    width: 563px;
+    height: 141px;
+    max-width: 563px;
+    max-height: 141px;
+    overflow: auto;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin:25px 0 0 45px;
+}
+.modal-body .comment_publish .btn_box{
+    margin: 15px 0 0 230px;
+}
+.modal-body .comment_publish #submit{
+    display:inline-block ;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    background-color:#0EA0E1;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.modal-body .comment_publish #cancel{
+    display:inline-block ;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    background-color: #999999;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}

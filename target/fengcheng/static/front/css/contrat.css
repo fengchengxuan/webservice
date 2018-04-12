@@ -1,0 +1,206 @@
+*{
+	box-sizing: border-box;
+}
+.contract {
+	width: 1200px;
+	margin: 0 auto;
+}
+.contract .content{
+	
+}
+
+.contract .content .msg{
+	width: 180px;
+	height: 55px;
+	background-color: #ff0000;
+	color: #FFFFFF;
+	font-size: 25px;
+	line-height: 55px;
+	text-align: center;
+	margin-bottom: 35px;
+}
+.contract .contract_list{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.contract .contract_list>ul li{
+	float: left;
+	width: 520px;
+	margin-bottom: 20px;
+	
+}
+.contract .contract_list>ul li:nth-child(odd){
+	margin-right: 30px;
+}
+.contract .contract_list>ul li span,.contract .sign_box>ul li span{
+	display: inline-block;
+	background-color: #009FDF;
+	width: 150px;
+	height: 40px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	vertical-align: top;
+	margin-right: 20px;
+}
+.contract .contract_list .sel,.contract .sign_box .sel{
+	display: inline-block;
+	position: relative;
+	width: 286px;
+}	
+.contract .contract_list .sel p ,.contract .sign_box .sel p{
+	display: inline-block;
+	width: 286px;
+	height: 40px;
+	border: solid 1px #666666;
+	text-align: center;
+	line-height: 40px;
+	padding-left:15px ;
+	
+}
+.contract .contract_list .sel input ,.contract .sign_box .sel input{
+	display: inline-block;
+	width: 286px;
+	height: 40px;
+	border: solid 1px #666666;
+	line-height: 40px;
+	padding-left:15px ;
+}
+.contract .contract_list .sel select{
+	width: 286px;
+	height: 40px;
+	border: solid 1px #666666;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	padding-right: 14px;
+	padding-left: 14px;
+	background-color: transparent;
+}
+.contract .contract_list .sel i{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 9px;
+	right: 0;
+	background: url(../../../static/front/images/contrat_sel_bg.png) no-repeat;
+	z-index: -1;
+}
+.contract .msg_box .btn_box{
+	width: 200px;
+	margin: 0 auto;
+	
+}
+.contract .msg_box .btn_box button{
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	background-color: #2EB6EE;
+	text-align: center;
+	line-height: 40px;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	margin-left: 412px;
+	
+}
+.contract .token_box{
+	width: 292px;
+	margin: 0 auto;
+}
+.contract .token_box .token{
+	width: 250px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 22.5px;
+	color: #FFFFFF;
+	background-color: #009FDF;
+	margin: 50px 0 20px 0;
+}
+.contract  span.token_msg{
+	color: #FF0000;
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom:50px ;
+}
+.contract .sign_box{
+	width: 1080px;
+	margin: 0 auto;
+	/*margin-top: 60px;*/
+}
+.contract .sign_box ul{
+	overflow: hidden;
+}
+.contract .sign_box li{
+	float: left;
+}
+.contract .sign_box .btn_box button{
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	background-color: #2EB6EE;
+	text-align: center;
+	line-height: 40px;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	margin: 20px 0 0 50px;
+}
+.contract .bottom_text{
+	display: block;
+	color: #FF0000;
+	margin: 0 auto;
+	width: 220px;
+	margin-top: 30px;
+}
+/*创建合同*/
+.contract .upcontract .btn{
+	display: block;
+	background-color: #2EB6EE;
+	width: 160px;
+	height: 45px;
+	overflow: hidden;
+	position: relative;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 45px;
+	border-radius:4px ;
+	margin-left: 914px;
+    margin-top: 31px;
+	
+}
+.contract .CreateContract_template{
+	width: 1080px;
+	margin: 0 auto;
+}
+.contract .CreateContract_template .btn{
+	display: block;
+	background-color: #009FDF;
+	width: 200px;
+	height: 45px;
+	overflow: hidden;
+	position: relative;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 45px;
+}
+.contract .CreateContract_template .btn input{
+	display: inline-block;
+	opacity: 0;
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+.contract .CreateContract_template textarea{
+	display: block;
+	width: 1016px;
+	height: 145px;
+}

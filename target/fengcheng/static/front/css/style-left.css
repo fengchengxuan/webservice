@@ -1,0 +1,252 @@
+#content{
+
+    height: 2830px;
+    background: transparent;margin-top: 30px;
+}
+
+.content_middle li{
+    width: 819px;
+    height: 786px;
+    position: absolute;
+    left: 0;top: 8px;
+    z-index: -1;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
+/* CSS Document */
+.center_area{
+    width:100%;
+    height:500px;
+    margin:0 auto;
+}
+
+
+/*中间区域*/
+.center_area .center{
+    width:100%;
+    height:500px;
+    background:#ccc;
+    float: left;
+}
+.common_da{ width: 800px; height: 100px;}
+.center_area .center .center_top{
+    width:100%;
+    height:440px;
+}
+/*<==================================================>*/
+
+/*中间轮播图区域*/
+
+.content_middle{
+    height:837px;
+    margin:-7px auto;
+    position:relative;
+}
+.content_middle:hover .common{
+    display: block;
+}
+
+.content_middle .table{
+    width:740px;
+    height:33px;
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    z-index:9;
+    margin-left:-355px;
+    line-height: 24px;
+}
+.content_middle .table a{
+    width:13px;
+    height:13px;
+    border-radius: 50%;
+    display: block;
+    float:left;
+    position: relative;left: 300px;bottom: 60px;
+    margin: 0 0 0 10px;
+    background: white;
+}
+
+.content_middle .table a.small_active{
+    background: #0090ff;
+}
+
+
+
+#content .content-top {
+    width: 100%;
+    height: 508px;
+    margin: -64px auto 0 auto;
+}
+body{
+    background: #ededed;
+}
+.content-jpg {
+    margin: 10px auto 0 auto;
+    width: 1200px;
+    height: 780px;
+    background: transparent;
+}
+
+.content-jpg-tupian {
+    float: left;
+}
+
+.content-jpg-left1, .content-jpg-left2{
+    width: 372px;
+    height: 408px;
+}
+
+.content-jpg-right1, .content-jpg-right2{
+    /*background: white;*/
+    width: 817px;
+    height: 412px;
+    margin-left: 11px;
+}
+@font-face {
+    font-family: SketchRockwell;
+}
+.content-jpg-text{
+    font-weight: bold;
+    width: 372px;
+    height: 53px;
+    background: linear-gradient(0deg,  #ee2324,#f13030,#f65050);
+    border-radius: 8px 8px 0 0;
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height:53px;
+}
+#content-left{
+    width: 372px;
+    height: 875px;
+
+}
+#content-left .div{
+
+    background: #fff;
+}
+.left-Promise{
+    position: relative;top: -18px;
+    background: #fff;
+}
+#content-right{
+    margin-left: 11px;
+    height: 1480px;
+    width: 817px;
+}
+
+#content-left,#content-right{
+    float: left;
+}
+.content-right-text{
+    display: block;
+    height: 55px;
+    width: 817px;
+    background: linear-gradient(0deg,  #0291ff,#199bff,#34a7ff);
+    border-radius: 8px 8px 0 0;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+    position: relative;
+    top: -20px;
+}
+.content-left-text-p{
+    float: right;
+    display: block;
+    height: 30px;
+    width: 230px;
+    letter-spacing: 1px;
+    margin-top: 6px;
+
+} .content-left-text-p p{
+      height: 35px;line-height: 35px;
+      font-family: '微软雅黑',sans-serif;font-size: 14px;color: #666;
+  }
+  .tit{
+      margin-top: -66px;
+  }
+.five{
+    font-size: 18px;
+    font-family: '黑体',sans-serif;
+    color:#333;
+    margin-left: 45px;
+    display: block;
+    height: 40px;
+}
+hr{
+    border: 0;
+    margin: 0 auto;
+    background: #CCCCCC;
+    width: 364px;
+    height: 1px;
+}
+.content-left-text-4 {
+    float: right;
+    display: block;
+    height: 170px;
+    width: 230px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+.content-left-text-4 p,pre{
+    height: 38px;line-height: 38px;
+    font-family: '微软雅黑',sans-serif;font-size: 14px;color: #666;
+}
+.left-Promise p{
+    font-size: 14px;
+    font-family: '微软雅黑',sans-serif;
+    text-align: center;
+    color: #333;
+    line-height: 35px;
+}
+.left-Promise p a{
+    font-size: 14px;
+    font-family: '微软雅黑',sans-serif;
+    color: #333;
+}
+.left-Promise p a:hover{
+    color:  #0291ff;
+}
+.left-Promise .promise-time{
+    color: #666;
+    margin-right: 20px;
+}
+.left-Promise p .promise-title{
+    display: block;
+    float: left;
+    width: 200px;
+    height: 34px;
+    overflow: hidden;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    text-align: center;
+}
+.content-left-box{
+    height: 1131px;
+    background: #fff;
+}
+.ko-x{
+    margin: 20px ;position: relative;left: 10px
+}
+.ko-4{
+    margin: 100px 0 0 20px;
+    position: relative;
+    left: 10px;top: -10px;
+}
+
+pre{
+    line-height: 30px;
+    font-size: 14px;
+    font-family: '微软雅黑',sans-serif;
+    color: #666;
+    position: relative;
+    top: 144px;
+}
+
+

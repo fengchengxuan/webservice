@@ -1,0 +1,317 @@
+a{
+    list-style: none;
+    cursor: pointer;
+}
+.ocontainer{
+    width: 948px;
+    height: 458px;
+    margin: 20px auto;
+}
+.ocontainer .way{
+    margin-left: 80px;
+    font-size: 12px;
+    color: #656565;
+}
+.ocontainer .schedule{
+    margin: 20px 0 0 93px;
+}
+.ocontainer .firm{
+    width: 100%;
+    height: 326px;
+    margin-top: 13px;
+    background: white;
+}
+.oinfo{
+    box-shadow: 0 0 10px 1px #ccc;
+}
+.ocontainer table{border-collapse: collapse;margin-left: 10px}
+.ocontainer table{overflow: hidden}
+.ocontainer table th,td{  text-align: center; height: 50px;}
+.firmtable th{
+    font-size: 14px;
+    color: #333333;
+    background: #99d5f0;
+}
+.firmtable td{
+    font-size: 12px;
+    color: #333333;
+}
+.firmtable .th1{
+    width: 266px;
+    text-align: left;
+    text-indent: 40px;
+}
+.firmtable .th2{
+    width: 102px;
+}
+.firmtable .th3{
+    width: 130px;
+}
+.firmtable .th4{
+    width: 110px;
+}
+.firmtable .th5{
+    width: 138px;
+}
+.firmtable .th6{
+    width: 120px;
+}
+.firmtable .red{
+    color: #ED0F0F;
+}
+.firm .gifts{
+    margin:13px 0 0 45px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #008ED4;
+}
+.firm .gifts div{
+    line-height: 22px;
+}
+.firm .lastbox .reminder{
+    width: 328px;
+    float: left;
+    text-align: center;
+    margin:42px 0 0 45px;
+    font-size: 12px;
+    color: #ee1010;
+}
+.firm .lastbox .right{
+    width: 399px;
+    float: right;
+    height: 65px;
+    margin:42px 43px 0 0;
+}
+.firm .lastbox .right button{
+    float: right;
+    margin-top: -6px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 4px;
+    background: #ED0F0F;
+    border-bottom: 2px solid #960d0d;
+}
+.firm .lastbox .right button a{
+    font-size: 16px;
+    color: white;
+}
+
+.firm .lastbox .right .count{
+    float: right;
+    margin-right: 20px;
+    width: 219px;
+    height: 38px;
+}
+.firm .lastbox .right .count .title{
+    font-size: 14px;
+    color: #656565;
+}
+.firm .lastbox .right .count .num{
+    font-size: 30px;
+    color: #ED0F0F;
+}
+.firm .lastbox .right .agreement{
+    margin: 44px 0 0 22px;
+}
+.firm .lastbox .right .agreement input{
+    display: block;
+    float: left;
+}
+.firm .lastbox .right .agreement a{
+    line-height: 14px;
+    float: left;
+    font-size: 12px;
+    color: #999999;
+}
+
+.ocontainer .oinfo{
+    width: 100%;
+    height: 326px;
+    margin-top: 13px;
+    background: white;
+    padding-right: 10px;
+}
+.oinfotable th{
+    width: 173px;
+    height: 35px;
+    font-size: 14px;
+    color: #333333;
+    background: #99d5f0;
+}
+.oinfotable .th2{
+    width: 126px;
+}
+.oinfotable td{
+    height: 34px;
+    font-size: 12px;
+    color: #333333;
+}
+.oinfotable .txt{
+    padding: 8px 15px;
+    width: 173px;
+}
+.mcontainer .ocontainer .oinfo .ctitle{
+    margin: 15px 0 0 40px;
+}
+.mcontainer .ocontainer .oinfo .ctitle .cblank{
+    font-weight: bold;
+    font-size: 18px;color: #333333;
+}
+.mcontainer .ocontainer .oinfo .ctitle .cred{
+    font-size: 14px;color: #ED0F0F;
+}
+a:hover,a:focus{
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+.oinfo .tab .tab-content .account{
+     margin:45px 0 15px 0;
+ }
+.oinfo .tab .tab-content .notice{
+    margin:28px 0 15px 54px;
+    line-height: 18px;
+}
+.oinfo .tab .tab-content .Prompt{
+    width: 425px;
+    line-height: 20px;
+    float: right;
+    text-align: center;
+    margin: 30px 55px 0 0;
+}
+.oinfo .tab .tab-content .account-t{
+    margin-left: 30px;
+    font-size: 14px;
+    color: #656565;
+}
+.oinfo .tab .tab-content .account-n{
+    font-size: 30px;
+    color: #ED0F0F;
+}
+.oinfo .tab .tab-content .chtxt{
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.oinfo .tab .tab-content .banks{
+    height: 390px;
+}
+.oinfo .tab .thisPlatform .TPitem button{
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    background: #00A1E5;
+    border-radius: 4px;
+    border: none;
+    margin-left: 156px;
+}
+.oinfo .tab .bankul{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.oinfo .tab .bankul li{
+    height: 50px;
+    margin-top: 10px;
+}
+.oinfo .tab .bankul li input{
+    display: block;
+    float: left;
+    margin-top: 20px;
+    width: 16px;
+    height: 16px;
+}
+.oinfo .tab .bankul li img{
+    margin-left: 9px;
+}
+.oinfo .tab .bankul a{
+    font-size: 16px;
+    color: #00A1E5;
+    margin: 0;
+    display: block;
+    width: 205px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 2px solid #00a2e5;
+    text-transform: uppercase;
+    position: relative;
+}
+.oinfo .tab .bankul a:before{
+    content: "";
+    width: 58%;
+    height: 4px;
+    margin: 0 auto;
+}
+.oinfo .tab .bankul a:after{
+    content: "";
+    border-bottom: 5px solid #00a2e5;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 46%;
+}
+.oinfo .tab #balance .bcontent{
+    height: 140px;
+}
+.oinfo .tab #balance .bcontent .notice .nored{
+    font-size: 14px;
+    color: #D71E06;
+}
+.oinfo .tab #balance .bcontent .notice .none{
+    font-size: 12px;
+    color: #656565;
+}
+.oinfo .tab #balance .bcontent .notice .noblue{
+    font-size: 12px;
+    color: #0088CF;
+}
+.oinfo .tab .Prompt .pred{
+    font-size: 14px;
+    color: #D71E06;
+}
+.oinfo .tab .Prompt .none{
+    font-size: 12px;
+    color: #656565;
+}
+.oinfo .tab .flow .flow-title{
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.oinfo .tab .flow .first{
+    margin-top: 15px;
+}
+.oinfo .tab .flow .first,.second{
+    text-indent: 2em;
+}
+.oinfo .tab .flow .step{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+.oinfo .tab .flow  .txt{
+    font-size: 14px;
+    text-indent: 1em;
+    color: #333333;
+}
+.oinfo .tab .flow .blue{
+    font-size: 14px;
+    color: #008BD0;
+}
+tr:nth-of-type(even){
+    background: #f6f6f6;
+
+}
+tr:nth-of-type(odd){
+    background: #e3e3e3;
+}
+tr:nth-of-type(odd) td:nth-of-type(even){
+    background: #ebebeb;
+}
+tr:nth-of-type(even) td:nth-of-type(even){
+    background: #fff;
+}

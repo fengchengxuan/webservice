@@ -1,0 +1,29 @@
+body{
+    min-width: 1170px;
+}
+.contentbox .top span{
+    color: #656565;
+    font-family: "微软雅黑",sans-serif;
+    font-size: 8px;
+
+}
+.inner-content div{
+    float: left;
+    padding: 4px;
+    margin-left:39px;
+    font-size: 12px;
+    font-family: "微软雅黑",sans-serif;
+}
+.inner-content{
+    display: block;
+    width: 980px;
+    height: 45px;
+    line-height: 35px;
+    background: rgb(245,245,245);
+}
+.alter{
+    color:#00f;
+}
+.del{
+    color:red;
+}

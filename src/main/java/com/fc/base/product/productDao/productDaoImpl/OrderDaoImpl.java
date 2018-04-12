@@ -102,13 +102,13 @@ public class OrderDaoImpl extends BaseDao implements OrderDao{
     }
 
     @Override//显示用户所有的订单
-    public List<OrderEntity> showAllDao(String userName) {
+    public List<OrderEntity> showAllDao(String userId) {
 
         List<String>  proInfo=new ArrayList<>();
         StringBuffer hql=new StringBuffer("from OrderEntity  where 1=1");
-       if( userName!=null &&  userName!=""){
+       if( userId!=null &&  userId!=""){
             hql.append(" and fcUserId = ?");
-            proInfo.add(userName);
+            proInfo.add(userId);
         }
       return super.findList(hql.toString(),proInfo);
     }

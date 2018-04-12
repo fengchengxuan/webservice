@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+}
+th,td{
+    padding: 0;
+}
+select{
+    /*height: 43px;*/
+    line-height: 43px;
+    color: white;
+}
+#Ulist tr:nth-of-type(odd){
+    background: #F5F5F5;
+    height: 40px;
+    text-align: center;
+}
+#Ulist tr:nth-of-type(even){
+    background: #ffffff;
+    height: 50px;
+}

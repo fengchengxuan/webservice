@@ -9,6 +9,8 @@ import com.fc.base.product.util.Amount;
 import com.fc.base.product.util.OrderUtil;
 import com.fc.base.product.util.ProUtil;
 import com.fc.base.product.util.SreachPro;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -43,6 +45,8 @@ public class ProductAction {
     private SreachPro SreachPro;
     private List<String> list;
     private Map map;
+    @Autowired
+    private UserService userService;
 
     @ModelAttribute
     public void init(){
@@ -250,8 +254,13 @@ public class ProductAction {
     }*/
   //----------------------------------------------------------------
     @RequestMapping("/showOrder")//显示全用户订单
-    public @ResponseBody SreachPro showAllOrder(String userName){
-        SreachPro util=orderService.showAllOrderService(userName);
+    public @ResponseBody SreachPro showAllOrder(HttpSession session,String userName){
+        String user =(String)session.getAttribute("user");
+        String password =(String) session.getAttribute("password");
+        String type=(String) session.getAttribute("type");
+        FcUser fcUser=userService.loginUser(type,user,password);
+        SreachPro util=orderService.showAllOrderService(fcUser.getId());
+
         return util;
     }
     @RequestMapping("/stateOrder")//根据状态显示订单
@@ -416,7 +425,11 @@ public class ProductAction {
        if( session.getAttribute("order")!=null){//判断是否存在订单
             //   return  (OrderEntity)session.getAttribute("order");
         }
-        String loginName=(String) session.getAttribute("userName");  //取用户名
+        String loginName=(String) session.getAttribute("user");  //取用户名
+        String password=(String) session.getAttribute("password");  //取用户名
+        String type=(String) session.getAttribute("type");
+        FcUser fcUser=userService.loginUser(type,loginName,password);
+        System.out.println(fcUser.getId()+":用户id");
         OrderUtil util=(OrderUtil) session.getAttribute("showOrder"); //取选中的产品
         //生成编号
        Format format=new SimpleDateFormat("yyyyMMdd"); //时间转换
@@ -428,7 +441,7 @@ public class ProductAction {
         }else{
             code.append(String.format("%05d",0));
         }
-        OrderEntity  order= util.createOrder(loginName,code.toString());
+        OrderEntity  order= util.createOrder(fcUser.getId(),code.toString());
         session.setAttribute("order",order);
 
         orderService.saveOrder(order);

@@ -1,0 +1,15 @@
+select{
+
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("../../../static/background/images/XL.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+select::-ms-expand { display: none; }
+option{
+    background-color: white;
+    border: 1px solid #ccc;
+}
+#newsType{
+    font-weight: 400;
+}

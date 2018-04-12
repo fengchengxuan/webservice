@@ -103,9 +103,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override//显示用户全部订单
-    public SreachPro showAllOrderService(String userName) {
-        if(userName!=null&&userName!=""){//不为空
-            order= orderDao.showAllDao(userName);
+    public SreachPro showAllOrderService(String userId) {
+        if( userId!=null&& userId!=""){//不为空
+            order= orderDao.showAllDao(userId);
         }else {
             order=new ArrayList<>();
         }

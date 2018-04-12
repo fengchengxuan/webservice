@@ -25,7 +25,6 @@ public class UserServiceImpl extends BaseDao implements UserService {
             return null;
         }
     }
-
     @Override
     public void saveUser(String userName, String password, String repassword, String type) {
         FcUser fcUser =new FcUser();

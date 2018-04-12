@@ -1,0 +1,89 @@
+.rName-main{
+    width: 1000px;
+    margin-left: 208px;
+}
+.rName-choose{
+    width: 1000px;
+    height: 299px;
+    background: white;
+    margin-top: 10px;
+    box-shadow: 0 0 10px 1px #ccc;
+}
+.rName-choose .rName-img{
+    width: 68px;
+    height: 82px;
+    float: left;
+    margin: 30px 0 0 60px;
+}
+.rName-choose .rName-img .img{
+    width: 47px;
+    height: 47px;
+    margin: 0 auto;
+    background-image: url("../../../static/front/images/reminder.png");
+}
+.rName-choose .rName-img .txt{
+    font-size: 16px;
+    color: #D71E06;
+    margin-top: 10px;
+}
+.rName-choose .rName-text{
+    width: 804px;
+    height: 115px;
+    padding-top: 30px;
+    margin-left: 165px;
+    font-size: 14px;
+    color: #656565;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+.rName-main .rName-choose-btn{
+    width: 382px;
+    height: 108px;
+    margin:20px 0 0 300px;
+}
+.rName-main .rName-choose-btn div{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+.rName-main .rName-choose-btn button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 4px;
+    background: #00A1E5;
+    margin-top: 40px;
+}
+
+/*通过认证*/
+.rName-main .rName-choose .success{
+    width: 454px;
+    height: 178px;
+    margin: 50px 0 0 80px;
+
+}
+.rName-main .rName-choose .success .success-txt{
+    font-size: 24px;
+    font-weight: bold;
+    color: #31C50A;
+    height: 32px;
+}
+.rName-main .rName-choose .success .success-txt span{
+    display: block;
+    float: right;
+}
+.rName-main .rName-choose .success .success-way{
+    margin-top: 40px;
+}
+.rName-main .rName-choose .success .success-name,.success-number{
+    margin-top: 20px;
+}
+.rName-main .rName-choose .success .success-way,.success-name,.success-number{
+    font-size: 14px;
+    color: #333333;
+}
+.rName-main .rName-choose .success-img{
+    margin-left: 300px;
+}
