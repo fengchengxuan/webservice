@@ -9,4 +9,5 @@ public interface UserDao {
     FcUser saveUser(FcUser fcUser) ;
     List<FcUser> findUser(String type , String userName, String password);
     List<FcUser> getUserList() ;
+    FcUser getUser(String username);
 }

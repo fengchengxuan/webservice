@@ -5,6 +5,9 @@ import com.fc.base.product.entity.ProApplyEntity;
 import com.fc.base.product.productService.ApplyService;
 import com.fc.base.product.productService.OrderService;
 import com.fc.base.product.util.SreachApply;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +27,8 @@ public class ApplyAction {
     private OrderService orderService;
     @Autowired
     private ApplyService applyService;
+    @Autowired
+    private UserService userService;
     private List<OrderEntity> orderList;
     private List<String> listArr;
     private SreachApply sreachApply;
@@ -59,9 +64,10 @@ public class ApplyAction {
     }
     //用户查看申请体验;
     @RequestMapping("/userApply")
-    public @ResponseBody ProApplyEntity getUserApply(HttpSession session){
-        session.getAttribute("userName") ;
-        return  applyService.userApplySerivce("11");
+    public @ResponseBody FcUser getUserApply(HttpSession session){
+//        session.getAttribute("userName") ;
+//        return  applyService.userApplySerivce("11");
+        return userService.getUser(session.getAttribute("userName").toString());
     }
 
 
