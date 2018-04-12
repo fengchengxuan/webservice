@@ -20,6 +20,12 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     public void saveEntity(FcUser fcUser) {
         super.saveOrUpdate(fcUser);
     }
+    
+    @Override
+    public FcUser saveUser(FcUser fcUser) {
+        super.saveOrUpdate(fcUser);
+        return fcUser;
+    }
 
     @Override
     public List<FcUser> findUser(String type, String user, String password) {
@@ -46,5 +52,23 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             list.add(password);
         }
         return super.findList(hql.toString(),list);
+    }
+    
+    @Override
+    public FcUser getUser(String username) {
+        StringBuffer hql= new StringBuffer("from FcUser where 1 = 1 ");
+        list = new ArrayList<>();
+        if(username != null && !"".equals(username)){
+            hql.append("and userName = ?");
+            list.add(username);
+        }
+        return (FcUser)super.findList(hql.toString(),list).get(0);
+    }
+    
+    
+    @Override
+    public List<FcUser> getUserList() {
+    	String hql="from FcUser";
+    	return super.findList(hql.toString());
     }
 }
