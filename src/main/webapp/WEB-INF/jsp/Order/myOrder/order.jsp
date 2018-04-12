@@ -180,7 +180,19 @@
         }
         .select_model{
             position: relative;
+        }  td{
+               border-left: 1px solid #333;
+               border-right: 1px solid #333;
+           }
+        table{
+            border-bottom: 1px solid #333;
         }
+        .oinfotable{
+            border-spacing: 0;
+            border-collapse: collapse;
+        }tr th{
+             background: #99d5f0;
+         }
     </style>
 </head>
 <body ng-init="sysa=true;basea=true;contenta=true;producta=true;ordera=false;membera=true;adva=true;pagefoota=true;keya=true;allnava=true;adma=true;
@@ -213,41 +225,126 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                 <table class="artable">
                     <thead>
                     <tr>
-                        <th style="width: 62px;">序号</th>
-                        <th style="width: 120px;border-left: 1px solid #24a1e4">编号</th>
-                        <th style="width: 78px;border-left: 1px solid #24a1e4">会员名称</th>
-                        <th style="width: 134px;border-left: 1px solid #24a1e4">需求信息</th>
-                        <th style="width: 160px;border-left: 1px solid #24a1e4">订单标题</th>
+
+                        <th style="width: 120px;border-left: 1px solid #24a1e4">订单编号</th>
+                        <th style="width: 78px;border-left: 1px solid #24a1e4">订单详情</th>
+                        <th style="width: 134px;border-left: 1px solid #24a1e4">服务标准</th>
+
 
                         <th style="width: 128px;border-left: 1px solid #24a1e4">
                             <div class="select_model">
-                                <div class="ddo" id="Selected12"><span>创建订单时间</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
+                                <div class="ddo" id="Selected12"><span>购买时长</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                                 <div style="display: none" id="ddoli12">
                                     <ul>
-                                        <li style="border-top: none">创建订单时间</li>
-                                        <li>订单付款时间</li>
+                                        <li style="border-top: none">3个月</li>
+                                        <li>1年</li>
+                                        <li>2年</li>
+                                        <li>3年</li>
                                     </ul>
                                 </div>
                             </div>
                         </th>
                         <%--<th style="width: 105px;border-left: 1px solid #24a1e4">折扣/优惠券</th>--%>
-                        <th style="width: 120px;border-left: 1px solid #24a1e4">订单实付金额</th>
-                        <th style="width: 90px;border-left: 1px solid #24a1e4">订单状态</th>
-                        <th style="width: 86px;border-left: 1px solid #24a1e4">备注</th>
+                        <th style="width: 120px;border-left: 1px solid #24a1e4">优惠金额</th>
+                        <th style="width: 90px;border-left: 1px solid #24a1e4">订单金额</th>
+                        <th style="width: 86px;border-left: 1px solid #24a1e4">订单时间</th>
+                        <th style="width: 86px;border-left: 1px solid #24a1e4">
+                        <div class="select_model">
+                            <div class="ddo" id="Selected13"><span>付款状态</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
+                            <div style="display: none" id="ddoli13">
+                                <ul>
+                                    <li style="border-top: none">未付款</li>
+                                    <li>已付款</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </th>
+                        <th style="width: 86px;border-left: 1px solid #24a1e4">
+                            <div class="select_model">
+                                <div class="ddo" id="Selected14"><span>订单状态</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
+                                <div style="display: none" id="ddoli14">
+                                    <ul>
+                                        <li style="border-top: none">完成交易</li>
+                                        <li>未完成交易</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </th>
                     </tr>
                     </thead>
                     <tbody id="allOrder">
+
+
+
                     <tr>
-                        <td ><input type="checkbox" value="" style="position: relative;top: 2px" placeholder="">&nbsp;&nbsp;&nbsp;1 </td>
-                        <td style="color: #1d87e9" >2</td>
-                        <td >3</td>
-                        <td style="color: red">5</td>
-                        <td >6</td>
-                        <td >7</td>
-                        <td >8</td>
-                        <td >9</td>
-                        <td style="color: red">10</td>
-                        <td style="color: #1d87e9">尽快安排发货</td></tr>
+                        <td rowspan="5">fc00002</td>
+                        <td >
+                            网站建设/程序及功能/微信小程序/APP研发与定制
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td style="border-top:1px dashed #656565; ">网站建设</td>
+                        <td style="border-top:1px dashed #656565; ">基础版</td>
+                        <td style="border-top:1px dashed #656565; ">1年</td>
+                        <td style="border-top:1px dashed #656565; ">1</td>
+                        <td style="color: red;border-top:1px dashed #656565; ">￥50.00</td>
+                        <td style="color: red;border-top:1px dashed #656565; ">￥1615.00</td>
+                        <td style="border-top:1px dashed #656565; ">未付款</td>
+                        <td style="border-top:1px dashed #656565; ">未完成交易</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:1px dashed #656565;">程序及功能/微信小程序</td>
+                        <td style="border-top:1px dashed #656565;">加强版</td>
+                        <td style="border-top:1px dashed #656565;">1年</td>
+                        <td style="border-top:1px dashed #656565;">1</td>
+                        <td style="color: red;border-top:1px dashed #656565;">￥150.00</td>
+                        <td style="color: red;border-top:1px dashed #656565;">￥3615.00</td>
+                        <td style="border-top:1px dashed #656565; ">未付款</td>
+                        <td style="border-top:1px dashed #656565; ">未完成交易</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:1px dashed #656565;">APP研发与定制</td>
+                        <td style="border-top:1px dashed #656565;">商业版</td>
+                        <td style="border-top:1px dashed #656565;">1年</td>
+                        <td style="border-top:1px dashed #656565;">1</td>
+                        <td style="color: red;border-top:1px dashed #656565;">￥250.00</td>
+                        <td style="color: red;border-top:1px dashed #656565;">￥9615.00</td>
+                        <td style="border-top:1px dashed #656565; ">未付款</td>
+                        <td style="border-top:1px dashed #656565; ">未完成交易</td>
+                    </tr>
+                    <tr style="border-bottom:1px dashed #656565;">
+                        <td style="border-top:1px dashed #656565;">
+                            <div>
+                                <div style="float: left;margin-top: 12px;">
+                                    <img src="${ctx}/static/front/images/s.png" alt="" style="width: 35px">
+                                </div>
+                                <div style="float: right;width: 310px;height: auto;text-align: left;padding-bottom: 5px">
+                                    <p>1、注册APP版权，并根据系统升级要求，一年内升级2个版本。</p>
+                                    <p>2、上传目前各大应用APP市场及商店，并保持每一个上传应用市场及应用商店有10000个下载量。</p>
+                                    <p>3、技术服务及指导APP使用为期二年。</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                        <td style="border-top:1px dashed #656565;"></td>
+                    </tr>
+
+
+
+
+
                     </tbody>
                 </table>
 
@@ -299,6 +396,65 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
 
     });
 
+
+
+
+
+
+
+
+
+    $(document).ready(function() {
+        $("#Selected13").click(function(){
+            if("block" == $("#ddoli13").css("display")){
+                $("#ddoli13").hide();
+            }else{
+                $("#ddoli13").show();
+            }
+        });
+
+        $("#ddoli13>ul>li").each(function(i,v){
+            $(this).click(function(){
+                $("#Selected13>span").html($(this).html());
+                $("#ddoli13").hide();
+            });
+        });
+
+        $("#Selected13").blur(function(){
+            $("#ddoli13").hide();
+        });
+
+    });
+
+
+
+
+    
+
+
+
+
+    $(document).ready(function() {
+        $("#Selected14").click(function(){
+            if("block" == $("#ddoli14").css("display")){
+                $("#ddoli14").hide();
+            }else{
+                $("#ddoli14").show();
+            }
+        });
+
+        $("#ddoli14>ul>li").each(function(i,v){
+            $(this).click(function(){
+                $("#Selected14>span").html($(this).html());
+                $("#ddoli14").hide();
+            });
+        });
+
+        $("#Selected14").blur(function(){
+            $("#ddoli14").hide();
+        });
+
+    });
 </script>
 </body>
 </html>
@@ -516,134 +672,134 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
 </div>
 
 <script test="text/javascript">
-    var totalNum;
-    var orderList;
+    <%--var totalNum;--%>
+    <%--var orderList;--%>
 
-    $(document).ready(function(){
-        $("#currentPage").val(1);
-        $.ajax({
-            url : '${ctx}/order/showAll',
-            type : 'POST',
-            async:true,
-            cache:false,
-            dataType : 'json',
-            success : function(data) {
-                if (data != null && data != ""){
-                    orderList=data.orderList;//全部订单
-                    totalNum=data.totalNum;
-                    $("#totalNum").text("共"+totalNum+"页");
-                    showObj(orderList,$("#currentPage").val())
-                }
-            }
-        })
-    })
-    function showObj(order,currentPage){
-        $("#allOrder").empty();
-        $("#showOrder").append("<tr style=\"width: 980px;height: 5px\"></tr>");//添加空白区
-        var i=(currentPage-1)*20;
-        var row;
-        if(totalNum==currentPage){
-          for(i;i<order.length;i++){
-              var row1="";//需求
-              for(var j=0;j<order[i].list.length;j++){ //需求
-                  row1=row1+order[i].list[j].demand+"/";
-              }
-              row=" <tr>" +
-                  " <td ><input type=\"checkbox\" value=\""+order[i].id+"\" style=\"position: relative;top: 2px\" placeholder=\"\">"+(i+1)+"</td>" +
-                  " <td style=\"color: #1d87e9\" >"+order[i].code+"</td>" +
-                  " <td >"+order[i].userName+"</td>" +
-                  " <td style=\"color: red\"><div class=\"hiddenText\">"+row1+"</div></td>" +
-                  " <td >"+order[i].proTitle+"</td>" +
-                  " <td >"+order[i].time+"</td>" +
-                  " <td >"+order[i].price+"</td>" +
-                  " <td style=\"color: red\">"+order[i].state+"</td>" +
-                  " <td style=\"color: #1d87e9\">尽快安排发货</td></tr>"
-              $("#allOrder").append(row);
-          }
-        }else if(totalNum!=currentPage&&totalNum>currentPage){
-            var end=i+20;
-            for(i;i<end;i++){
-                var row1="";//需求
-                for(var j=0;j<order[i].list.length;j++){ //需求
-                    row1=row1+order[i].list[j].demand+"/";
-                }
-                row=" <tr>" +
-                    " <td ><input type=\"checkbox\" value=\""+order[i].id+"\" style=\"position: relative;top: 2px\" placeholder=\"\">"+(i+1)+"</td>" +
-                    " <td style=\"color: #1d87e9\" >"+order[i].code+"</td>" +
-                    " <td >"+order[i].userName+"</td>" +
-                    " <td style=\"color: red\" ><div calss=\"hiddenText\">"+row1+"</div></td>" +
-                    " <td >"+order[i].proTitle+"</td>" +
-                    " <td >"+order[i].time+"</td>" +
-                    " <td >"+order[i].price+"</td>" +
-                    " <td style=\"color: red\">"+order[i].state+"</td>" +
-                    " <td style=\"color: #1d87e9\">尽快安排发货</td></tr>"
-                $("#allOrder").append(row);
-            }
-        }
-        $(".darpages").find(".page").remove();//删除之前的
-        $("#nextPage").before("<span class=\"page\">" + currentPage + "</sqan>");//显示页码
-        $(".page").css("color","red");
-    }
-    //上一页
-    $("#oldPage").click(function () {
-        var currentPage= $("#currentPage").val();  //取当前页码
-        var nextPage=currentPage-1;               //上一页的数
-        if(currentPage>1){
-            $("#currentPage").val(nextPage);
-            showObj(orderList,$("#currentPage").val());
-        }else if(currentPage==1){
-            alert("这里是首页哦！！！！");
-        }
-    });
-    //下一页
-    $("#nextPage").click(function () {
-        var currentPage= $("#currentPage").val();
-        var nextPage=parseInt(currentPage)+parseInt(1);
-        if(currentPage<totalNum){
-            $("#currentPage").val(nextPage);
-            showObj(orderList,$("#currentPage").val());
-        }else if(currentPage==totalNum){
-            alert("已经是最后一页了。");
-        }
-    });
-    function clickAll() {
-        var clickFlat= $("#clickId").is(':checked');
-        if(clickFlat){
-            $("#allOrder").find("input[type='checkbox']").prop("checked",true);
-        }else{
-            $("#allOrder").find("input[type='checkbox']").prop("checked",false);
-        }
-    }
-    function deleteOrder(){
-        var checkboxAll=$("#allOrder").find("input[type='checkbox']:checked");
-        if(checkboxAll == null || checkboxAll.length<1){
-            alert("请选择一行");
-            return ;
-        }
-        if(confirm("是否要删除勾选部分")){
-            var list=[];
-            var proId;
-            for(var i=0;i<checkboxAll.length;i++){
-                proId= checkboxAll[i].value;
-                list.push(proId);
-            }
-            $.ajax({
-                url : '${ctx}/order/deleteAll',
-                type : 'POST',
-                data : "orderList="+list,
-                async:true,
-                cache:false,
-                dataType : 'json',
-                success : function(data) {
-                    if (data != null && data != ""){
-                        alert(data[0]);
-                        var url=window.location.href;
-                        window.location.href=url;
-                    }
-                }
-            });
-        }
-    }
+    <%--$(document).ready(function(){--%>
+        <%--$("#currentPage").val(1);--%>
+        <%--$.ajax({--%>
+            <%--url : '${ctx}/order/showAll',--%>
+            <%--type : 'POST',--%>
+            <%--async:true,--%>
+            <%--cache:false,--%>
+            <%--dataType : 'json',--%>
+            <%--success : function(data) {--%>
+                <%--if (data != null && data != ""){--%>
+                    <%--orderList=data.orderList;//全部订单--%>
+                    <%--totalNum=data.totalNum;--%>
+                    <%--$("#totalNum").text("共"+totalNum+"页");--%>
+                    <%--showObj(orderList,$("#currentPage").val())--%>
+                <%--}--%>
+            <%--}--%>
+        <%--})--%>
+    <%--})--%>
+    <%--function showObj(order,currentPage){--%>
+        <%--$("#allOrder").empty();--%>
+        <%--$("#showOrder").append("<tr style=\"width: 980px;height: 5px\"></tr>");//添加空白区--%>
+        <%--var i=(currentPage-1)*20;--%>
+        <%--var row;--%>
+        <%--if(totalNum==currentPage){--%>
+          <%--for(i;i<order.length;i++){--%>
+              <%--var row1="";//需求--%>
+              <%--for(var j=0;j<order[i].list.length;j++){ //需求--%>
+                  <%--row1=row1+order[i].list[j].demand+"/";--%>
+              <%--}--%>
+              <%--row=" <tr>" +--%>
+                  <%--" <td ><input type=\"checkbox\" value=\""+order[i].id+"\" style=\"position: relative;top: 2px\" placeholder=\"\">"+(i+1)+"</td>" +--%>
+                  <%--" <td style=\"color: #1d87e9\" >"+order[i].code+"</td>" +--%>
+                  <%--" <td >"+order[i].userName+"</td>" +--%>
+                  <%--" <td style=\"color: red\"><div class=\"hiddenText\">"+row1+"</div></td>" +--%>
+                  <%--" <td >"+order[i].proTitle+"</td>" +--%>
+                  <%--" <td >"+order[i].time+"</td>" +--%>
+                  <%--" <td >"+order[i].price+"</td>" +--%>
+                  <%--" <td style=\"color: red\">"+order[i].state+"</td>" +--%>
+                  <%--" <td style=\"color: #1d87e9\">尽快安排发货</td></tr>"--%>
+              <%--$("#allOrder").append(row);--%>
+          <%--}--%>
+        <%--}else if(totalNum!=currentPage&&totalNum>currentPage){--%>
+            <%--var end=i+20;--%>
+            <%--for(i;i<end;i++){--%>
+                <%--var row1="";//需求--%>
+                <%--for(var j=0;j<order[i].list.length;j++){ //需求--%>
+                    <%--row1=row1+order[i].list[j].demand+"/";--%>
+                <%--}--%>
+                <%--row=" <tr>" +--%>
+                    <%--" <td ><input type=\"checkbox\" value=\""+order[i].id+"\" style=\"position: relative;top: 2px\" placeholder=\"\">"+(i+1)+"</td>" +--%>
+                    <%--" <td style=\"color: #1d87e9\" >"+order[i].code+"</td>" +--%>
+                    <%--" <td >"+order[i].userName+"</td>" +--%>
+                    <%--" <td style=\"color: red\" ><div calss=\"hiddenText\">"+row1+"</div></td>" +--%>
+                    <%--" <td >"+order[i].proTitle+"</td>" +--%>
+                    <%--" <td >"+order[i].time+"</td>" +--%>
+                    <%--" <td >"+order[i].price+"</td>" +--%>
+                    <%--" <td style=\"color: red\">"+order[i].state+"</td>" +--%>
+                    <%--" <td style=\"color: #1d87e9\">尽快安排发货</td></tr>"--%>
+                <%--$("#allOrder").append(row);--%>
+            <%--}--%>
+        <%--}--%>
+        <%--$(".darpages").find(".page").remove();//删除之前的--%>
+        <%--$("#nextPage").before("<span class=\"page\">" + currentPage + "</sqan>");//显示页码--%>
+        <%--$(".page").css("color","red");--%>
+    <%--}--%>
+    <%--//上一页--%>
+    <%--$("#oldPage").click(function () {--%>
+        <%--var currentPage= $("#currentPage").val();  //取当前页码--%>
+        <%--var nextPage=currentPage-1;               //上一页的数--%>
+        <%--if(currentPage>1){--%>
+            <%--$("#currentPage").val(nextPage);--%>
+            <%--showObj(orderList,$("#currentPage").val());--%>
+        <%--}else if(currentPage==1){--%>
+            <%--alert("这里是首页哦！！！！");--%>
+        <%--}--%>
+    <%--});--%>
+    <%--//下一页--%>
+    <%--$("#nextPage").click(function () {--%>
+        <%--var currentPage= $("#currentPage").val();--%>
+        <%--var nextPage=parseInt(currentPage)+parseInt(1);--%>
+        <%--if(currentPage<totalNum){--%>
+            <%--$("#currentPage").val(nextPage);--%>
+            <%--showObj(orderList,$("#currentPage").val());--%>
+        <%--}else if(currentPage==totalNum){--%>
+            <%--alert("已经是最后一页了。");--%>
+        <%--}--%>
+    <%--});--%>
+    <%--function clickAll() {--%>
+        <%--var clickFlat= $("#clickId").is(':checked');--%>
+        <%--if(clickFlat){--%>
+            <%--$("#allOrder").find("input[type='checkbox']").prop("checked",true);--%>
+        <%--}else{--%>
+            <%--$("#allOrder").find("input[type='checkbox']").prop("checked",false);--%>
+        <%--}--%>
+    <%--}--%>
+    <%--function deleteOrder(){--%>
+        <%--var checkboxAll=$("#allOrder").find("input[type='checkbox']:checked");--%>
+        <%--if(checkboxAll == null || checkboxAll.length<1){--%>
+            <%--alert("请选择一行");--%>
+            <%--return ;--%>
+        <%--}--%>
+        <%--if(confirm("是否要删除勾选部分")){--%>
+            <%--var list=[];--%>
+            <%--var proId;--%>
+            <%--for(var i=0;i<checkboxAll.length;i++){--%>
+                <%--proId= checkboxAll[i].value;--%>
+                <%--list.push(proId);--%>
+            <%--}--%>
+            <%--$.ajax({--%>
+                <%--url : '${ctx}/order/deleteAll',--%>
+                <%--type : 'POST',--%>
+                <%--data : "orderList="+list,--%>
+                <%--async:true,--%>
+                <%--cache:false,--%>
+                <%--dataType : 'json',--%>
+                <%--success : function(data) {--%>
+                    <%--if (data != null && data != ""){--%>
+                        <%--alert(data[0]);--%>
+                        <%--var url=window.location.href;--%>
+                        <%--window.location.href=url;--%>
+                    <%--}--%>
+                <%--}--%>
+            <%--});--%>
+        <%--}--%>
+    <%--}--%>
 
 </script>
 

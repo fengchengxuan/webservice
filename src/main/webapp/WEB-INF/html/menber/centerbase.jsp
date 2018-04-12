@@ -42,14 +42,13 @@
                 <div style="height:160px;">
                     <div class="setimg">
                         <div id="preview5" style="float: left;height: 80px">
-                            <a href="javascript:" class="file">
-                                <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
+                            <a href="javascript:" class="file">修改头像
+
                                 <input id="st18" name="evidence"  onchange="previewImage(this,5)" type="file" style="height:80px;"/>
-                                <div style="width: 0;height: 0">
-                                    <div class="alr-tou">修改头像</div>
-                                </div>
+
                             </a>
                             <span class="dui" id="imgOrder_dui" style="display: none;"></span>
+                            <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -67,18 +66,18 @@
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
                             <select name="htype" id="htype">
-                                <option value="0">政府|非盈利机构</option>
-                                <option value="1">文体教育|工艺美术</option>
-                                <option value="2">金融业</option>
-                                <option value="3">房地产|建筑业</option>
-                                <option value="4">商业服务|个体</option>
-                                <option value="5">贸易|批发|零售|租赁业</option>
-                                <option value="6">生产|加工|制造</option>
-                                <option value="7">交通|运输|物流|仓储</option>
-                                <option value="8">服务业|个体</option>
-                                <option value="9">能源|矿产|环保</option>
-                                <option value="10">农|林|牧|渔|其他</option>
-                                <option value="11">文化|传媒|娱乐|体育</option>
+                                <option value="政府|非盈利机构">政府|非盈利机构</option>
+                                <option value="政府|非盈利机构">政府|非盈利机构</option>
+                                <option value="金融业">金融业</option>
+                                <option value="房地产|建筑业">房地产|建筑业</option>
+                                <option value="商业服务|个体">商业服务|个体</option>
+                                <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
+                                <option value="生产|加工|制造">生产|加工|制造</option>
+                                <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
+                                <option value="服务业|个体">服务业|个体</option>
+                                <option value="能源|矿产|环保">能源|矿产|环保</option>
+                                <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
+                                <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
                             </select>
                             </label>
                         </div>
@@ -99,9 +98,9 @@
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
                             <select name="stype" id="stype">
-                                <option value="0">法人</option>
-                                <option value="1">股东</option>
-                                <option value="2">项目负责人</option>
+                                <option value="法人">法人</option>
+                                <option value="股东">股东</option>
+                                <option value="项目负责人">项目负责人</option>
                             </select>
                             </label>
                         </div>
@@ -191,7 +190,7 @@
         return param;
     }
     $(document).ready(function () {
-        var path='${sessionScope.path}';
+        var path='${sessionScope.path}';//图片
         // $("#parseImg").attr("src",path);
         $.ajax({
             url: '${ctx}/showUserInfo',
@@ -200,18 +199,28 @@
             cache: false,
             success: function (data) {
                 if (data.flag) {
-                     var log=data.entity;
-                    $("#vipname").val(log.vipname);
-                    $("#phonenumber").val(log.phonenumber);
-                    $("#stablephone").val(log.stablephone);
-                    $("#email").val(log.email);
-                    $("#social").val(log.social);
-                    $("#companyname").val(log.companyname);
-                    $("#htype").val(log.htype);
-                    $("#ctype").val(log.ctype);
-                    $("#stype").val(log.stype);
-                    $("#web").val(log.web);
-                    $("#address").val(log.address);
+                     var user=data.entity;
+                    $("#vipname").val(user.userName);
+                    $("#phonenumber").val(user.tel);
+                    $("#stablephone").val(user.phone);
+                    $("#email").val(user.email);
+                    $("#social").val(user.wechart);
+                    $("#companyname").val(user.company);
+                    $("#web").val(user.website);
+                    $("#address").val(user.operAddr);
+                    if(data.prodkind!=null){
+                        $("#htype").val(data.prodkind.proKind);
+                    }
+                    if(data.comptype!=null){
+                        $("#ctype").val(data.comptype.compType);
+                    }
+                    if(data.appType!=null){
+                        $("#stype").val(data.appType.appType);
+                    }
+
+                }else {
+                    window.location.href="${ctx}/login";
+                    return;
                 }
             }
         })

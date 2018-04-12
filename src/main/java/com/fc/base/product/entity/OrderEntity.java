@@ -3,6 +3,7 @@ package com.fc.base.product.entity;
 
 import javax.persistence.*;
 
+import com.fc.base.user.entity.FcUser;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.CascadeType;
@@ -24,8 +25,8 @@ public class OrderEntity {
     private String time;//创建时时间
     @Column(length=15)
     private String price; //总金额
-    @Column
-    private String userName; //用户账号
+    @Column(name = "fcuser_id")
+    private String fcUserId; //用户id
     @Column
     private String transaction;//交易状态
     @Column
@@ -76,12 +77,13 @@ public class OrderEntity {
         this.price = price;
     }
 
-    public String getUserName() {
-        return userName;
+
+    public String getFcUserId() {
+        return fcUserId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setFcUserId(String fcUserId) {
+        this.fcUserId = fcUserId;
     }
 
     public String getTransaction() {

@@ -13,7 +13,6 @@ public class SessionListener implements HttpSessionListener {
 
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
-        httpSessionEvent.getSession().setMaxInactiveInterval(120);
     }
 
     @Override

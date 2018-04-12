@@ -210,6 +210,7 @@
     text-align: center;
     border-radius: 40px;
     display: inline-block;
+    /*overflow: hidden;*/
     color: #999999;
     -ms-text-decoration: none;
     text-decoration: none;
@@ -231,41 +232,13 @@
     -ms-text-decoration: none;
     text-decoration: none;
 }
-#myImg{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-#parseImg{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-.alr-tou{
-    opacity: 0;
-    width: 80px;
-    height: 80px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    line-height: 80px;
-    text-align: center;
-    position: relative;
-    top: -80px;
-    color: white;
-}
-.alr-tou:hover{
-
-
-    opacity:1;
-}
 .base-main .setimg a{
     color: white;
     line-height: 80px;
-    position:absolute; top:0; left:-18px;
-    z-index:10;  filter:alpha(opacity=60);
-}/*-moz-opacity:0.5;*/
-/*opacity: 0.5;*/
-/*display: none;*/
+    position:absolute; top:0px; left:-18px;
+    z-index:10;background:#000;  filter:alpha(opacity=60);-moz-opacity:0.5;opacity: 0.5;
+    display: none;
+}
 .base-main .setimg:hover a{
     display: block;
 

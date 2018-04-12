@@ -422,10 +422,12 @@
             if(!(/^[a-zA-Z\d_]{5,}$/.test(userQQ))){  //QQ微信验证
                 alert("请输入正确微信号或者QQ号");//是否微信
                 return ;
+            }else{
+
             }
         }
 
-        if(!(/^^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+$/).test(website)){
+        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
             alert("请输入贵公司正确的网址");
             return ;
         }

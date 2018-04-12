@@ -200,10 +200,10 @@
                             <a style="list-style: none;text-decoration:none;" href="#">咨询管理&nbsp;&nbsp;</a>
                         </div>
                         <ul class="consult-content" ng-if="consulta==false">
-                            <li class="list list15"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/alladvice">全部咨询</a></li>
-                            <li class="list list16"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/answer">已答咨询</a></li>
-                            <li class="list list17"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/noanswer">未答咨询</a></li>
-                            <li class="list list18"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/colation">过滤咨询</a></li>
+                            <li class="list list15"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/alladvice">咨询查看</a></li>
+                            <%--<li class="list list16"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/answer">已答咨询</a></li>--%>
+                            <%--<li class="list list17"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/noanswer">未答咨询</a></li>--%>
+                            <%--<li class="list list18"><a style="list-style: none;text-decoration:none;" href="${ctx}/admin/colation">过滤咨询</a></li>--%>
                         </ul>
                     </div>
                 </ul>

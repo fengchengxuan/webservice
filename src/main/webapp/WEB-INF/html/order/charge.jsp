@@ -12,7 +12,8 @@
         .mcontainer{
             width: 1210px;
             margin: 0 auto;
-            height: 1536px;
+            height: auto;
+            min-height: 1536px;
         }
         .charge{
             background: #F53292;
@@ -61,6 +62,8 @@
                             <th>折扣/优惠金额</th>
                             <th>订单金额</th>
                             <th>订单时间</th>
+                            <th>付款状态</th>
+                            <th>订单状态</th>
                         </tr>
 
                         </thead>
@@ -555,8 +558,15 @@ function evaluate(){
                    }
                }
                 var row="<tr> <td rowspan="+rowLength+">"+orderEntity.code+"</td>"+//编号和产品
-                    "<td >"+orderEntity.proTitle+"</td> <td></td><td></td>"+
-                    "<td></td><td></td> <td></td> <td></td></tr>";
+                    "<td >"+orderEntity.proTitle+"</td>" +
+                    " <td></td>" +
+                    "<td></td>"+
+                    "<td></td>" +
+                    "<td></td> " +
+                    "<td></td> " +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td></tr>";
                 var row1=""
                for(var j=0;j<orderEntity.list.length;j++){
                    row2=" <tr><td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].demand+"</td>" +
@@ -565,20 +575,26 @@ function evaluate(){
                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[i].num+"</td>" +
                        "<td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[i].preferential+"</td>" +
                        " <td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[i].price+"</td>" +
-                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td></tr>";
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td>" +
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.state+"</td>" +
+                       "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.transaction+"</td>" +
+                       "</tr>";
                    if(orderEntity.list[j].givenFree!="" && orderEntity.list[j].givenFree!=null){
                     var map= " ${ctx}/static/front/images/s.png";
            row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;\">" +
                       "<td style=\"border-top:1px dashed #656565;\"><div>" +
                       " <div style=\"float: left;margin-top: 12px;\">" +
                  " <img src="+map+" alt=\"\" style=\"width: 35px\"></div>" +
-             " <div style=\"float: right;width: 310px;height: 220px;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
+             " <div style=\"float: right;width: 310px;height: auto;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
           "</div></div></td><td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
           "<td style=\"border-top:1px dashed #656565;\"></td>" +
-          "<td style=\"border-top:1px dashed #656565;\"></td></tr>";
+          "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "<td style=\"border-top:1px dashed #656565;\"></td>" +
+               "</tr>";
                     }
                   row1=row1+row2;
                  }
@@ -600,7 +616,7 @@ function evaluate(){
                 };
                 var row="<tr> <td rowspan="+rowLength+">"+orderEntity.code+"</td>"+//编号和产品
                     "<td >"+orderEntity.proTitle+"</td> <td></td><td></td>"+
-                    "<td></td><td></td> <td></td> <td></td></tr>";
+                    "<td></td><td></td> <td></td> <td></td><td></td><td></td></tr>";
                 var row1="";
                 for(var j=0;j<orderEntity.list.length;j++){
                     var row2=" <tr><td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].demand+"</td>" +
@@ -609,20 +625,26 @@ function evaluate(){
                         "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.list[j].num+"</td>" +
                         "<td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[j].preferential+"</td>" +
                         " <td style=\"color: red;border-top:1px dashed #656565; \">￥"+orderEntity.list[j].price+"</td>" +
-                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td></tr>";
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.time+"</td>" +
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.state+"</td>" +
+                        "<td style=\"border-top:1px dashed #656565; \">"+orderEntity.transaction+"</td>" +
+                        "</tr>";
                     if(orderEntity.list[j].givenFree!="" && orderEntity.list[j].givenFree!=null){
                         var map= " ${ctx}/static/front/images/s.png";
-                        row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;\">" +
+                        row2=row2+"</tr><tr style=\"border-bottom:1px dashed #656565;padding: 0 0 5px 5px\">" +
                             "<td style=\"border-top:1px dashed #656565;\"><div>" +
                             " <div style=\"float: left;margin-top: 12px;\">" +
                             " <img src="+map+" alt=\"\" style=\"width: 35px\"></div>" +
-                            " <div style=\"float: right;width: 310px;height: 220px;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
+                            " <div style=\"float: right;width: 310px;height: auto;text-align: left;\"><p>"+orderEntity.list[j].givenFree+"</p>" +
                             "</div></div></td><td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
                             "<td style=\"border-top:1px dashed #656565;\"></td>" +
-                            "<td style=\"border-top:1px dashed #656565;\"></td></tr>";
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "<td style=\"border-top:1px dashed #656565;\"></td>" +
+                            "</tr>";
                     }
                     row1=row1+row2;
                 }

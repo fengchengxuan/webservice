@@ -23,7 +23,7 @@ $(".save").click(function () {
     $.ajax({
         url: ctx+'/updateUserInfo',
         type: 'POST',
-        data: "vipname="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
+        data: "username="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
         "&email="+$("#email").val()+"&social="+$("#social").val()+"&companyname="+$("#companyname").val()+"&htype="+$("#htype").val()
         +"&ctype="+$("#ctype").val()+"&stype="+$("#stype").val()+"&web="+$("#web").val()+"&address="+$("#address").val(),
         dataType: "json",
@@ -35,7 +35,7 @@ $(".save").click(function () {
                     alert("设置成功!");
                     window.location.href = ctx + "vips";
                 } else {
-                    return false;
+                   alert("失败");
                 }
             }else {
                 alert("您还未登录!");

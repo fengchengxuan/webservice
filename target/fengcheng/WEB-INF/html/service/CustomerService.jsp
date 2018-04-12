@@ -120,10 +120,10 @@
                             <table>
                                 <thead>
                                 <tr>
-                                <th class="th1">投诉编号</th>
+                                <th class="th1">建议编号</th>
                                 <th class="th2">时间</th>
-                                <th class="th3">投诉方</th>
-                                <th class="th4">投诉理由</th>
+                                <th class="th3">建议方</th>
+                                <th class="th4">建议理由</th>
                                 <th class="th5">处理结果</th>
                                 </tr>
                                 </thead>

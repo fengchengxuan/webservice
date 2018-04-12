@@ -7,6 +7,7 @@
     <title>全部咨询</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/navstyle.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/advice.css" type="text/css">
+    <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <style>
         .list15{
             background: #3eb7f3;
@@ -121,16 +122,16 @@
         width: 64px;
     }
     #ddoli2 ul li{
-        width: 93px;
+        width: 130px;
     }
     #ddoli3 ul li{
-        width: 98px;
+        width: 115px;
     }
     #ddoli4 ul li{
-        width: 113px;
+        width: 156px;
     }
     #ddoli5 ul li{
-        width: 140px;
+        width: 232px;
     }
     #ddoli6 ul li{
         width: 116px;
@@ -142,7 +143,9 @@
     .contener .admlistbox{
         height: auto;
         padding-bottom: 25px;
-    }
+    }#showConsult{
+            width: 980px;
+         }
     </style>
 </head>
 <body ng-init="sysa=true;basea=true;contenta=false;producta=true;ordera=true;membera=true;adva=true;pagefoota=true;keya=true;allnava=true;adma=true;
@@ -167,13 +170,21 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
         <div class="inner inner-1" style=" width: 980px;height: 70px;
             background-color: white;">
             <div class="title" style="margin-top: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;全部咨询</div>
+            <div class="draftart-top">
+                <button class="keywords">咨询问题</button>
+                <input style="width: 269px" type="text"  placeholder="例如：峰程7080，500名，免费体验，名额" id="newsKeyValue">
+                <button class="key-search" id="KeySearch">搜索</button>
+                <button class="search-title">标题搜索</button>
+                <input style="width: 283px" type="text" placeholder="例如：峰程7080开放500名免费中小型企业体验名额诚邀您参与" id="newsTilevalue">
+                <button class="title-search" id="TitleSearch">搜索</button>
+            </div>
         </div>
         <div class="inner inner-2" style=" width: 980px;height: 850px;
-            background-color: white;position: relative;top: -10px">
+            background-color: white;position: relative;top: 38px">
             <ul style="color:white;">
-                <li  style="text-align:center;float: left;height: 43px;line-height: 43px;width: 47px;">序号</li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:50px;">编号</li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:66px">
+                <li  style="text-align:center;float: left;height: 43px;line-height: 43px;width: 55px;">序号</li>
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:93px;">编号</li>
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:76px">
                     <div class="select_model">
                         <div class="Selected" id="Selected"><span>用户</span><img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli">
@@ -185,7 +196,7 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                         </div>
                     </div>
                 </li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:95px">
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:133px">
                     <div class="select_model">
                         <div class="Selected" id="Selected2"><span>咨询类型</span><img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli2">
@@ -198,7 +209,7 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                     </div>
                 </li>
                 <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:112px">咨询问题</li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:142px">
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:233px">
                     <div class="select_model">
                         <div class="Selected" id="Selected5"><span>咨询时间</span><img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli5">
@@ -209,7 +220,7 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                         </div>
                     </div>
                 </li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:100px">
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:117px">
                     <div class="select_model">
                         <div class="Selected" id="Selected3"><span>咨询状态</span><img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli3">
@@ -220,7 +231,7 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                         </div>
                     </div>
                 </li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:115px">
+                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:160px">
                     <div class="select_model">
                         <div class="Selected" id="Selected4"><span>咨询处理人</span><img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli4">
@@ -233,17 +244,17 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                         </div>
                     </div>
                 </li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:135px">已答咨询</li>
-                <li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:118px">
-                    <div class="select_model">
-                        <div class="Selected" id="Selected6"><span>咨询处理结果</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
-                        <div style="display: none" class="ddoli" id="ddoli6">
-                            <ul>
-                                <li style="border-top: none">已处理</li>
-                                <li>未处理</li>
-                            </ul>
-                        </div>
-                    </div>
+                <%--<li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:135px">已答咨询</li>--%>
+                <%--<li style="text-align:center;float: left;height: 43px;line-height: 43px;border-left: 1px solid #208ec9;width:118px">--%>
+                    <%--<div class="select_model">--%>
+                        <%--<div class="Selected" id="Selected6"><span>咨询处理结果</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>--%>
+                        <%--<div style="display: none" class="ddoli" id="ddoli6">--%>
+                            <%--<ul>--%>
+                                <%--<li style="border-top: none">已处理</li>--%>
+                                <%--<li>未处理</li>--%>
+                            <%--</ul>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
                 </li>
             </ul>
             <div style="width: 980px;height: 60px;">
@@ -259,9 +270,8 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                         <td style="width:142px">2017年7月1日10：36</td>
                         <td style="width:100px">未答</td>
                         <td style="width:112px">系统管理员</td>
-                        <td style="width:144px;"><input type="text" value="学校里..." style="background: transparent;border: 0;text-overflow:ellipsis;
-        overflow:hidden;white-space:nowrap;width:60px; " title="学校里的老师们会对每一位来校新生，根据其性格及特征制定适合的专业推荐及深入引导。"  disabled="disabled" >   <span  style="color: #0D63EF">修改</span> | <span style="color: red;">删除</span></td>
-                        <td style="width:109px">已处理</td>
+
+
                     </tr>
                 </table>
                 <div>
@@ -680,8 +690,8 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
         var j=num+parseInt(1);
         if(sultStateTime=="咨询时间"){
              row = "<tr style=\"width: 980px;\">" +
-                "<td style=\"width: 27px\"><input type=\"checkbox\" placeholder=\"\" name=\"subBox\" readonly ng-checked=\"m\"></td>" +
-                " <td style=\"width: 20px;\">" + j + "</td>" +
+
+                " <td style=\"width: 57px;\"><input type=\"checkbox\" placeholder=\"\" name=\"subBox\" readonly ng-checked=\"m\">" + j + "</td>" +
                 "<td style=\"width: 55px\">" + list[num].code + "</td>" +
                 " <td style=\"width: 61px\">" + list[num].userType + "</td>" +
                 " <td style=\"width:100px\">"+list[num].consultType+"</td>" +
@@ -689,10 +699,10 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                 " overflow:hidden;white-space:nowrap;width:110px;\" title=\""+list[num].questions+"\"  disabled=\"disabled\" ></td>" +
                 " <td style=\"width:142px\">"+list[num].consultTime+"</td>" +
                 " <td style=\"width:100px\">"+list[num].consultState+"</td>" +
-                " <td style=\"width:112px\">"+list[num].consultAdmin+"</td>" +
-                " <td style=\"width:144px;\"><input type=\"text\" value=\""+list[num].replyContent+"\" style=\"background: transparent;border: 0;text-overflow:ellipsis;" +
-                "overflow:hidden;white-space:nowrap;width:60px; \" title=\""+list[num].replyContent+"\"  disabled=\"disabled\" ><span  style=\"color: #0D63EF\" ><a  href =javascript:void(null) onclick=\"showtext()\">修改</a></span> | <span style=\"color: red;\">删除</span></td>" +
-                " <td style=\"width:109px\">"+list[num].consultResult+"</td></tr>";
+                " <td style=\"width:112px\">"+list[num].consultAdmin+"</td></tr>";
+                // " <td style=\"width:144px;\"><input type=\"text\" value=\""+list[num].replyContent+"\" style=\"background: transparent;border: 0;text-overflow:ellipsis;" +
+                // "overflow:hidden;white-space:nowrap;width:60px; \" title=\""+list[num].replyContent+"\"  disabled=\"disabled\" ><span  style=\"color: #0D63EF\" ><a  href =javascript:void(null) onclick=\"showtext()\">修改</a></span> | <span style=\"color: red;\">删除</span></td>" +
+                // " <td style=\"width:109px\">"+list[num].consultResult+"</td></tr>";
         }else if(sultStateTime=="回复时间"){
             row= "<tr style=\"width: 980px;\">" +
                 "<td style=\"width: 27px\"><input type=\"checkbox\" placeholder=\"\" name=\"subBox\" readonly ng-checked=\"m\"></td>" +
