@@ -17,9 +17,9 @@ public class FcUser extends Base{
     @Column(name = "username")
     private String userName;  // 用户名
     @Column(name = "password")
-    private String password;
+    private String password;//密码
     @Column(name = "repassword")
-    private String rePassword;
+    private String rePassword;//重复密码
     @Column(name ="profile_photo")
     private String profilePhoto;//用户头像地址
     @Column(name = "tel")   //手机号
@@ -31,27 +31,27 @@ public class FcUser extends Base{
     @Column(name = "ip")
     private String ip;//用户ip
     @Column(name = "location")
-    private String location;
+    private String location;//用户所在地
     @OneToOne
     @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id")//用户角色（关联）
     private Role roleId;
     @Column(name = "privilege_id")
-    private int privilegeId;
+    private int privilegeId;  //权限
     @Column(name = "user_type_id")
     private String userTypeId;
     @Column(name = "regi_time")
-    private Timestamp regiTime;
+    private Timestamp regiTime;//注册时间
     @Column(name = "user_intent")
-    private String userIntent;
+    private String userIntent;//用户在本地维度
     @Column(name = "phone")
-    private String phone;
+    private String phone;//固定电话
     @Column(name = "wechart")
-    private String wechart;
+    private String wechart;//qq/微信
     @Column(name = "oper_addr")
-    private String operAddr;
+    private String operAddr;//地址
     @Column(name = "company")
-    private String company;
+    private String company;//公司名称
     @OneToOne
     @Cascade(value = {CascadeType.SAVE_UPDATE})
     @JoinColumn(name = "prod_kind_id")
