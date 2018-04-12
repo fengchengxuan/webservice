@@ -59,10 +59,10 @@
                 <ul class="sul" ng-if="t4==true">
                     <li class="slm exslm cslm liskmf"><a class="slma skmf" href="${ctx}/FreePlaces">试客申请免费体验</a>
                         <ul class="tul extul ctul">
-                            <li class="tlm"><a style="margin: 0" href="">开放500名免费体验名额</a></li>
-                            <li class="tlm"><a style="margin: 0" href="">试客免费体验名额</a></li>
-                            <li class="tlm"><a style="margin: 0" href="">网络广告体验名额</a></li>
-                            <li class="tlm"><a style="margin: 0" href="">主营业务范围</a></li>
+                            <li class="tlm"><a style="margin: 0" href="${ctx}/fivehundredfree">开放500名免费体验名额</a></li>
+                            <li class="tlm"><a style="margin: 0" href="${ctx}/tryforfree">试客免费体验名额</a></li>
+                            <li class="tlm"><a style="margin: 0" href="${ctx}/internetadfree">网络广告体验名额</a></li>
+                             <li class="tlm"><a style="margin: 0" href="">主营业务范围</a></li>
                         </ul>
                     </li>
                     <%--<li class="slm buslm cslm"><a class="slma" href="">主营业务范围</a>--%>
