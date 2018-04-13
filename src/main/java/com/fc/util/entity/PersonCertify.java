@@ -15,10 +15,8 @@ public class PersonCertify extends Base {//个人认证
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(name = "pc_id",length = 36)
     private String id;
-    @OneToOne
-    @Cascade(value = {org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     @JoinColumn(name = "fcuser_id")
-    private FcUser fcuserId;
+    private String fcuserId;
     @Column(name = "name",length = 20)//姓名
     private String name;
     @Column(name = "id_num",length = 20)//身份证号
@@ -40,11 +38,11 @@ public class PersonCertify extends Base {//个人认证
         this.id = id;
     }
 
-    public FcUser getFcuserId() {
+    public String getFcuserId() {
         return fcuserId;
     }
 
-    public void setFcuserId(FcUser fcuserId) {
+    public void setFcuserId(String fcuserId) {
         this.fcuserId = fcuserId;
     }
 

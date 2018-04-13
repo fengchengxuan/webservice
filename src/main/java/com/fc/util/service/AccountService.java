@@ -1,21 +1,25 @@
 package com.fc.util.service;
 
 import com.fc.base.user.entity.FcUser;
-import com.fc.util.entity.BillLogistics;
-import com.fc.util.entity.BillManage;
+import com.fc.util.entity.*;
 
 public interface AccountService {
 
-	//Æ±¾Ý¹ÜÀí
+	//Æ±ï¿½Ý¹ï¿½ï¿½ï¿½
 	void appBill(String appType, String billType, String billTitle, FcUser userid);
 	void receiveBill(String receiver, String city, String address, String mail_code, String phone, String tel, String userid);
 	BillManage billManage(String userid);
 	BillLogistics getBillLogistics(String userid);
-	//ÃÜ±£ÉèÖÃ
-	void addSafeQuestion(String oldQusertion, String oldAnswer, String newQuestion, String newAnswer, String newConfirmAnswer, String fcuserId);
-	//¸öÈËÈÏÖ¤
+	//ï¿½Ü±ï¿½ï¿½ï¿½ï¿½ï¿½
+	void addSafeQuestion(String Qusertion, String answer, String confirmAnswer, String fcuserId);
+	void addSafeQuestion(SafeQusetion safeQusetion,String Qusertion, String answer, String confirmAnswer);
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤
 	void addPersonCertify(String name, String idNum, String reIdNum, String tel, String idPic, String holdIdPic, FcUser fcuserId);
-	//ÆóÒµÈÏÖ¤
+	//ï¿½ï¿½Òµï¿½ï¿½Ö¤
 	void addEnterCertify(String enterpriceName, String corporateName, String appName, String phone, String tel, String website,String idPic, String holdIdPic, FcUser fcuserId);
-
+	SafeQusetion getSafeQusetion(String fcUserId);
+	PersonCertify findPersonCertify(String id);
+	void savePersonCertify(PersonCertify personCertify);
+	EnterCertify findEnterCertify(String id);
+	void saveEnterCertify(EnterCertify enterCertify);
 }

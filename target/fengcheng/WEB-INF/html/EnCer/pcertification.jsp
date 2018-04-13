@@ -59,29 +59,29 @@
                             <div class="thisPlatform">
                                 <div class="TPitem">
                                     <span class="tpi-name">企业名称</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="enterpriceName">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">法人姓名</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="corporateName">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">申请人姓名</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="appName">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">固定电话</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="phone">
                                     <span>固定号码格式不正确</span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">固定电话</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="tel">
                                     <span>手机号码格式不正确</span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">公司网址</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="website">
                                 </div>
                                 <div  class="TPimgitem">
                                     <span class="tpi-name">身份证正面</span>
@@ -106,7 +106,7 @@
                                     <img style="margin: 0 0 0 42px;" src="${ctx}/static/front/images/example-2.png" alt="">
                                 </div>
                                 <div  class="TPitem" style="margin-top: 40px">
-                                    <button style="cursor: pointer">确认</button>
+                                    <button style="cursor: pointer" onclick="saveEnterCertify()">确认</button>
                                 </div>
                             </div>
                         </div>
@@ -187,6 +187,31 @@
         param.left = Math.round((maxWidth - param.width) / 2);
         param.top = Math.round((maxHeight - param.height) / 2);
         return param;
+    }
+</script>
+<script type="text/javascript">
+    function saveEnterCertify() {
+
+        $.ajax({
+            type: 'POST',
+            url: ctx + '/saveECertify',
+            data:"enterpriceName="+$("#enterpriceName").val()+"&corporateName="+$("#corporateName").val()+"&appName="+$("#appName").val()+
+            "&phone="+$("#phone").val()+"&tel="+$("#tel").val()+"&website="+$("#website").val(),
+            dataType: 'json',
+            success: function (msg) {
+                if (msg.ok) {
+                    if(!msg.flag){
+                        alert("已经认证过了");
+                        location.reload();
+                        return;
+                    }
+                    alert("成功");
+                    location.reload();
+                } else {
+                    alert("失败")
+                }
+            }
+        })
     }
 </script>
 </body>

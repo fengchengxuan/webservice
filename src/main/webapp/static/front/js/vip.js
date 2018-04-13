@@ -23,7 +23,7 @@ $(".save").click(function () {
     $.ajax({
         url: ctx+'/updateUserInfo',
         type: 'POST',
-        data: "username="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
+        data: "vipName="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
         "&email="+$("#email").val()+"&social="+$("#social").val()+"&companyname="+$("#companyname").val()+"&htype="+$("#htype").val()
         +"&ctype="+$("#ctype").val()+"&stype="+$("#stype").val()+"&web="+$("#web").val()+"&address="+$("#address").val(),
         dataType: "json",

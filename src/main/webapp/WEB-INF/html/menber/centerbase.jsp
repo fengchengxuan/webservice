@@ -84,14 +84,14 @@
                         <div style="margin-top: 30px"><span>公司类型</span>
                             <label>
                             <select name="ctype" id="ctype">
-                                <option value="0">国有企业</option>
-                                <option value="1">集体所有制</option>
-                                <option value="2">私营企业</option>
-                                <option value="3">股份制企业</option>
-                                <option value="4">联营企业</option>
-                                <option value="5">外商投资企业</option>
-                                <option value="6">港、澳、台</option>
-                                <option value="7">股份合作企业</option>
+                                <option value="国有企业">国有企业</option>
+                                <option value="集体所有制">集体所有制</option>
+                                <option value="私营企业">私营企业</option>
+                                <option value="股份制企业">股份制企业</option>
+                                <option value="联营企业">联营企业</option>
+                                <option value="外商投资企业">外商投资企业</option>
+                                <option value="港、澳、台">港、澳、台</option>
+                                <option value="股份合作企业">股份合作企业</option>
                             </select>
                             </label>
                         </div>

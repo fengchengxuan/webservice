@@ -59,21 +59,21 @@
                             <div class="thisPlatform">
                                 <div class="TPitem">
                                     <span class="tpi-name">姓名</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="name">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">身份证号码</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="nameNum">
                                     <span>身份证号码有误，请重新输入</span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">确认再次输入核对</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="reNameNum">
                                     <span>两次输入的身份证号码不一致，请重新输入</span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">电话号码</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="phone">
                                     <span>手机号码格式不正确</span>
                                 </div>
                                 <div  class="TPimgitem">
@@ -99,7 +99,7 @@
                                     <img style="margin: -8px 0 0 42px;" src="${ctx}/static/front/images/sample-2.png" alt="">
                                 </div>
                                 <div  class="TPitem" style="margin-top: 40px">
-                                    <button style="cursor: pointer">确认</button>
+                                    <button style="cursor: pointer" onclick="savePersonCertify()">确认</button>
                                 </div>
                             </div>
                         </div>
@@ -185,6 +185,33 @@
         param.top = Math.round((maxHeight - param.height) / 2);
         return param;
     }
+</script>
+<script type="text/javascript">
+ function savePersonCertify() {
+     if($("#reNameNum").val()!=$("#nameNum").val()){
+         alert("身份证号不一致");
+         return ;
+     }
+     $.ajax({
+         type: 'POST',
+         url: ctx + '/savePCertify',
+         data:"name="+$("#name").val()+"&nameNum="+$("#nameNum").val()+"&phone="+$("#phone").val(),
+         dataType: 'json',
+         success: function (msg) {
+             if (msg.ok) {
+                 if(!msg.flag){
+                     alert("已经认证过了");
+                     location.reload();
+                     return;
+                 }
+              alert("成功");
+               location.reload();
+             } else {
+                 alert("失败")
+             }
+         }
+     })
+ }
 </script>
 </body>
 </html>

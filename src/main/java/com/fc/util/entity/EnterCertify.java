@@ -1,5 +1,6 @@
 package com.fc.util.entity;
 
+import com.fc.base.user.entity.Base;
 import com.fc.base.user.entity.FcUser;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Cascade;
@@ -8,16 +9,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "enter_certify")
-public class EnterCertify {//企业认证
+public class EnterCertify extends Base{//企业认证
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(name = "ec_id",length = 36)
     private String ecId;
-    @OneToOne
-    @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "fcuser_id")
-    private FcUser fcUserId;
+    @Column(name = "fcuser_id")
+    private String fcUserId;
     @Column(name = "enterprice_name")
     private String enterpriceName;//企业名称
     @Column(name = "corporate_name")
@@ -43,11 +42,11 @@ public class EnterCertify {//企业认证
         this.ecId = ecId;
     }
 
-    public FcUser getFcUserId() {
+    public String getFcUserId() {
         return fcUserId;
     }
 
-    public void setFcUserId(FcUser fcUserId) {
+    public void setFcUserId(String fcUserId) {
         this.fcUserId = fcUserId;
     }
 
@@ -114,4 +113,5 @@ public class EnterCertify {//企业认证
     public void setHoldIdPic(String holdIdPic) {
         this.holdIdPic = holdIdPic;
     }
+
 }

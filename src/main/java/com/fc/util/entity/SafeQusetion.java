@@ -16,66 +16,52 @@ public class SafeQusetion extends Base {
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(length = 36)
     private String  id;
-    @OneToOne
-    @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "fcuser_id")
-    private FcUser fcuserId;
-    @Column(name = "old_question")
-    private String oldQusertion;
-    @Column(name = "old_answer")
-    private String oldAnswer;
-    @Column(name = "new_question")
-    private String newQuestion;
-    @Column(name = "new_answer")
-    private String newAnswer;
-    @Column(name = "new_confirm_answer")
-    private String newConfirmAnswer;
+    @Column(name = "fcuser_id")
+    private String fcuserId;  //用户id
+    @Column(name = "question")
+    private String question;//问题
+    @Column(name = "answer")
+    private String answer;//答案
+    @Column(name = "confirm_answer")
+    private String ConfirmAnswer;//确认答案
 
-    public FcUser getFcuserId() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFcuserId() {
         return fcuserId;
     }
 
-    public void setFcuserId(FcUser fcuserId) {
+    public void setFcuserId(String fcuserId) {
         this.fcuserId = fcuserId;
     }
 
-    public String getOldQusertion() {
-        return oldQusertion;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setOldQusertion(String oldQusertion) {
-        this.oldQusertion = oldQusertion;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public String getOldAnswer() {
-        return oldAnswer;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setOldAnswer(String oldAnswer) {
-        this.oldAnswer = oldAnswer;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
-    public String getNewQuestion() {
-        return newQuestion;
+    public String getConfirmAnswer() {
+        return ConfirmAnswer;
     }
 
-    public void setNewQuestion(String newQuestion) {
-        this.newQuestion = newQuestion;
-    }
-
-    public String getNewAnswer() {
-        return newAnswer;
-    }
-
-    public void setNewAnswer(String newAnswer) {
-        this.newAnswer = newAnswer;
-    }
-
-    public String getNewConfirmAnswer() {
-        return newConfirmAnswer;
-    }
-
-    public void setNewConfirmAnswer(String newConfirmAnswer) {
-        this.newConfirmAnswer = newConfirmAnswer;
+    public void setConfirmAnswer(String confirmAnswer) {
+        ConfirmAnswer = confirmAnswer;
     }
 }

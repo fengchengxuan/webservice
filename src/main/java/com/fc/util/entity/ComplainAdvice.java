@@ -1,5 +1,6 @@
 package com.fc.util.entity;
 
+import com.fc.base.user.entity.Base;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "complain_advice")
-public class ComplainAdvice {
+public class ComplainAdvice extends Base {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")

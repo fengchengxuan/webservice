@@ -3,17 +3,21 @@ package com.fc.util.dao.impl;
 import com.fc.base.user.entity.FcUser;
 import com.fc.util.BaseDao;
 import com.fc.util.dao.AccountDao;
-import com.fc.util.entity.BillApp;
-import com.fc.util.entity.BillLogistics;
-import com.fc.util.entity.BillManage;
-import com.fc.util.entity.BillSendAddr;
-import com.fc.util.entity.SafeQusetion;
+import com.fc.util.entity.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Repository
 public class AccountDaoImpl extends BaseDao  implements AccountDao {
 
-	// ÕËºÅµµ°¸-Æ±¾Ý¹ÜÀí-ÉêÇë¿ª·¢Æ± 
+	// ï¿½ËºÅµï¿½ï¿½ï¿½-Æ±ï¿½Ý¹ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½Æ± 
+
+
 	@Override
-	public void appBill(String appType, String billType, String billTitle,FcUser userid) {
+	public void appBill(String appType, String billType, String billTitle, FcUser userid) {
 		BillApp billapp = new BillApp();
 		billapp.setAppType(appType);
 		billapp.setBillType(billType);
@@ -22,13 +26,13 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 		super.save(billapp);
 	}
 
-	// ÕËºÅµµ°¸-Æ±¾Ý¹ÜÀí-ÊÕ·¢·¢Æ±
+	// ï¿½ËºÅµï¿½ï¿½ï¿½-Æ±ï¿½Ý¹ï¿½ï¿½ï¿½-ï¿½Õ·ï¿½ï¿½ï¿½Æ±
 	@Override
 	public void receiveBill(String receiver, String city, String address, String mail_code, String phone, String tel, String userid) {
 		
 	}
 
-	// ÕËºÅµµ°¸-Æ±¾Ý¹ÜÀí-·¢Æ±¹ÜÀí
+	// ï¿½ËºÅµï¿½ï¿½ï¿½-Æ±ï¿½Ý¹ï¿½ï¿½ï¿½-ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public BillManage billManage(String userid) {
         String hql = "from BillApp ba, BillSendAddr bsa where ba.ba_id=bsa.ba_id and ba.fcuser_id=?";
@@ -36,25 +40,15 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
         return (BillManage)super.findEntity(hql,args);
 	}
 
-	// ÕËºÅµµ°¸-Æ±¾Ý¹ÜÀí-·¢Æ±µ½ÄÄ
+	// ï¿½ËºÅµï¿½ï¿½ï¿½-Æ±ï¿½Ý¹ï¿½ï¿½ï¿½-ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public BillLogistics getBillLogistics(String userid) {
         String hql = "from BillLogistics where fcuserId = ? ";
         Object[]args = {userid};
         return (BillLogistics)super.findEntity(hql,args);
 	}
-	
-	public void addSafeQuestion(String oldQusertion, String oldAnswer, String newQuestion, String newAnswer, String newConfirmAnswer, FcUser fcuserId) {
-		SafeQusetion sq = new SafeQusetion();
-		sq.setOldQusertion(oldQusertion);
-		sq.setOldAnswer(oldAnswer);
-		sq.setNewQuestion(newQuestion);
-		sq.setNewAnswer(newAnswer);
-		sq.setNewConfirmAnswer(newConfirmAnswer);
-		sq.setFcuserId(fcuserId);
-		super.save(sq);
-	}
-	
+
+
 	public void addPersonCertify(String name, String idNum, String reIdNum, String tel, String idPic, String holdIdPic, FcUser fcuserId) {
 		
 	}
@@ -64,8 +58,50 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 	}
 
 	@Override
-	public void addSafeQuestion(String oldQusertion, String oldAnswer, String newQuestion, String newAnswer,
-			String newConfirmAnswer, String fcuserId) {
-		
+	public void addSafeQuestion( String question,String answer,String ConfirmAnswer, String fcuserId) {
+		SafeQusetion sq = new SafeQusetion();
+		sq.setQuestion(question);
+		sq.setAnswer(answer);
+		sq.setConfirmAnswer(ConfirmAnswer);
+		sq.setFcuserId(fcuserId);
+		super.saveOrUpdate(sq);
+	}
+
+	@Override
+	public SafeQusetion findSafeQusetion(String fcUserId) {
+		String hql="from SafeQusetion  where fcuserId = ?";
+		Object[]args = {fcUserId};
+		List<String> list= new ArrayList<>();
+		list.add( fcUserId);
+		return (SafeQusetion) super.findEntity(hql,args);
+	}
+
+	@Override
+	public void saveSafeQuestion(SafeQusetion entity) {
+		super.saveOrUpdate(entity);
+	}
+
+	@Override
+	public PersonCertify findPersonCertify(String id) {
+		String hql ="from PersonCertify where  fcuserId = ?" ;
+		Object []args={id};
+		return (PersonCertify)super.findEntity(hql,args);
+	}
+
+	@Override
+	public void savePersonCertify(PersonCertify personCertify) {
+		super.saveOrUpdate(personCertify);
+	}
+
+	@Override
+	public EnterCertify findEnterCertify(String id) {
+		String hql ="from EnterCertify where fcUserId = ?" ;
+		Object []args={id};
+		return (EnterCertify)super.findEntity(hql,args);
+	}
+
+	@Override
+	public void saveEnterCertify(EnterCertify enterCertify) {
+		super.saveOrUpdate(enterCertify);
 	}
 }

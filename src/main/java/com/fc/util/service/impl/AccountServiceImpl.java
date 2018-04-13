@@ -1,13 +1,14 @@
 package com.fc.util.service.impl;
 
+import com.fc.util.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fc.base.user.entity.FcUser;
 import com.fc.util.dao.AccountDao;
-import com.fc.util.entity.BillLogistics;
-import com.fc.util.entity.BillManage;
 import com.fc.util.service.AccountService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
@@ -35,9 +36,16 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public void addSafeQuestion(String oldQusertion, String oldAnswer, String newQuestion, String newAnswer,
-			String newConfirmAnswer, String fcuserId) {
-		accountDao.addSafeQuestion(oldQusertion, oldAnswer, newQuestion, newAnswer, newConfirmAnswer, fcuserId);
+	public void addSafeQuestion(String qusertion, String answer, String confirmAnswer, String fcuserId) {
+		accountDao.addSafeQuestion(qusertion, answer, confirmAnswer, fcuserId);
+	}
+
+	@Override
+	public void addSafeQuestion(SafeQusetion safeQusetion, String qusertion, String answer, String confirmAnswer) {
+			safeQusetion.setAnswer(answer);
+			safeQusetion.setQuestion(qusertion);
+			safeQusetion.setConfirmAnswer(confirmAnswer);
+			accountDao.saveSafeQuestion(safeQusetion);
 	}
 
 	@Override
@@ -52,4 +60,28 @@ public class AccountServiceImpl implements AccountService {
 		accountDao.addEnterCertify(enterpriceName, corporateName, appName, phone, tel, website, idPic, holdIdPic, fcuserId);
 	}
 
+	@Override
+	public SafeQusetion getSafeQusetion(String fcUserId) {
+		return accountDao.findSafeQusetion(fcUserId);
+	}
+
+	@Override
+	public PersonCertify findPersonCertify(String id) {
+		return accountDao.findPersonCertify(id);
+}
+
+	@Override
+	public void savePersonCertify(PersonCertify personCertify) {
+          accountDao.savePersonCertify(personCertify);
+	}
+
+	@Override
+	public EnterCertify findEnterCertify(String id) {
+		return accountDao.findEnterCertify(id);
+	}
+
+	@Override
+	public void saveEnterCertify(EnterCertify enterCertify) {
+		accountDao.saveEnterCertify(enterCertify);
+	}
 }

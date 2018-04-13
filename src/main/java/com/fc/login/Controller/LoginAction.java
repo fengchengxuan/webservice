@@ -20,6 +20,10 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.fc.util.entity.EnterCertify;
+import com.fc.util.entity.PersonCertify;
+import com.fc.util.entity.SafeQusetion;
+import com.fc.util.service.AccountService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -67,7 +71,8 @@ public class LoginAction {
 
     @Autowired
    private ILoginService loginService;
-
+    @Autowired
+    private AccountService accountService;
     @Autowired
     private ILogService logService;
     @Autowired
@@ -475,7 +480,7 @@ public class LoginAction {
 
     /**
      * 会员基本设置
-     * @param vipname
+     * @param vipName
      * @param phonenumber
      * @param stablephone
      * @param email
@@ -490,25 +495,25 @@ public class LoginAction {
      * @return
      */
     @RequestMapping("updateUserInfo")
-    public @ResponseBody  Map<String,Object>  updateInfo(String vipname,String phonenumber,String stablephone,String
+    public @ResponseBody  Map<String,Object>  updateInfo(String vipName,String phonenumber,String stablephone,String
             email,String social,String companyname,String htype,String ctype, String stype,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
         String userName=(String)session.getAttribute("userName");
         String user=(String)session.getAttribute("user");
         String password =(String) session.getAttribute("password");
         String type=(String) session.getAttribute("type");
-       String pares=(String) session.getAttribute("parsePath");//图片
+        String pares=(String) session.getAttribute("parsePath");//图片
         if(userName==null || userName.length()<1){  //判断用户是否为存在
             map.put("data",false);
         }else{
             map.put("data",true);
 
-        FcUser fcUser = userService.loginUser(user,password,type);//取用户信息
-            if(!"".equals(pares)){
+        FcUser fcUser = userService.loginUser(type,user,password);//取用户信息
+          /*  if(!"".equals(pares)){
                 fcUser.setProfilePhoto(pares);
-            }
-            if(!"".equals(vipname)){
-                fcUser.setUserName(vipname);
+         /*   }*/
+            if(!"".equals(vipName)){
+                fcUser.setUserName(vipName);
             }
             if(!"".equals(stablephone)) {
                 fcUser.setPhone(stablephone);//固定电话
@@ -620,12 +625,13 @@ public class LoginAction {
             return list;
         }
         String type=(String)session.getAttribute("type");
-          FcUser fcUser = userService.loginUser(type,user,password);
+          FcUser fcUser = userService.loginUser(type,user,oldpassword);
 	      if(fcUser!=null){
               fcUser.setPassword(password);
               fcUser.setRePassword(repassword);
               userService.saveUser(fcUser);
 		      list.add("修改成功");
+              session.setAttribute("password",password);
 	      }else{
               list.add("密码错误");
           }
@@ -804,6 +810,78 @@ public class LoginAction {
     @RequestMapping("newsData")//显示文章
     public String showNews(String currentPage,String age){
         return "html/data/dataArticles";
+    }
+    @RequestMapping("saveQuestion")//显示文章
+    public @ResponseBody Map<String,Object> save(HttpSession session,String question,String answer,String confirmAnswer){
+        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
+        if(safeQusetion!=null){
+            accountService.addSafeQuestion(safeQusetion,question,answer,confirmAnswer);
+        }else{
+            accountService.addSafeQuestion(question,answer,confirmAnswer,fcUser.getId());
+        }
+
+
+        return map;
+    }
+    @RequestMapping("showQuestion")//显示文章
+    public @ResponseBody Map<String,Object> showQuestion(HttpSession session){
+        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
+        map.put("entity",safeQusetion);
+        return map;
+    }
+    @RequestMapping("savePCertify")//个人认证(保存)
+    public @ResponseBody Map<String,Object> savePersonCertify(HttpSession session,String name,String nameNum,String phone){
+        String user =(String)session.getAttribute("user");
+        String password =(String) session.getAttribute("password");
+        String type=(String) session.getAttribute("type");
+        FcUser fcuser = userService.loginUser(type,user,password);
+
+        if(fcuser!=null){
+           if( accountService.findPersonCertify(fcuser.getId())==null){
+               map.put("flag",true);//没有认证
+               PersonCertify personCertify=new PersonCertify();
+               personCertify.setFcuserId(fcuser.getId());
+               personCertify.setName(name);
+               personCertify.setIdNum(nameNum);
+               personCertify.setReIdNum(nameNum);
+               personCertify.setTel(phone);
+               accountService.savePersonCertify(personCertify);
+           }else{
+               map.put("flag",false);//已经存在
+           };
+        }else{
+            map.put("ok",false);
+        }
+        return map;
+    }
+    @RequestMapping("saveECertify")//企业认证(保存)
+    public @ResponseBody Map<String,Object> saveEnterCertify(HttpSession session,String enterpriceName,String corporateName,String appName,String
+            phone,String tel,String website){
+
+
+        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+
+        if(fcuser!=null){
+            if( accountService.findEnterCertify(fcuser.getId())==null){
+                map.put("flag",true);//没有认证
+                EnterCertify enterCertify=new EnterCertify();
+                enterCertify.setFcUserId(fcuser.getId());//
+                enterCertify.setAppName(appName);//
+                enterCertify.setEnterpriceName(enterpriceName);
+                enterCertify.setCorporateName(corporateName);
+                enterCertify.setPhone(phone);
+                enterCertify.setTel(tel);
+                enterCertify.setWebsite(website);
+                accountService.saveEnterCertify(enterCertify);
+            }else{
+                map.put("flag",false);//已经存在
+            };
+        }else{
+            map.put("ok",false);
+        }
+        return map;
     }
 
 }

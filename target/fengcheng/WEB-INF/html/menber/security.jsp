@@ -33,43 +33,43 @@
             <div class="security-setting">
                 <div class="sec-set">
                     <div class="ss-item">
-                        <span class="setn">原始密保问题</span>
+                        <span class="setn" >原始密保问题</span>
                         <label>
-                        <select name="" >
-                            <option value="">广西峰程璇网络科技有限公司的网址是多少？</option>
-                            <option value="">您的出生日期是多少?</option>
-                            <option value="">对您影响最大的人的名字是什么/</option>
-                            <option value="">您的启蒙老师的名字是什么?</option>
-                            <option value="">您的母亲的名字是什么?</option>
+                        <select name="" id="oldQuestion">
+                            <option value="广西峰程璇网络科技有限公司的网址是多少？">广西峰程璇网络科技有限公司的网址是多少？</option>
+                            <option value="您的出生日期是多少?">您的出生日期是多少?</option>
+                            <option value="对您影响最大的人的名字是什么?">对您影响最大的人的名字是什么?</option>
+                            <option value="您的启蒙老师的名字是什么?">您的启蒙老师的名字是什么?</option>
+                            <option value="您的母亲的名字是什么?">您的母亲的名字是什么?</option>
                         </select>
                         </label>
                     </div>
                     <div class="ss-item">
                         <span class="setn">原始问题答案</span>
-                        <input type="text" placeholder="">
+                        <input type="text" placeholder="" id="oldAnswer">
                     </div>
                     <div class="ss-item">
                         <span class="setn">设置新的密保问题</span>
                         <label>
-                        <select name="" id="">
-                            <option value="">
+                        <select name="" id="newQuestion">
+                            <option value="您的出生日期是多少？">
                                 您的出生日期是多少？
                             </option>
-                            <option value="">广西峰程璇网络科技有限公司的网址是多少？</option>
-                            <option value="">您的生日是?</option>
-                            <option value="">对您影响最大的人的名字是什么/</option>
-                            <option value="">您的启蒙老师的名字是什么?</option>
-                            <option value="">您的母亲的名字是什么?</option>
+                            <option value="广西峰程璇网络科技有限公司的网址是多少?">广西峰程璇网络科技有限公司的网址是多少？</option>
+                            <option value="您的出生日期是多少?">您的出生日期是多少?</option>
+                            <option value="对您影响最大的人的名字是什么?">对您影响最大的人的名字是什么?</option>
+                            <option value="您的启蒙老师的名字是什么?">您的启蒙老师的名字是什么?</option>
+                            <option value="您的母亲的名字是什么?">您的母亲的名字是什么?</option>
                         </select>
                         </label>
                     </div>
                     <div class="ss-item">
                         <span class="setn">设置问题答案</span>
-                        <input type="text" placeholder="">
+                        <input type="text" id="newAnswer" placeholder="">
                     </div>
                     <div class="ss-item">
                         <span class="setn">确认问题答案</span>
-                        <input type="text" placeholder="">
+                        <input type="text" id="reAnswer" placeholder="">
                     </div>
                 </div>
                 <div class="btnbox">
@@ -81,5 +81,49 @@
     <jsp:include page="/static/front/comm/footer.jsp"/>
 </div>
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var oldAnswer="";
+    var oldQusertion="";
+    $(document).ready(function(){
+        $.ajax({
+            url : ctx+'/showQuestion',
+            type : 'POST',
+            dataType : 'json',
+            success : function(data) {
+                var obj=data.entity;
+                if(obj!=null){
+                    oldAnswer=obj.answer;
+                    oldQusertion=obj.question;
+                    $("#oldQuestion").val(obj.question);
+                    $("#oldAnswer").val(obj.answer);
+                }
+            } })
+    })
+    $(".save").click(function () {
+        if($("#newAnswer").val()!=$("#reAnswer").val()){//问题答案
+            alert("答案不一致")
+            return;
+        }
+        if($("#newAnswer").val()==$("#oldAnswer").val()){//问题
+            alert("新旧答案不能一致");
+            return;
+        }
+        if( oldAnswer!="" && oldAnswer!= $("#oldAnswer").val()){//
+          alert("旧答案不正确");
+        }
+        $.ajax({
+            url : ctx+'/saveQuestion',
+            type : 'POST',
+            data:"question="+$("#newQuestion").val()+"&answer="+$("#newAnswer").val()+ "&confirmAnswer="+$("#reAnswer").val(),
+            dataType : 'json',
+            success : function(data) {
+               if( data.ok){
+                   alert("成功")
+               }else{
+                   alert("失败")
+               }
+            } })
+    })
+</script>
 </body>
 </html>
