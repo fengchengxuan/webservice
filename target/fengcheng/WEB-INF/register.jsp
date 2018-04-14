@@ -99,7 +99,7 @@
                     <div class="list">
                         <div class="list-name"><span class="must">*</span>设置登录密码:</div>
                         <input type="password" name="password" placeholder="请输入密码" class="password" id="passwordE">
-                        <div class="comment">
+                        <div class="comment" id="prompt">
                             请设置登录密码为数字+字母+特殊符号，请不要使用 手机号或生日及常用的数字作为密码。
                         </div>
                     </div>

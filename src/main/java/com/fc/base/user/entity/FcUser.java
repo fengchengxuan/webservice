@@ -28,6 +28,8 @@ public class FcUser extends Base{
     private String email;//邮箱
     @Column(name = "user_status_id")
     private int userStatusId;//用户类型
+    @Column(name = "status")
+    private int status;//
     @Column(name = "ip")
     private String ip;//用户ip
     @Column(name = "location")
@@ -269,5 +271,13 @@ public class FcUser extends Base{
 
     public void setProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

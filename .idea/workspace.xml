@@ -7,35 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23f9a319-7eb8-46aa-93ea-a4e382de46eb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/dao/AccountDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/dao/AccountDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/dao/impl/AccountDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/dao/impl/AccountDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillLogistics.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillLogistics.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillSendAddr.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillSendAddr.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/service/AccountService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction$1.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/login/Controller/LoginAction.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/dao/AccountDao.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/dao/AccountDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/dao/impl/AccountDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/dao/impl/AccountDaoImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillApp.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillApp.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillLogistics.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillLogistics.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillSendAddr.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/entity/BillSendAddr.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/service/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/service/AccountService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fc/util/service/impl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/fc/util/service/impl/AccountServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction$1.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/login/Controller/LoginAction.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/dao/AccountDao.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/dao/AccountDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/dao/impl/AccountDaoImpl.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/dao/impl/AccountDaoImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillApp.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillApp.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillLogistics.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillLogistics.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillSendAddr.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/entity/BillSendAddr.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/service/AccountService.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/service/AccountService.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/service/impl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/classes/com/fc/util/service/impl/AccountServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Bill/billtab.jsp" afterPath="$PROJECT_DIR$/target/fengcheng/WEB-INF/html/Bill/billtab.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/front/js/register.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/front/js/register.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,96 +24,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="BillApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillApp.java">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="111">
+              <caret line="463" column="30" lean-forward="true" selection-start-line="463" selection-start-column="30" selection-end-line="463" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/Base.java">
+      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="343">
+              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BillSendAddr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillSendAddr.java">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="billtab.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="256" column="15" lean-forward="false" selection-start-line="256" selection-start-column="15" selection-end-line="256" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BillLogistics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillLogistics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="198">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="116" column="33" lean-forward="false" selection-start-line="110" selection-start-column="8" selection-end-line="116" selection-end-column="33" />
-              <folding>
-                <element signature="e#2137#2138#0" expanded="true" />
-                <element signature="e#2188#2189#0" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
-                <element signature="e#2298#2299#0" expanded="true" />
-                <element signature="e#2372#2373#0" expanded="true" />
-                <element signature="e#2430#2431#0" expanded="true" />
-                <element signature="e#2493#2494#0" expanded="true" />
-                <element signature="e#2538#2539#0" expanded="true" />
-                <element signature="e#2609#2610#0" expanded="true" />
-                <element signature="e#2657#2658#0" expanded="true" />
-                <element signature="e#2710#2711#0" expanded="true" />
-                <element signature="e#2750#2751#0" expanded="true" />
-                <element signature="e#2802#2803#0" expanded="true" />
-                <element signature="e#2836#2837#0" expanded="true" />
-                <element signature="e#2899#2900#0" expanded="true" />
-                <element signature="e#2944#2945#0" expanded="true" />
-                <element signature="e#3014#3015#0" expanded="true" />
-                <element signature="e#3061#3062#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/dao/AccountDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,67 +60,158 @@
       <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="940" column="92" lean-forward="false" selection-start-line="940" selection-start-column="92" selection-end-line="940" selection-end-column="92" />
+            <state relative-caret-position="-160">
+              <caret line="245" column="24" lean-forward="true" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10708#10949#0" expanded="true" />
-                <element signature="e#10948#10949#0" expanded="true" />
-                <element signature="e#21792#21793#0" expanded="true" />
-                <element signature="e#21837#21838#0" expanded="true" />
-                <element signature="e#21890#21891#0" expanded="true" />
-                <element signature="e#21938#21939#0" expanded="true" />
-                <element signature="e#22005#22006#0" expanded="true" />
-                <element signature="e#22058#22059#0" expanded="true" />
-                <element signature="e#22125#22126#0" expanded="true" />
-                <element signature="e#22175#22176#0" expanded="true" />
-                <element signature="e#22236#22237#0" expanded="true" />
-                <element signature="e#22286#22287#0" expanded="true" />
-                <element signature="e#22350#22351#0" expanded="true" />
-                <element signature="e#22401#22402#0" expanded="true" />
-                <element signature="e#22460#22461#0" expanded="true" />
-                <element signature="e#22511#22512#0" expanded="true" />
-                <element signature="e#22574#22575#0" expanded="true" />
-                <element signature="e#22630#22631#0" expanded="true" />
-                <element signature="e#22699#22700#0" expanded="true" />
-                <element signature="e#22752#22753#0" expanded="true" />
-                <element signature="e#22816#22817#0" expanded="true" />
-                <element signature="e#22869#22870#0" expanded="true" />
-                <element signature="e#22931#22932#0" expanded="true" />
-                <element signature="e#22987#22988#0" expanded="true" />
-                <element signature="e#23042#23043#0" expanded="true" />
-                <element signature="e#23082#23083#0" expanded="true" />
-                <element signature="e#23143#23144#0" expanded="true" />
-                <element signature="e#23185#23186#0" expanded="true" />
+                <element signature="e#2989#2990#0" expanded="true" />
+                <element signature="e#3022#3023#0" expanded="true" />
+                <element signature="e#11027#11268#0" expanded="true" />
+                <element signature="e#11267#11268#0" expanded="true" />
+                <element signature="e#12187#12188#0" expanded="true" />
+                <element signature="e#12226#12227#0" expanded="true" />
+                <element signature="e#12285#12286#0" expanded="true" />
+                <element signature="e#12315#12316#0" expanded="true" />
+                <element signature="e#12368#12369#0" expanded="true" />
+                <element signature="e#12400#12401#0" expanded="true" />
+                <element signature="e#12459#12460#0" expanded="true" />
+                <element signature="e#12489#12490#0" expanded="true" />
+                <element signature="e#12549#12550#0" expanded="true" />
+                <element signature="e#12577#12578#0" expanded="true" />
+                <element signature="e#13228#13229#0" expanded="true" />
+                <element signature="e#13275#13276#0" expanded="true" />
+                <element signature="e#13342#13343#0" expanded="true" />
+                <element signature="e#13385#13386#0" expanded="true" />
+                <element signature="e#13459#13460#0" expanded="true" />
+                <element signature="e#13506#13507#0" expanded="true" />
+                <element signature="e#13567#13568#0" expanded="true" />
+                <element signature="e#13610#13611#0" expanded="true" />
+                <element signature="e#13694#13695#0" expanded="true" />
+                <element signature="e#13751#13752#0" expanded="true" />
+                <element signature="e#13812#13813#0" expanded="true" />
+                <element signature="e#13865#13866#0" expanded="true" />
+                <element signature="e#13921#13922#0" expanded="true" />
+                <element signature="e#13950#13951#0" expanded="true" />
+                <element signature="e#14003#14004#0" expanded="true" />
+                <element signature="e#14046#14047#0" expanded="true" />
+                <element signature="e#14101#14102#0" expanded="true" />
+                <element signature="e#14148#14149#0" expanded="true" />
+                <element signature="e#15506#15507#0" expanded="true" />
+                <element signature="e#15551#15552#0" expanded="true" />
+                <element signature="e#22111#22112#0" expanded="true" />
+                <element signature="e#22156#22157#0" expanded="true" />
+                <element signature="e#22209#22210#0" expanded="true" />
+                <element signature="e#22257#22258#0" expanded="true" />
+                <element signature="e#22324#22325#0" expanded="true" />
+                <element signature="e#22377#22378#0" expanded="true" />
+                <element signature="e#22444#22445#0" expanded="true" />
+                <element signature="e#22494#22495#0" expanded="true" />
+                <element signature="e#22555#22556#0" expanded="true" />
+                <element signature="e#22605#22606#0" expanded="true" />
+                <element signature="e#22669#22670#0" expanded="true" />
+                <element signature="e#22720#22721#0" expanded="true" />
+                <element signature="e#22779#22780#0" expanded="true" />
+                <element signature="e#22830#22831#0" expanded="true" />
+                <element signature="e#22893#22894#0" expanded="true" />
+                <element signature="e#22949#22950#0" expanded="true" />
+                <element signature="e#23018#23019#0" expanded="true" />
+                <element signature="e#23071#23072#0" expanded="true" />
+                <element signature="e#23135#23136#0" expanded="true" />
+                <element signature="e#23188#23189#0" expanded="true" />
                 <element signature="e#23250#23251#0" expanded="true" />
-                <element signature="e#23292#23293#0" expanded="true" />
-                <element signature="e#23357#23358#0" expanded="true" />
-                <element signature="e#23397#23398#0" expanded="true" />
+                <element signature="e#23306#23307#0" expanded="true" />
+                <element signature="e#23361#23362#0" expanded="true" />
+                <element signature="e#23401#23402#0" expanded="true" />
                 <element signature="e#23462#23463#0" expanded="true" />
-                <element signature="e#23505#23506#0" expanded="true" />
-                <element signature="e#23570#23571#0" expanded="true" />
-                <element signature="e#23623#23624#0" expanded="true" />
-                <element signature="e#23684#23685#0" expanded="true" />
-                <element signature="e#23732#23733#0" expanded="true" />
-                <element signature="e#23801#23802#0" expanded="true" />
-                <element signature="e#23850#23851#0" expanded="true" />
-                <element signature="e#23913#23914#0" expanded="true" />
-                <element signature="e#23957#23958#0" expanded="true" />
-                <element signature="e#24024#24025#0" expanded="true" />
-                <element signature="e#24072#24073#0" expanded="true" />
-                <element signature="e#24129#24130#0" expanded="true" />
-                <element signature="e#24168#24169#0" expanded="true" />
-                <element signature="e#24231#24232#0" expanded="true" />
-                <element signature="e#24267#24268#0" expanded="true" />
-                <element signature="e#24940#24941#0" expanded="true" />
-                <element signature="e#24976#24977#0" expanded="true" />
-                <element signature="e#25039#25040#0" expanded="true" />
-                <element signature="e#25086#25087#0" expanded="true" />
-                <element signature="e#25137#25138#0" expanded="true" />
-                <element signature="e#25190#25191#0" expanded="true" />
-                <element signature="e#25288#25289#0" expanded="true" />
-                <element signature="e#25335#25336#0" expanded="true" />
+                <element signature="e#23504#23505#0" expanded="true" />
+                <element signature="e#23569#23570#0" expanded="true" />
+                <element signature="e#23611#23612#0" expanded="true" />
+                <element signature="e#23676#23677#0" expanded="true" />
+                <element signature="e#23716#23717#0" expanded="true" />
+                <element signature="e#23781#23782#0" expanded="true" />
+                <element signature="e#23824#23825#0" expanded="true" />
+                <element signature="e#23889#23890#0" expanded="true" />
+                <element signature="e#23942#23943#0" expanded="true" />
+                <element signature="e#24003#24004#0" expanded="true" />
+                <element signature="e#24051#24052#0" expanded="true" />
+                <element signature="e#24120#24121#0" expanded="true" />
+                <element signature="e#24169#24170#0" expanded="true" />
+                <element signature="e#24232#24233#0" expanded="true" />
+                <element signature="e#24276#24277#0" expanded="true" />
+                <element signature="e#24343#24344#0" expanded="true" />
+                <element signature="e#24391#24392#0" expanded="true" />
+                <element signature="e#24448#24449#0" expanded="true" />
+                <element signature="e#24487#24488#0" expanded="true" />
+                <element signature="e#24550#24551#0" expanded="true" />
+                <element signature="e#24586#24587#0" expanded="true" />
+                <element signature="e#25259#25260#0" expanded="true" />
+                <element signature="e#25295#25296#0" expanded="true" />
+                <element signature="e#25358#25359#0" expanded="true" />
+                <element signature="e#25405#25406#0" expanded="true" />
+                <element signature="e#25456#25457#0" expanded="true" />
+                <element signature="e#25509#25510#0" expanded="true" />
+                <element signature="e#25607#25608#0" expanded="true" />
+                <element signature="e#25654#25655#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplyAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/productAction/ApplyAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FcUser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <element signature="e#6219#6220#0" expanded="true" />
+                <element signature="e#6248#6249#0" expanded="true" />
+                <element signature="e#6289#6290#0" expanded="true" />
+                <element signature="e#6325#6326#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/AppType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="centerbase.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/centerbase.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="195" column="37" lean-forward="false" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="37" />
+              <folding>
+                <marker date="1523603567893" expanded="true" signature="6757:6769" ph="..." />
+                <marker date="1523603567893" expanded="true" signature="6843:6857" ph="..." />
+                <marker date="1523603567893" expanded="true" signature="8227:8329" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vip.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/vip.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -213,20 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showOrder</find>
-      <find>safe</find>
-      <find>saveQuestion</find>
-      <find>pas</find>
-      <find>findpwd</find>
-      <find>setn</find>
-      <find>oldQuestion</find>
-      <find>showQuestion</find>
-      <find>addSafeQuestion</find>
-      <find>vipname</find>
-      <find>class=&quot;save</find>
-      <find>vips</find>
-      <find>avePersonCertify</find>
-      <find>savePCertify</find>
       <find>cctfct</find>
       <find>update</find>
       <find>submit</find>
@@ -242,7 +235,21 @@
       <find>Section3</find>
       <find>Section31</find>
       <find>tab</find>
+      <find>bill</find>
+      <find>register</find>
+      <find>saveEntity</find>
+      <find>saveUser</find>
+      <find>findUser</find>
+      <find>login</find>
+      <find>admin</find>
+      <find>code</find>
       <find>showBill</find>
+      <find>yxhm</find>
+      <find>vips</find>
+      <find>findList</find>
+      <find>showUserInfo</find>
+      <find>telecode</find>
+      <find>regs</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -259,12 +266,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/register.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/util/OrderUtil.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/order/charge.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/base/product/productService/productServiceImpl/OrderServiceImpl.java" />
@@ -289,8 +292,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/service/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/dao/AccountDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/util/dao/impl/AccountDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/front/js/register.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java" />
       </list>
     </option>
   </component>
@@ -300,9 +307,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="973" />
-    <option name="y" value="191" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
@@ -462,58 +468,6 @@
               <item name="webservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -548,7 +502,7 @@
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.62488395" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ueditor-1.1.2.jar!/" />
-    <property name="SearchEverywhereHistoryKey" value="Log&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/login/Controller/LoginAction.java&#10;login&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/login.jsp&#10;enter&#9;PSI&#9;JAVA://com.fc.util.entity.EnterCertify&#10;person&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/entity/PersonCertify.java&#10;fc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/entity/FcUser.java&#10;xml&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/web.xml&#10;Fc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/entity/FcUser.java&#10;SafeQusetion&#9;PSI&#9;JAVA://com.fc.util.entity.SafeQusetion&#10;OrderDao&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderD&#9;PSI&#9;JAVA://com.fc.base.product.productDao.productDaoImpl.OrderDaoImpl&#10;orderser&#9;PSI&#9;JAVA://com.fc.base.product.productService.productServiceImpl.OrderServiceImpl&#10;pro&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;proA&#9;PSI&#9;JAVA://com.fc.base.product.productAction.ProductAction&#10;userd&#9;PSI&#9;JAVA://com.fc.base.user.dao.impl.UserDaoImpl&#10;userse&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java&#10;users&#9;PSI&#9;JAVA://com.fc.base.user.service.UserService&#10;userser&#9;PSI&#9;JAVA://com.fc.base.user.service.impl.UserServiceImpl&#10;accountDao&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/dao/impl/AccountDaoImpl.java&#10;a&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java&#10;web.&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/web.xml&#10;Acc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java" />
+    <property name="SearchEverywhereHistoryKey" value="fc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/entity/FcUser.java&#10;top&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/jsp/comm/top.jsp&#10;login&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/login/Controller/LoginAction.java&#10;user&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java&#10;userDao&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java&#10;userser&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java&#10;lo&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/login/Controller/LoginAction.java&#10;Log&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/login/Controller/LoginAction.java&#10;enter&#9;PSI&#9;JAVA://com.fc.util.entity.EnterCertify&#10;person&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/entity/PersonCertify.java&#10;xml&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/web.xml&#10;Fc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/entity/FcUser.java&#10;SafeQusetion&#9;PSI&#9;JAVA://com.fc.util.entity.SafeQusetion&#10;OrderDao&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/product/productDao/productDaoImpl/OrderDaoImpl.java&#10;orderD&#9;PSI&#9;JAVA://com.fc.base.product.productDao.productDaoImpl.OrderDaoImpl&#10;orderser&#9;PSI&#9;JAVA://com.fc.base.product.productService.productServiceImpl.OrderServiceImpl&#10;pro&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/product/productAction/ProductAction.java&#10;proA&#9;PSI&#9;JAVA://com.fc.base.product.productAction.ProductAction&#10;userd&#9;PSI&#9;JAVA://com.fc.base.user.dao.impl.UserDaoImpl&#10;userse&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java&#10;users&#9;PSI&#9;JAVA://com.fc.base.user.service.UserService&#10;accountDao&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/dao/impl/AccountDaoImpl.java&#10;a&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java&#10;web.&#9;FILE&#9;file://G:/ws/webservice/src/main/webapp/WEB-INF/web.xml&#10;Acc&#9;FILE&#9;file://G:/ws/webservice/src/main/java/com/fc/util/service/impl/AccountServiceImpl.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -740,16 +694,15 @@
       <workItem from="1523516171435" duration="4370000" />
       <workItem from="1523520897359" duration="8359000" />
       <workItem from="1523582822126" duration="25127000" />
-      <workItem from="1523669703487" duration="4317000" />
+      <workItem from="1523669703487" duration="18372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42173000" />
+    <option name="totallyTimeSpent" value="56228000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="976" height="1038" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -769,10 +722,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26777253" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25751072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13636364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -828,18 +781,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java</url>
-          <line>275</line>
+          <line>285</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java</url>
-          <line>290</line>
+          <line>300</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java</url>
-          <line>829</line>
+          <line>839</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -851,7 +804,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp</url>
-          <line>257</line>
+          <line>255</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -865,61 +818,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="530" column="0" lean-forward="false" selection-start-line="530" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/order/scheduleorder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="248" column="25" lean-forward="true" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
-          <folding>
-            <marker date="1523515489710" expanded="true" signature="8017:8030" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8064:8079" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8154:8169" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8219:8234" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8296:8311" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8472:8487" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8560:8575" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8672:8687" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="8979:9019" ph="..." />
-            <marker date="1523515489710" expanded="true" signature="9062:9068" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/entity/OrderEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -945,6 +843,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2346">
           <caret line="110" column="32" lean-forward="false" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,14 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/password.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1093,53 +984,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="139" column="42" lean-forward="false" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="429" column="10" lean-forward="true" selection-start-line="417" selection-start-column="6" selection-end-line="429" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="107" column="47" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/centerbase.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1705">
-          <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
-          <folding>
-            <marker date="1523603567893" expanded="true" signature="6757:6769" ph="..." />
-            <marker date="1523603567893" expanded="true" signature="6843:6857" ph="..." />
-            <marker date="1523603567893" expanded="true" signature="8227:8329" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/vip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1211,37 +1060,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/ComplainAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="e#640#641#0" expanded="false" />
-            <element signature="e#686#687#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,16 +1094,16 @@
         <state relative-caret-position="2438">
           <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
           <folding>
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2778#2779#0" expanded="true" />
-            <element signature="e#2818#2819#0" expanded="true" />
-            <element signature="e#3083#3084#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3593#3594#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+            <element signature="e#2472#2473#0" expanded="false" />
+            <element signature="e#2505#2506#0" expanded="false" />
+            <element signature="e#2778#2779#0" expanded="false" />
+            <element signature="e#2818#2819#0" expanded="false" />
+            <element signature="e#3083#3084#0" expanded="false" />
+            <element signature="e#3122#3123#0" expanded="false" />
+            <element signature="e#3554#3555#0" expanded="false" />
+            <element signature="e#3593#3594#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1308,10 +1131,10 @@
         <state relative-caret-position="184">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1321,24 +1144,24 @@
         <state relative-caret-position="443">
           <caret line="116" column="33" lean-forward="false" selection-start-line="110" selection-start-column="8" selection-end-line="116" selection-end-column="33" />
           <folding>
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2493#2494#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2710#2711#0" expanded="true" />
-            <element signature="e#2750#2751#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2836#2837#0" expanded="true" />
-            <element signature="e#2899#2900#0" expanded="true" />
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="false" />
+            <element signature="e#2188#2189#0" expanded="false" />
+            <element signature="e#2253#2254#0" expanded="false" />
+            <element signature="e#2298#2299#0" expanded="false" />
+            <element signature="e#2372#2373#0" expanded="false" />
+            <element signature="e#2430#2431#0" expanded="false" />
+            <element signature="e#2493#2494#0" expanded="false" />
+            <element signature="e#2538#2539#0" expanded="false" />
+            <element signature="e#2609#2610#0" expanded="false" />
+            <element signature="e#2657#2658#0" expanded="false" />
+            <element signature="e#2710#2711#0" expanded="false" />
+            <element signature="e#2750#2751#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2836#2837#0" expanded="false" />
+            <element signature="e#2899#2900#0" expanded="false" />
+            <element signature="e#2944#2945#0" expanded="false" />
+            <element signature="e#3014#3015#0" expanded="false" />
+            <element signature="e#3061#3062#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1347,80 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="940" column="92" lean-forward="false" selection-start-line="940" selection-start-column="92" selection-end-line="940" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10708#10949#0" expanded="true" />
-            <element signature="e#10948#10949#0" expanded="true" />
-            <element signature="e#21792#21793#0" expanded="true" />
-            <element signature="e#21837#21838#0" expanded="true" />
-            <element signature="e#21890#21891#0" expanded="true" />
-            <element signature="e#21938#21939#0" expanded="true" />
-            <element signature="e#22005#22006#0" expanded="true" />
-            <element signature="e#22058#22059#0" expanded="true" />
-            <element signature="e#22125#22126#0" expanded="true" />
-            <element signature="e#22175#22176#0" expanded="true" />
-            <element signature="e#22236#22237#0" expanded="true" />
-            <element signature="e#22286#22287#0" expanded="true" />
-            <element signature="e#22350#22351#0" expanded="true" />
-            <element signature="e#22401#22402#0" expanded="true" />
-            <element signature="e#22460#22461#0" expanded="true" />
-            <element signature="e#22511#22512#0" expanded="true" />
-            <element signature="e#22574#22575#0" expanded="true" />
-            <element signature="e#22630#22631#0" expanded="true" />
-            <element signature="e#22699#22700#0" expanded="true" />
-            <element signature="e#22752#22753#0" expanded="true" />
-            <element signature="e#22816#22817#0" expanded="true" />
-            <element signature="e#22869#22870#0" expanded="true" />
-            <element signature="e#22931#22932#0" expanded="true" />
-            <element signature="e#22987#22988#0" expanded="true" />
-            <element signature="e#23042#23043#0" expanded="true" />
-            <element signature="e#23082#23083#0" expanded="true" />
-            <element signature="e#23143#23144#0" expanded="true" />
-            <element signature="e#23185#23186#0" expanded="true" />
-            <element signature="e#23250#23251#0" expanded="true" />
-            <element signature="e#23292#23293#0" expanded="true" />
-            <element signature="e#23357#23358#0" expanded="true" />
-            <element signature="e#23397#23398#0" expanded="true" />
-            <element signature="e#23462#23463#0" expanded="true" />
-            <element signature="e#23505#23506#0" expanded="true" />
-            <element signature="e#23570#23571#0" expanded="true" />
-            <element signature="e#23623#23624#0" expanded="true" />
-            <element signature="e#23684#23685#0" expanded="true" />
-            <element signature="e#23732#23733#0" expanded="true" />
-            <element signature="e#23801#23802#0" expanded="true" />
-            <element signature="e#23850#23851#0" expanded="true" />
-            <element signature="e#23913#23914#0" expanded="true" />
-            <element signature="e#23957#23958#0" expanded="true" />
-            <element signature="e#24024#24025#0" expanded="true" />
-            <element signature="e#24072#24073#0" expanded="true" />
-            <element signature="e#24129#24130#0" expanded="true" />
-            <element signature="e#24168#24169#0" expanded="true" />
-            <element signature="e#24231#24232#0" expanded="true" />
-            <element signature="e#24267#24268#0" expanded="true" />
-            <element signature="e#24940#24941#0" expanded="true" />
-            <element signature="e#24976#24977#0" expanded="true" />
-            <element signature="e#25039#25040#0" expanded="true" />
-            <element signature="e#25086#25087#0" expanded="true" />
-            <element signature="e#25137#25138#0" expanded="true" />
-            <element signature="e#25190#25191#0" expanded="true" />
-            <element signature="e#25288#25289#0" expanded="true" />
-            <element signature="e#25335#25336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillSendAddr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1441,11 +1190,255 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="59" column="78" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#button#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#button#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#button#2;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#button#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#button#4;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="98" column="42" lean-forward="true" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="389" column="31" lean-forward="true" selection-start-line="389" selection-start-column="31" selection-end-line="389" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/Bill/billtab.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="256" column="15" lean-forward="false" selection-start-line="256" selection-start-column="15" selection-end-line="256" selection-end-column="15" />
+        <state relative-caret-position="266">
+          <caret line="230" column="37" lean-forward="true" selection-start-line="230" selection-start-column="17" selection-end-line="230" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/entity/BillSendAddr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/vip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="101" column="55" lean-forward="false" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/util/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/comm/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="401" column="67" lean-forward="false" selection-start-line="401" selection-start-column="42" selection-end-line="401" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/menber/centerbase.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="195" column="37" lean-forward="false" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="37" />
+          <folding>
+            <marker date="1523603567893" expanded="true" signature="6757:6769" ph="..." />
+            <marker date="1523603567893" expanded="true" signature="6843:6857" ph="..." />
+            <marker date="1523603567893" expanded="true" signature="8227:8329" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/front/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="463" column="30" lean-forward="true" selection-start-line="463" selection-start-column="30" selection-end-line="463" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/AppType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/login/Controller/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="245" column="24" lean-forward="true" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+            <element signature="e#3022#3023#0" expanded="true" />
+            <element signature="e#11027#11268#0" expanded="true" />
+            <element signature="e#11267#11268#0" expanded="true" />
+            <element signature="e#12187#12188#0" expanded="true" />
+            <element signature="e#12226#12227#0" expanded="true" />
+            <element signature="e#12285#12286#0" expanded="true" />
+            <element signature="e#12315#12316#0" expanded="true" />
+            <element signature="e#12368#12369#0" expanded="true" />
+            <element signature="e#12400#12401#0" expanded="true" />
+            <element signature="e#12459#12460#0" expanded="true" />
+            <element signature="e#12489#12490#0" expanded="true" />
+            <element signature="e#12549#12550#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#13228#13229#0" expanded="true" />
+            <element signature="e#13275#13276#0" expanded="true" />
+            <element signature="e#13342#13343#0" expanded="true" />
+            <element signature="e#13385#13386#0" expanded="true" />
+            <element signature="e#13459#13460#0" expanded="true" />
+            <element signature="e#13506#13507#0" expanded="true" />
+            <element signature="e#13567#13568#0" expanded="true" />
+            <element signature="e#13610#13611#0" expanded="true" />
+            <element signature="e#13694#13695#0" expanded="true" />
+            <element signature="e#13751#13752#0" expanded="true" />
+            <element signature="e#13812#13813#0" expanded="true" />
+            <element signature="e#13865#13866#0" expanded="true" />
+            <element signature="e#13921#13922#0" expanded="true" />
+            <element signature="e#13950#13951#0" expanded="true" />
+            <element signature="e#14003#14004#0" expanded="true" />
+            <element signature="e#14046#14047#0" expanded="true" />
+            <element signature="e#14101#14102#0" expanded="true" />
+            <element signature="e#14148#14149#0" expanded="true" />
+            <element signature="e#15506#15507#0" expanded="true" />
+            <element signature="e#15551#15552#0" expanded="true" />
+            <element signature="e#22111#22112#0" expanded="true" />
+            <element signature="e#22156#22157#0" expanded="true" />
+            <element signature="e#22209#22210#0" expanded="true" />
+            <element signature="e#22257#22258#0" expanded="true" />
+            <element signature="e#22324#22325#0" expanded="true" />
+            <element signature="e#22377#22378#0" expanded="true" />
+            <element signature="e#22444#22445#0" expanded="true" />
+            <element signature="e#22494#22495#0" expanded="true" />
+            <element signature="e#22555#22556#0" expanded="true" />
+            <element signature="e#22605#22606#0" expanded="true" />
+            <element signature="e#22669#22670#0" expanded="true" />
+            <element signature="e#22720#22721#0" expanded="true" />
+            <element signature="e#22779#22780#0" expanded="true" />
+            <element signature="e#22830#22831#0" expanded="true" />
+            <element signature="e#22893#22894#0" expanded="true" />
+            <element signature="e#22949#22950#0" expanded="true" />
+            <element signature="e#23018#23019#0" expanded="true" />
+            <element signature="e#23071#23072#0" expanded="true" />
+            <element signature="e#23135#23136#0" expanded="true" />
+            <element signature="e#23188#23189#0" expanded="true" />
+            <element signature="e#23250#23251#0" expanded="true" />
+            <element signature="e#23306#23307#0" expanded="true" />
+            <element signature="e#23361#23362#0" expanded="true" />
+            <element signature="e#23401#23402#0" expanded="true" />
+            <element signature="e#23462#23463#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23569#23570#0" expanded="true" />
+            <element signature="e#23611#23612#0" expanded="true" />
+            <element signature="e#23676#23677#0" expanded="true" />
+            <element signature="e#23716#23717#0" expanded="true" />
+            <element signature="e#23781#23782#0" expanded="true" />
+            <element signature="e#23824#23825#0" expanded="true" />
+            <element signature="e#23889#23890#0" expanded="true" />
+            <element signature="e#23942#23943#0" expanded="true" />
+            <element signature="e#24003#24004#0" expanded="true" />
+            <element signature="e#24051#24052#0" expanded="true" />
+            <element signature="e#24120#24121#0" expanded="true" />
+            <element signature="e#24169#24170#0" expanded="true" />
+            <element signature="e#24232#24233#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#24343#24344#0" expanded="true" />
+            <element signature="e#24391#24392#0" expanded="true" />
+            <element signature="e#24448#24449#0" expanded="true" />
+            <element signature="e#24487#24488#0" expanded="true" />
+            <element signature="e#24550#24551#0" expanded="true" />
+            <element signature="e#24586#24587#0" expanded="true" />
+            <element signature="e#25259#25260#0" expanded="true" />
+            <element signature="e#25295#25296#0" expanded="true" />
+            <element signature="e#25358#25359#0" expanded="true" />
+            <element signature="e#25405#25406#0" expanded="true" />
+            <element signature="e#25456#25457#0" expanded="true" />
+            <element signature="e#25509#25510#0" expanded="true" />
+            <element signature="e#25607#25608#0" expanded="true" />
+            <element signature="e#25654#25655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/product/productAction/ApplyAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/base/user/entity/FcUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#6219#6220#0" expanded="true" />
+            <element signature="e#6248#6249#0" expanded="true" />
+            <element signature="e#6289#6290#0" expanded="true" />
+            <element signature="e#6325#6326#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

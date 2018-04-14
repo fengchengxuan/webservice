@@ -308,7 +308,7 @@ $(document).ready(function() {
 		 if(pass == "" || pass_ag == "" || phone == "" || inputCode =="") {
              $("phonenum_comment").html("*号项不能为空!").css("color", 'red');
 			} else{
-            register(0);
+            register("0");
 		 }
 	});
 	$("#yzm").click(function(){
@@ -396,37 +396,79 @@ if(testphone){
             $("#yxhm").html("*号项不能为空!").css("color", 'red');
         }else {
 
-            register(1);
+            register("1");
         }
     })
 	function register(type){
     	var userName;
     	var password;
     	var repassword;
-    	var code;
-    	if(type==0){//手机注册
+    	var sendCode;
+    	if(type=="0"){//手机注册
 			userName=$("#phonenum").val();
-			password=$("#password").val()
+			password=$("#password").val();
 			repassword=$("#repassword").val()
-			code=$("#telecode").val()
-	    }else if(type==1){//邮箱注册
-            userName=$("#email").val();
-            password=$("#passwordE").val()
-            repassword=$("#repasswordE").val()
-			code=$("#emailcode").val()
-		}
-        $.ajax({
-            type: 'POST',
-            url: ctx + '/regs',
-            dataType: 'json',
-            data: "type="+type+"&userName="+userName+"&password="+password+"&repassword="+repassword+"&code="+code,
-            success: function (msg) {
-                if (msg.data) {
-                    alert("注册成功!");
-                } else {
-                    alert("注册失败!请完善注册信息!")
-                }
+            sendCode=$("#telecode").val()
+			if(userName.length!=11){
+				alert("手机号不正确");
+				return ;
+			}
+			if($("#password").val().length<6||$("#password").val().length>12){
+				alert("密码长度错误");
+				return ;
+			}
+            if($("#repassword").val().length<6||$("#repassword").val().length>12){
+                alert("确认密码长度错误");
+                return ;
             }
-        })
-	}
+            if($("#input1").val()!=code){
+				alert("请输入正确的验证码");
+				return ;
+			};
+	    }else if(type=="1"){//邮箱注册
+            userName=$("#email").val();
+            password=$("#passwordE").val();
+            repassword=$("#repasswordE").val();
+            sendCode=$("#emailcode").val();
+            if(!/^\w+@[a-zA-Z0-9]{2,}(.[a-zA-Z0-9]{2,3}){1,2}$/.test(userName)){
+            	alert("邮箱号码错误");
+            	return ;
+			}
+            if($("#passwordE").val().length<6||$("#passwordE").val().length>12){
+                alert("密码长度错误");
+                return ;
+            }
+            if($("#repasswordE").val().length<6||$("#repasswordE").val().length>12){
+                alert("确认密码长度错误");
+                return ;
+            }
+            if($("#input2").val()!=code2){
+                alert("请输入正确的验证码");
+                return;
+            };
+		}
+            $.ajax({
+                type: 'POST',
+                url: ctx + '/regs',
+				dataType: 'json',
+                data: "type="+type+"&userName="+userName+"&password="+password+"&repassword="+repassword+"&code="+sendCode,
+                success: function (msg) {
+                    if (msg.data) {
+                        if(!msg.code){
+                        	alert("手机验证码错误");
+                        	return ;
+						}
+                    	if(msg.ok){
+                            alert("注册成功!");
+                            location.reload();
+						}else{
+                    		alert("密码不一样")
+						}
+                    } else {
+                        alert("注册失败!请看红字的提示")
+                    }
+                }
+            })
+		}
+
 });

@@ -241,10 +241,20 @@ public class LoginAction {
      */
 
     @RequestMapping("regs")//注册
-    public @ResponseBody Map<String,Object>regs(String type,String userName,String password,String repassword,String code){
-        if (userService.findList(userName,password,type).size()<1){
-            userService.saveUser(userName,password,repassword,type);
+    public @ResponseBody Map<String,Object>regs(HttpSession session,String type,String userName,String password,String repassword,String code){
+      if(code.equals((String) session.getAttribute("telecode"))){
+        map.put("code",true);
+      }else{
+          map.put("code",false);
+      }
+        if (userService.findList(userName,"",type).size()<1){
             map.put("data",true);
+            if(password.equals(repassword)){
+                userService.saveUser(userName,password,repassword,type);
+                map.put("ok",true);
+            }else{
+                map.put("ok",false);
+            }
         }else {
             map.put("data",false);
         }

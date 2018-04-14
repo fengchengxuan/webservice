@@ -247,8 +247,6 @@
               var  app= data.billapp;
               var billSendAddr= data.billSendAddr;
               if(app!=null) {
-
-
                   var row = "<tr><td>" + app.appType + "</td><td>" + app.billType + "</td>" +
                       "<td>" + app.billTitle + "</td><td>" + billSendAddr.address + "</td>" +
                       "<td>" + app.fcd + "</td><td>" + billSendAddr.city + "</td></tr>";
