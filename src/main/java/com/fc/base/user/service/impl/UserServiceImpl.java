@@ -30,7 +30,7 @@ public class UserServiceImpl extends BaseDao implements UserService {
         FcUser fcUser =new FcUser();
         fcUser.setUserName(userName);
         fcUser.setRePassword(password);
-        fcUser.setPassword(password);
+        fcUser.setPassword(repassword);
         fcUser.setUserTypeId(type);
         if("0".equals(type)){//手机类型
             fcUser.setTel(userName);
