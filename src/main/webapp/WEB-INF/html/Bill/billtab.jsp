@@ -55,7 +55,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">申请开发票</a></li>
                         <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">收发发票</a></li>
-                        <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">发票管理</a></li>
+                        <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab" id="Section31">发票管理</a></li>
                         <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab" data-toggle="tab">发票到哪</a></li>
 
                     </ul>
@@ -66,28 +66,28 @@
                                 <div class="TPitem">
                                     <span class="tpi-name">开具类型</span>
                                     <label>
-                                    <select name="" id="">
-                                        <option value="">个人</option>
-                                        <option value="">企业</option>
+                                    <select name="" id="appType" >
+                                        <option value="个人">个人</option>
+                                        <option value="企业">企业</option>
                                     </select>
                                     </label>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">发票类型</span>
                                     <label>
-                                    <select name="" >
-                                        <option value="">普通发票</option>
-                                        <option value="">增值税普通发票</option>
-                                        <option value="">增值税专用发票</option>
+                                    <select name="" id="billType">
+                                        <option value="普通发票">普通发票</option>
+                                        <option value="增值税普通发票">增值税普通发票</option>
+                                        <option value="增值税专用发票">增值税专用发票</option>
                                     </select>
                                     </label>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">发票抬头</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="billTitle">
                                 </div>
                                 <div  class="TPitem" style="margin-top: 40px">
-                                    <button>确认</button>
+                                    <button id="submit1">确认</button>
                                 </div>
                             </div>
                         </div>
@@ -95,47 +95,47 @@
                             <div class="thisPlatform">
                                 <div class="TPitem">
                                     <span class="tpi-name">收件人</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="receiver">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">所在地区</span>
                                     <label>
-                                    <select name="">
-                                        <option value="">南宁市</option>
-                                        <option value="">柳州市</option>
-                                        <option value="">桂林市</option>
-                                        <option value="">梧州市</option>
-                                        <option value="">北海市</option>
-                                        <option value="">防城港市</option>
-                                        <option value="">钦州市</option>
-                                        <option value="">贵州市</option>
-                                        <option value="">玉林市</option>
-                                        <option value="">白色市</option>
-                                        <option value="">贺州市</option>
-                                        <option value="">河池市</option>
-                                        <option value="">来宾市</option>
-                                        <option value="">崇左市</option>
+                                    <select name="" id="city">
+                                        <option value="南宁市">南宁市</option>
+                                        <option value="柳州市">柳州市</option>
+                                        <option value="桂林市">桂林市</option>
+                                        <option value="梧州市">梧州市</option>
+                                        <option value="北海市">北海市</option>
+                                        <option value="防城港市">防城港市</option>
+                                        <option value="钦州市">钦州市</option>
+                                        <option value="贵州市">贵州市</option>
+                                        <option value="玉林市">玉林市</option>
+                                        <option value="白色市">白色市</option>
+                                        <option value="贺州市">贺州市</option>
+                                        <option value="河池市">河池市</option>
+                                        <option value="来宾市">来宾市</option>
+                                        <option value="崇左市">崇左市</option>
                                     </select>
                                     </label>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">详细地址</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="address">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">邮政编号</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="mailCode">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">手机号码</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="tel">
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">固定电话</span>
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="" id="phone">
                                 </div>
                                 <div  class="TPitem" style="margin-top: 40px">
-                                    <button>确认</button>
+                                    <button  id="submit2">确认</button>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                     <th class="th6">邮寄发票时间</th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="showBill">
                                     <tr>
                                         <td>企业</td>
                                         <td>增值税普通发票</td>
@@ -202,5 +202,64 @@
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $("#submit1").click(function () {//申请发票
+        $.ajax({
+            url : ctx+'/addBillApp',
+            type : 'POST',
+            data:"appType="+$("#appType").val()+"&billType="+$("#billType").val()+"&billTitle="+$("#billTitle").val(),
+            dataType : 'json',
+            success : function(data) {
+                if(data.ok){
+                    alert("成功")
+                    location.reload();
+                }else{
+                    alert("失败")
+                }
+            } })
+    })
+   $("#submit2").click(function () {//收发发票
+       $.ajax({
+           url : ctx+'/addBillSendAddr',
+           type : 'POST',
+           data:"receiver="+$("#receiver").val()+"&city="+$("#city").val()+"&address="+$("#address").val()+
+           "&mailCode="+$("#mailCode").val()+"&phone="+$("#phone").val()+"&tel="+$("#tel").val(),
+           dataType : 'json',
+           success : function(data) {
+               if(data.ok){
+                   alert("成功")
+                   location.reload();
+
+               }else{
+                   alert("失败")
+               }
+           } })
+   })
+   $("#Section31").click(function(){
+
+        $.ajax({
+            url : ctx+'/showBill',
+            type : 'POST',
+            dataType : 'json',
+            success : function(data) {
+                if(data.ok){
+                    $("#showBill").empty();
+              var  app= data.billapp;
+              var billSendAddr= data.billSendAddr;
+              if(app!=null) {
+
+
+                  var row = "<tr><td>" + app.appType + "</td><td>" + app.billType + "</td>" +
+                      "<td>" + app.billTitle + "</td><td>" + billSendAddr.address + "</td>" +
+                      "<td>" + app.fcd + "</td><td>" + billSendAddr.city + "</td></tr>";
+
+                  $("#showBill").append(row);
+              }
+                }
+            } })
+
+
+   })
+</script>
 </body>
 </html>

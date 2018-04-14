@@ -14,10 +14,8 @@ public class BillSendAddr extends Base{//发票邮寄地址
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(length = 36)
     private String  id;
-    @OneToOne
-    @Cascade(value ={org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "ba_id")
-    private BillApp baId;
+    @Column(name = "ba_id")
+    private String baId;
     @Column(name = "receiver",length = 10)
     private String receiver;//收件人
     @Column(name = "city")
@@ -39,11 +37,11 @@ public class BillSendAddr extends Base{//发票邮寄地址
         this.id = id;
     }
 
-    public BillApp getBaId() {
+    public String getBaId() {
         return baId;
     }
 
-    public void setBaId(BillApp baId) {
+    public void setBaId(String baId) {
         this.baId = baId;
     }
 

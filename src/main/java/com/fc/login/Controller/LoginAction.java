@@ -20,9 +20,7 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.fc.util.entity.EnterCertify;
-import com.fc.util.entity.PersonCertify;
-import com.fc.util.entity.SafeQusetion;
+import com.fc.util.entity.*;
 import com.fc.util.service.AccountService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -883,6 +881,72 @@ public class LoginAction {
         }
         return map;
     }
+    @RequestMapping("addBillApp")//申请发票
+    public @ResponseBody Map<String,Object> addBillApp(HttpSession session,String appType,String billType,String billTitle){
+        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+
+        if(fcuser!=null) {
+            BillApp billApp=accountService.findBillApp(fcuser.getId());
+            if(billApp==null){
+                accountService.appBill(appType, billType, billTitle, fcuser.getId());
+
+                map.put("ok",true);
+            }else{
+
+                billApp.setAppType(appType);
+                billApp.setBillTitle(billTitle);
+                billApp.setBillType(billType);
+                accountService.appBill(billApp);
+            }
+
+        }else{
+            map.put("ok",false);
+        }
+        return map;
+    }
+    @RequestMapping("addBillSendAddr")//发票寄到哪里？
+    public @ResponseBody Map<String,Object>  addBillSendAddr(HttpSession session,String receiver,String city,String address
+            ,String mailCode,String phone,String tel){
+        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+        if(fcuser!=null) {
+           BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
+           if(billApp!=null){
+               map.put("flag",true);
+               if(accountService.findBillSendAddr(billApp.getBaId())!=null){//
+                 BillSendAddr billSendAddr= accountService.findBillSendAddr(billApp.getBaId());
+                 billSendAddr.setReceiver(receiver);
+                   billSendAddr.setAddress(address);
+                   billSendAddr.setCity(city);
+                   billSendAddr.setPhone(phone);
+                   billSendAddr.setTel(tel);
+                   billSendAddr.setMailCode(mailCode);
+                   billSendAddr.setReceiver(receiver);
+                   billSendAddr.setBaId(billApp.getBaId());
+                   accountService.appBillSendAddr(billSendAddr);
+               }else{
+               accountService.appBillSendAddr(receiver,city,address,mailCode,phone,tel,billApp.getBaId());}
+           }else{
+               map.put("flag",false);
+           }
+            map.put("ok",true);
+        }else{
+            map.put("ok",false);
+        }
+        return map;
+    }
+    @RequestMapping("showBill")//发票寄到哪里？
+    public @ResponseBody Map<String,Object>  addBillSendAddr(HttpSession session){
+        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+        BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
+        BillSendAddr billSendAddr= accountService.findBillSendAddr(billApp.getBaId());//发票地址
+        if(billApp!=null&&billSendAddr!=null) {
+
+            map.put("billapp", billApp);
+            map.put("billSendAddr", billSendAddr);
+        }
+        return map;
+    }
+
 
 }
 

@@ -16,10 +16,8 @@ public class BillLogistics extends Base{//发票物流信息
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(length = 36)
     private String  id;
-    @OneToOne
-    @Cascade(value = {org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "ba_id")
-    private BillApp baId;
+    @Column(name = "ba_id")
+    private String baId;
     @Column(name = "logistics_comp")
     private String logistics_Comp;//物流公司
     @Column(name = "logistics_no")
@@ -35,11 +33,11 @@ public class BillLogistics extends Base{//发票物流信息
         this.id = id;
     }
 
-    public BillApp getBaId() {
+    public String getBaId() {
         return baId;
     }
 
-    public void setBaId(BillApp baId) {
+    public void setBaId(String baId) {
         this.baId = baId;
     }
 

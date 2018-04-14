@@ -6,7 +6,8 @@ import com.fc.util.entity.*;
 public interface AccountService {
 
 	//Ʊ�ݹ���
-	void appBill(String appType, String billType, String billTitle, FcUser userid);
+	void appBill(String appType, String billType, String billTitle, String userid);
+	void appBill(BillApp billApp);
 	void receiveBill(String receiver, String city, String address, String mail_code, String phone, String tel, String userid);
 	BillManage billManage(String userid);
 	BillLogistics getBillLogistics(String userid);
@@ -22,4 +23,9 @@ public interface AccountService {
 	void savePersonCertify(PersonCertify personCertify);
 	EnterCertify findEnterCertify(String id);
 	void saveEnterCertify(EnterCertify enterCertify);
+	BillApp findBillApp(String id);
+	BillSendAddr findBillSendAddr(String id);
+	void appBillSendAddr(BillSendAddr billSendAddr);
+	void appBillSendAddr(String receiver,String city,String address,String mailCode,String phone,String tel,String id);
+
 }

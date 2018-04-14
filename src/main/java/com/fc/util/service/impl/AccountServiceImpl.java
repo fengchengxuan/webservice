@@ -15,7 +15,7 @@ public class AccountServiceImpl implements AccountService {
     AccountDao  accountDao;
 
 	@Override
-	public void appBill(String appType, String billType, String billTitle, FcUser userid) {
+	public void appBill(String appType, String billType, String billTitle, String userid) {
 		accountDao.appBill(appType, billType, billTitle, userid);
 	}
 
@@ -83,5 +83,38 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public void saveEnterCertify(EnterCertify enterCertify) {
 		accountDao.saveEnterCertify(enterCertify);
+	}
+
+	@Override
+	public BillApp findBillApp(String id) {
+		return accountDao.findBillApp(id);
+	}
+
+	@Override
+	public void appBill(BillApp billApp) {
+		accountDao.appBill(billApp);
+	}
+
+	@Override
+	public BillSendAddr findBillSendAddr(String id) {
+		return accountDao.findBillSendAddr(id);
+	}
+
+	@Override
+	public void appBillSendAddr(BillSendAddr billSendAddr) {
+		accountDao.appBillSendAddr(billSendAddr);
+	}
+
+	@Override
+	public void appBillSendAddr(String receiver, String city, String address, String mailCode, String phone, String tel,String id) {
+		BillSendAddr billSendAddr=new BillSendAddr();
+		billSendAddr.setAddress(address);
+		billSendAddr.setCity(city);
+		billSendAddr.setPhone(phone);
+		billSendAddr.setTel(tel);
+		billSendAddr.setMailCode(mailCode);
+		billSendAddr.setReceiver(receiver);
+		billSendAddr.setBaId(id);
+		accountDao.appBillSendAddr(billSendAddr);
 	}
 }

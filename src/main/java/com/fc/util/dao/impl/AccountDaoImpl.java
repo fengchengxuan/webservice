@@ -17,13 +17,18 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 
 
 	@Override
-	public void appBill(String appType, String billType, String billTitle, FcUser userid) {
+	public void appBill(String appType, String billType, String billTitle, String userid) {
 		BillApp billapp = new BillApp();
 		billapp.setAppType(appType);
 		billapp.setBillType(billType);
 		billapp.setBillTitle(billTitle);
 		billapp.setFcUser(userid);
 		super.save(billapp);
+	}
+
+	@Override
+	public void appBill(BillApp billApp) {
+		super.saveOrUpdate(billApp);
 	}
 
 	// �˺ŵ���-Ʊ�ݹ���-�շ���Ʊ
@@ -103,5 +108,24 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 	@Override
 	public void saveEnterCertify(EnterCertify enterCertify) {
 		super.saveOrUpdate(enterCertify);
+	}
+
+	@Override
+	public BillApp findBillApp(String id) {
+		String hql ="from BillApp where fcUser = ?" ;
+		Object []args={id};
+		return (BillApp)super.findEntity(hql,args);
+	}
+
+	@Override
+	public BillSendAddr findBillSendAddr(String id) {
+		String hql ="from BillSendAddr where baId = ?" ;
+		Object []args={id};
+		return (BillSendAddr)super.findEntity(hql,args);
+	}
+
+	@Override
+	public void appBillSendAddr(BillSendAddr billSendAddr) {
+		super.saveOrUpdate(billSendAddr);
 	}
 }
