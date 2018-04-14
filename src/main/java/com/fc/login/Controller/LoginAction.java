@@ -494,7 +494,7 @@ public class LoginAction {
      */
     @RequestMapping("updateUserInfo")
     public @ResponseBody  Map<String,Object>  updateInfo(String vipName,String phonenumber,String stablephone,String
-            email,String social,String companyname,String htype,String ctype, String stype,String web,String address,HttpServletRequest request){
+            email,String social,String companyname,String prodKindId,String comptypeId, String appTypeId,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
         String userName=(String)session.getAttribute("userName");
         String user=(String)session.getAttribute("user");
@@ -534,29 +534,38 @@ public class LoginAction {
             if(!"".equals(address)) {
                 fcUser.setOperAddr(address);//地址
             }
-            if(fcUser.getProdKindId()!=null){
+//            if(fcUser.getProdKindId()!=null){
+//
+//                fcUser.getProdKindId().setProKind(htype);
+//            }else{
+//                ProKind proKind=new ProKind();//行业类型
+//                proKind.setProKind(htype);
+//                fcUser.setProdKindId(proKind);
+//            }
 
-                fcUser.getProdKindId().setProKind(htype);
-            }else{
-                ProKind proKind=new ProKind();//行业类型
-                proKind.setProKind(htype);
-                fcUser.setProdKindId(proKind);
+//            if( fcUser.getComptypeId()!=null){
+//                fcUser.getComptypeId().setCompType(ctype);
+//            }else{
+//                CompType compType=new CompType();//公司类型
+//                compType.setCompType(ctype);
+//                fcUser.setComptypeId(compType);
+//            }
+
+//            if( fcUser.getAppTypeId()!=null){
+//                fcUser.getAppTypeId().setAppType(stype);
+//            }else {
+//                AppType appType = new AppType();//申请人类型
+//                appType.setAppType(stype);
+//                fcUser.setAppTypeId(appType);
+//            }
+            if(!"".equals(prodKindId)) {
+                fcUser.setProdKindId(prodKindId);
             }
-
-            if( fcUser.getComptypeId()!=null){
-                fcUser.getComptypeId().setCompType(ctype);
-            }else{
-                CompType compType=new CompType();//公司类型
-                compType.setCompType(ctype);
-                fcUser.setComptypeId(compType);
+            if(!"".equals(comptypeId)) {
+                fcUser.setComptypeId(comptypeId);//地址
             }
-
-            if( fcUser.getAppTypeId()!=null){
-                fcUser.getAppTypeId().setAppType(stype);
-            }else {
-                AppType appType = new AppType();//申请人类型
-                appType.setAppType(stype);
-                fcUser.setAppTypeId(appType);
+            if(!"".equals(appTypeId)) {
+                fcUser.setAppTypeId(appTypeId);//地址
             }
 
             userService.saveUser(fcUser);
@@ -564,6 +573,13 @@ public class LoginAction {
         map.put("flag",true);
         }
         return map;
+    }
+    
+    @RequestMapping("/proApply2")
+    public @ResponseBody void proApply(String prodKindId,String comptypeId,String appTypeId ,String companyname ,
+            String address,String stablephone,String phonenumber,String email,String web,String social,String demand){
+    	
+    	
     }
 
     /**

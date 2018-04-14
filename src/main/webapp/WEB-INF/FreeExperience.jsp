@@ -273,53 +273,52 @@
                 <div class="setmessage">
                     <div class="mtittle">行业类型</div>
                     <label>
-                        <select name="" id="industry">
-                            <option value="政府非盈利机构">政府非盈利机构</option>
-                            <option value="文体教育|工艺美术">文体教育|工艺美术</option>
-                            <option value="金融业">金融业</option>
-                            <option value="房地产|建筑业">房地产|建筑业</option>
-                            <option value="商业服务/个体">商业服务/个体</option>
-                            <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
-                            <option value="生产|加工|制造">生产|加工|制造</option>
-                            <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
-                            <option value="服务业/个体">服务业/个体</option>
-                            <option value="能源|矿产|环保">能源|矿产|环保</option>
-                            <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
-                            <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
-                        </select>
-                    </label>
+                            <select name="prodKindId" id="prodKindId">
+                                <option value="0">政府非盈利机构</option>
+                                <option value="1">金融业</option>
+                                <option value="2">房地产|建筑业</option>
+                                <option value="3">商业服务|个体</option>
+                                <option value="4">贸易|批发|零售|租赁业</option>
+                                <option value="5">生产|加工|制造</option>
+                                <option value="6">交通|运输|物流|仓储</option>
+                                <option value="7">服务业|个体</option>
+                                <option value="8">能源|矿产|环保</option>
+                                <option value="9">农|林|牧|渔|其他</option>
+                                <option value="10">文化|传媒|娱乐|体育</option>
+                            </select>
+                     </label>
                     <span>*星号代表此选项必填：点击该选项下拉框，选择符合公司性及行业即可。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">公司类型</div>
                     <label>
-                        <select name="" id="companyType">
-                            <option value="国有企业">国有企业</option>
-                            <option value="集体所有制">集体所有制</option>
-                            <option value="私营企业">私营企业</option>
-                            <option value="股份制企业">股份制企业</option>
-                            <option value="联营企业">联营企业</option>
-                            <option value="外商投资企业">外商投资企业</option>
-                            <option value="港、澳、台">港、澳、台</option>
-                            <option value="股份合作企业">股份合作企业</option>
-                        </select>
+                             <select name="comptypeId" id="comptypeId">
+                                <option value="0">国有企业</option>
+                                <option value="1">集体所有制</option>
+                                <option value="2">私营企业</option>
+                                <option value="3">股份制企业</option>
+                                <option value="4">联营企业</option>
+                                <option value="5">外商投资企业</option>
+                                <option value="6">港、澳、台</option>
+                                <option value="7">股份合作企业</option>
+                            </select>
                     </label>
                     <span>*星号代表此选项必填：点击该选项下拉框，选择符合公司性及行业即可。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">申请人类型</div>
                     <label>
-                        <select name="" id="application">
-                            <option value="法人">法人</option>
-                            <option value="股东">股东</option>
-                            <option value="项目负责人">项目负责人</option>
-                        </select>
+                            <select name="appTypeId" id="appTypeId">
+                                <option value="0">法人</option>
+                                <option value="1">股东</option>
+                                <option value="2">项目负责人</option>
+                            </select>
                     </label>
                     <span>*星号代表此选项必填：点击该选项下拉框，您属于公司申请人那个类型，根据申请人职位及职责选择适合即可。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">公司名称</div>
-                    <input type="text" placeholder="" id="company"/>
+                    <input type="text" placeholder="" id="companyname"/>
                     <span>*星号代表此选项必填：请手动输入您公司/企业名称</span>
                 </div>
                 <div class="setmessage">
@@ -329,12 +328,12 @@
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">固定电话</div>
-                    <input type="text" placeholder="" id="fHpone">
+                    <input type="text" placeholder="" id="stablephone">
                     <span>*星号代表此选项必填：请手动输入您公司/企业真实经营场地固定电话。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">手机电话</div>
-                    <input type="text" placeholder="" id="mHpone">
+                    <input type="text" placeholder="" id="phonenumber">
                     <span>*星号代表此选项必填：请手动输入您公司/企业负责该项目的负责人手机电话。</span>
                 </div>
                 <div class="setmessage">
@@ -344,12 +343,12 @@
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">公司网址</div>
-                    <input type="text" placeholder="" id="website"/>
+                    <input type="text" placeholder="" id="web"/>
                     <span>*星号代表此选项必填：请手动输入您公司/企业真实官网，无官方网址请填写无。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">QQ/微信</div>
-                    <input type="text" placeholder="" id="userQQ"/>
+                    <input type="text" placeholder="" id="social"/>
                     <span>*星号代表此选项必填：请手动输入您公司/企业负责人QQ或微信。</span>
                 </div>
                 <div class="setmessage-e">
@@ -445,7 +444,7 @@
                         if(data.flat){
                             userName = data.user;
                             $.ajax({
-                                url : '${ctx}/apply/proApply',
+                                url : '${ctx}/apply/proApply2',
                                 type : 'POST',
                                 data : "userName="+userName+"&industry="+industry+"&companyType="+companyType+"&application="+application+""
                                 +"&company="+company+"&address="+address+"&fHpone="+fHpone+"&mHpone="+mHpone+"&email="+email+"&website="+website+

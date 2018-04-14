@@ -1,16 +1,15 @@
 package com.fc.base.user.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "pro_kind")
 public class ProKind extends Base{
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    @Column(name = "pro_kind_id",length = 36)
+    @Column(name = "pro_kind_id",length = 3)
     private String proKindId;
     @Column(name = "pro_kind")
     private String proKind;  //行业类型

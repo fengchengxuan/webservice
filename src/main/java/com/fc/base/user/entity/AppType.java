@@ -1,16 +1,15 @@
 package com.fc.base.user.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "app_type")
 public class AppType {//申请人类型表
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    @Column(name = "app_type_id",length = 36)
+    @Column(name = "app_type_id",length = 2)
     private String id;
     @Column(name = "app_type")
     private String appType;

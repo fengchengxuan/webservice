@@ -52,18 +52,12 @@ public class FcUser extends Base{
     private String operAddr;//地址
     @Column(name = "company")
     private String company;//公司名称
-    @OneToOne
-    @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "prod_kind_id")
-    private ProKind prodKindId;    //行业类型
-    @OneToOne
-    @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "comp_type_id")
-    private CompType comptypeId;   //公司类型
-    @OneToOne
-    @Cascade(value = {CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "app_type_id")
-    private AppType appTypeId;//申请人类型
+    @Column(name = "prod_kind_id")
+    private String prodKindId;    //行业类型
+    @Column(name = "comp_type_id")
+    private String comptypeId;   //公司类型
+    @Column(name = "app_type_id")
+    private String appTypeId;//申请人类型
     @Column(name = "website")
     private String website;//公司网站
     @Column(name = "is_free_app")
@@ -215,31 +209,31 @@ public class FcUser extends Base{
         this.company = company;
     }
 
-    public ProKind getProdKindId() {
-        return prodKindId;
-    }
+    public String getProdKindId() {
+		return prodKindId;
+	}
 
-    public void setProdKindId(ProKind prodKindId) {
-        this.prodKindId = prodKindId;
-    }
+	public void setProdKindId(String prodKindId) {
+		this.prodKindId = prodKindId;
+	}
 
-    public CompType getComptypeId() {
-        return comptypeId;
-    }
+	public String getComptypeId() {
+		return comptypeId;
+	}
 
-    public void setComptypeId(CompType comptypeId) {
-        this.comptypeId = comptypeId;
-    }
+	public void setComptypeId(String comptypeId) {
+		this.comptypeId = comptypeId;
+	}
 
-    public AppType getAppTypeId() {
-        return appTypeId;
-    }
+	public String getAppTypeId() {
+		return appTypeId;
+	}
 
-    public void setAppTypeId(AppType appTypeId) {
-        this.appTypeId = appTypeId;
-    }
+	public void setAppTypeId(String appTypeId) {
+		this.appTypeId = appTypeId;
+	}
 
-    public String getWebsite() {
+	public String getWebsite() {
         return website;
     }
 

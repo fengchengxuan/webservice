@@ -67,7 +67,7 @@ public class UserServiceImpl extends BaseDao implements UserService {
     }
     
     @Override//鍖垮悕鐧诲綍
-    public FcUser anonymousLogin() {   //用户申请免费体验名额
+    public FcUser anonymousLogin() { 
         List<FcUser> list = userDao.getUserList();
         StringBuffer userName = new StringBuffer("FC_U");
         String str;

@@ -65,42 +65,41 @@
                         <div><span>公司名称</span><input type="text" placeholder="" id="companyname"></div>
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
-                            <select name="htype" id="htype">
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="金融业">金融业</option>
-                                <option value="房地产|建筑业">房地产|建筑业</option>
-                                <option value="商业服务|个体">商业服务|个体</option>
-                                <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
-                                <option value="生产|加工|制造">生产|加工|制造</option>
-                                <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
-                                <option value="服务业|个体">服务业|个体</option>
-                                <option value="能源|矿产|环保">能源|矿产|环保</option>
-                                <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
-                                <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
+                            <select name="prodKindId" id="prodKindId">
+                                <option value="0">政府|非盈利机构</option>
+                                <option value="1">金融业</option>
+                                <option value="2">房地产|建筑业</option>
+                                <option value="3">商业服务|个体</option>
+                                <option value="4">贸易|批发|零售|租赁业</option>
+                                <option value="5">生产|加工|制造</option>
+                                <option value="6">交通|运输|物流|仓储</option>
+                                <option value="7">服务业|个体</option>
+                                <option value="8">能源|矿产|环保</option>
+                                <option value="9">农|林|牧|渔|其他</option>
+                                <option value="10">文化|传媒|娱乐|体育</option>
                             </select>
                             </label>
                         </div>
                         <div style="margin-top: 30px"><span>公司类型</span>
                             <label>
-                            <select name="ctype" id="ctype">
-                                <option value="国有企业">国有企业</option>
-                                <option value="集体所有制">集体所有制</option>
-                                <option value="私营企业">私营企业</option>
-                                <option value="股份制企业">股份制企业</option>
-                                <option value="联营企业">联营企业</option>
-                                <option value="外商投资企业">外商投资企业</option>
-                                <option value="港、澳、台">港、澳、台</option>
-                                <option value="股份合作企业">股份合作企业</option>
+                            <select name="comptypeId" id="comptypeId">
+                                <option value="0">国有企业</option>
+                                <option value="1">集体所有制</option>
+                                <option value="2">私营企业</option>
+                                <option value="3">股份制企业</option>
+                                <option value="4">联营企业</option>
+                                <option value="5">外商投资企业</option>
+                                <option value="6">港、澳、台</option>
+                                <option value="7">股份合作企业</option>
                             </select>
                             </label>
                         </div>
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
-                            <select name="stype" id="stype">
-                                <option value="法人">法人</option>
-                                <option value="股东">股东</option>
-                                <option value="项目负责人">项目负责人</option>
+                            <select name="appTypeId" id="appTypeId">
+                                <option value="0">法人</option>
+                                <option value="1">股东</option>
+                                <option value="2">项目负责人</option>
                             </select>
                             </label>
                         </div>
