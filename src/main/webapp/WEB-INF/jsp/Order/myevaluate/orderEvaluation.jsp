@@ -78,7 +78,7 @@
             width: 102px;
             text-align: right;
             display: block;
-            margin-top: 15px;
+            margin-top: 8px;
         }
         .modal .draftartbox-left{
             width: 232px;
@@ -649,7 +649,8 @@ marketing">基础版-adver...</td>
                                 <textarea placeholder=""></textarea>
                                 <p style="position: relative;left:90px;">可自定义评语</p>
                             </div>
-                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加并保存</button>
+    <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
                         </form>
                     </div>
 
@@ -719,7 +720,9 @@ marketing">基础版-adver...</td>
                                 <textarea placeholder=""></textarea>
                                 <p style="position: relative;left:90px;">可自定义评语</p>
                             </div>
-                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加并保存</button>
+
+    <button style=" margin:20px 0 0 35px; width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
                         </form>
                     </div>
 

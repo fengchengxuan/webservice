@@ -77,7 +77,7 @@
             width: 102px;
             text-align: right;
             display: block;
-            margin-top: 15px;
+            margin-top: 8px;
         }
         .modal .draftartbox-left{
             width: 232px;
@@ -373,7 +373,8 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                                 <textarea placeholder=""></textarea>
                                 <p style="position: relative;left:90px;">当来宾用户或会员用户提供评价为差评时或中评时，都可以随时进行修改并保存。</p>
                             </div>
-                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加并保存</button>
+    <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
                         </form>
                     </div>
 

@@ -36,11 +36,11 @@
                         <span class="setn" >原始密保问题</span>
                         <label>
                         <select name="" id="oldQuestion">
-                            <option value="广西峰程璇网络科技有限公司的网址是多少？">广西峰程璇网络科技有限公司的网址是多少？</option>
-                            <option value="您的出生日期是多少?">您的出生日期是多少?</option>
-                            <option value="对您影响最大的人的名字是什么?">对您影响最大的人的名字是什么?</option>
-                            <option value="您的启蒙老师的名字是什么?">您的启蒙老师的名字是什么?</option>
-                            <option value="您的母亲的名字是什么?">您的母亲的名字是什么?</option>
+                            <option value="0">广西峰程璇网络科技有限公司的网址是多少？</option>
+                            <option value="1">您的出生日期是多少?</option>
+                            <option value="2">对您影响最大的人的名字是什么?</option>
+                            <option value="3">您的启蒙老师的名字是什么?</option>
+                            <option value="4">您的母亲的名字是什么?</option>
                         </select>
                         </label>
                     </div>
@@ -52,14 +52,12 @@
                         <span class="setn">设置新的密保问题</span>
                         <label>
                         <select name="" id="newQuestion">
-                            <option value="您的出生日期是多少？">
-                                您的出生日期是多少？
-                            </option>
-                            <option value="广西峰程璇网络科技有限公司的网址是多少?">广西峰程璇网络科技有限公司的网址是多少？</option>
-                            <option value="您的出生日期是多少?">您的出生日期是多少?</option>
-                            <option value="对您影响最大的人的名字是什么?">对您影响最大的人的名字是什么?</option>
-                            <option value="您的启蒙老师的名字是什么?">您的启蒙老师的名字是什么?</option>
-                            <option value="您的母亲的名字是什么?">您的母亲的名字是什么?</option>
+                        <select name="" id="oldQuestion">
+                            <option value="0">广西峰程璇网络科技有限公司的网址是多少？</option>
+                            <option value="1">您的出生日期是多少?</option>
+                            <option value="2">对您影响最大的人的名字是什么?</option>
+                            <option value="3">您的启蒙老师的名字是什么?</option>
+                            <option value="4">您的母亲的名字是什么?</option>
                         </select>
                         </label>
                     </div>

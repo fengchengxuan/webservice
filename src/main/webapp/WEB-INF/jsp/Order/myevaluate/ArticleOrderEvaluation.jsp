@@ -77,7 +77,7 @@
             width: 102px;
             text-align: right;
             display: block;
-            margin-top: 15px;
+            margin-top: 8px;
         }
         .modal .draftartbox-left{
             width: 232px;
@@ -344,7 +344,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                             <div>
                                 <span class="draftartbox-left pjy" >用户类型</span>
                                 <label>
-                                    <select style="font-weight: 400">
+                                    <select style="font-weight: 400; margin-top: 7px;">
                                         <option>会员</option>
                                         <option>来宾</option>
                                     </select>
@@ -371,7 +371,8 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                                 <textarea placeholder=""></textarea>
                                 <p style="position: relative;left:90px;">可自定义评语</p>
                             </div>
-                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加并保存</button>
+                             <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+                            <button  style="margin:20px 0 0 150px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
                         </form>
                     </div>
 

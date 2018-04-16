@@ -10,7 +10,7 @@
 
     <rule><!-- 新闻页伪匿名-->
         <from>^/xw/([0-9]+)-([0-9]+)$</from>
-        <to>/news/newsData?date=$1&amp;id=$2</to>
+        <to>/dataArticles?type=新闻&amp;date=$1&amp;id=$2</to>
     </rule>
     <rule><!-- 十二数据页伪匿名-->
         <from>^/twelve/([0-9]+)-([0-9]+)$</from>
