@@ -20,6 +20,8 @@ public class UserServiceImpl extends BaseDao implements UserService {
     public FcUser loginUser(String type, String user, String password) {//类型 账号 密码
         List<FcUser> list=userDao.findUser(type,user,password);
         if(list.size()>0){
+        	list.get(0).setUserStatusId(1);
+        	userDao.saveUser(list.get(0));
             return list.get(0);
         }else{
             return null;

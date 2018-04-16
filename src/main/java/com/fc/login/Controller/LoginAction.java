@@ -153,6 +153,9 @@ public class LoginAction {
                session.setAttribute("type",type);//类型
                map.put( "message",true);
            }else{
+        	   if(userService.findList(user, null, null).size()<0) {
+        		   //返回消息：“用户未注册，请先注册”
+        	   }
                map.put( "message",false);
            }
         }
@@ -220,7 +223,8 @@ public class LoginAction {
     public @ResponseBody Map<String,Object> reg(HttpServletRequest request){
         HttpSession session = request.getSession(true);
         String phonenumber = request.getParameter("phonenum");
-        String code = (String)session.getAttribute("telecode");
+//        String code = (String)session.getAttribute("telecode");
+        String code=(String)request.getAttribute("yzm");
         String inputcode = request.getParameter("telecode");
         String password = request.getParameter("password");
         String rpwd = request.getParameter("repassword");
@@ -241,8 +245,8 @@ public class LoginAction {
      */
 
     @RequestMapping("regs")//注册
-    public @ResponseBody Map<String,Object>regs(HttpSession session,String type,String userName,String password,String repassword,String code){
-      if(code.equals((String) session.getAttribute("telecode"))){
+    public @ResponseBody Map<String,Object>regs(HttpServletRequest request,String type,String userName,String password,String repassword,String code){
+      if(code.equals((String)request.getAttribute("yzm"))){
         map.put("code",true);
       }else{
           map.put("code",false);
@@ -283,7 +287,8 @@ public class LoginAction {
 
         //随机生成6位验证码
         Integer code = (int) (Math.random() * (999999 - 100000 + 1)) + 100000;// 产生100000-999999的随机数
-        session.setAttribute("telecode", code.toString());
+//        session.setAttribute("telecode", code.toString());
+        requests.setAttribute("yzm", code.toString());
 
         //组装请求对象-具体描述见控制台-文档部分内容
         SendSmsRequest request = new SendSmsRequest();
@@ -520,9 +525,9 @@ public class LoginAction {
           /*  if(!"".equals(pares)){
                 fcUser.setProfilePhoto(pares);
          /*   }*/
-            if(!"".equals(vipName)){
-                fcUser.setUserName(vipName);
-            }
+//            if(!"".equals(vipName)){
+//             //   fcUser.setUserName(vipName);
+//            }
             if(!"".equals(stablephone)) {
                 fcUser.setPhone(stablephone);//固定电话
             }
