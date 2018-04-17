@@ -11,6 +11,8 @@ import com.fc.base.product.util.ProUtil;
 import com.fc.base.product.util.SreachPro;
 import com.fc.base.user.entity.FcUser;
 import com.fc.base.user.service.UserService;
+import com.fc.util.entity.FcComment;
+import com.fc.util.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -35,7 +37,9 @@ public class ProductAction {
     @Autowired
     private  ProductService service;
     @Autowired
-    private ProCommentService commentService;
+    private ProCommentService commentService1;
+    @Autowired
+    private CommentService  commentService;
     @Autowired
     private OrderService orderService;
     private ProductEntity entity;
@@ -243,7 +247,7 @@ public class ProductAction {
             ip = request.getRemoteAddr();
           }
 
-        list= commentService.addComment(content,proTitle,"1837718665");
+       // list= commentService.addComment(content,proTitle,"1837718665");
         return list;
     }
     /*@RequestMapping("/oldOrder")//显示旧订单
@@ -446,5 +450,21 @@ public class ProductAction {
 
         orderService.saveOrder(order);
         return order;
+    }
+    @RequestMapping("proComment")//你问我答
+    public @ResponseBody Map<String,Object>  comment(HttpSession session,String content){
+        String user=(String)session.getAttribute("user");
+        String password =(String) session.getAttribute("password");
+        String type=(String) session.getAttribute("type");
+        FcUser fcUser= userService.loginUser(type,user,password);
+        if(fcUser!=null){
+            map.put("ok",true);
+            FcComment fcComment=new FcComment();
+            fcComment.setContent(content);
+            fcComment.setFcuserId(fcUser.getId());
+            fcComment.setCommenter(fcUser.getUserName());
+            commentService.saveProComent(fcComment);
+        }
+        return  map;
     }
 }

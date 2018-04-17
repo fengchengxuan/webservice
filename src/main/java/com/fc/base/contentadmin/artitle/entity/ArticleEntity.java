@@ -1,7 +1,11 @@
 package com.fc.base.contentadmin.artitle.entity;
 
 
+import com.fc.util.entity.FcComment;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by lenovo on 2017/9/20.
@@ -32,6 +36,12 @@ public class ArticleEntity {
     private String artAbstract;
     @Column(name="adminType")//管理员类型
     private String adminType;
+    @Column(name="fcuser_id")//fcuser id
+    private String fcuserId;
+    @Column(name="fccommon_id")//fcuser id
+    private String fccommonId;
+    @Column(name="fccomment_id")
+    private String fccommentId;
 
     public String getAdminType() {
         return adminType;
@@ -120,5 +130,27 @@ public class ArticleEntity {
         this.userName = userName;
     }
 
+    public String getFcuserId() {
+        return fcuserId;
+    }
 
+    public void setFcuserId(String fcuserId) {
+        this.fcuserId = fcuserId;
+    }
+
+    public String getFccommonId() {
+        return fccommonId;
+    }
+
+    public void setFccommonId(String fccommonId) {
+        this.fccommonId = fccommonId;
+    }
+
+    public String getFccommentId() {
+        return fccommentId;
+    }
+
+    public void setFccommentId(String fccommentId) {
+        this.fccommentId = fccommentId;
+    }
 }

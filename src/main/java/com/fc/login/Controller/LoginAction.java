@@ -20,8 +20,11 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
+import com.fc.base.contentadmin.artitle.service.ArticleService;
 import com.fc.util.entity.*;
 import com.fc.util.service.AccountService;
+import com.fc.util.service.CommentService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -66,9 +69,10 @@ public class LoginAction {
     private static final String sender = "1044565101@qq.com";
     //邮件发送授权码
     private static final String senderVerfirycode = "pobbouurspoabdcj";
-
     @Autowired
-   private ILoginService loginService;
+    private  CommentService commentService;
+    @Autowired
+    private ILoginService loginService;
     @Autowired
     private AccountService accountService;
     @Autowired
@@ -77,6 +81,8 @@ public class LoginAction {
     private UserService userService;
    @Autowired
     private OrderService orderService;
+    @Autowired
+    private ArticleService articleService;
     @Autowired
     private Map<String,Object> map;
 
@@ -498,9 +504,9 @@ public class LoginAction {
      * @param email
      * @param social
      * @param companyname
-     * @param htype
-     * @param ctype
-     * @param stype
+    // * @param htype
+    // * @param ctype
+    // * @param stype
      * @param web
      * @param address
      * @param request
@@ -986,7 +992,26 @@ public class LoginAction {
         }
         return map;
     }
-
+    @RequestMapping("articleComment")//发票寄到哪里？
+    public @ResponseBody Map<String,Object>  comment(HttpSession session,String content,String id,String type){
+        String user=(String)session.getAttribute("user");
+        String password =(String) session.getAttribute("password");
+        String userType=(String) session.getAttribute("type");
+        FcUser fcUser=userService.loginUser(userType,user,password);
+        if(fcUser!=null){
+            map.put("ok",true);
+            FcComment fcComment=new FcComment();
+            fcComment.setFcuserId(fcUser.getId());
+            fcComment.setCommenter(fcUser.getUserName());
+            fcComment.setContent(content);
+            fcComment.setCommentClass(type);
+            fcComment.setSubmiterAddr(fcUser.getLocation());
+           ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
+            fcComment.setArtcleId(entity.getId()+"");
+            commentService.saveProComent(fcComment);
+        }
+        return map;
+    }
 
 }
 
