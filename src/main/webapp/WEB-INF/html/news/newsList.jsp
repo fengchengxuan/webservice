@@ -157,8 +157,9 @@
         //页面加载激活  查询所有新闻
         $(document).ready(function () {
             $.ajax({
-                url : '${ctx}/news/findNew',
+                url : '${ctx}/Article/artShow',
                 type : 'POST',
+                data:"artType=新闻快报",
                 async:true,
                 cache:false,
                 dataType : 'json',
@@ -167,7 +168,7 @@
                         anews=data;
                         var num=anews.length;
                         $.ajax({
-                            url : '${ctx}/news/showAll',
+                            url : '${ctx}/Article/showTotal',
                             data:"num="+num,
                             type : 'POST',
                             async:true,
@@ -205,7 +206,7 @@
                      date=(num[0]+num[1]+num[2]).substring(0,(num[0]+num[1]+num[2]).length-1);
                     //标题 关键词
                     var row="<ul><li><img src="+map+" alt=\"\" class=\"list-img\">"+
-                        "<div class=\"list-ul-text\" ><a style=\"color: #333;font-size: 16px;cursor: pointer\" href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" onclick=\"newsMation(" + (i+1) +")\"><p>"+data[i].newsTitle+" </a><span>"+data[i].crateDate+"</span></p><p class=\"list-ul-textp\">"+data[i].newsAbstract+"</p>"+
+                        "<div class=\"list-ul-text\" ><a style=\"color: #333;font-size: 16px;cursor: pointer\" href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" onclick=\"newsMation(" + (i+1) +")\"><p>"+data[i].artTitle+" </a><span>"+data[i].crateDate+"</span></p><p class=\"list-ul-textp\">"+data[i].artAbstract+"</p>"+
                         "<a href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" ><p class=\"list-ul-textp1\"><span>more</span></p></a></div></li></ul>";
                     $("#table2").append(row);
                 }
@@ -220,7 +221,7 @@
                     date=(num[0]+num[1]+num[2]).substring(0,(num[0]+num[1]+num[2]).length-1);
                     //标题 关键词
                     var row="<ul><li><img src="+map+" alt=\"\" class=\"list-img\">"+
-                        "<div class=\"list-ul-text\" ><a style=\"color: #333;font-size: 16px;cursor: pointer\" href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" onclick=\"newsMation(" + (i+1) +")\"><p>"+data[i].newsTitle+" </a><span>"+data[i].crateDate+"</span></p><p class=\"list-ul-textp\">"+data[i].newsAbstract+"</p>"+
+                        "<div class=\"list-ul-text\" ><a style=\"color: #333;font-size: 16px;cursor: pointer\" href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" onclick=\"newsMation(" + (i+1) +")\"><p>"+data[i].artTitle+" </a><span>"+data[i].crateDate+"</span></p><p class=\"list-ul-textp\">"+data[i].artAbstract+"</p>"+
                         "<a href=\"javascript:window.open('"+path+date+"-"+data[i].id+"','_blank')\" ><p class=\"list-ul-textp1\"><span>more</span></p></a></div></li></ul>";
                     $("#table2").append(row);
                     j++;
