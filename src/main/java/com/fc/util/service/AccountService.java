@@ -14,6 +14,7 @@ public interface AccountService {
 	//�ܱ�����
 	void addSafeQuestion(String Qusertion, String answer, String confirmAnswer, String fcuserId);
 	void addSafeQuestion(SafeQusetion safeQusetion,String Qusertion, String answer, String confirmAnswer);
+	void addSafeQuestion(SafeQusetion safeQusetion);
 	//������֤
 	void addPersonCertify(String name, String idNum, String reIdNum, String tel, String idPic, String holdIdPic, FcUser fcuserId);
 	//��ҵ��֤

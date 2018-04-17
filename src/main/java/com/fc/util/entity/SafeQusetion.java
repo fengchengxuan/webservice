@@ -18,7 +18,7 @@ public class SafeQusetion extends Base {
     private String  id;
     @Column(name = "fcuser_id")
     private String fcuserId;  //用户id
-    @Column(name = "question")
+    @Column(name = "question_id")
     private String question;//问题
     @Column(name = "answer")
     private String answer;//答案
