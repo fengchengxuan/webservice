@@ -1,14 +1,12 @@
 package com.fc.util;
 
 
-import com.fc.base.login.model.User;
-import com.fc.base.login.service.IUserService;
-import com.fc.login.util.LoginUser;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Map;
 
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-import java.util.Map;
+
+import com.fc.login.util.LoginUser;
 public class SessionListener implements HttpSessionListener {
 
     @Override

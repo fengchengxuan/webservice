@@ -692,8 +692,15 @@ public class LoginAction {
         return map;
     }
     @RequestMapping("safe")
-    public String security(){
-        return "html/menber/security";
+    public String security(HttpServletRequest request){
+    	HttpSession session = request.getSession(true);
+    	String userid=((FcUser)session.getAttribute("user")).getId();
+    	SafeQusetion safeQusetion= accountService.getSafeQusetion(userid);
+    	if(safeQusetion!=null) {
+    		return "html/menber/security";
+    	} else {
+    		return "html/menber/security_init";
+    	}
     }
 
     @RequestMapping("via")
@@ -845,6 +852,9 @@ public class LoginAction {
         FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
         SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
         if(safeQusetion!=null){
+			safeQusetion.setAnswer(answer);
+			safeQusetion.setQuestion(question);
+			safeQusetion.setConfirmAnswer(confirmAnswer);
             accountService.addSafeQuestion(safeQusetion,question,answer,confirmAnswer);
         }else{
             accountService.addSafeQuestion(question,answer,confirmAnswer,fcUser.getId());

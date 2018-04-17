@@ -42,9 +42,11 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public void addSafeQuestion(SafeQusetion safeQusetion, String qusertion, String answer, String confirmAnswer) {
-			safeQusetion.setAnswer(answer);
-			safeQusetion.setQuestion(qusertion);
-			safeQusetion.setConfirmAnswer(confirmAnswer);
+			accountDao.saveSafeQuestion(safeQusetion);
+	}
+	
+	@Override
+	public void addSafeQuestion(SafeQusetion safeQusetion) {
 			accountDao.saveSafeQuestion(safeQusetion);
 	}
 
