@@ -44,7 +44,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 //    else 
 //    	if("1".equals(type)){
             if(user != null && !"".equals(user)){
-                hql.append("and userName = ?");
+                hql.append("and userName = ? ");
                 list.add(user);
             }
         

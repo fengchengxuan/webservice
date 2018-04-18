@@ -272,6 +272,6 @@ public class FcUser extends Base{
     }
 
     public void setStatus(int status) {
-        this.status = status;
+        this.status = 0;
     }
 }

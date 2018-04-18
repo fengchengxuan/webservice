@@ -20,8 +20,6 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.fc.util.entity.*;
-import com.fc.util.service.AccountService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,15 +38,18 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import com.fc.base.product.entity.OrderEntity;
 import com.fc.base.product.productService.OrderService;
-import com.fc.base.user.entity.AppType;
-import com.fc.base.user.entity.CompType;
 import com.fc.base.user.entity.FcUser;
-import com.fc.base.user.entity.ProKind;
 import com.fc.base.user.service.UserService;
 import com.fc.login.Service.ILogService;
 import com.fc.login.Service.ILoginService;
 import com.fc.login.util.LoginUser;
 import com.fc.login.util.LoginUtil;
+import com.fc.util.entity.BillApp;
+import com.fc.util.entity.BillSendAddr;
+import com.fc.util.entity.EnterCertify;
+import com.fc.util.entity.PersonCertify;
+import com.fc.util.entity.SafeQusetion;
+import com.fc.util.service.AccountService;
 
 @Controller
 public class LoginAction {
@@ -66,6 +67,8 @@ public class LoginAction {
     private static final String sender = "1044565101@qq.com";
     //邮件发送授权码
     private static final String senderVerfirycode = "pobbouurspoabdcj";
+    
+    static String usercode="";
 
     @Autowired
    private ILoginService loginService;
@@ -138,25 +141,35 @@ public class LoginAction {
      */
     @RequestMapping("logs")//登录
     public @ResponseBody Map<String,Object>logs(HttpServletRequest request,String type ,String user,String password) {
-
         HttpSession session = request.getSession(true);
-        if ((String) session.getAttribute("user")!=null&&!"".equals((String) session.getAttribute("user"))) {//判断是否登录
-            map.put("msg", false);//判断是否有用户登录  false为已经登录
-        } else {
-            map.put("msg", true);
-             FcUser fcUser=userService.loginUser(type ,user, password);
-
-           if(fcUser!=null){       //判断是否正确.
-               session.setAttribute("userName",fcUser.getUserName());//用户名
-               session.setAttribute("user",user);//登录号
-               session.setAttribute("password",password);
-               session.setAttribute("type",type);//类型
-               map.put( "message",true);
-           }else{
-        	   if(userService.findList(user, null, null).size()<0) {
-        		   //返回消息：“用户未注册，请先注册”
-        	   }
-               map.put( "message",false);
+        FcUser fcUser = null;
+        fcUser = userService.loginUser("" ,user, "");
+        //判断用户是否注册
+        if(fcUser==null) {
+        	//返回消息：“用户未注册，请先注册”
+        	 map.put( "message",false);
+        } else  //判断是否登录 false为已经登录
+        {
+        	String uname = (String) session.getAttribute("user");
+        	if (uname!=null&&!"".equals(uname)) 
+        	{
+        		map.put("msg", false); //返回消息：用户已登录，无法再登陆
+        	}
+	        else { //用户未登录
+	             fcUser=userService.loginUser(type ,user, password);
+		           if(fcUser!=null){ //用户登录成功
+		               session.setAttribute("userName",fcUser.getUserName());//用户名
+		               session.setAttribute("user",user);//登录号
+		               session.setAttribute("password",password);
+		               session.setAttribute("type",type);//类型
+		               map.put( "message",true);
+		           }else{
+		        	   if(userService.findList(user, null, null).size()<0) {
+		        		   //返回消息：用户登陆失败
+		        		   map.put( "message",false);
+		        	   }
+		         }
+		         map.put("msg", true);
            }
         }
         return map;
@@ -246,10 +259,10 @@ public class LoginAction {
 
     @RequestMapping("regs")//注册
     public @ResponseBody Map<String,Object>regs(HttpServletRequest request,String type,String userName,String password,String repassword,String code){
-      if(code.equals((String)request.getAttribute("yzm"))){
+      if(code.equals(usercode)){
         map.put("code",true);
       }else{
-          map.put("code",false);
+          map.put("code",false); // 加上“验证码错误”的信息提示
       }
         if (userService.findList(userName,"",type).size()<1){
             map.put("data",true);
@@ -260,7 +273,7 @@ public class LoginAction {
                 map.put("ok",false);
             }
         }else {
-            map.put("data",false);
+            map.put("data",false); //加上“用户已注册，请直接登录”的提示
         }
         return map;
     }
@@ -287,9 +300,9 @@ public class LoginAction {
 
         //随机生成6位验证码
         Integer code = (int) (Math.random() * (999999 - 100000 + 1)) + 100000;// 产生100000-999999的随机数
-//        session.setAttribute("telecode", code.toString());
+        session.setAttribute("telecode", code.toString());
         requests.setAttribute("yzm", code.toString());
-
+        usercode=code.toString();
         //组装请求对象-具体描述见控制台-文档部分内容
         SendSmsRequest request = new SendSmsRequest();
         //必填:待发送手机号
@@ -319,7 +332,7 @@ public class LoginAction {
      */
 
     @RequestMapping("mailcode")
-    public @ResponseBody static void send_mail(HttpSession httpSession,String email) throws Exception {
+    public @ResponseBody static void send_mail(HttpServletRequest request,String email) throws Exception {
         //创建连接对象 连接到邮件服务器
         Properties properties = new Properties();
         //设置发送邮件的基本参数
@@ -358,7 +371,9 @@ public class LoginAction {
         message.setSubject("欢迎注册峰程7080网站会员");
         //设置邮件正文  第二个参数是邮件发送的类型
         Integer code = (int) (Math.random() * (999999 - 100000 + 1)) + 100000;// 产生100000-999999的随机数
-        httpSession.setAttribute("e-code",code.toString());
+//        httpSession.setAttribute("e-code",code.toString());
+        request.setAttribute("yzm", code.toString());
+        usercode=code.toString();
         message.setContent("您正在www.fengcheng7080.com/vip注册会员，邮箱验证码为："+code+",请您于10分钟内使用。如验证码过期需重新获取。或直接点击进入会员页面,该邮件系统会在30秒钟后自动跳转进入会员页面。","text/html;charset=UTF-8");
         //发送一封邮件
             Transport.send(message);
@@ -898,8 +913,8 @@ public class LoginAction {
     @RequestMapping("saveECertify")//企业认证(保存)
     public @ResponseBody Map<String,Object> saveEnterCertify(HttpSession session,String enterpriceName,String corporateName,String appName,String
             phone,String tel,String website){
-
-
+  
+  
         FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
 
         if(fcuser!=null){
