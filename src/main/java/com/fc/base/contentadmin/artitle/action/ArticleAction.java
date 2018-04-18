@@ -33,7 +33,6 @@ public class ArticleAction {
         list=new ArrayList<>();
     }
 
-
     @RequestMapping("/add")//添加文章
     public @ResponseBody
     List<String> add(String htmlText, String title, String key, String abstract1, String type, HttpSession session) {

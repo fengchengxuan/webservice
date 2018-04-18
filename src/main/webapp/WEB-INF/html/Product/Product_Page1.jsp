@@ -483,7 +483,7 @@
 					<!--评论-->
 					<div class="comment_publish">
 						<div class="comment_publish_star">
-							<textarea name="" rows="" cols="" placeholder="我有话要说..."></textarea>
+							<textarea name="" id="content" rows="" cols="" placeholder="我有话要说..."></textarea>
 							<div class="btn_box">
 								<div id="submit">提交评论</div>
 							</div>
@@ -867,6 +867,23 @@
             })
 
         }
+        $("#submit").click(function (){
+            $.ajax({
+                url : ctx+'/Product/proComment',
+                type : 'POST',
+                data :"content="+$("#content").val(),
+				async:true,
+                cache:false,
+                dataType : 'json',
+                success :function(data){
+                    if(data.ok){
+                       alert("成功");
+                    }else{
+                        alert("失败")
+					}
+                }
+            })
+		})
 	</script>
 	</body>
 

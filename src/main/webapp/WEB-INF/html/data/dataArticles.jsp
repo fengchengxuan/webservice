@@ -98,7 +98,7 @@
 
         <div class="AE-pl">
             <form>
-                <textarea placeholder="我有话要说..."></textarea>
+                <textarea placeholder="我有话要说..." id="content"></textarea>
 
                 <div class="Article-right-pre">
                     <pre class="pre">对于我这样的菜鸟表示看不懂，有没有视频可看啊      2017年5月20日  14：36    fengcheng01    来自玉林电信用户</pre>
@@ -106,8 +106,10 @@
 
                 </div>
                 <div class="Article-right-submit">
-                    <button>提交评论</button>
-                    <button style="background: #999">取消评论</button>
+
+                    <div type="button" id="submit" >提交评论</div>
+
+                    <div style="background: #999" type="button"  >取消评论</div>
                 </div>
             </form>
         </div>
@@ -247,9 +249,9 @@
 <script src="${ctx}/static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/nav-nava.js" type="text/javascript"></script>
 <script type="text/javascript">
+    var id='${param.id}';
+    var type='${param.type}';
     $(document).ready(function () {
-        var id='${param.id}';
-        var type='${param.type}';
         if(id==null||id==""){
             alert("输出错误,请选择相应的文章类型");
             window.location.href="${ctx}/index";
@@ -276,6 +278,24 @@
                     }
                     }
                 }
+            }
+        })
+    })
+    $("#submit").click(function () {
+        $.ajax({
+           url:'${ctx}/articleComment',
+            type : 'POST',
+            data : "content="+$("#content").val()+"&id="+id+"&type="+type,
+            async:true,
+            cache:false,
+            dataType : 'json',
+            success : function(data) {
+               if(data.ok){
+                   location.reload();
+               }else{
+                   alert("错误")
+               }
+
             }
         })
     })

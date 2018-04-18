@@ -662,11 +662,30 @@
                         <span style="margin-left: 50px">体验）只想展示或者在网络上能够找到我们</span><br><span style="margin-left: -102px">品牌......</span><span
                                     style="color: #4088E3">more</span></span></span>
                         </p>
+                    </div>
+                        <%--<p style="font-size: 20px;font-family: '微软雅黑',sans-serif;margin-top: 8px">网站建设/程序/APP研发与定制</p>--%>
+                        <%--<p style="font-size: 18px;font-family: '微软雅黑',sans-serif;color: #ED0F0F;line-height: 34px">按需求、经济实惠、符合中小企业</p>--%>
+                        <%--<p style="font-size: 60px;font-family: '微软雅黑',sans-serif;color: #ED0F0F;">555<span style="font-size: 18px">元起</span>--%>
+                        <%--</p>--%>
+                        <%--<div style="margin-left: 105px;background: transparent">--%>
+                            <%--<button style="border: 0;margin-left: 25px;background: url(${ctx}/static/front/images/buttun-m.png);width: 128px;height: 39px;color: #fff;font-size: 20px;font-family: '微软雅黑',sans-serif;text-shadow: 1px 1px 3px #333;cursor: pointer">--%>
+
+                            <%--</button>--%>
+                        <%--</div>--%>
+                        <%--<p class="content-right-text-order1-p"><span--%>
+                                <%--style="font-size: 14px;font-family: '微软雅黑',sans-serif;">五方案</span> <span style="margin-left: 10px"><span--%>
+                                <%--style="color: #656565">了解品牌、了解产品、pan style="color: #4088E3;cursor: pointer">more</span></span>--%>
+                        <%--</p>了解市场、了解消<br>--%>
+                        <%--费者、了解竞争对手......--%>
+                        <%--<p class="content-right-text-order1-p"><span--%>
+                                <%--style="font-size: 14px;font-family: '微软雅黑',sans-serif;">五方案</span> <span--%>
+                                <%--style="position: relative;left: 10px"> <span style="color: #656565;">免费开放500名中小型企业体验名额（免费<br>--%>
+                        <%--<span style="margin-left: 50px">体验）只想展示或者在网络上能够找到我们</span><br><span style="margin-left: -102px">品牌......</span><span--%>
+                                    <%--style="color: #4088E3">more</span></span></span>--%>
+                        <%--</p>--%>
 
                     </div>
-
-
-
+>>>>>>> 2d1852de6b20582eb2545ec9ebaa577f6d6ee14b
                 </div>
             </div>
 
@@ -863,14 +882,15 @@
 
     $(document).ready(function () {
         $.ajax({//新闻快报
-            url : '${ctx}/news/showNews',
+            url : '${ctx}/Article/showArt',
             type : 'POST',
+            data:"artType=新闻快报",
             async:true,
             cache:false,
             dataType : 'json',
             success : function(data) {
                  if(data!=null &&data !=""){
-                     showNewsData(data.list,data.dateList)
+                     showArtData(data.list,data.dateList,"新闻快报");
                  }
             }
         });
@@ -930,6 +950,10 @@
             path = "/wearefengcheng/";
             $("#fctab").empty();
             type = "#fctab";
+        }else if(type == "新闻快报"){
+             path="/xw/";
+            $("#newsTab").empty();
+            type ="#newsTab";
         }
         var long = data.length;
         for (var i = 0; i <long ; i++) {

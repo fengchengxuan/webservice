@@ -319,7 +319,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
       var  url;
         if(type=="新闻快报"){
             typeObj="新闻快报";
-            url="${ctx}/news/SearchAll"
+            url="${ctx}/Article/SearchAll"
         }else{
             typeObj="文章";
             url="${ctx}/Article/SearchAll"
@@ -341,7 +341,7 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     $("#totalNum").text("共"+totalNum+"页");   //设值总页数
                     $("#totalNum").val(totalNum);
                     if(type=="新闻快报"){
-                        showNews(currentPage,list,totalNum);      //当前页 总新闻 总页数
+                        showArtcle(currentPage,list,totalNum);      //当前页 总新闻 总页数
                     }else{
                         showArtcle(currentPage,list,totalNum);
                     }
@@ -380,7 +380,6 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     "</tr>";
                 $("#showId").append(showRow);
             }
-
         }
         if(currentPage==totalNum){   //当前页等于总页数
             var row="<tr style=\"width: 980px;height: 5px\"></tr>";
@@ -592,15 +591,11 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         var state;  //状态
         var url;
         var title;
-        if( typeObj=="新闻快报"){
-            url='${ctx}/news/deleteNews';
-            state= listNews[data].newsState;
-            title= listNews[data].newsTitle;
-        }else{
+      //  if( typeObj=="新闻快报"){
             url='${ctx}/Article/deleteArt';
             state=listNews[data].artState;
             title=listNews[data].artTitle;
-        }
+        //}
         if(state=="删除"){
             alert("已经删除了 ，等待数据库删除");
             return;
@@ -626,16 +621,16 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
     function upDate(data){
         var code=data;
         var list=listNews;
-        if("新闻快报"){
+       /* if("新闻快报"){
             if(list[code].newsState=="删除"){
                 alert("已经删除了 ,不能再更改");
                 return;
             }
-        }else{
-            if(list[code].artState=="删除"){
+        }else{*/
+           if(list[code].artState=="删除"){
                 alert("已经删除了 ,不能再更改");
                 return;
-            }
+         //   }
         }
         window.location.href = "${ctx}/admin/editnews?code="+list[code].id+"&type="+typeObj;
     }
