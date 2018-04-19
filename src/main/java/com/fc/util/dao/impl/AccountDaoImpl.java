@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -23,6 +24,7 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 		billapp.setBillType(billType);
 		billapp.setBillTitle(billTitle);
 		billapp.setFcUser(userid);
+		billapp.setBillCreateDate(new Date());
 		super.save(billapp);
 	}
 
@@ -114,6 +116,8 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 	public BillApp findBillApp(String id) {
 		String hql ="from BillApp where fcUser = ?" ;
 		Object []args={id};
+		List list = new ArrayList<>();
+		list.add(id);
 		return (BillApp)super.findEntity(hql,args);
 	}
 

@@ -98,7 +98,6 @@
         <div class="box1">
             <span class="bsp">更换头像</span>
             <div class="box2">
-
                 <span class="bsp2" onclick="hidebox()">X</span>
             </div>
         </div>

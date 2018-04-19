@@ -138,6 +138,7 @@ $(document).ready(function() {
                     dataType: 'json',
                     data:{"email":$("#email").val()},
                     success: function(msg) {
+//                    	alert(msg.data);
                         if(msg.data){
                             $("#e-yzm").removeAttr("disabled");
                             $("yxhm").html("");

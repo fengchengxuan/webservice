@@ -5,6 +5,8 @@ import com.fc.base.user.entity.FcUser;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,8 +26,18 @@ public class BillApp extends Base{//申请发票
     private String billType;//发票类型
     @Column(name = "bill_title")
     private String billTitle;//发票抬头
+    @Column(name="bill_create_date") //发票创建时间
+    private Date billCreateDate;
 
-    public String getBaId() {
+    public Date getBillCreateDate() {
+		return billCreateDate;
+	}
+
+	public void setBillCreateDate(Date billCreateDate) {
+		this.billCreateDate = billCreateDate;
+	}
+
+	public String getBaId() {
         return baId;
     }
 

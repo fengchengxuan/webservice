@@ -10,8 +10,15 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created on 17/6/7.
@@ -35,7 +42,7 @@ public class SmsDemo {
     static final String accessKeyId = "LTAIxlgmunRt3Q5z";
     static final String accessKeySecret = "lZiLmhScmWziwud2XH45Kpunifrpzu";
 
-    public static SendSmsResponse sendSms() throws ClientException {
+    public static SendSmsResponse sendSms(String tel) throws ClientException {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -52,7 +59,7 @@ public class SmsDemo {
         //组装请求对象-具体描述见控制台-文档部分内容
         SendSmsRequest request = new SendSmsRequest();
         //必填:待发送手机号
-        request.setPhoneNumbers("18778010556");
+        request.setPhoneNumbers(tel);
         //必填:短信签名-可在短信控制台中找到
         request.setSignName("峰程7080");
         //必填:短信模板-可在短信控制台中找到
@@ -91,7 +98,7 @@ public class SmsDemo {
         //组装请求对象
         QuerySendDetailsRequest request = new QuerySendDetailsRequest();
         //必填-号码
-        request.setPhoneNumber("15277528545");
+        request.setPhoneNumber("18677100176");
         //可选-流水号
         request.setBizId(bizId);
         //必填-发送日期 支持30天内记录查询，格式yyyyMMdd
@@ -115,7 +122,19 @@ public class SmsDemo {
     public static void main(String[] args) throws ClientException, InterruptedException {
 
         //发短信
-        SendSmsResponse response = sendSms();
+    	BufferedReader br =null;
+    	String s;
+    	SendSmsResponse response = null;
+    	try {
+			br = new BufferedReader(new FileReader(new File("d:\\list.txt")));
+	    	while ((s=br.readLine())!=null) {
+	    		response = sendSms(s);
+	    	}
+    	} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
         System.out.println("短信接口返回的数据----------------");
         System.out.println("Code=" + response.getCode());
         System.out.println("Message=" + response.getMessage());

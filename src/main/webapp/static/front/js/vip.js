@@ -17,8 +17,6 @@ function myshow (formData){
     })
 }
 
-
-
 $(".save").click(function () {
     $.ajax({
         url: ctx+'/updateUserInfo',
@@ -33,7 +31,7 @@ $(".save").click(function () {
             if (data.data) {
                 if (data.flag) {
                     alert("设置成功!");
-                    window.location.href = ctx + "vips";
+                    window.location.href = ctx + "/vips";
                 } else {
                    alert("失败");
                 }

@@ -101,20 +101,20 @@
                                     <span class="tpi-name">所在地区</span>
                                     <label>
                                     <select name="" id="city">
-                                        <option value="南宁市">南宁市</option>
-                                        <option value="柳州市">柳州市</option>
-                                        <option value="桂林市">桂林市</option>
-                                        <option value="梧州市">梧州市</option>
-                                        <option value="北海市">北海市</option>
-                                        <option value="防城港市">防城港市</option>
-                                        <option value="钦州市">钦州市</option>
-                                        <option value="贵州市">贵州市</option>
-                                        <option value="玉林市">玉林市</option>
-                                        <option value="白色市">白色市</option>
-                                        <option value="贺州市">贺州市</option>
-                                        <option value="河池市">河池市</option>
-                                        <option value="来宾市">来宾市</option>
-                                        <option value="崇左市">崇左市</option>
+                                        <option value="0">南宁市</option>
+                                        <option value="1">柳州市</option>
+                                        <option value="2">桂林市</option>
+                                        <option value="3">梧州市</option>
+                                        <option value="4">北海市</option>
+                                        <option value="5">防城港市</option>
+                                        <option value="6">钦州市</option>
+                                        <option value="7">贵州市</option>
+                                        <option value="8">玉林市</option>
+                                        <option value="9">白色市</option>
+                                        <option value="10">贺州市</option>
+                                        <option value="11">河池市</option>
+                                        <option value="12">来宾市</option>
+                                        <option value="13">崇左市</option>
                                     </select>
                                     </label>
                                 </div>
@@ -152,6 +152,7 @@
                                 </tr>
                                 </thead>
                                 <tbody id="showBill">
+                                <!--
                                     <tr>
                                         <td>企业</td>
                                         <td>增值税普通发票</td>
@@ -168,6 +169,7 @@
                                         <td>2017年5月26日 <br>10:15:20</td>
                                         <td>企业</td>
                                     </tr>
+                                -->
                                 </tbody>
                             </table>
                         </div>
@@ -183,12 +185,14 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <!-- 
                                     <tr>
                                         <td>广西霸龙汇科有限公司</td>
                                         <td>顺丰</td>
                                         <td>4256789625</td>
                                         <td></td>
                                     </tr>
+                                    -->
                                 </table>
                             </div>
                         </div>
@@ -249,7 +253,7 @@
               if(app!=null) {
                   var row = "<tr><td>" + app.appType + "</td><td>" + app.billType + "</td>" +
                       "<td>" + app.billTitle + "</td><td>" + billSendAddr.address + "</td>" +
-                      "<td>" + app.fcd + "</td><td>" + billSendAddr.city + "</td></tr>";
+                      "<td>" + app.billCreateDate + "</td><td>" + billSendAddr.city + "</td></tr>";
 
                   $("#showBill").append(row);
               }

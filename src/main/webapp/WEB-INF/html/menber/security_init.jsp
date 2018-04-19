@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="btnbox">
-                    <button class="save" style="cursor: pointer">更新保存</button>
+                    <button class="save" style="cursor: pointer">保存</button>
                 </div>
             </div>
         </div>

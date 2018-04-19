@@ -1,5 +1,7 @@
 package com.fc.util.dao;
 
+import java.util.List;
+
 import com.fc.base.user.entity.FcUser;
 import com.fc.util.entity.*;
 

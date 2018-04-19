@@ -11,15 +11,17 @@ $(".login").click(function (){
             data :"user="+$("#phonenumber").val()+"&password="+$("#password").val()+"&type="+type,
             dataType : 'json',
             success : function(data) {
-                if(data.msg){
-                    if(data.message){
-                        window.location.href = ctx+"/vip";
-                    }else{
+                if(!data.msg){
+                    if(data.unregister){
+                    	alert("用户未注册，请先注册");
+                    }else if(data.logined){
+                    	alert("用户已登录");
+                    } else {
                         $("#login1124").html("登录失败！用户名或者密码错误!").css('border','1px solid red').css('background',' #ffebeb');
                         return false;
                     }
                 }else {
-                    alert("您已经登录过了");
+                	window.location.href = ctx+"/vip";
                 }
             } })
 });

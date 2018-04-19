@@ -52,7 +52,6 @@
                         <span class="setn">设置新的密保问题</span>
                         <label>
                         <select name="" id="newQuestion">
-                        <select name="" id="oldQuestion">
                             <option value="0">广西峰程璇网络科技有限公司的网址是多少？</option>
                             <option value="1">您的出生日期是多少?</option>
                             <option value="2">对您影响最大的人的名字是什么?</option>

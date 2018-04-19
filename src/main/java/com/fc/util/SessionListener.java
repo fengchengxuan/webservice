@@ -16,6 +16,7 @@ public class SessionListener implements HttpSessionListener {
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent){
         String userName =(String)httpSessionEvent.getSession().getAttribute("userName");
+        httpSessionEvent.getSession().removeAttribute("fcUser");
         Map<String,Object> map= LoginUser.getLoginUser().map;
         map.remove(userName);
     }
