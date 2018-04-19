@@ -14,6 +14,9 @@
             width: 110px;
             height: 36px;
         }
+        .artable{
+            width: 980px;
+        }
         table{
             border-collapse: collapse;
         }
@@ -167,9 +170,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                 <thead>
                 <tr>
                 <th style="width: 62px;">序号</th>
-                <th style="width: 81px;border-left: 1px solid  #24a1e4">编号
-                </th>
-                <th style="width: 147px;border-left: 1px solid  #24a1e4">订单标题</th>
+                <th style="width: 147px;border-left: 1px solid  #24a1e4">新闻标题</th>
                 <th style="width: 107px;border-left: 1px solid  #24a1e4">
                     <div class="select_model">
                         <div class="Selected" id="Selected"><span>用户类型</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
@@ -177,6 +178,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                             <ul>
                                 <li style="border-top: none">来宾户</li>
                                 <li >会员户</li>
+                                <li >用户类型</li>
                             </ul>
                         </div>
                     </div>
@@ -199,11 +201,10 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                 <th style="width: 109px;border-left: 1px solid  #24a1e4">处理方式</th>
                 </tr>
                 </thead>
-
+                <tbody id="showComment">
                 <tr style="height: 10px;"><td></td></tr>
                 <tr>
                     <td><input type="checkbox" placeholder="" ng-checked="m" style="position: relative;top: 2px;">1</td>
-                    <td>FC001</td>
                     <td style="width:147px;"><input type="text" value="飞燕轻便系列防水防..." title="飞燕轻便系列防水防尘键盘鼠标新品上市"  disabled="disabled" style="background: #f5f5f5"></td>
                     <td>会员客户</td>
                     <td>fc7080</td>
@@ -213,12 +214,12 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                     <td>删除</td>
                 </tr>
 
-
+                </tbody>
 
             </table>
             <div>
-                <div style="float: left;line-height: 36px;margin-left: 14px;"><input type="checkbox" placeholder="" class="checkAll" ng-model="m"></div>
-                <div style="float: left;line-height: 36px;margin-left: 10px;" class="checkAll"> 全选  &nbsp;删除</div>
+                <div style="float: left;line-height: 36px;margin-left: 14px;"><input type="checkbox" placeholder=""onclick="clickAll()" id="checkAll" class="checkAll" ng-model="m"></div>
+                <div style="float: left;line-height: 36px;margin-left: 10px;" class="checkAll"> 全选  &nbsp;<a href=javascript:void(null) onclick="deleteAll()">删除</a></div>
             </div>
 
             <div class="darbtnbox">
@@ -226,19 +227,11 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                 <button class="allfresh"  data-toggle="modal" data-target="#myModapl4">修改</button>
             </div>
             <div class="darpages">
-                <span>共10页</span>&nbsp;
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>&nbsp;
-                <span>上一页</span>
-                <span>下一页</span>
+                <input type="hidden" id="currentPage"/>
+                <span id="totalNum"></span>&nbsp;
+                &nbsp;
+                <span id="oldPage"><a href =javascript:void(null)>上一页</a></span>
+                <span id="nextPage"><a href =javascript:void(null)>下一页</a></span>
             </div>
         </div>
     </div>
@@ -247,33 +240,23 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
 <jsp:include page="/WEB-INF/jsp/comm/footer.jsp"/>
 <script src="${ctx}/static/background/js/angular.min.js" type="text/javascript"></script>
 <script>
+var   newUserType;
+var  newCommontType="好评";
     $(document).ready(function () {
         $("#Selected").click(function(){
-            var oldType= $(this).val();
+            oldUserType= $(this).val();
             if("block" == $("#ddoli").css("display")){
                 $("#ddoli").hide();
             }else{
                 $("#ddoli").show();
             }
         });
-
         $("#ddoli>ul>li").each(function(i,v){
             $(this).click(function(){
                 $("#Selected>span").html($(this).html());
-                type= $(this).html();
+                newUserType= $(this).html();
+                changeShow(newUserType,newCommontType)
                 $("#ddoli").hide();
-                if(oldType!=type){
-                    //状态显示
-                    var value=state;
-                    var currentPage=$("#totalNum").val();
-                    var newsType=type;
-                    var systemId=system;
-                    reMovePage(currentPage);
-                    $("#currentPage").val(1);
-                    pagingSreach(value,newsType,systemId);
-                }
-
-
             });
         });
 
@@ -281,7 +264,6 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
             $("#ddoli").hide();
         });
         $("#Selected2").click(function(){
-            oldSystem=$(this).text();
             if("block" == $("#ddoli2").css("display")){
                 $("#ddoli2").hide();
             }else{
@@ -292,18 +274,9 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
         $("#ddoli2>ul>li").each(function(i,v){
             $(this).click(function(){
                 $("#Selected2>span").html($(this).html());
-                system= $(this).html();
+                newCommontType=$(this).html();
+                 changeShow(newUserType,newCommontType);
                 $("#ddoli2").hide();
-                if(oldSystem!=system){
-                    //状态显示
-                    var value=state;
-                    var currentPage=$("#totalNum").val();
-                    var newsType=type;
-                    var systemId=system;
-                    reMovePage(currentPage);
-                    $("#currentPage").val(1);
-                    pagingSreach(value,newsType,systemId);
-                }
             });
         });
 
@@ -312,6 +285,175 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
         });
 
     });
+    var obj;//返回的新闻列表
+    $(document).ready(function () {
+        $("#currentPage").val(1);
+        $.ajax({//文章评价
+            url : '${ctx}/admin/articleComment',
+            type : 'POST',
+            data:"artType=2",
+            async:true,
+            cache:false,
+            dataType : 'json',
+            success : function(data) {
+                if(data!=null &&data !=""){
+                    obj=data.atrCommentsList;
+                    $("#totalNum").text("共"+data.totalNum+"页");   //设值总页数
+                    $("#totalNum").val(data.totalNum);
+                    showComment( $("#currentPage").val(), $("#totalNum").val());
+                }
+            }
+        });
+    })
+    function showComment(currentPage,totalNum) {
+        var oldCurrentPage=$("#currentPage").val();
+        $("#page"+oldCurrentPage).remove();
+   $("#showComment").empty();
+   $("#showComment").append("<tr style=\"height: 10px;\"><td></td></tr>");
+        var i=(currentPage-1)*20;        //每页显示20条数据
+        if(currentPage==totalNum){
+         for( i;i<obj.length;i++){
+             var    commenter
+             var  commontType;
+             if(obj[i].commenter=="0"){
+                 commenter="会员户";
+             }else{
+                 commenter="来宾户";
+             }
+             if(obj[i].commontType=="0"){
+                 commontType="好评";
+             }else if(obj[i].commontType=="1"){
+                 commontType="中评";
+             }else if(obj[i].commontType=="2"){  commontType="差评";}
+
+             var j = i + 1;
+        var row=" <tr><td><input type=\"checkbox\" placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
+        "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
+        "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
+        "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
+        $("#showComment").append(row);
+       }
+        }else if(currentPage!=totalNum&&currentPage<totalNum){
+            var strip=i+20;
+            for( i;i<strip;i++){
+                var j = i + 1;
+                var    commenter
+                var  commontType;
+                if(obj[i].commenter=="0"){
+                    commenter="会员户";
+                }else {
+                    commenter="来宾户";
+                }
+                if(obj[i].commontType=="0"){
+                    commontType="好评";
+                }else if(obj[i].commontType=="1"){
+                    commontType="中评";
+                }else if(obj[i].commontType=="2"){  commontType="差评";}
+                var row=" <tr><td><input type=\"checkbox\" placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\" value=\""+obj[i].id+"\">"+j+"</td>" +
+                    "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
+                    "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
+                    "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
+                $("#showComment").append(row)
+            }
+         }
+        $("#nextPage").before("<span id=\"page" + currentPage + "\">" + currentPage + "</sqan>");
+        $("#page"+currentPage).css("color","red");
+        }
+    //上一页
+    $("#oldPage").click(function () {
+        var currentPage= $("#currentPage").val();  //取当前页码
+        var totalNum=$("#totalNum").val();       //取总页码
+        var nextPage=currentPage-1;               //上一页的数
+        if(currentPage>1){
+            showComment(nextPage,totalNum);
+
+        }else if(currentPage==1){
+            alert("这里是首页哦！！！！");
+        }
+    });
+    //下一页
+    $("#nextPage").click(function () {
+        var currentPage= $("#currentPage").val();
+        var totalNum=$("#totalNum").val();
+        var nextPage=parseInt(currentPage)+parseInt(1);
+        if(currentPage<totalNum){
+            showComment(nextPage,totalNum);
+
+        }else if(currentPage==totalNum){
+            alert("已经是最后一页了。");
+        }
+    });
+function clickAll() {
+    var clickFlat= $("#checkAll").is(':checked');
+    if(clickFlat){
+        $("#showComment").find("input[type='checkbox']").prop("checked",true);
+    }else{
+        $("#showComment").find("input[type='checkbox']").prop("checked",false);
+    }
+}
+function changeShow(newUserType,newCommontType){
+    if(newUserType=="会员户"){
+        newUserType="0";
+    }else if(newUserType=="来宾户"){
+        newUserType="1";
+    }else{
+        newUserType="";
+    }
+    if(newCommontType=="好评"){
+        newCommontType="0";
+    }else if(newCommontType=="中评"){
+        newCommontType="1";
+    }else if(newCommontType=="差评"){
+        newCommontType="2";
+    }
+    $.ajax({//文章评价
+        url : '${ctx}/admin/changeShowArticle',
+        type : 'POST',
+        data:"artType=2&userType="+newUserType+"&commontType="+newCommontType,
+        async:true,
+        cache:false,
+        dataType : 'json',
+        success : function(data) {
+            if(data!=null &&data !=""){
+
+                obj=data.atrCommentsList;
+                $("#totalNum").text("共"+data.totalNum+"页");   //设值总页数
+                $("#totalNum").val(data.totalNum);
+                showComment( $("#currentPage").val(), $("#totalNum").val());
+            }
+        }
+    });
+}
+//全删除
+function deleteAll() {
+    var checkboxAll=$("#showComment").find("input:checkbox[css=checkboxCss]:checked");
+    if(checkboxAll==null || checkboxAll.length<1){
+        alert("请选择一行");
+        return ;
+    }
+    if(confirm("是否要删除勾选部分")){
+        var listId=[];
+        var proId;
+        for(var i=0;i<checkboxAll.length;i++){
+            proId= checkboxAll[i].value;
+            listId.push(proId);
+        }
+        $.ajax({
+            url : '${ctx}/admin/deleteAllComment',
+            type : 'POST',
+            data : "listId="+listId,
+            async:true,
+            cache:false,
+            dataType : 'json',
+            success : function(data) {
+               if(!data.ok){
+
+               }
+
+            }
+        });
+    }
+}
 </script>
 </body>
 </html>
@@ -339,14 +481,14 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                             </div>
                             <div>
                 <span  class="draftartbox-left" >
-                订单标题</span>
+                文章标题</span>
                                 <input type="text" placeholder="" >
                             </div>
 
                             <div>
                                 <span class="draftartbox-left" >用户类型</span>
                                 <label>
-                                    <select style="font-weight: 400">
+                                    <select style="font-weight: 400" id="">
                                         <option>会员</option>
                                         <option>来宾</option>
                                     </select>

@@ -26,8 +26,8 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="${url}" />
-		<property name="username" value="fc" />
-		<property name="password" value="123456" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
 		<!-- 连接池启动时的初始值 -->
 		<property name="initialSize" value="${initialSize}" />
 		<!-- 连接池的最大值 -->

@@ -7,10 +7,18 @@ import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
+import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
+import com.fc.base.contentadmin.artitle.service.ArticleService;
 import com.fc.base.login.model.Permissions;
 import com.fc.base.login.model.User;
 import com.fc.base.login.service.IUserService;
 import com.fc.base.login.util.Util;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.service.UserService;
+import com.fc.util.CommentUtil;
+import com.fc.util.entity.ArtComment;
+import com.fc.util.entity.FcComment;
+import com.fc.util.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -47,7 +55,12 @@ public class UserAction {
 
     @Autowired
     private IUserService userService;
-
+    @Autowired
+    private UserService service;
+    @Autowired
+    private CommentService commentService;
+    @Autowired
+    private ArticleService articleService;
     @Autowired
     private Map<String,Object>map;
 
@@ -1337,5 +1350,63 @@ public class UserAction {
     public @ResponseBody List<User> findUser(String loginName){
        List<User> list=userService.showUser(loginName,"","","","");
         return list;
+    }
+    @RequestMapping("/articleComment")//新闻全查询
+    public @ResponseBody
+    CommentUtil showArticleComment(String type){
+        List<FcComment> list= commentService.findComment(type,"");//新闻评价
+        List<FcUser> list1=new ArrayList<>();                   //用户
+        List<ArticleEntity> list2=new ArrayList<>();
+        for(int i=0;i<list.size();i++){
+            list1.add(service.getUser(list.get(i).getFcuserId(),""));
+        }
+        for(int i=0;i<list.size();i++){
+            list2.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+        }
+        List<ArtComment> list3 =new ArrayList<>();
+        CommentUtil util=new CommentUtil();
+        for(int i=0;i<list.size();i++){
+            list3.add(util.getArtComment(list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
+
+        }
+        util.setAtrCommentsList(list3);
+        return util;
+    }
+    @RequestMapping("changeShowArticle")
+    public  @ResponseBody CommentUtil changeShowArticleComment(String artType,String userType,String commontType){
+
+        List<FcComment> list= commentService.findComment(artType,commontType);//新闻评价
+        List<FcComment> list1=new ArrayList<>();                               //筛选后的新闻评价
+        List<FcUser> list2=new ArrayList<>();                                 //用户
+        List<ArticleEntity> list3=new ArrayList<>();                          //新闻
+        CommentUtil util=new CommentUtil();
+        for(int i=0;i<list.size();i++){
+
+            if(service.getUser(list.get(i).getFcuserId(),"").getUserTypeId().equals(userType)){
+                list1.add(list.get(i));
+                list2.add(service.getUser(list.get(i).getFcuserId(),""));
+            }else if("".equals(userType)){
+                list1.add(list.get(i));
+                list2.add(service.getUser(list.get(i).getFcuserId(),""));
+            }
+        }
+        for(int i=0;i<list.size();i++){
+            list3.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+        }
+        List<ArtComment> list4 =new ArrayList<>();
+
+        for(int i=0;i<list1.size();i++){
+            list4.add(util.getArtComment(list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
+        }
+        util.setAtrCommentsList(list4);
+        return util;
+    }
+    @RequestMapping("/deleteAllComment")
+    public @ResponseBody Map<String,Object> deleteAllComment(String[] listId){
+
+     for(String id:listId){
+         System.out.println(id+":id");
+     }
+        return map;
     }
 }

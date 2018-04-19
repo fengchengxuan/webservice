@@ -126,13 +126,18 @@ pre img{
     line-height: 5px;
     margin-top: 3px;
 }
+.Article-right-submit{
+    margin-top: -55px;
+}
 .Article-right-submit div{
+    text-align: center;
     width: 70px;
     height: 40px;
     background: #169BD5;
     color: white;
     border: 0;
-    margin: 12px 0 5px 15px;
+    margin: 0 0 5px 800px;
+    line-height: 40px;
 }
 .data-tablie2{
     margin-top: -180px;
