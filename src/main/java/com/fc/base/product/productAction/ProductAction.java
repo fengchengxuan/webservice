@@ -463,6 +463,7 @@ public class ProductAction {
             fcComment.setContent(content);
             fcComment.setFcuserId(fcUser.getId());
             fcComment.setCommenter(fcUser.getUserName());
+            fcComment.setCommentClass("0");
             commentService.saveProComent(fcComment);
         }
         return  map;

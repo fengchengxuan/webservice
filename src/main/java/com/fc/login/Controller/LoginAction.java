@@ -22,6 +22,7 @@ import javax.servlet.http.HttpSession;
 
 import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
 import com.fc.base.contentadmin.artitle.service.ArticleService;
+import com.fc.util.CommentUtil;
 import com.fc.util.entity.*;
 import com.fc.util.service.AccountService;
 import com.fc.util.service.CommentService;
@@ -1021,9 +1022,9 @@ public class LoginAction {
             fcComment.setFcuserId(fcUser.getId());
             fcComment.setCommenter(fcUser.getUserName());
             fcComment.setContent(content);
-            fcComment.setCommentClass(type);
+            fcComment.setCommentClass(new CommentUtil().changeType(type));
             fcComment.setSubmiterAddr(fcUser.getLocation());
-           ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
+            ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
             fcComment.setArtcleId(entity.getId()+"");
             commentService.saveProComent(fcComment);
         }
