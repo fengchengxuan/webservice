@@ -14,6 +14,7 @@
             width: 110px;
             height: 36px;
         }
+
         .artable{
             width: 980px;
         }
@@ -23,9 +24,7 @@
         th,td{
             padding: 0;
         }
-        select{
-            color: white;
-        }
+
         tr:nth-of-type(even){
             background: #F5F5F5;
             height: 40px;
@@ -190,7 +189,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                         <div class="Selected" id="Selected2"><span>评价类型</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                         <div style="display: none" class="ddoli" id="ddoli2">
                             <ul>
-                                <li style="border-top: none">好评</li>
+                                <li style="border-top: none;color: #333">好评</li>
                                 <li>中评</li>
                                 <li>差评</li>
                             </ul>
@@ -203,17 +202,16 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                 </thead>
                 <tbody id="showComment">
                 <tr style="height: 10px;"><td></td></tr>
-                <tr>
-                    <td><input type="checkbox" placeholder="" ng-checked="m" style="position: relative;top: 2px;">1</td>
-                    <td style="width:147px;"><input type="text" value="飞燕轻便系列防水防..." title="飞燕轻便系列防水防尘键盘鼠标新品上市"  disabled="disabled" style="background: #f5f5f5"></td>
-                    <td>会员客户</td>
-                    <td>fc7080</td>
-                    <td>还赠送一个鼠标垫及...</td>
-                    <td>好评</td>
-                    <td>正常</td>
-                    <td>删除</td>
-                </tr>
-
+                <%--<tr>--%>
+                    <%--<td><input type="checkbox" placeholder="" ng-checked="m" style="position: relative;top: 2px;">1</td>--%>
+                    <%--<td style="width:147px;"><input type="text" value="飞燕轻便系列防水防..." title="飞燕轻便系列防水防尘键盘鼠标新品上市"  disabled="disabled" style="background: #f5f5f5"></td>--%>
+                    <%--<td>会员客户</td>--%>
+                    <%--<td>fc7080</td>--%>
+                    <%--<td>还赠送一个鼠标垫及...</td>--%>
+                    <%--<td>好评</td>--%>
+                    <%--<td>正常</td>--%>
+                    <%--<td>删除</td>--%>
+                <%--</tr>--%>
                 </tbody>
 
             </table>
@@ -224,7 +222,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
 
             <div class="darbtnbox">
                 <button class="thisfresh" data-toggle="modal" data-target="#myModapl2">添加</button>
-                <button class="allfresh"  data-toggle="modal" data-target="#myModapl4">修改</button>
+                <button class="allfresh" >修改</button>
             </div>
             <div class="darpages">
                 <input type="hidden" id="currentPage"/>
@@ -327,7 +325,7 @@ var  newCommontType="好评";
              }else if(obj[i].commontType=="2"){  commontType="差评";}
 
              var j = i + 1;
-        var row=" <tr><td><input type=\"checkbox\" placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
+        var row=" <tr><td><input type=\"checkbox\" value='"+obj[i].id+"' placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
         "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
         "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
         "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
@@ -349,7 +347,7 @@ var  newCommontType="好评";
                 }else if(obj[i].commontType=="1"){
                     commontType="中评";
                 }else if(obj[i].commontType=="2"){  commontType="差评";}
-                var row=" <tr><td><input type=\"checkbox\" placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\" value=\""+obj[i].id+"\">"+j+"</td>" +
+                var row=" <tr><td><input type=\"checkbox\" value='"+obj[i].id+"' placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
                     "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
                     "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
                     "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
@@ -426,7 +424,7 @@ function changeShow(newUserType,newCommontType){
 }
 //全删除
 function deleteAll() {
-    var checkboxAll=$("#showComment").find("input:checkbox[css=checkboxCss]:checked");
+    var checkboxAll=$("#showComment").find("input:checkbox:checked");
     if(checkboxAll==null || checkboxAll.length<1){
         alert("请选择一行");
         return ;
@@ -446,10 +444,10 @@ function deleteAll() {
             cache:false,
             dataType : 'json',
             success : function(data) {
-               if(!data.ok){
-
+               if(data.ok){
+                   alert("删除成功");
+                   location.reload();
                }
-
             }
         });
     }
@@ -461,13 +459,11 @@ function deleteAll() {
 
 
 <!--修改新闻评论-->
-<div class="modal fade" id="myModapl4" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true" >
+<div class="modal" id="myModapl4" >
     <div class="modal-dialog" >
         <div class="modal-content" style="width:720px;height: auto;padding-bottom: 20px;">
             <div >
-                <button type="button"  data-dismiss="modal"
-                        aria-hidden="true" style="background: transparent;color: #009F43;border: 0;position: relative;left: 684px;font-size:25px;">
+                <button type="button"  class="del" style="background: transparent;color: #009F43;border: 0;position: relative;left: 684px;font-size:25px;">
                     <img src="${ctx}/static/background/images/admbutton.png" alt="">
                 </button>
             </div>
@@ -477,30 +473,32 @@ function deleteAll() {
                     <div class="draftartbox">
                         <form action="" method="post">
                             <div><span  class="draftartbox-left" >
-                新闻标题</span><input  type="text" placeholder="" >
+                新闻标题</span><input  type="text" placeholder=""  id="changeNewsTitle" readonly = "true">
                             </div>
-                            <div>
-                <span  class="draftartbox-left" >
-                文章标题</span>
-                                <input type="text" placeholder="" >
-                            </div>
+                            <%--<div>--%>
+                <%--<span  class="draftartbox-left" >--%>
+                <%--文章标题</span>--%>
+                                <%--<input type="text" placeholder="" >--%>
+                            <%--</div>--%>
 
                             <div>
-                                <span class="draftartbox-left" >用户类型</span>
-                                <label>
-                                    <select style="font-weight: 400" id="">
-                                        <option>会员</option>
-                                        <option>来宾</option>
-                                    </select>
-                                </label>
-                                <p style="position: relative;left:150px;top: -24px">可选其中一项</p>
+                                <span class="draftartbox-left" style="color:black">用户类型</span>
+                                <%--<label>--%>
+                                    <%--<select style="font-weight: 400" id="">--%>
+                                        <%--<option>会员</option>--%>
+                                        <%--<option>来宾</option>--%>
+                                    <%--</select>--%>
+                                <%--</label>--%>
+                              <input type="text" width="30px" id="changeUserType" readonly="true"/>
+                              <%--<p style="position: relative;left:150px;top: -24px">可选其中一项</p>--%>
                             </div>
                             <div>
-                                <span class="draftartbox-left" >评价类型</span>
+                                <span class="draftartbox-left " style="color:black" >评价类型</span>
                                 <label>
-                                    <select style="font-weight: 400">
-                                        <option>好评</option>
-                                        <option>差评</option>
+                                    <select style="font-weight: 400" id="changeCommontType">
+                                        <option value="0">好评</option>
+                                        <option value="1">中评</option>
+                                        <option value="2">差评</option>
                                     </select>
                                 </label>
                                 <p style="position: relative;left:150px;top: -24px">可选其中一项</p>
@@ -508,15 +506,15 @@ function deleteAll() {
 
                             <div>
                                 <span class="draftartbox-left" >用户昵称/ID</span>
-                                <input type="text" placeholder="" style="margin-left: 16px" >
+                                <input type="text" placeholder="" style="margin-left: 16px" id="changeUserName" readonly="true">
                             </div>
                             <div>
                                 <span class="draftartbox-left" >评价语</span>
-                                <textarea placeholder=""></textarea>
+                                <textarea placeholder="" id="changeContent"></textarea>
                                 <p style="position: relative;left:90px;">当来宾用户或会员用户提供评价为差评时或中评时，都可以随时进行修改并保存。</p>
                             </div>
     <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
-                            <button  style="margin:20px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
+                            <input  style="margin:-38px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;text-align: center;line-height: 40px" onclick="updateComment()" value="提交"></input></div>
                         </form>
                     </div>
 
@@ -530,5 +528,55 @@ function deleteAll() {
         <!-- /.modal-content --><!--内容-->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<script>
+
+    $(".del").click(function () {
+
+        $('#myModapl4').css('display','none')
+    })
+    var commentId;
+        $(".allfresh").click(function () {
+            var checkboxAll=$("#showComment").find("input:checkbox:checked");
+            if( checkboxAll.length==1){
+                for(var i=0;i<obj.length;i++){
+                    if(obj[i].id==checkboxAll[i].value){
+                        commentId = obj[i].id;
+                        $("#changeNewsTitle").val(obj[i].artTitle);
+                        var commenter;
+                        if(obj[i].commenter=="0"){
+                            commenter="会员户"
+                        }else {
+                            commenter="来宾户";
+                        }
+                       $("#changeUserType").val(commenter);
+                       $("#changeCommontType").val(obj[i].commontType);
+                        $("#changeUserName").val(obj[i].user);
+                        $("#changeContent").val(obj[i].content);
+                    }
+                }
+            $('#myModapl4').css('display','block')
+        }else{
+              alert("请选择一行");
+              return;
+            }
+        })
+    function updateComment() {
+
+        $.ajax({
+            url : '${ctx}/admin/updateComment',
+            type : 'POST',
+            data : "artCommentId="+commentId+"&commontType="+ $("#changeCommontType").val()+"&content="+ $("#changeContent").val(),
+            async:true,
+            cache:false,
+            dataType : 'json',
+            success : function(data) {
+                if(data.ok){
+                    alert("更改成功");
+                    location.reload();
+                }
+            }
+        });
+    }
+</script>
 
 

@@ -1366,7 +1366,7 @@ public class UserAction {
         List<ArtComment> list3 =new ArrayList<>();
         CommentUtil util=new CommentUtil();
         for(int i=0;i<list.size();i++){
-            list3.add(util.getArtComment(list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
+            list3.add(util.getArtComment(list.get(i).getId(),list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
 
         }
         util.setAtrCommentsList(list3);
@@ -1396,17 +1396,27 @@ public class UserAction {
         List<ArtComment> list4 =new ArrayList<>();
 
         for(int i=0;i<list1.size();i++){
-            list4.add(util.getArtComment(list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
+            list4.add(util.getArtComment(list1.get(i).getId(),list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
         }
         util.setAtrCommentsList(list4);
         return util;
     }
     @RequestMapping("/deleteAllComment")
     public @ResponseBody Map<String,Object> deleteAllComment(String[] listId){
-
      for(String id:listId){
-         System.out.println(id+":id");
+      FcComment fcComment= commentService.findComment(id);
+      commentService.deleteComment(fcComment);
      }
+     map.put("ok",true);
+        return map;
+    }
+    @RequestMapping("/updateComment")
+    public @ResponseBody Map<String,Object> updateComment(String artCommentId,String commontType,String content){
+         FcComment fcComment= commentService.findComment(artCommentId);
+         fcComment.setCommontType(commontType);
+         fcComment.setContent(content);
+         commentService.saveProComent(fcComment);
+        map.put("ok",true);
         return map;
     }
 }

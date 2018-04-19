@@ -31,4 +31,25 @@ public class CommentDaoImpl extends BaseDao implements CommentDao {
 
         super.save(fcComment);
     }
+
+    @Override
+    public List<FcComment> findComment(String id) {
+        StringBuffer hql=new StringBuffer("from FcComment where 1 = 1");
+        List<String> list=new ArrayList<>();
+        if(id !=null && !"".equals(id)){
+            hql.append("and id = ?");
+            list.add(id);
+        }
+        return super.findList(hql.toString(),list);
+    }
+
+    @Override
+    public void deleteComment(FcComment fcComment) {
+        super.delete(fcComment);
+    }
+
+    @Override
+    public void updateComment(FcComment fcComment) {
+        super.update(fcComment);
+    }
 }

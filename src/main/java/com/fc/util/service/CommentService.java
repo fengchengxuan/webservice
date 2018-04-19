@@ -9,4 +9,7 @@ import java.util.List;
 public interface CommentService {
     void saveProComent(FcComment fcComment);
     List<FcComment> findComment(String type,String commontType);
+   FcComment findComment(String id);
+   void deleteComment(FcComment fcComment);
+   void updateComment(FcComment fcComment);
 }

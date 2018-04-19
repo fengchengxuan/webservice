@@ -59,8 +59,9 @@ public class CommentUtil {
     public void setTotalNum(int totalNum) {
         this.totalNum = totalNum;
     }
-   public ArtComment getArtComment( String user, String commenter, String content, String commontType,String status, String artTitle){
+   public ArtComment getArtComment(String id, String user, String commenter, String content, String commontType,String status, String artTitle){
         ArtComment artComment=new ArtComment();
+        artComment.setId(id);
         artComment.setCommenter(commenter);
         artComment.setUser(user);
         artComment.setArtTitle(artTitle);
