@@ -460,9 +460,10 @@ public class ProductAction {
         if(fcUser!=null){
             map.put("ok",true);
             FcComment fcComment=new FcComment();
-//            fcComment.setContent(content);
-//            fcComment.setFcuserId(fcUser.getId());
-//            fcComment.setCommenter(fcUser.getUserName());
+            fcComment.setContent(content);
+            fcComment.setFcuserId(fcUser.getId());
+            fcComment.setCommenter(fcUser.getUserName());
+            fcComment.setCommentClass("0");
             commentService.saveProComent(fcComment);
         }
         return  map;
