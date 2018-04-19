@@ -155,29 +155,33 @@ public class LoginAction {
         //判断用户是否注册
         if(fcUser==null) {
         	//返回消息：“用户未注册，请先注册”
-        	 map.put( "message",false);
-        } else  //判断是否登录 false为已经登录
+        	 map.put( "unregister",true);
+        	 map.put("msg", false);
+        } else  //判断是否登录 
         {
         	String uname = (String) session.getAttribute("user");
-        	if (uname!=null&&!"".equals(uname)) 
+        	if (uname!=null&&!"".equals(uname) && uname.equals(user)) 
         	{
-        		map.put("msg", false); //返回消息：用户已登录，无法再登陆
+        		map.put("logined", true); //返回消息：用户已登录，无法再登陆
+        		map.put("msg", false);
         	}
 	        else { //用户未登录
 	             fcUser=userService.loginUser(type ,user, password);
 		           if(fcUser!=null){ //用户登录成功
-		               session.setAttribute("userName",fcUser.getUserName());//用户名
-		               session.setAttribute("user",user);//登录号
-		               session.setAttribute("password",password);
-		               session.setAttribute("type",type);//类型
-		               map.put( "message",true);
+//		               session.setAttribute("userName",fcUser.getUserName());//用户名
+//		               session.setAttribute("user",user);//登录号
+//		               session.setAttribute("password",password);
+//		               session.setAttribute("type",type);//类型
+		               session.setAttribute("fcUser", fcUser);
+		               map.put( "sucess",true);
+		               map.put("msg", true);
 		           }else{
 		        	   if(userService.findList(user, null, null).size()<0) {
 		        		   //返回消息：用户登陆失败
-		        		   map.put( "message",false);
+		        		   map.put( "failed",true);
+		        		   map.put("msg", false);
 		        	   }
 		         }
-		         map.put("msg", true);
            }
         }
         return map;
@@ -191,9 +195,11 @@ public class LoginAction {
     @RequestMapping("exit")
     public @ResponseBody Map<String,Object>exit(HttpServletRequest request){
         HttpSession session = request.getSession(true);
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
         Map<String,Object> map1= LoginUser.getLoginUser().map;
-        map1.remove(  session.getAttribute("userName"));
-        session.removeAttribute("user");
+//        map1.remove(  session.getAttribute("userName"));
+        map1.remove(  fcUser.getUserName());
+        session.removeAttribute("fcUser");
         return map;
     }
 
@@ -242,7 +248,7 @@ public class LoginAction {
 
     @RequestMapping("reg")
     public @ResponseBody Map<String,Object> reg(HttpServletRequest request){
-        HttpSession session = request.getSession(true);
+//        HttpSession session = request.getSession(true);
         String phonenumber = request.getParameter("phonenum");
 //        String code = (String)session.getAttribute("telecode");
         String code=(String)request.getAttribute("yzm");
@@ -308,7 +314,7 @@ public class LoginAction {
 
         //随机生成6位验证码
         Integer code = (int) (Math.random() * (999999 - 100000 + 1)) + 100000;// 产生100000-999999的随机数
-        session.setAttribute("telecode", code.toString());
+//        session.setAttribute("telecode", code.toString());
         requests.setAttribute("yzm", code.toString());
         usercode=code.toString();
         //组装请求对象-具体描述见控制台-文档部分内容
@@ -470,8 +476,11 @@ public class LoginAction {
     }
 
     @RequestMapping("vips")
-    public String vips(){
-        return "html/menber/centerbase";
+    public String vips(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+    		return "html/menber/centerbase";
+    	else 
+    		return "/login";
     }
 
     /**
@@ -509,8 +518,11 @@ public class LoginAction {
     }
 
     @RequestMapping("pwd")
-    public String password(){
-        return "html/menber/password";
+    public String password(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/menber/password";
+    	else 
+    		return "/login";
     }
 
     /**
@@ -533,10 +545,11 @@ public class LoginAction {
     public @ResponseBody  Map<String,Object>  updateInfo(String vipName,String phonenumber,String stablephone,String
             email,String social,String companyname,String prodKindId,String comptypeId, String appTypeId,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
-        String userName=(String)session.getAttribute("userName");
-        String user=(String)session.getAttribute("user");
-        String password =(String) session.getAttribute("password");
-        String type=(String) session.getAttribute("type");
+        FcUser fu = (FcUser)session.getAttribute("fcUser");
+        String userName= fu.getUserName();
+        String user= fu.getUserName();
+        String password = fu.getPassword();
+        String type= fu.getUserTypeId();
         String pares=(String) session.getAttribute("parsePath");//图片
         if(userName==null || userName.length()<1){  //判断用户是否为存在
             map.put("data",false);
@@ -627,9 +640,13 @@ public class LoginAction {
     @RequestMapping("showUserInfo")
     public @ResponseBody Map<String,Object>  showUserInfo(HttpServletRequest request){
         HttpSession session = request.getSession(true);
-        String user =(String)session.getAttribute("user");
-        String password =(String) session.getAttribute("password");
-        String type=(String) session.getAttribute("type");
+//        String user =(String)session.getAttribute("user");
+//        String password =(String) session.getAttribute("password");
+//        String type=(String) session.getAttribute("type");
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+        String user= fcUser.getUserName();
+        String password = fcUser.getPassword();
+        String type= fcUser.getUserTypeId();
         if(user!=null && user.length()>0){
         	FcUser fcuser = userService.loginUser(type,user,password);
         	if(fcuser!=null) 
@@ -662,7 +679,8 @@ public class LoginAction {
     public @ResponseBody List<String> findpwd(HttpServletRequest request,String oldpassword,String password,String repassword){
         List<String> list = new ArrayList<>();
         HttpSession session = request.getSession(true);
-        String user=(String)session.getAttribute("user");
+//        String user=(String)session.getAttribute("user");
+        String user= ((FcUser)session.getAttribute("fcUser")).getUserName();
             if(user==null || user.length()<1){
             list.add("您还未登录!");
             return list;
@@ -675,14 +693,16 @@ public class LoginAction {
             list.add("两次密码不一致!");
             return list;
         }
-        String type=(String)session.getAttribute("type");
+//        String type=(String)session.getAttribute("type");
+        String type= ((FcUser)session.getAttribute("fcUser")).getUserTypeId();
           FcUser fcUser = userService.loginUser(type,user,oldpassword);
 	      if(fcUser!=null){
               fcUser.setPassword(password);
               fcUser.setRePassword(repassword);
               userService.saveUser(fcUser);
 		      list.add("修改成功");
-              session.setAttribute("password",password);
+//              session.setAttribute("password",password);
+		      session.setAttribute("fcUser", fcUser);
 	      }else{
               list.add("密码错误");
           }
@@ -691,7 +711,10 @@ public class LoginAction {
     @RequestMapping("anonymousLogin")//匿名注册登录
     public @ResponseBody Map<String,Object> anonymousLogin(HttpServletRequest request){
         HttpSession session = request.getSession(true);
-        if(session.getAttribute("user")==null || session.getAttribute("user").toString().length()<1){
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+        String user= fcUser.getUserName();
+//        if(session.getAttribute("user")==null || session.getAttribute("user").toString().length()<1){
+          if(user==null || user.trim().length()<1) {
 //            AnonymousEntity entity=new AnonymousEntity();
 //            entity= loginService.anonymousLogin();
 //            if(entity!=null){
@@ -700,11 +723,13 @@ public class LoginAction {
 //            }
             FcUser entity=userService.anonymousLogin();
             if(entity!=null) {
-            	session.setAttribute("user", entity.getUserName());
+//            	session.setAttribute("user", entity.getUserName());
+            	session.setAttribute("fcUser", entity);
             	map.put("user", entity.getUserName());
             }
         }else {
-            map.put("user",session.getAttribute("user").toString());
+//            map.put("user",session.getAttribute("user").toString());
+        	 map.put("user", user);
         }
         if(session.getAttribute("user")!=null){
             map.put("flat",true);
@@ -714,98 +739,148 @@ public class LoginAction {
         return map;
     }
     @RequestMapping("safe")
-    public String security(HttpServletRequest request){
-    	HttpSession session = request.getSession(true);
-    	String userid=((FcUser)session.getAttribute("user")).getId();
-    	SafeQusetion safeQusetion= accountService.getSafeQusetion(userid);
-    	if(safeQusetion!=null) {
-    		return "html/menber/security";
-    	} else {
-    		return "html/menber/security_init";
+    public String security(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null) {
+        	FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+        	String userid = fcUser.getId();
+        	SafeQusetion safeQusetion= accountService.getSafeQusetion(userid);
+        	if(safeQusetion!=null) {
+        		return "html/menber/security";
+        	} else {
+        		return "html/menber/security_init";
+        	}
+    	}
+    	else {
+    		return "/login";
     	}
     }
 
     @RequestMapping("via")
-    public String via(){
-        return "html/realName/realindex";
+    public String via(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/realName/realindex";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("pctfct")
-    public String pcertification(){
-        return "html/realName/pcertification";
+    public String pcertification(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/realName/pcertification";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("cctfct")
-    public String ccertification(){
-        return "html/EnCer/pcertification";
+    public String ccertification(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/EnCer/pcertification";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("balance")
-    public String balance(){
-        return "html/AccountBalance/index";
+    public String balance(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/index";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("deposit")
-    public String balancetab(){
-        return "html/AccountBalance/charge";
+    public String balancetab(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/charge";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("refund")
-    public String refund(){
-        return "html/AccountBalance/refund";
+    public String refund(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/refund";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("withdraw")
-    public String withdraw(){
-        return "html/AccountBalance/Withdrawals";
+    public String withdraw(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/Withdrawals";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("wsuccess")
-    public String withdrawsucess(){
+    public String withdrawsucess(HttpSession session){
         return "html/AccountBalance/WSuccess";
     }
 
     @RequestMapping("wlist")
-    public String withdrawlist(){
-        return "html/AccountBalance/WHistory";
+    public String withdrawlist(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/WHistory";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("info")
-    public String accountinfo(){
-        return "html/AccountBalance/accountinfo";
+    public String accountinfo(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/AccountBalance/accountinfo";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("bill")
-    public String bill(){
-        return "html/Bill/index";
+    public String bill(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/Bill/index";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("billtab")
-    public String billtab(){
-        return "html/Bill/billtab";
+    public String billtab(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/Bill/billtab";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("saleorder")
-    public String saleorder(){
-        return "html/order/charge";
+    public String saleorder(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/order/charge";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("freeorder")
-    public String freeorder(){
-        return "html/order/free";
+    public String freeorder(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/order/free";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("viewapply")
-    public String viewapply(){
-        return "html/order/myApply";
+    public String viewapply(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/order/myApply";
+    	else 
+    		return "/login";
     }
 
     @RequestMapping("csv")
-    public String customerservice(){
-        return "html/service/CustomerService";
+    public String customerservice(HttpSession session){
+    	if(session.getAttribute("fcUser")!=null)
+            return "html/service/CustomerService";
+    	else 
+    		return "/login";
     }
 
-    @RequestMapping("freevia")
+    @RequestMapping("freevia") //哪个页面？
     public String freevia(){
         return "html/service/FreePlaces";
     }
@@ -871,7 +946,8 @@ public class LoginAction {
     }
     @RequestMapping("saveQuestion")//显示文章
     public @ResponseBody Map<String,Object> save(HttpSession session,String question,String answer,String confirmAnswer){
-        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+//        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
         SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
         if(safeQusetion!=null){
 			safeQusetion.setAnswer(answer);
@@ -887,16 +963,21 @@ public class LoginAction {
     }
     @RequestMapping("showQuestion")//显示文章
     public @ResponseBody Map<String,Object> showQuestion(HttpSession session){
-        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+//        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
         SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
         map.put("entity",safeQusetion);
         return map;
     }
     @RequestMapping("savePCertify")//个人认证(保存)
     public @ResponseBody Map<String,Object> savePersonCertify(HttpSession session,String name,String nameNum,String phone){
-        String user =(String)session.getAttribute("user");
-        String password =(String) session.getAttribute("password");
-        String type=(String) session.getAttribute("type");
+//        String user =(String)session.getAttribute("user");
+//        String password =(String) session.getAttribute("password");
+//        String type=(String) session.getAttribute("type");
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+        String user = fcUser.getUserName();
+        String password = fcUser.getPassword();
+        String type = fcUser.getUserTypeId();
         FcUser fcuser = userService.loginUser(type,user,password);
 
         if(fcuser!=null){
@@ -922,8 +1003,8 @@ public class LoginAction {
             phone,String tel,String website){
   
   
-        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
-
+//        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+    	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         if(fcuser!=null){
             if( accountService.findEnterCertify(fcuser.getId())==null){
                 map.put("flag",true);//没有认证
@@ -946,8 +1027,8 @@ public class LoginAction {
     }
     @RequestMapping("addBillApp")//申请发票
     public @ResponseBody Map<String,Object> addBillApp(HttpSession session,String appType,String billType,String billTitle){
-        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
-
+//        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+        FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         if(fcuser!=null) {
             BillApp billApp=accountService.findBillApp(fcuser.getId());
             if(billApp==null){
@@ -959,6 +1040,7 @@ public class LoginAction {
                 billApp.setAppType(appType);
                 billApp.setBillTitle(billTitle);
                 billApp.setBillType(billType);
+                billApp.setBillCreateDate(new Date());
                 accountService.appBill(billApp);
             }
 
@@ -970,7 +1052,8 @@ public class LoginAction {
     @RequestMapping("addBillSendAddr")//发票寄到哪里？
     public @ResponseBody Map<String,Object>  addBillSendAddr(HttpSession session,String receiver,String city,String address
             ,String mailCode,String phone,String tel){
-        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+//        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+    	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         if(fcuser!=null) {
            BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
            if(billApp!=null){
@@ -999,7 +1082,8 @@ public class LoginAction {
     }
     @RequestMapping("showBill")//发票寄到哪里？
     public @ResponseBody Map<String,Object>  addBillSendAddr(HttpSession session){
-        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+//        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
+    	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
         BillSendAddr billSendAddr= accountService.findBillSendAddr(billApp.getBaId());//发票地址
         if(billApp!=null&&billSendAddr!=null) {
@@ -1009,22 +1093,26 @@ public class LoginAction {
         }
         return map;
     }
-    @RequestMapping("articleComment")//发票寄到哪里？
+    @RequestMapping("articleComment")//文章评价
     public @ResponseBody Map<String,Object>  comment(HttpSession session,String content,String id,String type){
-        String user=(String)session.getAttribute("user");
-        String password =(String) session.getAttribute("password");
-        String userType=(String) session.getAttribute("type");
+//        String user=(String)session.getAttribute("user");
+//        String password =(String) session.getAttribute("password");
+//        String userType=(String) session.getAttribute("type");
+    	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
+    	String user = fcuser.getUserName();
+    	String password = fcuser.getPassword();
+    	String userType = fcuser.getUserTypeId();
         FcUser fcUser=userService.loginUser(userType,user,password);
         if(fcUser!=null){
             map.put("ok",true);
             FcComment fcComment=new FcComment();
-            fcComment.setFcuserId(fcUser.getId());
-            fcComment.setCommenter(fcUser.getUserName());
-            fcComment.setContent(content);
-            fcComment.setCommentClass(type);
-            fcComment.setSubmiterAddr(fcUser.getLocation());
-           ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
-            fcComment.setArtcleId(entity.getId()+"");
+//            fcComment.setFcuserId(fcUser.getId());
+//            fcComment.setCommenter(fcUser.getUserName());
+//            fcComment.setContent(content);
+//            fcComment.setCommentClass(type);
+//            fcComment.setSubmiterAddr(fcUser.getLocation());
+//           ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
+//            fcComment.setArtcleId(entity.getId()+"");
             commentService.saveProComent(fcComment);
         }
         return map;

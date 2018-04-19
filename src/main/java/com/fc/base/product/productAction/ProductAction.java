@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
+  
 /**
  * Created by lenovo on 2017/9/20.
  */
@@ -460,9 +460,9 @@ public class ProductAction {
         if(fcUser!=null){
             map.put("ok",true);
             FcComment fcComment=new FcComment();
-            fcComment.setContent(content);
-            fcComment.setFcuserId(fcUser.getId());
-            fcComment.setCommenter(fcUser.getUserName());
+//            fcComment.setContent(content);
+//            fcComment.setFcuserId(fcUser.getId());
+//            fcComment.setCommenter(fcUser.getUserName());
             commentService.saveProComent(fcComment);
         }
         return  map;
