@@ -295,6 +295,7 @@
             dataType : 'json',
             success : function(data) {
                 if(data.ok){
+                    alert("成功")
                     location.reload();
                 }else{
                     alert("错误")

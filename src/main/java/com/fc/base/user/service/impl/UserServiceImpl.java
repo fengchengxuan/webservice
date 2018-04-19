@@ -85,5 +85,8 @@ public class UserServiceImpl extends BaseDao implements UserService {
         return userDao.saveUser(user);
     }
 
-    
+    @Override
+    public FcUser getUser(String id, String userName) {
+        return userDao.getUser(id,userName);
+    }
 }

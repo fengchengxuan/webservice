@@ -73,4 +73,20 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     	String hql="from FcUser";
     	return super.findList(hql.toString());
     }
+
+    @Override
+    public FcUser getUser(String id, String userName) {
+        StringBuffer hql=new StringBuffer("from FcUser where 1 = 1");
+        List<String> list=new ArrayList<>();
+        if(id!=null || !"".equals(id)){
+            hql.append(" and id = ?");
+            list.add(id);
+        }
+    /*   if(userName !=null || !"".equals(userName) ){
+            hql.append(" and userName = ?");
+            list.add(userName);
+        }*/
+
+        return (FcUser) super.findList(hql.toString(),list).get(0);
+    }
 }

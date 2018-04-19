@@ -12,4 +12,5 @@ public interface UserService {
     FcUser getUser(String phonenum, String email, String password) ;
     FcUser getUser(String param) ;
     FcUser anonymousLogin();
+    FcUser getUser(String id,String userName);
 }

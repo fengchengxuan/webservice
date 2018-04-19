@@ -387,7 +387,6 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                     "</tr>";
                 $("#showId").append(showRow);
             }
-
         }
         if(currentPage==totalNum){   //当前页等于总页数
             var row="<tr style=\"width: 980px;height: 5px\"></tr>";
