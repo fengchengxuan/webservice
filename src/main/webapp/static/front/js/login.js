@@ -21,7 +21,7 @@ $(".login").click(function (){
                         return false;
                     }
                 }else {
-                	window.location.href = ctx+"/New/vip";
+                	window.location.href = ctx+"/vip";
                 }
             } })
 });

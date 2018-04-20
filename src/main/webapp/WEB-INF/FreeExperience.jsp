@@ -13,7 +13,7 @@
 <body style="min-width: 1200px;overflow-x:hidden">
 <div style="width: 40px;height: 3px;position: absolute;right: 1196px;top: 137px;background: #52c7f5"></div>
 <div style="background: #ededed">
-    <jsp:include page="${ctx}/static/front/comm/top.jsp"/>
+    <jsp:include page="/static/front/comm/top.jsp"/></div>
     <!--中间内容-->
 
     <div style="width: 1200px;margin: 0 auto;font-size: 12px;color: #666;position: relative;z-index: 99;">
@@ -329,22 +329,23 @@
                 <div class="setmessage">
                     <div class="mtittle">固定电话</div>
                     <input type="text" placeholder="" id="stablephone">
-                    <span>*星号代表此选项必填：请手动输入您公司/企业真实经营场地固定电话。</span>
+                    <span >*星号代表此选项必填：请手动输入您公司/企业真实经营场地固定电话。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">手机电话</div>
                     <input type="text" placeholder="" id="phonenumber">
-                    <span>*星号代表此选项必填：请手动输入您公司/企业负责该项目的负责人手机电话。</span>
+                    <span class="phonenumber">*星号代表此选项必填：请手动输入您公司/企业负责该项目的负责人手机电话。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">邮箱</div>
                     <input type="text" placeholder="" id="email"/>
-                    <span>*星号代表此选项必填：请手动输入您公司/企业真企业邮箱或者负责人邮箱。</span>
+                    <span class="email">*星号代表此选项必填：请手动输入您公司/企业真企业邮箱或者负责人邮箱。</span>
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">公司网址</div>
-                    <input type="text" placeholder="" id="web"/>
-                    <span>*星号代表此选项必填：请手动输入您公司/企业真实官网，无官方网址请填写无。</span>
+                    <input type="text" placeholder="" id="website"/>
+                    <span class="website">*星号代表此选项必填：请手动输入您公司/企业真实官网，无官方网址请填写无。</span>
+                    
                 </div>
                 <div class="setmessage">
                     <div class="mtittle">QQ/微信</div>
@@ -369,10 +370,11 @@
 
     </div>
 </div>
-<jsp:include page="${ctx}/static/front/comm/footer.jsp"/>
+<jsp:include page="/static/front/comm/footer.jsp"/>
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <!--二维码弹出-->
+
 <script type="text/javascript">
     $(document).ready(function(){
         $("#reset-hide").click(function(){
@@ -385,41 +387,45 @@
 
     $(".confirm").click(function () {  //提交申请
         var userName='${sessionScope.user}';//用户名
+        
         var industry=$("#industry").val();            //行业类型
         var companyType=$("#companyType").val();      //公司类型
         var application=$("#application").val() ;      //申请人
-        var company=$("#company").val() ;           //公司名称
+        var company=$("#companyname").val() ;           //公司名称
         var address=$("#address").val() ;             //经营地址
-        var fHpone = $("#fHpone").val();              //固定电话
-        var mHpone=$("#mHpone").val();                //手机号码
+        var fHpone = $("#stablephone").val();              //固定电话
+        var mHpone=$("#phonenumber").val();                //手机号码
         var email=$("#email").val();                  //邮箱
         var website=$("#website").val();             //公司网址
-        var userQQ=$("#userQQ").val();                //QQ微信
+        var userQQ=$("#social").val();                //QQ微信
         var appContent=$("#appContent").val();       //申请需求
-        if(company==null || company==""||address==null||address==""||website==null||website==""||appContent==null||appContent==""){
+        if(company==null || company==""||address==null||address==""||website==null||website==""||appContent==null){
             alert("请填写完整信息");
+            
             return;
-        }
-        if(!(/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/.test(fHpone))){
-            alert("请输入正确的固定号码！")  ;
-            return;
-        }
+        }else
+       // if(!(/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/.test(fHpone))){
+        //    alert("请输入正确的固定号码！")  ;
+        //    return;
+       // }else
         if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(mHpone))){   //手机判断
-            alert("请输入正确的手机号码！");
+         $('.phonenumber').html("请输入正确的手机号码！").css("color","red");
             return;
-        }
+        }else
         if(!(/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/.test(email))){  //邮箱判断
-            alert("请输入正确邮箱地址，亲");
+          //  alert("请输入正确邮箱地址，亲");
+             $('.email').html("请输入正确邮箱地址，亲").css("color","red")
             return;
-        }
+        }else
         if(/^[0-9]+.?[0-9]*$/.test(userQQ)){//是否全数字
             if(!(/^\d{5,10}$/.test(userQQ))){  //是否QQ
-                alert("请输入正确微信号或者QQ号");
+           //     alert("请输入正确微信号或者QQ号");
+            $('.social').html("请输入正确微信号或者QQ号").css("color","red")
                 return;
             }
         }else {
             if(!(/^[a-zA-Z\d_]{5,}$/.test(userQQ))){  //QQ微信验证
-                alert("请输入正确微信号或者QQ号");//是否微信
+              $('.social').html("请输入正确微信号或者QQ号").css("color","red")
                 return ;
             }else{
 
@@ -427,7 +433,7 @@
         }
 
         if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
-            alert("请输入贵公司正确的网址");
+            $('.website').html("请输入贵公司正确的网址").css("color","red")
             return ;
         }
         if(userName==null||userName==""){    //登录判断
@@ -497,7 +503,28 @@
         }
     });
 </script>
-<script src="../static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script>
+    $("#email").blur(function () { 
+         var email=$("#email").val(); 
+         if(!(/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/.test(email))){  //邮箱判断
+          // alert("请输入正确邮箱地址，亲");
+             $('.email').html("请输入正确邮箱地址，亲").css("color","red")
+       
+        }else{
+		$('.email').html("正确");
+            }
+        });
+        
+         $("#website").blur(function () { 
+        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+            $('.website').html("请输入贵公司正确的网址").css("color","red")
+        
+        }else{
+         $('.website').html("正确")
+        }
+        })
+        </script>
+<script src="${ctx}/static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <!--锚点-->
 <script type="text/javascript">
     $(document).ready(function() {
@@ -517,6 +544,35 @@
             return false;
         });
     });
+    
+    
+    
+    
+    
+    
+     $("#phonenumber").blur(function () {  //提交申请
+        var mHpone=$("#phonenumber").val();                //手机号码
+      
+        if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(mHpone))){   //手机判断
+         $('.phonenumber').html("请输入正确的手机号码！").css("color","red");
+            }else{
+		$('.phonenumber').html("正确");
+           
+            }
+        });
+        
+        
+     
+        
+     
+          
+        
+        
+        
+        
+            
+           
+     
 </script>
 </body>
 </html>
