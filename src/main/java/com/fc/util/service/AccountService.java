@@ -6,7 +6,7 @@ import com.fc.base.user.entity.FcUser;
 import com.fc.util.entity.*;
 
 public interface AccountService {
-
+ 
 	//Ʊ�ݹ���
 	void appBill(String appType, String billType, String billTitle, String userid);
 	void appBill(BillApp billApp);

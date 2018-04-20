@@ -30,7 +30,8 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 
 	@Override
 	public void appBill(BillApp billApp) {
-		super.saveOrUpdate(billApp);
+//		super.saveOrUpdate(billApp);
+		super.save(billApp);
 	}
 
 	// �˺ŵ���-Ʊ�ݹ���-�շ���Ʊ

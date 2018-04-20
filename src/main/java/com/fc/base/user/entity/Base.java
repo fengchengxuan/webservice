@@ -3,7 +3,7 @@ package com.fc.base.user.entity;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
-
+ 
 @MappedSuperclass
 public class Base {
     @Column(name = "role")

@@ -1031,19 +1031,18 @@ public class LoginAction {
 //        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
         FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         if(fcuser!=null) {
-            BillApp billApp=accountService.findBillApp(fcuser.getId());
-            if(billApp==null){
-                accountService.appBill(appType, billType, billTitle, fcuser.getId());
-
-                map.put("ok",true);
-            }else{
-
-                billApp.setAppType(appType);
-                billApp.setBillTitle(billTitle);
-                billApp.setBillType(billType);
-                billApp.setBillCreateDate(new Date());
-                accountService.appBill(billApp);
-            }
+//            BillApp billApp=accountService.findBillApp(fcuser.getId());
+//            if(billApp==null){
+//                accountService.appBill(appType, billType, billTitle, fcuser.getId());
+//                map.put("ok",true);
+//            }else{
+        	BillApp billApp= new BillApp();
+            billApp.setAppType(appType);
+            billApp.setBillTitle(billTitle);
+            billApp.setBillType(billType);
+            billApp.setBillCreateDate(new Date());
+            accountService.appBill(billApp);
+//            }
 
         }else{
             map.put("ok",false);

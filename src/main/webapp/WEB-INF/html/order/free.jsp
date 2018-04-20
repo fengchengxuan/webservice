@@ -68,6 +68,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <!--
                     <tr class="tr1">
                         <td>网站建设</td>
                         <td>1</td>
@@ -90,8 +91,10 @@
                         <td>未付款</td>
                         <td>已申请</td>
                     </tr>
+                    -->
                     </tbody>
                 </table>
+                <!--
                 <div class="all">当页共计20条信息</div>
                 <div class="pages">
                     <span id="totalNum"></span>
@@ -100,6 +103,7 @@
                     <span id="nextPage">下一页</span>
                     <span><a href="${ctx}/vip">返回</a></span>
                 </div>
+                -->
                 <div style="height: 15px"></div>
             </div>
         </div>

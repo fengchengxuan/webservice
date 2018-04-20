@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="${ctx}/static/front/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/menber.css" type="text/css">
     <style>
+     .phonenumber,.email,.stablephone,.vipname,.address,.companyname{
+    float: right;
+    font-size: 12px;
+    color: red;
+    }
         #imghead5,#parseImg{
             border-radius: 50%;
             width: 481px;
@@ -350,6 +355,113 @@
 
 
 </script>
+
+
+
+    <script>
+
+    $('#vipname').blur(function(){
+    var vipname = document.getElementById('vipname').value;
+    if(vipname==""){
+
+    $('.vipname').html('昵称不能为空');
+    }
+    else {
+
+    $('.vipname').html('');
+
+
+
+    return false;
+
+    }
+    });
+    $('#phonenumber').blur(function(){
+    var phone = document.getElementById('phonenumber').value;
+    if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+    $('.phonenumber').html('手机号码有误，请重填');
+
+    }else if(phone==""){
+
+    $('.phonenumber').html('手机号码有误，请重填');
+    }
+    else {
+
+    $('.phonenumber').html('');
+
+
+
+    return false;
+
+    }
+    });
+
+    $('#stablephone').blur(function(){
+    var stablephone = document.getElementById('stablephone').value;
+    if(!(/(^[0-9]{3,4}\-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^\([0-9]{3,4}\)[0-9]{3,8}$)|(^0{0,1}13[0-9]{9}$)/ .test(stablephone))){
+    $('.stablephone').html('固定电话有误');
+    }
+    else {
+    $('.stablephone').html('');
+
+
+    return false;
+    }
+    });
+    $('#email').blur(function(){
+    var email = document.getElementById('email').value;
+    if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+    $('.email').html('电子邮箱错误');
+    }
+    else if(email==""){
+    $('.email').html('电子邮箱不能为空');
+    }else{
+
+    $('.email').html('');
+
+
+    return false;
+    }
+    });
+
+    $('#address').blur(function(){
+    var address = document.getElementById('address').value;
+    if(address==""){
+    $('.address').html('经营地址不能为空');
+    }
+    else {
+
+    $('.address').html('');
+
+
+    return false;
+    }
+    });
+
+    $('#companyname').blur(function(){
+
+    var phone1 = document.getElementById('address').value;
+    if(phone1==""){
+
+    $('.companyname').html('公司名称不能为空');
+
+    }
+    else {
+
+    $('.companyname').html('');
+
+    return false;
+    }
+
+
+    });
+
+
+
+
+    </script>
+
+
 
 </body>
 </html>

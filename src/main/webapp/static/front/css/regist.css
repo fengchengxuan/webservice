@@ -1,3 +1,4 @@
+
 .registbox{
     width: 782px;
     height: 540px;
@@ -17,7 +18,6 @@
     width: 720px;
     margin: 0 auto 15px auto;
 }
-/*选项卡*/
 a:hover,a:focus{
     outline: none;
     text-decoration: none;
@@ -83,7 +83,9 @@ a:hover,a:focus{
 .tab-pane .list{
     margin:10px 0 0 50px;
     font-size: 14px;
+    height: 40px;
 }
+
 .tab-pane .list-name{
     width: 114px;
     line-height: 40px;
@@ -101,10 +103,12 @@ a:hover,a:focus{
 .tab-pane div input{
     width: 230px;
     height: 40px;
+    float: left;
     text-align: left;
     margin-left: 30px;
     border: 1px solid #CCCCCC;
 }
+
 .tab-pane div input[type=text],.tab-pane div input[type=password]{
     text-indent: 1em;
 }
@@ -189,7 +193,7 @@ a:hover,a:focus{
     letter-spacing:2px;
     color:blue;
     width:60px;
-    margin-right: 100px;text-align: center;
+    margin-right: 20px;text-align: center;
 }.tab .gologin{position: relative;top: -61px}
 #wsxx,#yxxx{
     text-align: center;
