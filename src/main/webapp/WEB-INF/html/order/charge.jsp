@@ -508,7 +508,7 @@ function evaluate(){
     //页码加载完执行
     $(document).ready(function () {
 
-         var  userName='${sessionScope.userName}';
+         var  userName='${sessionScope.fcUser.userName}';
          if(userName==null ||userName==""){
              alert("请登录");
        window.location.href="${ctx}/login";
@@ -690,7 +690,7 @@ function evaluate(){
         stateOrder("",tState);
     })//条件显示
     function stateOrder(payState,tarState){
-       var  userName='${sessionScope.userName}';
+       var  userName='${sessionScope.fcUser.userName}';
         var pState=payState;
         var tState=tarState;
         if(payState==null || payState==""){

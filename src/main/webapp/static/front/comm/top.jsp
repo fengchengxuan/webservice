@@ -172,7 +172,7 @@
     </div>
     <div class="navlist" style="position: absolute;right: 0;">
         <ul>
-            <li class="index"><a href="http://www.fengcheng7080.com" target="_blank">首页</a></li>
+            <li class="index"><a href="http://localhost:8989/fengcheng" target="_blank">首页</a></li>
             <li class="taste" style="height: 47px"><a href="${ctx}/free" style="height: 47px;display: block;" target="_blank">
                 <span class="mm1">免</span><span class="mm2">费</span><span class="mm3">体</span><span class="mm4">验</span>
             </a></li>

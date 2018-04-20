@@ -15,6 +15,9 @@
             margin: 0 auto;
             height: 1536px;
         }
+        .TPitem span{
+        color:red;
+        font-size:18px;}
         .bill .slma{
             color: white;
         }
@@ -84,7 +87,7 @@
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">发票抬头</span>
-                                    <input type="text" placeholder="" id="billTitle">
+                                    <input type="text" placeholder="" id="billTitle"><span class="billTitle">*</span>
                                 </div>
                                 <div  class="TPitem" style="margin-top: 40px">
                                     <button id="submit1">确认</button>
@@ -208,21 +211,26 @@
 <script src="${ctx}/static/front/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript">
    $("#submit1").click(function () {//申请发票
+   	
+    var billTitle = document.getElementById('billTitle').value;
+    
+   		
         $.ajax({
             url : ctx+'/addBillApp',
             type : 'POST',
             data:"appType="+$("#appType").val()+"&billType="+$("#billType").val()+"&billTitle="+$("#billTitle").val(),
             dataType : 'json',
             success : function(data) {
-                if(data.ok){
+                if(data.ok&&billTitle!=""){
                     alert("成功")
                     location.reload();
                 }else{
-                    alert("失败")
+                    $('.billTitle').html('发票抬头不能为空');
                 }
             } })
     })
    $("#submit2").click(function () {//收发发票
+   
        $.ajax({
            url : ctx+'/addBillSendAddr',
            type : 'POST',

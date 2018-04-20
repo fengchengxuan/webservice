@@ -57,11 +57,10 @@
                 <hr>
                 <div class="rName-choose-btn">
                     <div>根据您的需求选择以下票据管理项目</div>
-                    <button style="margin-left: -30px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">申请开发票</a></button>
+                    <button style="margin-left: 50px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">申请开发票</a></button>
                     <button style="margin-left: 50px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">收发发票</a></button>
                     <button style="margin-left: 50px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">发票管理</a></button>
                     <button style="margin-left: 50px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">发票到哪</a></button>
-                    <button style="margin-left: 50px"><a href="${ctx}/billtab" style="cursor: pointer;color: white;font-size: 16px">发票地址</a></button>
                 </div>
             </div>
         </div>

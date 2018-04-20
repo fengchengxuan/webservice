@@ -160,10 +160,14 @@
 
                 <div class="setb">
                     <div class="set-l">
-                        <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false></div>
+                        <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false readonly></div>
+                        
                         <div style="margin-top: 30px"><span>手机电话</span><input type="text" placeholder="" id="phonenumber"></div>
+                        <div class="phonenumber"></div>
                         <div style="margin-top: 30px"><span>固定电话</span><input type="text" placeholder="" id="stablephone"></div>
+                        <div class="stablephone"></div>
                         <div style="margin-top: 30px"><span>电子邮箱</span><input type="text" placeholder="" id="email"></div>
+                        <div class="email"></div>
                         <div style="margin-top: 30px"><span>QQ/微信</span><input type="text" placeholder="" id="social"></div>
                     </div>
                     <div class="set-r">
@@ -360,101 +364,11 @@
 
     <script>
 
-    $('#vipname').blur(function(){
-    var vipname = document.getElementById('vipname').value;
-    if(vipname==""){
-
-    $('.vipname').html('昵称不能为空');
-    }
-    else {
-
-    $('.vipname').html('');
+  //  $('#vipname').blur(function(){
+   
 
 
-
-    return false;
-
-    }
-    });
-    $('#phonenumber').blur(function(){
-    var phone = document.getElementById('phonenumber').value;
-    if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
-    $('.phonenumber').html('手机号码有误，请重填');
-
-    }else if(phone==""){
-
-    $('.phonenumber').html('手机号码有误，请重填');
-    }
-    else {
-
-    $('.phonenumber').html('');
-
-
-
-    return false;
-
-    }
-    });
-
-    $('#stablephone').blur(function(){
-    var stablephone = document.getElementById('stablephone').value;
-    if(!(/(^[0-9]{3,4}\-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^\([0-9]{3,4}\)[0-9]{3,8}$)|(^0{0,1}13[0-9]{9}$)/ .test(stablephone))){
-    $('.stablephone').html('固定电话有误');
-    }
-    else {
-    $('.stablephone').html('');
-
-
-    return false;
-    }
-    });
-    $('#email').blur(function(){
-    var email = document.getElementById('email').value;
-    if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
-    $('.email').html('电子邮箱错误');
-    }
-    else if(email==""){
-    $('.email').html('电子邮箱不能为空');
-    }else{
-
-    $('.email').html('');
-
-
-    return false;
-    }
-    });
-
-    $('#address').blur(function(){
-    var address = document.getElementById('address').value;
-    if(address==""){
-    $('.address').html('经营地址不能为空');
-    }
-    else {
-
-    $('.address').html('');
-
-
-    return false;
-    }
-    });
-
-    $('#companyname').blur(function(){
-
-    var phone1 = document.getElementById('address').value;
-    if(phone1==""){
-
-    $('.companyname').html('公司名称不能为空');
-
-    }
-    else {
-
-    $('.companyname').html('');
-
-    return false;
-    }
-
-
-    });
+   // });
 
 
 
