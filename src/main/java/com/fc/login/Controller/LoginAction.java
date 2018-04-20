@@ -157,14 +157,15 @@ public class LoginAction {
         if(fcUser==null) {
         	//返回消息：“用户未注册，请先注册”
         	 map.put( "unregister",true);
-        	 map.put("msg", false);
         } else  //判断是否登录 
         {
-        	String uname = (String) session.getAttribute("user");
-        	if (uname!=null&&!"".equals(uname) && uname.equals(user)) 
+        	FcUser sessionUser = (FcUser) session.getAttribute("fcUser");
+        	if (sessionUser!=null)
         	{
-        		map.put("logined", true); //返回消息：用户已登录，无法再登陆
-        		map.put("msg", false);
+        	    String uname = sessionUser.getUserName();
+        	    if(!"".equals(uname) && uname.equals(user)) {
+                    map.put("logined", true); //返回消息：用户已登录，无法再登陆
+                }
         	}
 	        else { //用户未登录
 	             fcUser=userService.loginUser(type ,user, password);
@@ -174,13 +175,11 @@ public class LoginAction {
 //		               session.setAttribute("password",password);
 //		               session.setAttribute("type",type);//类型
 		               session.setAttribute("fcUser", fcUser);
-		               map.put( "sucess",true);
-		               map.put("msg", true);
+		               map.put( "success",true);
 		           }else{
 		        	   if(userService.findList(user, null, null).size()<0) {
 		        		   //返回消息：用户登陆失败
 		        		   map.put( "failed",true);
-		        		   map.put("msg", false);
 		        	   }
 		         }
            }
@@ -341,7 +340,6 @@ public class LoginAction {
 
     /**
      * 会员注册邮箱验证码
-     * @param httpSession
      * @param email
      * @throws Exception
      */
@@ -522,6 +520,7 @@ public class LoginAction {
     public String password(HttpSession session){
     	if(session.getAttribute("fcUser")!=null)
             return "html/menber/password";
+
     	else 
     		return "/login";
     }
