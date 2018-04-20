@@ -1,6 +1,7 @@
 package com.fc.util.entity;
 
 public class ArtComment {
+    private String id;          //提问id
     private String user;        //用户
     private String commenter;   //用户类型
     private String content;     //评论内容
@@ -56,5 +57,13 @@ public class ArtComment {
 
     public void setArtTitle(String artTitle) {
         this.artTitle = artTitle;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -23,4 +23,24 @@ public class CommentServiceImpl implements CommentService {
     public List<FcComment> findComment(String type, String commontType) {
         return commentDao.findComment(type,commontType);
     }
+
+    @Override
+    public FcComment findComment(String id) {
+     List<FcComment> list=   commentDao.findComment(id);
+     if(list.size()<1){
+         return null;
+     }else{
+         return commentDao.findComment(id).get(0);
+     }
+    }
+
+    @Override
+    public void deleteComment(FcComment fcComment) {
+        commentDao.deleteComment(fcComment);
+    }
+
+    @Override
+    public void updateComment(FcComment fcComment) {
+        commentDao.updateComment(fcComment);
+    }
 }

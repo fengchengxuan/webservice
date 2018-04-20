@@ -25,9 +25,7 @@
     th,td{
         padding: 0;
     }
-    .modal select{
-        color: white;
-    }
+
      tr:nth-of-type(even){
         background: #F5F5F5;
         height: 30px;
@@ -43,10 +41,10 @@
     }
 
     /*弹框*/
-    .modal .draftartbox div{
-        margin-left: 90px;
-        margin-top: 4px;
-    }
+    /*.modal .draftartbox div{*/
+        /*margin-left: 90px;*/
+        /*margin-top:17px;*/
+    /*}*/
     .modal .draftartbox input,.modal .draftartbox textarea,.draftartbox select{
         border: 1px solid #ccc;
     }
