@@ -7,7 +7,8 @@
     <title>系统管理员设置</title>
     <link rel="icon" href="${ctx}/static/background/images/i.png">
     <link rel="stylesheet" href="${ctx}/static/background/css/adm.css" type="text/css">
-    <link rel="stylesheet" href="${ctx}/static/background/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <script src="${ctx}/static/background/js/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="${ctx}/static/background/js/bootstrap.min.js" type="text/javascript"></script>
     <style>
@@ -147,9 +148,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</td>
                 <td>fengcheng</td>
                 <td>系统管理员</td>
-                <td>
-                    系统管理员
-                </td>
+               
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut passwordShow" style="color: #0D62F0" >重设密码</td>
@@ -159,9 +158,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</td>
                 <td>fengcheng</td>
                 <td>系统管理员</td>
-                <td>
-                    系统管理员
-                </td>
+              
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut passwordShow" style="color: #0D62F0" >重设密码</td>
@@ -171,9 +168,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</td>
                 <td>fengcheng</td>
                 <td>系统管理员</td>
-                <td>
-                    系统管理员
-                </td>
+               
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut" style="color: #0D62F0" >重设密码</td>
@@ -182,9 +177,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 <td><input type="checkbox" placeholder="" ng-checked="m">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</td>
                 <td>fengcheng</td>
                 <td>系统管理员</td>
-                <td>
-                    系统管理员
-                </td>
+               
                 <td>正常</td>
                 <td>2017.06.18  登录IP  113.15.21.171</td>
                 <td class="modbut" style="color: #0D62F0" >重设密码</td>

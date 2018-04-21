@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>副导航</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <!--引用会员管理样式-->
     <link rel="stylesheet" href="${ctx}/static/background/css/Guest.css" type="text/css">

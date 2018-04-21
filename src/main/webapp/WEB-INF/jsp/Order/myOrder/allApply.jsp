@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>体验申请</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .list25{
             background: #3eb7f3;

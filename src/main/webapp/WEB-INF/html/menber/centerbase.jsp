@@ -98,6 +98,7 @@
     </style>
 </head>
 <body>
+<form action="${ctx}/uploadProfile" method="post" enctype="multipart/form-data">  
 <div id="conbox" >
     <div class="box">
         <div class="box1">
@@ -107,17 +108,14 @@
             </div>
         </div>
         <div class="box3">
-
                 <input id="st18" name="evidence"  onchange="previewImage(this,5)"  type="file" style="height:30px;"/>
-
-
         </div>
         <div class="box-cent">
             <div class="setimg">
                 <div id="preview5" style="float: left;">
 
                     <span class="dui" id="imgOrder_dui" style="display: none;"></span>
-                    <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
+                    <img id="parseImg"  src="${profile_file}" alt=""/>
 
                 </div>
             </div>
@@ -127,8 +125,8 @@
             <button onclick="hidebox()">取消</button>
         </div>
     </div>
-
 </div>
+</form>
 <div style="background-color: #ededed">
     <jsp:include page="/static/front/comm/top.jsp"/>
 
@@ -138,7 +136,7 @@
         <form action="" id="myform" enctype="multipart/form-data" method="post">
         <div class="base-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;会员基本设置</span>
+                <span>首页&nbsp;>&nbsp;<a href="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;会员基本设置</span>
             </div>
             <div class="setting">
                 <div style="height:160px;">
@@ -152,7 +150,7 @@
 
                             </a>
                             <span class="dui"  style="display: none;"></span>
-                            <img   src="${ctx}/static/front/images/set-title.png" alt=""/>
+                            <img id="profile_pig"   src="${ctx}/static/front/images/set-title.png" alt=""/>
                             
                         </div>
                     </div>
@@ -297,7 +295,7 @@
             status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
             div.innerHTML = "<div id=divhead"+imgNum+" style='float:left;width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
         }
-        myshow (formData);
+     //   myshow (formData);
     }
     function clacImgZoomParam( maxWidth, maxHeight, width, height ){
         var param = {top:0, left:0, width:width, height:height};
@@ -348,6 +346,7 @@
                     if(data.appType!=null){
                         $("#stype").val(data.appType.appType);
                     }
+                   
 
                 }else {
                     window.location.href="${ctx}/login";
@@ -359,23 +358,5 @@
 
 
 </script>
-
-
-
-    <script>
-
-  //  $('#vipname').blur(function(){
-   
-
-
-   // });
-
-
-
-
-    </script>
-
-
-
 </body>
 </html>

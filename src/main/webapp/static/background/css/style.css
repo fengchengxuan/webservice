@@ -46,7 +46,7 @@ th select,li select{
     width: 207px;
     height: auto;
     background-color: #edf7f9;
-    font-family: "微软雅黑",sans-serif;
+    font-family: "寰蒋闆呴粦",sans-serif;
     font-size: 16px;
     float: left;
 }
@@ -66,7 +66,7 @@ ul{
 .contener .leftbox .nav .system,.content,.product,.order,.member,.adv,.pagefoot,.key,.nothing{
     border: 1px solid #ccc;
 }
-/*系统管理的标题栏*/
+/*绯荤粺绠＄悊鐨勬爣棰樻爮*/
 .original{
     width: 207px;
     height: 52px;
@@ -76,7 +76,7 @@ ul{
     color: #333333;
 }
 .change{
-    width: 207px;
+    width: 206px;
     height: 52px;
     text-align: center;
     margin:auto;
@@ -100,7 +100,7 @@ ul{
     color:#333333;
 }
 
-/*内容管理的标题栏*/
+/*鍐呭绠＄悊鐨勬爣棰樻爮*/
 .contener .leftbox .nav .content .content-title{
     width: 207px;
     height: 52px;
@@ -127,7 +127,7 @@ ul{
     color:#333333;
 }
 
-/*产品管理*/
+/*浜у搧绠＄悊*/
 .contener .leftbox .nav .product .product-title{
     width: 207px;
     height: 52px;
@@ -154,7 +154,7 @@ ul{
     color:#333333;
 }
 
-/*订单管理的标题栏*/
+/*璁㈠崟绠＄悊鐨勬爣棰樻爮*/
 .contener .leftbox .nav .order .order-title{
     width: 207px;
     height: 52px;
@@ -181,7 +181,7 @@ ul{
     color:#333333;
     cursor: pointer;
 }
-/*会员管理的标题栏*/
+/*浼氬憳绠＄悊鐨勬爣棰樻爮*/
 .contener .leftbox .nav .member .member-title{
     width: 207px;
     height: 52px;
@@ -208,7 +208,7 @@ ul{
     color:#333333;
 }
 
-/*广告管理的标题栏*/
+/*骞垮憡绠＄悊鐨勬爣棰樻爮*/
 .contener .leftbox .nav .adv .adv-title{
     width: 207px;
     height: 52px;
@@ -234,7 +234,7 @@ ul{
 .contener .leftbox .adv-content a{
     color:#333333;
 }
-/*页脚管理的标题栏*/
+/*椤佃剼绠＄悊鐨勬爣棰樻爮*/
 .contener .leftbox .nav .pagefoot .pagefoot-title{
     width: 207px;
     height: 52px;
@@ -261,7 +261,7 @@ ul{
     color:#333333;
 }
 
-/*关键词管理的标题栏*/
+/*鍏抽敭璇嶇鐞嗙殑鏍囬鏍�*/
 .contener .leftbox .nav .key .key-title{
     width: 207px;
     height: 52px;
@@ -300,7 +300,7 @@ ul{
 }
 .contentbox .top span{
     color: #656565;
-    font-family: 微软雅黑,sans-serif;
+    font-family: 寰蒋闆呴粦,sans-serif;
     font-size: 11px;
 
 }
@@ -316,7 +316,7 @@ ul{
     color: white;
 }
 .contentbox .inner .nei{
-    font-family: "微软雅黑",sans-serif;
+    font-family: "寰蒋闆呴粦",sans-serif;
     letter-spacing: 2px;
     color: #333333;
     font-size: 16px;
@@ -356,7 +356,7 @@ ul{
     display: block;
     line-height: 38px;
     color: #F70707;
-    font-family: "微软雅黑",sans-serif;
+    font-family: "寰蒋闆呴粦",sans-serif;
     font-size: 12px;
     margin: 0 0 0 5px;
     position: absolute;

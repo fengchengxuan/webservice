@@ -6,6 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>体验跳转</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .draftartbox div {
             margin-left: 166px;

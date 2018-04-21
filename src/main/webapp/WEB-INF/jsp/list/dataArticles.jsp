@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/front/index/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/Article.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/my-pagination.css" type="text/css">

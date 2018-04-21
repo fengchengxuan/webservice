@@ -46,7 +46,7 @@
 
     <div class="pwd-main" id="nava">
             <div class="way">
-            <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;密码设置</span>
+            <span>首页&nbsp;>&nbsp;<a href="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;密码设置</span>
             </div>
             <div class="pwd-setting">
                 <div class="pwd-input">

@@ -7,6 +7,8 @@
     <title>产品</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/article.css" type="text/css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
 </head>
 <body ng-init="sysa=true;basea=true;contenta=true;producta=false;ordera=true;membera=true;adva=true;pagefoota=true;keya=true;allnava=true;adma=true;
 newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=true;videoadva=true;subjecta=true;deputynava=true">

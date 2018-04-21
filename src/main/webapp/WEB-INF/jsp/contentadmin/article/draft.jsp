@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>草稿文章</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/article.css" type="text/css">
     <style>
@@ -97,7 +99,7 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <th style="width: 97px;">序号</th>
                     <th style="width: 97px;border-left: 1px solid #057836">
                         <div class="select_model">
-                            <div class="Selected" id="Selected"><span>导航一</span>&nbsp;<img src="../../../../static/background/images/adm_icon.png" alt="下拉"></div>
+                            <div class="Selected" id="Selected"><span>导航一</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                             <div style="display: none" class="ddoli" id="ddoli">
                                 <ul>
                                     <li style="border-top: none">导航一</li>
@@ -125,7 +127,7 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <th style="width: 141px;border-left: 1px solid #057836">文章标题</th>
                     <th style="width: 128px;border-left: 1px solid #057836">
                         <div class="select_model">
-                            <div class="Selected" id="Selected2"><span>系统管理员</span>&nbsp;<img src="../../../../static/background/images/adm_icon.png" alt="下拉"></div>
+                            <div class="Selected" id="Selected2"><span>系统管理员</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                             <div style="display: none" class="ddoli" id="ddoli2">
                                 <ul>
                                     <li style="border-top: none">系统管理员</li>
@@ -139,7 +141,7 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <th style="width: 180px;border-left: 1px solid #057836">发布日期</th>
                     <th style="width: 119px;border-left: 1px solid #057836">
                         <div class="select_model">
-                            <div class="Selected" id="Selected3"><span>正常</span>&nbsp;<img src="../../../../static/background/images/adm_icon.png" alt="下拉"></div>
+                            <div class="Selected" id="Selected3"><span>正常</span>&nbsp;<img src="${ctx}/static/background/images/adm_icon.png" alt="下拉"></div>
                             <div style="display: none" class="ddoli" id="ddoli3">
                                 <ul>
                                     <li style="border-top: none">正常</li>

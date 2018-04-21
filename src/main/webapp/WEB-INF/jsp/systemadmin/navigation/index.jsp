@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>全部导航设置</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/nav.css" type="text/css">
 </head>
 <body ng-init="sysa=false;basea=true;contenta=true;producta=true;ordera=true;membera=true;adva=true;pagefoota=true;keya=true;allnava=false;adma=true;

@@ -17,6 +17,20 @@ function myshow (formData){
     })
 }
 
+
+function upload_profile() {
+    $.ajax({
+        url : ctx+'/uploadProfile',
+        type : 'POST',
+        success : function(data) {
+            if(data.suc_upload){
+            	window.location.href = ctx+"/vips";
+            }
+        } })
+}
+
+var profile_file = sessionScope.fcUser.profilePhoto;
+
 $(".save").click(function () {
 	
 	

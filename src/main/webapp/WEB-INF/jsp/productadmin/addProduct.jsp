@@ -5,15 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <title>添加产品</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/revnews.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/index.css"  type="text/css">
 </head>
 <style>
+.list21 {
+    background: #3eb7f3;
+}
     select{
         margin-left: 0;
         border-radius: 0;
         -webkit-appearance: none;
-        background: url(../../../static/background/images/Arrow.jpg) no-repeat scroll right center transparent;
+        background: url(../static/background/images/Arrow.jpg) no-repeat scroll right center transparent;
+        line-height:30px;
     }
     .contener .inner .setnewsbox{
         height: auto;

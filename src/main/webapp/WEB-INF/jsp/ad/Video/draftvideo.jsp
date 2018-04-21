@@ -5,9 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>草稿视频</title>
+    <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <style>
-        .list33{
+        .lst33{
             background: #3eb7f3;
         }
         table{

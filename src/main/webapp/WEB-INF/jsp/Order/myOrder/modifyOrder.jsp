@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>修改订单</title>
-
+ <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         body{
             min-width: 1170px;

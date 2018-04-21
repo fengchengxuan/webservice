@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <title>添加类产品</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/revnews.css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .list20{
             background: #3eb7f3;

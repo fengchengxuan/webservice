@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>添加导航</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="/static/css/navstyle.css">
     <style>
         body{

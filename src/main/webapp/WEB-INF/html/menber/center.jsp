@@ -22,7 +22,7 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心</span>
+                <span>首页&nbsp;>&nbsp;<a href="${ctx}/vips">会员中心</a></span>
             </div>
             <div class="order">
                 <div></div>

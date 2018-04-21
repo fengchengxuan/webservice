@@ -7,6 +7,8 @@
     <title>网站基本设置</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/website.css" type="text/css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .list1{
             background:  #3eb7f3;

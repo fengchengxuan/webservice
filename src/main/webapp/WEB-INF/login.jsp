@@ -128,7 +128,7 @@
 
 
     <!--忘记密码模态框 -->
-    <div id="forget-password" style="position: fixed;top: 15%;left: 33%;z-index: 2;display: none">
+    <div id="forget-password" style="position: fixed;top: 15%;left: 33%;z-index: 89999;display: none">
     <div class="modal-content" style="width:523px;height: 488px; ">
     <div >
     <button type="button" onclick="hidebox()" id="forget-password-h" style="background: transparent;color: #009F43;border: 0;position: relative;left: 486px;font-size:25px;">

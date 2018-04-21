@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <title>首页设置</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/web.css" type="text/css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .list2{
             background:  #3eb7f3;
         }
     </style>
 </head>
+<script src="${ctx}/static/background/js/angular.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="${ctx}/static/background/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="${ctx}/static/background/js/pd/judge.js"></script>
 <body ng-init="sysa=false;basea=false;contenta=true;producta=true;ordera=true;membera=true;adva=true;pagefoota=true;keya=true;allnava=true;adma=true;
@@ -33,7 +36,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
         <div class="inner">
             <form action="" method="post" autocomplete="off">
                 <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;首页设置</div>
-                <div style="width: 218px;height: 595px;float: left;margin-top:48px; ">
+                <div style="width: 218px;height: 555px;float: left;margin-top:48px; ">
                     <div class="tt title-1" style="letter-spacing: 5.3px;">标题（Title）</div>
 
                     <div class="kw title-1" style="margin-top:28px;">关键词（Key Words） </div>
@@ -58,7 +61,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
         </div>
     </div>
 </div>
-<jsp:include page="${ctx}/WEB-INF/jsp/comm/footer.jsp"/>
-<script src="${ctx}/static/background/js/angular.min.js" type="text/javascript"></script>
+<jsp:include page="/WEB-INF/jsp/comm/footer.jsp"/>
+
 </body>
 </html>
