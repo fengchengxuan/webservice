@@ -12,4 +12,5 @@ public interface CommentService {
    FcComment findComment(String id);
    void deleteComment(FcComment fcComment);
    void updateComment(FcComment fcComment);
+
 }

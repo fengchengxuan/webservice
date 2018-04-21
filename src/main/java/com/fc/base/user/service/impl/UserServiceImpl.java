@@ -89,4 +89,36 @@ public class UserServiceImpl extends BaseDao implements UserService {
     public FcUser getUser(String id, String userName) {
         return userDao.getUser(id,userName);
     }
+
+    @Override
+    public void deleteFcUser(FcUser fcUser) {
+        userDao.deleteFcUser(fcUser);
+    }
+
+    @Override
+    public List<FcUser> findList(String id, String userType, String userIntent, String status) {
+
+        if ("用户类型".equals(userType)){
+            userType="";
+        }else if("手机用户".equals(userType)){//手机用户
+            userType="0";
+        }else  if("邮箱用户".equals(userType)){
+            userType="1";
+        } else if("匿名用户".equals(userType)){
+            userType="2";
+        }
+
+
+        if("用户在本站维度".equals(userIntent)){//维度
+            userIntent="";
+        }
+
+
+       if("用户状态".equals(status)){//用户状态
+           status="";
+        }else if("正常".equals(status)){
+            status="0";
+        }
+        return userDao.findList(id,userType,userIntent,status);
+    }
 }
