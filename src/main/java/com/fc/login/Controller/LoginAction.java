@@ -167,9 +167,11 @@ public class LoginAction {
         		map.put("msg", false);
         	}
 	        else { //用户未登录
+
 	             fcUser=userService.loginUser(type ,user, password);
+
 		           if(fcUser!=null){ //用户登录成功
-//		               session.setAttribute("userName",fcUser.getUserName());//用户名
+		               session.setAttribute("userName",fcUser.getUserName());//用户名
 //		               session.setAttribute("user",user);//登录号
 //		               session.setAttribute("password",password);
 //		               session.setAttribute("type",type);//类型
@@ -341,7 +343,7 @@ public class LoginAction {
 
     /**
      * 会员注册邮箱验证码
-     * @param httpSession
+   //  * @param httpSession
      * @param email
      * @throws Exception
      */
@@ -1099,11 +1101,11 @@ public class LoginAction {
 //        String user=(String)session.getAttribute("user");
 //        String password =(String) session.getAttribute("password");
 //        String userType=(String) session.getAttribute("type");
-    	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
-    	String user = fcuser.getUserName();
+    	FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+    	/*String user = fcuser.getUserName();
     	String password = fcuser.getPassword();
     	String userType = fcuser.getUserTypeId();
-        FcUser fcUser=userService.loginUser(userType,user,password);
+        FcUser fcUser=userService.loginUser(userType,user,password);*/
         if(fcUser!=null){
             map.put("ok",true);
             FcComment fcComment=new FcComment();
@@ -1115,6 +1117,8 @@ public class LoginAction {
             ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
             fcComment.setArtcleId(entity.getId()+"");
             commentService.saveProComent(fcComment);
+        }else{
+            map.put("ok",false);
         }
         return map;
     }
