@@ -148,4 +148,9 @@ public class BaseDao<T>{
 		}
 		return query.list();
 	}
+	public List<T> findList(String hql,String str){
+		Query query = createQuery(hql);
+		query.setString(0,str);
+		return query.list();
+	}
 }

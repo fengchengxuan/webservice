@@ -1493,7 +1493,6 @@ public class UserAction {
     public  @ResponseBody
     FcUserUtil conditionShowFcUser(String userType,String dimension,String status){
         List<FcUser> list=service.findList("", userType, dimension,status);
-        System.out.println(list.size());
         FcUserUtil fcUserUtil=new FcUserUtil();
         fcUserUtil.setList(list);
         return fcUserUtil;

@@ -2,6 +2,10 @@ package com.fc.base.product.productService;
 
 import com.fc.base.product.entity.ProApplyEntity;
 import com.fc.base.product.util.SreachApply;
+import com.fc.base.user.entity.FcUser;
+import com.fc.util.entity.FreeApply;
+
+import java.util.List;
 
 /**
  * Created by lenovo on 2017/10/26.
@@ -18,4 +22,8 @@ public interface ApplyService {
     //根据电话申请查询
    // public String showHpoenSerice(String fHpone,String mHpone);
     public ProApplyEntity userApplySerivce(String userName);
+
+    FreeApply findFreeApply(String fcUserId);
+    void saveFreeApply(FreeApply freeApply);
+    List<FcUser> findFreeApply();
 }

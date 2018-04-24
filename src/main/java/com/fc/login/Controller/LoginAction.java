@@ -22,6 +22,9 @@ import javax.servlet.http.HttpSession;
 
 import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
 import com.fc.base.contentadmin.artitle.service.ArticleService;
+import com.fc.base.user.entity.AppType;
+import com.fc.base.user.entity.CompType;
+import com.fc.base.user.entity.ProKind;
 import com.fc.util.CommentUtil;
 import com.fc.util.entity.*;
 import com.fc.util.service.AccountService;
@@ -587,31 +590,31 @@ public class LoginAction {
             if(!"".equals(address)) {
                 fcUser.setOperAddr(address);//地址
             }
-//            if(fcUser.getProdKindId()!=null){
-//
-//                fcUser.getProdKindId().setProKind(htype);
-//            }else{
-//                ProKind proKind=new ProKind();//行业类型
-//                proKind.setProKind(htype);
-//                fcUser.setProdKindId(proKind);
-//            }
+            if(fcUser.getProdKindId()!=null){
 
-//            if( fcUser.getComptypeId()!=null){
-//                fcUser.getComptypeId().setCompType(ctype);
-//            }else{
-//                CompType compType=new CompType();//公司类型
-//                compType.setCompType(ctype);
-//                fcUser.setComptypeId(compType);
-//            }
+                fcUser.getProdKindId().setProKind(prodKindId);
+            }else{
+                ProKind proKind=new ProKind();//行业类型
+                proKind.setProKind(prodKindId);
+                fcUser.setProdKindId(proKind);
+            }
 
-//            if( fcUser.getAppTypeId()!=null){
-//                fcUser.getAppTypeId().setAppType(stype);
-//            }else {
-//                AppType appType = new AppType();//申请人类型
-//                appType.setAppType(stype);
-//                fcUser.setAppTypeId(appType);
-//            }
-            if(!"".equals(prodKindId)) {
+            if( fcUser.getComptypeId()!=null){
+                fcUser.getComptypeId().setCompType(comptypeId);
+            }else{
+                CompType compType=new CompType();//公司类型
+                compType.setCompType(comptypeId);
+                fcUser.setComptypeId(compType);
+            }
+
+            if( fcUser.getAppTypeId()!=null){
+                fcUser.getAppTypeId().setAppType(appTypeId);
+            }else {
+               AppType appType = new AppType();//申请人类型
+                appType.setAppType(appTypeId);
+                fcUser.setAppTypeId(appType);
+            }
+         /*   if(!"".equals(prodKindId)) {
                 fcUser.setProdKindId(prodKindId);
             }
             if(!"".equals(comptypeId)) {
@@ -619,7 +622,7 @@ public class LoginAction {
             }
             if(!"".equals(appTypeId)) {
                 fcUser.setAppTypeId(appTypeId);//地址
-            }
+            }*/
 
             userService.saveUser(fcUser);
 

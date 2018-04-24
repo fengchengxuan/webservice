@@ -2,6 +2,9 @@ package com.fc.base.product.productDao.productDaoImpl;
 
 import com.fc.base.product.entity.ProApplyEntity;
 import com.fc.base.product.productDao.ApplyDao;
+import com.fc.base.user.entity.FcUser;
+import com.fc.util.BaseDao;
+import com.fc.util.entity.FreeApply;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,7 +18,7 @@ import java.util.List;
  * Created by lenovo on 2017/10/26.
  */
 @Repository
-public class ApplyDaoImpl implements ApplyDao{
+public class ApplyDaoImpl extends BaseDao implements ApplyDao{
     @Autowired
     private SessionFactory sessionFactory;
     private List<ProApplyEntity> list;
@@ -116,5 +119,22 @@ public class ApplyDaoImpl implements ApplyDao{
             return null;
         }
         return list.get(0);
+    }
+
+    @Override
+    public List<FreeApply> findFreeApply(String fcUserId) {
+        String hql= "from FreeApply where fcUserId = ?";
+        return super.findList(hql,fcUserId);
+    }
+
+    @Override
+    public void saveFreeApply(FreeApply freeApply) {
+        super.save(freeApply);
+    }
+
+    @Override
+    public List<FcUser> findFreeApply() {
+        String hql="from FcUser where isFreeApp = ?";
+        return super.findList(hql,"1");
     }
 }

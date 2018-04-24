@@ -197,7 +197,7 @@
                         </div>
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
-                            <select name="stype" id="stype">
+                            <select name="stype" id="appTypeId">
                                 <option value="法人">法人</option>
                                 <option value="股东">股东</option>
                                 <option value="项目负责人">项目负责人</option>
