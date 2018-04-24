@@ -312,7 +312,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
     $(document).ready(function () {
         $("#currentPage").val(1);
       $.ajax({
-            url : '${ctx}/vip/showAll',
+            url : '${ctx}/vip/showAllVip',
             type : 'POST',
             data :"",
             async:true,
