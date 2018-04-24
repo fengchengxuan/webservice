@@ -50,6 +50,7 @@ public class ApplyAction {
     public @ResponseBody Map<String,Object> proApply(HttpSession session,String prodKindId, String comptypeId , String appTypeId ,
                                                      String companyname, String address, String hpone, String phonenumber, String email, String web, String social, String appContent){
         FcUser fcUser=(FcUser) session.getAttribute("fcUser");
+        System.out.println("jinreu");
         if(fcUser!= null){
             fcUser.getProdKindId().setProKind(prodKindId);
             fcUser.getComptypeId().setCompType(comptypeId);

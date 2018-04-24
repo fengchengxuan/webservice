@@ -27,8 +27,147 @@
             list-style: none;
         }
     </style>
+    <style>
+        #imghead5,#parseImg,#imgOrder_dui1 img,#imghead2{
+            border-radius: 50%;
+            width: 481px;
+            height: 400px;
+        }
+        #conbox,#conbox1{
+            display: none;
+        }
+        #conbox,#conbox1{
+            width:600px;
+            height: 200px;
+            z-index: 999999;
+            position: fixed;
+            top: 10%;
+            left: 30%;
+        }
+        .menutop img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .box{
+            width: 481px;
+            height: auto;
+            background: white;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 481px;
+            height: 40px;
+            line-height: 40px;
+            background: #ABCB56;
+        }
+        .bsp{
+            margin-left: 34px;
+        }
+        .box2{
+            width: 60px;
+            height: 40px;
+            float: right;
+            color: white;
+        }
+        .bsp2{
+            margin-left: 20px;
+            font-weight: 800;
+        }
+        .box3{
+            width: 440px;
+            height:auto;
+            margin: 0 auto;
+        }
+        .box4{
+            width: 164px;
+            height: 40px;
+            text-align: center;
+            line-height: 50%;
+            border: 1px solid #C4C9CE;
+            margin-top: 15px;
+        }
+        .box4{
+            width: 481px;
+            height:40px;
+        }
+        .box-cent{
+            clear: both;
+            background: rgba(0,0,0,0.3);
+            width: 481px;
+            height: 400px;
+        }</style>
+
 </head>
 <body ng-init="i=false;t=true;w=true;f=true;g=true;h=true">
+<!--身分证正面-->
+<div id="conbox" >
+    <div class="box">
+        <div class="box1">
+            <span class="bsp">更换头像</span>
+            <div class="box2">
+
+                <span class="bsp2" onclick="hidebox()">X</span>
+            </div>
+        </div>
+        <div class="box3">
+
+            <input id="st18" name="evidence"  onchange="previewImage(this,5)"  type="file" style="height:30px;"/>
+
+
+        </div>
+        <div class="box-cent">
+            <div class="setimg">
+                <div id="preview5" style="float: left;">
+
+                    <span class="dui" id="imgOrder_dui" style="display: none;"></span>
+                    <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
+
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <button>上传</button>
+            <button onclick="hidebox()">取消</button>
+        </div>
+    </div>
+
+</div>
+<!--手持身分-->
+<div id="conbox1" >
+    <div class="box">
+        <div class="box1">
+            <span class="bsp">更换头像</span>
+            <div class="box2">
+
+                <span class="bsp2" onclick="hidebox1()">X</span>
+            </div>
+        </div>
+        <div class="box3">
+
+            <input id="st182" name="evidence"  onchange="previewImage(this,2)"  type="file" style="height:30px;"/>
+
+
+        </div>
+        <div class="box-cent">
+            <div class="setimg">
+                <div id="preview2" style="float: left;">
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <button>上传</button>
+            <button onclick="hidebox1()">取消</button>
+        </div>
+    </div>
+
+</div>
+
+
+
 <div style="background-color: #ededed">
     <jsp:include page="/static/front/comm/top.jsp"/>
     <div class="mcontainer" id="nava">
@@ -213,5 +352,61 @@
      })
  }
 </script>
+  <script>
+  
+    function hidebox()
+    {
+        var mychar = document.getElementById("conbox").style.display ="none";
+
+
+    }
+    function showbox()
+    {
+        var mychar = document.getElementById("conbox").style.display ="block";
+
+    }
+
+    function hidebox1()
+    {
+        var mychar = document.getElementById("conbox1").style.display ="none";
+
+
+    }
+    function showbox1()
+    {
+        var mychar = document.getElementById("conbox1").style.display ="block";
+
+    }
+
+  
+    $(".post").click(function(){
+    if($("#name").val()==null || $("#name").val()=="" ) {
+    //alert("");
+    $("#qsrm").html("请输入名字");
+
+    return ;
+    }
+    else  if($("#sfz").val()==null || $("#sfz").val()=="" ) {
+    //alert("");
+    $("#qsrmm").html("请输入身份证");
+
+    return ;
+    } else if($("#dh").val()==null||$("#dh").val()=="" ){
+    //alert("");
+    $("#qsrxmm").html("请输入电话号码");
+
+    return ;
+    }
+
+    else if($("#oldpassword").val()==$("#password").val() ){
+    //alert("");
+    $("#passd").html("新旧身份证号不能一样");
+    return ;
+    }
+
+
+
+    });
+    </script>
 </body>
 </html>

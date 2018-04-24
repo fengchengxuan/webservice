@@ -8,7 +8,7 @@ public class LoginUser {
     public static int i=0;
     private static LoginUser loginUser;
     private LoginUser(){
-    }
+    }  
     public static  LoginUser getLoginUser(){
         i++;
         if(loginUser==null){

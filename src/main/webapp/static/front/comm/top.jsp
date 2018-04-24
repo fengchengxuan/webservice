@@ -149,7 +149,7 @@
         <div class="phone">
 
             <c:choose>
-                <c:when test="${ empty sessionScope.user}">
+                <c:when test="${ empty sessionScope.fcUser}">
                     <span><a href="${ctx}/register" target="_blank">注册</a></span>
                     <span>&nbsp;|&nbsp;</span>
                     <span><a href="${ctx}/login" target="_blank">登录</a></span> </c:when>
@@ -157,8 +157,8 @@
                     <div style="margin-top: 10px">
                     <div  class="user-name" style="float: left">
                         <span class="user" style="height: 40px;display: block;margin-top: -3px;text-align: center">
-                       <c:if test="${sessionScope.userName!=null}" var="condition" scope="session">
-                           ${sessionScope.userName}
+                       <c:if test="${sessionScope.fcUser!=null}" var="condition" scope="session">
+                           ${sessionScope.fcUser.userName}
     　　           </c:if>
                         <br><a href="${ctx}/vip"  style="font-size: 12px;color: #666;text-decoration: none" target="_blank">进入会员中心</a>
                         </span>
@@ -172,7 +172,7 @@
     </div>
     <div class="navlist" style="position: absolute;right: 0;">
         <ul>
-            <li class="index"><a href="http://www.fengcheng7080.com" target="_blank">首页</a></li>
+            <li class="index"><a href="http://localhost:8989/fengcheng" target="_blank">首页</a></li>
             <li class="taste" style="height: 47px"><a href="${ctx}/free" style="height: 47px;display: block;" target="_blank">
                 <span class="mm1">免</span><span class="mm2">费</span><span class="mm3">体</span><span class="mm4">验</span>
             </a></li>

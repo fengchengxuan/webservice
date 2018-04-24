@@ -11,9 +11,12 @@
 <div class="leftmenu" ng-init="t1=true;t2=true;t3=true;t4=true">
     <div class="menutop">
         <a href="${ctx}/vips"> <img id="myImg"  src="${ctx}/static/front/images/me-title.png" alt=""/></a>
-        <span><c:if test="${sessionScope.userName!=null}" var="condition" scope="session">
-            ${sessionScope.userName}
-        </c:if></span>
+        <span>
+        
+        <c:if test="${sessionScope.fcUser!=null}" var="condition" scope="session">
+                           ${sessionScope.fcUser.userName}
+    　　           </c:if>
+        </span>
     </div>
     <div class="navbox" style="margin-top: 4px;background: white">
         <ul>

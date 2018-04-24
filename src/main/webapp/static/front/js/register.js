@@ -121,7 +121,9 @@ $(document).ready(function() {
 			}
 		},
 		//邮件验证
+		
 		testEmail: function(selector) {
+			
 			var $this = $(selector);
 			if($this.val() === "") {
 				console.log('email不能为空');
@@ -141,18 +143,21 @@ $(document).ready(function() {
 //                    	alert(msg.data);
                         if(msg.data){
                             $("#e-yzm").removeAttr("disabled");
-                            $("yxhm").html("");
+                            $("#yxhm").html("");
                         }else{
                             $("#yxhm").html("该邮箱已注册");
                             $('#e-yzm').attr("disabled","true");
                         }
                     }
+                    
                 });
+			
 				console.log("邮箱格式正确");
 				$this.removeClass("err").next().html("<i class='fa fa-address-book'></i>").addClass("succ");
 				return true;
 			}
 		},
+	
 		//必填信息
 		testRequired: function(selector, msg) {
 			var $this = $(selector);
@@ -473,3 +478,91 @@ if(testphone){
 		}
 
 });
+
+
+//提示大小写
+ var input1 = document.querySelector("#password");
+ var h1 = document.querySelector("#h0");
+
+ function toggle(elem){
+     if(elem.style.display == "block"){
+         elem.style.display = "none";
+     }else{
+         elem.style.display = "block";
+     }
+ }
+
+ input1.onkeydown = function(e){
+     var e = e || window.event;
+     var capsLockKey = e.keyCode ? e.keyCode : e.which;
+     if(e.keyCode == 20){
+         toggle(h1);
+     }else{
+         h1.style.display = "none";
+     }
+ };
+
+ var input2 = document.querySelector("#repassword");
+ var h2 = document.querySelector("#h2");
+
+ function toggle(elem){
+     if(elem.style.display == "block"){
+         elem.style.display = "none";
+     }else{
+         elem.style.display = "block";
+     }
+ }
+
+ input2.onkeydown = function(e){
+         var e = e || window.event;
+         var capsLockKey = e.keyCode ? e.keyCode : e.which;
+         if(e.keyCode == 20){
+             toggle(h2);
+         }else{
+             h2.style.display = "none";
+         }
+     };
+
+ var input3 = document.querySelector("#passwordE");
+ var h3 = document.querySelector("#h3");
+
+ function toggle(elem){
+     if(elem.style.display == "block"){
+         elem.style.display = "none";
+     }else{
+         elem.style.display = "block";
+     }
+ }
+
+ input3.onkeydown = function(e){
+     var e = e || window.event;
+     var capsLockKey = e.keyCode ? e.keyCode : e.which;
+     if(e.keyCode == 20){
+         toggle(h3);
+     }else{
+         h3.style.display = "none";
+     }
+ };
+
+ var input4 = document.querySelector("#repasswordE");
+ var h4 = document.querySelector("#h4");
+
+ function toggle(elem){
+     if(elem.style.display == "block"){
+         elem.style.display = "none";
+     }else{
+         elem.style.display = "block";
+     }
+ }
+
+ input4.onkeydown = function(e){
+     var e = e || window.event;
+     var capsLockKey = e.keyCode ? e.keyCode : e.which;
+     if(e.keyCode == 20){
+         toggle(h4);
+     }else{
+         h4.style.display = "none";
+     }
+ }
+
+

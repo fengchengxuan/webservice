@@ -8,7 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 import java.util.Date;
 
 import javax.persistence.*;
-
+ 
 @Entity
 @Table(name = "bill_app")
 public class BillApp extends Base{//申请发票

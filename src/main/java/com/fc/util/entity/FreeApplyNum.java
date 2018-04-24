@@ -26,7 +26,9 @@ public class FreeApplyNum extends Base {//免费申请表
     private int num;//开放名额
     @Column(name = "starttime")
     private Timestamp starttime;
+
     @Column(name = "passNum") //审批通过名额
+
     private int passNum;
     @Column(name = "restNum")//剩下名额
     private int restNum;

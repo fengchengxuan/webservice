@@ -11,8 +11,9 @@ public class SessionListener implements HttpSessionListener {
 
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
-    }
 
+    }
+   
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent){
         String userName =(String)httpSessionEvent.getSession().getAttribute("userName");

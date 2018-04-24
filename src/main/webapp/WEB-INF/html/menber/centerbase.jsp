@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="${ctx}/static/front/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/menber.css" type="text/css">
     <style>
+     .phonenumber,.email,.stablephone,.vipname,.address,.companyname{
+    float: right;
+    font-size: 12px;
+    color: red;
+    }
         #imghead5,#parseImg{
             border-radius: 50%;
             width: 481px;
@@ -155,10 +160,14 @@
 
                 <div class="setb">
                     <div class="set-l">
-                        <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false></div>
+                        <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false readonly></div>
+                        
                         <div style="margin-top: 30px"><span>手机电话</span><input type="text" placeholder="" id="phonenumber"></div>
+                        <div class="phonenumber"></div>
                         <div style="margin-top: 30px"><span>固定电话</span><input type="text" placeholder="" id="stablephone"></div>
+                        <div class="stablephone"></div>
                         <div style="margin-top: 30px"><span>电子邮箱</span><input type="text" placeholder="" id="email"></div>
+                        <div class="email"></div>
                         <div style="margin-top: 30px"><span>QQ/微信</span><input type="text" placeholder="" id="social"></div>
                     </div>
                     <div class="set-r">
@@ -350,6 +359,23 @@
 
 
 </script>
+
+
+
+    <script>
+
+  //  $('#vipname').blur(function(){
+   
+
+
+   // });
+
+
+
+
+    </script>
+
+
 
 </body>
 </html>

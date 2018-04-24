@@ -1,7 +1,7 @@
 package com.fc.util.entity;
 
 public class BillManage {
-
+ 
 	BillApp bill;
 	BillSendAddr billsend;
 	public BillApp getBill() {

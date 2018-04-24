@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name="article")
 public class ArticleEntity {
-    @Id
+    @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; //id
     @Column(name = "artTitle" )
