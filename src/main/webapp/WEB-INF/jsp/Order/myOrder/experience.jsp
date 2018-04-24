@@ -245,7 +245,6 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
      var  id= '${param.id}';
      var status='${param.status}';
         if(status!="申请中"){
-         alert("已经审核过了,不能重复审核");
          window.location.href="${ctx}/admin/allApply";
          return ;
         }
