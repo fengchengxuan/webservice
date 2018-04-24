@@ -171,9 +171,7 @@ public class LoginAction {
                 }
         	}
 	        else { //用户未登录
-
 	             fcUser=userService.loginUser(type ,user, password);
-
 		           if(fcUser!=null){ //用户登录成功
 		               session.setAttribute("userName",fcUser.getUserName());//用户名
 //		               session.setAttribute("user",user);//登录号
@@ -552,81 +550,80 @@ public class LoginAction {
             email,String social,String companyname,String prodKindId,String comptypeId, String appTypeId,String web,String address,HttpServletRequest request){
         HttpSession session = request.getSession(true);
         FcUser fu = (FcUser)session.getAttribute("fcUser");
-        String userName= fu.getUserName();
-        String user= fu.getUserName();
-        String password = fu.getPassword();
-        String type= fu.getUserTypeId();
-        String pares=(String) session.getAttribute("parsePath");//图片
-        if(userName==null || userName.length()<1){  //判断用户是否为存在
-            map.put("data",false);
-        }else{
-            map.put("data",true);
+        if(fu!=null) {//是否登录
+            map.put("msg", true);
 
-        FcUser fcUser = userService.loginUser(type,user,password);//取用户信息
+            String userName = fu.getUserName();
+            String user = fu.getUserName();
+            String password = fu.getPassword();
+            String type = fu.getUserTypeId();
+            String pares = (String) session.getAttribute("parsePath");//图片
+            if (userName == null || userName.length() < 1) {  //判断用户是否为存在
+                map.put("data", false);
+            } else {
+                map.put("data", true);
+
+                FcUser fcUser = userService.loginUser(type, user, password);//取用户信息
           /*  if(!"".equals(pares)){
                 fcUser.setProfilePhoto(pares);
          /*   }*/
 //            if(!"".equals(vipName)){
 //             //   fcUser.setUserName(vipName);
 //            }
-            if(!"".equals(stablephone)) {
-                fcUser.setPhone(stablephone);//固定电话
-            }
-            if(!"".equals(phonenumber)) {
-                fcUser.setTel(phonenumber);//手机
-            }
-            if(!"".equals(email)) {
-                fcUser.setEmail(email);//邮箱
-            }
-            if(!"".equals(social)) {
-                fcUser.setWechart(social);//QQ/weixin
-            }
-            if(!"".equals(companyname)) {
-                fcUser.setCompany(companyname);
-            }
-            if(!"".equals(web)) {
-                fcUser.setWebsite(web);//网站
-            }
-            if(!"".equals(address)) {
-                fcUser.setOperAddr(address);//地址
-            }
-            if(fcUser.getProdKindId()!=null){
+                if (!"".equals(stablephone)) {
+                    fcUser.setPhone(stablephone);//固定电话
+                }
+                if (!"".equals(phonenumber)) {
+                    fcUser.setTel(phonenumber);//手机
+                }
+                if (!"".equals(email)) {
+                    fcUser.setEmail(email);//邮箱
+                }
+                if (!"".equals(social)) {
+                    fcUser.setWechart(social);//QQ/weixin
+                }
+                if (!"".equals(companyname)) {
+                    fcUser.setCompany(companyname);
+                }
+                if (!"".equals(web)) {
+                    fcUser.setWebsite(web);//网站
+                }
+                if (!"".equals(address)) {
+                    fcUser.setOperAddr(address);//地址
+                }
+                if (fcUser.getProdKindId() != null) {
 
-                fcUser.getProdKindId().setProKind(prodKindId);
-            }else{
-                ProKind proKind=new ProKind();//行业类型
-                proKind.setProKind(prodKindId);
-                fcUser.setProdKindId(proKind);
+                    fcUser.getProdKindId().setProKind(prodKindId);
+                } else {
+                    ProKind proKind = new ProKind();//行业类型
+                    proKind.setProKind(prodKindId);
+                    fcUser.setProdKindId(proKind);
+                }
+
+                if (fcUser.getComptypeId() != null) {
+                    fcUser.getComptypeId().setCompType(comptypeId);
+                } else {
+                    CompType compType = new CompType();//公司类型
+                    compType.setCompType(comptypeId);
+                    fcUser.setComptypeId(compType);
+                }
+
+                if (fcUser.getAppTypeId() != null) {
+                    fcUser.getAppTypeId().setAppType(appTypeId);
+                } else {
+                    AppType appType = new AppType();//申请人类型
+                    appType.setAppType(appTypeId);
+                    fcUser.setAppTypeId(appType);
+                }
+
+
+                userService.saveUser(fcUser);
+
+                map.put("flag", true);
             }
 
-            if( fcUser.getComptypeId()!=null){
-                fcUser.getComptypeId().setCompType(comptypeId);
-            }else{
-                CompType compType=new CompType();//公司类型
-                compType.setCompType(comptypeId);
-                fcUser.setComptypeId(compType);
-            }
-
-            if( fcUser.getAppTypeId()!=null){
-                fcUser.getAppTypeId().setAppType(appTypeId);
-            }else {
-               AppType appType = new AppType();//申请人类型
-                appType.setAppType(appTypeId);
-                fcUser.setAppTypeId(appType);
-            }
-         /*   if(!"".equals(prodKindId)) {
-                fcUser.setProdKindId(prodKindId);
-            }
-            if(!"".equals(comptypeId)) {
-                fcUser.setComptypeId(comptypeId);//地址
-            }
-            if(!"".equals(appTypeId)) {
-                fcUser.setAppTypeId(appTypeId);//地址
-            }*/
-
-            userService.saveUser(fcUser);
-
-        map.put("flag",true);
+        }else{
+            map.put("msg", true);
         }
         return map;
     }
@@ -653,18 +650,18 @@ public class LoginAction {
         String user= fcUser.getUserName();
         String password = fcUser.getPassword();
         String type= fcUser.getUserTypeId();
-        if(user!=null && user.length()>0){
-        	FcUser fcuser = userService.loginUser(type,user,password);
-        	if(fcuser!=null) 
-        		map.put("entity", fcuser);
-        	if(fcuser.getProdKindId()!=null){
-                map.put("prodkind",fcuser.getProdKindId());
+        if(fcUser!=null ){
+        	//FcUser fcuser = userService.loginUser(type,user,password);
+        	if(fcUser!=null)
+        		map.put("entity",fcUser);
+        	if(fcUser.getProdKindId()!=null){
+                map.put("prodkind",fcUser.getProdKindId());
             }
-            if(fcuser.getComptypeId()!=null){
-                map.put("comptype", fcuser.getComptypeId());
+            if(fcUser.getComptypeId()!=null){
+                map.put("comptype", fcUser.getComptypeId());
             }
-            if(fcuser.getAppTypeId()!=null){
-                map.put("appType", fcuser.getAppTypeId());
+            if(fcUser.getAppTypeId()!=null){
+                map.put("appType", fcUser.getAppTypeId());
             }
             map.put("flag",true);
             return map;
@@ -749,7 +746,7 @@ public class LoginAction {
     	if(session.getAttribute("fcUser")!=null) {
         	FcUser fcUser = (FcUser)session.getAttribute("fcUser");
         	String userid = fcUser.getId();
-        	SafeQusetion safeQusetion= accountService.getSafeQusetion(userid);
+        	SafeQusetion safeQusetion= accountService.getSafeQusetion(userid).get(0);
         	if(safeQusetion!=null) {
         		return "html/menber/security";
         	} else {
@@ -954,7 +951,7 @@ public class LoginAction {
     public @ResponseBody Map<String,Object> save(HttpSession session,String question,String answer,String confirmAnswer){
 //        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
         FcUser fcUser = (FcUser)session.getAttribute("fcUser");
-        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
+        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId()).get(0);
         if(safeQusetion!=null){
 			safeQusetion.setAnswer(answer);
 			safeQusetion.setQuestion(question);
@@ -971,7 +968,7 @@ public class LoginAction {
     public @ResponseBody Map<String,Object> showQuestion(HttpSession session){
 //        FcUser fcUser=userService.loginUser((String)session.getAttribute("type"),(String)session.getAttribute("user"),(String)session.getAttribute("password"));
         FcUser fcUser = (FcUser)session.getAttribute("fcUser");
-        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId());
+        SafeQusetion safeQusetion= accountService.getSafeQusetion(fcUser.getId()).get(0);
         map.put("entity",safeQusetion);
         return map;
     }
@@ -1035,7 +1032,7 @@ public class LoginAction {
     public @ResponseBody Map<String,Object> addBillApp(HttpSession session,String appType,String billType,String billTitle){
 //        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
         FcUser fcuser = (FcUser)session.getAttribute("fcUser");
-        if(fcuser!=null) {
+        if(fcuser!=null) {//用户不能为空
 //            BillApp billApp=accountService.findBillApp(fcuser.getId());
 //            if(billApp==null){
 //                accountService.appBill(appType, billType, billTitle, fcuser.getId());
@@ -1043,6 +1040,7 @@ public class LoginAction {
 //            }else{
         	BillApp billApp= new BillApp();
             billApp.setAppType(appType);
+            billApp.setFcUser(fcuser.getId());
             billApp.setBillTitle(billTitle);
             billApp.setBillType(billType);
             billApp.setBillCreateDate(new Date());
@@ -1060,25 +1058,30 @@ public class LoginAction {
 //        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
     	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
         if(fcuser!=null) {
-           BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
-           if(billApp!=null){
-               map.put("flag",true);
-               if(accountService.findBillSendAddr(billApp.getBaId())!=null){//
-                 BillSendAddr billSendAddr= accountService.findBillSendAddr(billApp.getBaId());
-                 billSendAddr.setReceiver(receiver);
+           List<BillApp> list=accountService.findBillApp(fcuser.getId());//查看申请发票
+           if(list!=null) {
+
+                   BillApp billApp=list.get(0);
+               map.put("flag", true);
+               if (accountService.findBillSendAddr(fcuser.getId()) != null) {//
+                   BillSendAddr billSendAddr = accountService.findBillSendAddr(fcuser.getId()).get(0);
+                   billSendAddr.setReceiver(receiver);
                    billSendAddr.setAddress(address);
                    billSendAddr.setCity(city);
                    billSendAddr.setPhone(phone);
                    billSendAddr.setTel(tel);
                    billSendAddr.setMailCode(mailCode);
                    billSendAddr.setReceiver(receiver);
-                   billSendAddr.setBaId(billApp.getBaId());
+                   billSendAddr.setFcUserId(fcuser.getId());
                    accountService.appBillSendAddr(billSendAddr);
+               } else {
+                   accountService.appBillSendAddr(receiver, city, address, mailCode, phone, tel, fcuser.getId());
+               }
+
                }else{
-               accountService.appBillSendAddr(receiver,city,address,mailCode,phone,tel,billApp.getBaId());}
-           }else{
-               map.put("flag",false);
-           }
+                   map.put("flag", false);
+               }
+
             map.put("ok",true);
         }else{
             map.put("ok",false);
@@ -1089,12 +1092,11 @@ public class LoginAction {
     public @ResponseBody Map<String,Object>  addBillSendAddr(HttpSession session){
 //        FcUser fcuser = userService.loginUser((String) session.getAttribute("type"),(String)session.getAttribute("user"),(String) session.getAttribute("password"));
     	FcUser fcuser = (FcUser)session.getAttribute("fcUser");
-        BillApp billApp=accountService.findBillApp(fcuser.getId());//查看申请发票
-        BillSendAddr billSendAddr= accountService.findBillSendAddr(billApp.getBaId());//发票地址
-        if(billApp!=null&&billSendAddr!=null) {
-
-            map.put("billapp", billApp);
-            map.put("billSendAddr", billSendAddr);
+        List<BillApp> list=accountService.findBillApp(fcuser.getId());//查看申请发票
+        List< BillSendAddr> billSendAddrlist= accountService.findBillSendAddr(fcuser.getId());//发票地址
+        if(list.size()>0&&billSendAddrlist!=null) {
+            map.put("list", list);
+            map.put("billSendAddr", billSendAddrlist.get(0));
         }
         return map;
     }

@@ -175,18 +175,18 @@
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
                             <select name="htype" id="htype">
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="金融业">金融业</option>
-                                <option value="房地产|建筑业">房地产|建筑业</option>
-                                <option value="商业服务|个体">商业服务|个体</option>
-                                <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
-                                <option value="生产|加工|制造">生产|加工|制造</option>
-                                <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
-                                <option value="服务业|个体">服务业|个体</option>
-                                <option value="能源|矿产|环保">能源|矿产|环保</option>
-                                <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
-                                <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
+                                <option value="0">政府|非盈利机构</option>
+                                <option value="1">政府|非盈利机构</option>
+                                <option value="2">金融业</option>
+                                <option value="3">房地产|建筑业</option>
+                                <option value="4">商业服务|个体</option>
+                                <option value="5">贸易|批发|零售|租赁业</option>
+                                <option value="6">生产|加工|制造</option>
+                                <option value="7">交通|运输|物流|仓储</option>
+                                <option value="8">服务业|个体</option>
+                                <option value="9">能源|矿产|环保</option>
+                                <option value="10">农|林|牧|渔|其他</option>
+                                <option value="11">文化|传媒|娱乐|体育</option>
                             </select>
                             </label>
                         </div>
@@ -207,9 +207,9 @@
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
                             <select name="stype" id="appTypeId">
-                                <option value="法人">法人</option>
-                                <option value="股东">股东</option>
-                                <option value="项目负责人">项目负责人</option>
+                                <option value="0">法人</option>
+                                <option value="1">股东</option>
+                                <option value="2">项目负责人</option>
                             </select>
                             </label>
                         </div>
@@ -320,9 +320,7 @@
         param.top = Math.round((maxHeight - param.height) / 2);
         return param;
     }
-    $(document).ready(function () {
-        var path='${sessionScope.path}';//图片
-        // $("#parseImg").attr("src",path);
+    function showDate() {
         $.ajax({
             url: '${ctx}/showUserInfo',
             type: 'POST',
@@ -330,7 +328,7 @@
             cache: false,
             success: function (data) {
                 if (data.flag) {
-                     var user=data.entity;
+                    var user=data.entity;
                     $("#vipname").val(user.userName);
                     $("#phonenumber").val(user.tel);
                     $("#stablephone").val(user.phone);
@@ -346,7 +344,7 @@
                         $("#ctype").val(data.comptype.compType);
                     }
                     if(data.appType!=null){
-                        $("#stype").val(data.appType.appType);
+                        $("#appTypeId").val(data.appType.appType);
                     }
 
                 }else {
@@ -355,27 +353,63 @@
                 }
             }
         })
+    }
+    $(document).ready(function () {
+        var path='${sessionScope.path}';//图片
+        // $("#parseImg").attr("src",path);
+        showDate();
     });
+    $(".save").click(function () {
+
+        var email = document.getElementById('email').value;
+        var stablephone = document.getElementById('stablephone').value;
+        var phone1 = document.getElementById('address').value;
+        var phone = document.getElementById('phonenumber').value;
+        if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+            $('.phonenumber').html('手机号码有误，请重填');
+            return ;
+
+        }else if(phone==""){
+
+            $('.phonenumber').html('手机号码有误，请重填');
+            return ;
+        }
+        else if(stablephone==""){
+            $('.stablephone').html('电子邮箱不能为空');
+            return ;
+        }else if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+            $('.email').html('电子邮箱错误');
+            return ;
+        }
+        else if(email==""){
+            $('.email').html('电子邮箱不能为空');
+            return ;
+        }
 
 
+        $.ajax({
+            url: ctx+'/updateUserInfo',
+            type: 'POST',
+            data: "vipName="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
+            "&email="+$("#email").val()+"&social="+$("#social").val()+"&companyname="+$("#companyname").val()+"&prodKindId="+$("#htype").val()
+            +"&comptypeId="+$("#ctype").val()+"&appTypeId="+$("#appTypeId").val()+"&web="+$("#web").val()+"&address="+$("#address").val(),
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+                console.log(data);
+                if (data.msg) {
+                    if (data.flag) {
+                        alert("设置成功!");
+                      //  window.location.href = ctx + "/vips";
+                    } else {
+                        alert("失败");
+                    }
+                }else {
+                    alert("您还未登录!");
+                }
+            }
+        })
+    });
 </script>
-
-
-
-    <script>
-
-  //  $('#vipname').blur(function(){
-   
-
-
-   // });
-
-
-
-
-    </script>
-
-
-
 </body>
 </html>

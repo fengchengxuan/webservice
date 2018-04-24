@@ -39,7 +39,6 @@ public class UserServiceImpl extends BaseDao implements UserService {
         }else if("1".equals(type)){//邮箱类型
             fcUser.setEmail(userName);
         }
-
         userDao.saveEntity(fcUser);
     }
     

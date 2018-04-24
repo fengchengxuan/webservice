@@ -66,7 +66,7 @@ public class BaseDao<T>{
 		}
 		List list=query.list();
 		if (list!=null && list.size()>0) {
-			return (T) list.get(0);
+			return (T) list;
 		}
 		return null;
 	}

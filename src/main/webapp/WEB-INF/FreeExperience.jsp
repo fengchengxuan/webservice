@@ -395,7 +395,7 @@
         var hpone = $("#stablephone").val();              //固定电话
         var phonenumber=$("#phonenumber").val();                //手机号码
         var email=$("#email").val();                  //邮箱
-        var web=$("#web").val();             //公司网址
+        var web=$("#website").val();             //公司网址
         var social=$("#social").val();                //QQ微信
         var appContent=$("#appContent").val();       //申请需求
        /* if(!(/^(0[0-9]{2,3}\/-)?([2-9][0-9]{6,7})+(\/-[0-9]{1,4})?$/.test(hpone))){
@@ -444,46 +444,7 @@
             return ;
         }*/
        /* if(userName==null||userName==""){    //登录判断
-            //---------------------------
-            //匿名注册
-            $.ajax({
-
-                type : 'POST',
-                async:true,
-                cache:false,
-                dataType : 'json',
-                success : function(data) {
-                    if(data!=null && data!=""){
-                        if(data.flat){
-                            userName = data.user;
-                            $.ajax({
-
-                                type : 'POST',
-                                data : "userName="+userName+"&industry="+industry+"&companyType="+companyType+"&application="+application+""
-                                +"&company="+company+"&address="+address+"&fHpone="+fHpone+"&mHpone="+mHpone+"&email="+email+"&website="+website+
-                                "&userQQ="+userQQ+"&appContent="+appContent,
-                                async:true,
-                                cache:false,
-                                dataType : 'json',
-                                success : function(data) {
-                                    if(data!=null && data!=""){
-                                        if(data[0]=="1001"){
-                                            alert("申请成功");
-
-                                        }else if(data[0]=="已经没有名额了"){
-                                            alert(data[0]);
-
-                                        }else{
-                                            alert(data[0]);
-                                        }
-                                    }
-                                }
-                            })
-                        }
-                    }
-                }
-            })
-        }else{//已经有账号存在*/
+          */
             $.ajax({
                 url : '${ctx}/apply/proApply',
                 type : 'POST',
@@ -498,11 +459,15 @@
                         if(data.ok){
                             alert("申请成功");
                             window.location.href="${ctx}/free";
+                        }else{
+                            if(confirm("是否要登录")){
+                                window.location.href="${ctx}/login";
+                                }
+
                         }
                     }
                 }
             })
-     //   }
     });
 </script>
 <script>

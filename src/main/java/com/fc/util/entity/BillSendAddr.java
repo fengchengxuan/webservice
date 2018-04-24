@@ -14,8 +14,8 @@ public class BillSendAddr extends Base{//发票邮寄地址
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(length = 36)
     private String  id;
-    @Column(name = "ba_id")
-    private String baId;
+    @Column(name = "fcuser_id")
+    private String fcUserId;
     @Column(name = "receiver",length = 10)
     private String receiver;//收件人
     @Column(name = "city")
@@ -37,12 +37,12 @@ public class BillSendAddr extends Base{//发票邮寄地址
         this.id = id;
     }
 
-    public String getBaId() {
-        return baId;
+    public String getFcUserId() {
+        return fcUserId;
     }
 
-    public void setBaId(String baId) {
-        this.baId = baId;
+    public void setFcUserId(String fcUserId) {
+        this.fcUserId = fcUserId;
     }
 
     public String getReceiver() {
