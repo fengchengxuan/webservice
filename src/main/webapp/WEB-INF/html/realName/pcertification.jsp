@@ -198,22 +198,23 @@
                             <div class="thisPlatform">
                                 <div class="TPitem">
                                     <span class="tpi-name">姓名</span>
-                                    <input type="text" placeholder="" id="name">
+                                    <input type="text" placeholder="" id="name" "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=8 name="Numbers">
+                                    <span class="name"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">身份证号码</span>
                                     <input type="text" placeholder="" id="nameNum">
-                                    <span>身份证号码有误，请重新输入</span>
+                                    <span class="nameNum"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">确认再次输入核对</span>
                                     <input type="text" placeholder="" id="reNameNum">
-                                    <span>两次输入的身份证号码不一致，请重新输入</span>
+                                    <span class="reNameNum"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">电话号码</span>
-                                    <input type="text" placeholder="" id="phone">
-                                    <span>手机号码格式不正确</span>
+                                    <input type="text" placeholder="" id="phone" onkeyup="value=value.replace(/[^\d]/g,'')">
+                                    <span class="phone"></span>
                                 </div>
                                 <div  class="TPimgitem">
                                     <span class="tpi-name">身份证正面</span>
@@ -327,10 +328,47 @@
 </script>
 <script type="text/javascript">
  function savePersonCertify() {
-     if($("#reNameNum").val()!=$("#nameNum").val()){
-         alert("身份证号不一致");
-         return ;
-     }
+	 var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;  
+ 	//电话  
+ 	var phone = $.trim($('#phone').val()); 
+	 
+	 
+ 	var regIdNo = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/; 
+	var idNo=document.getElementById("nameNum");
+     if($("#name").val()==null || $("#name").val()=="" ) {
+    	    //alert("");
+    	    $(".name").html("请输入名字");
+
+    	    return ;
+    	    }
+    	    
+    	    else  if($("#nameNum").val()==null || $("#nameNum").val()=="" ) {
+    	  
+    	    $(".nameNum").html("请输入身份证");
+
+    	    return ;
+    	    }
+    	    else if($("#reNameNum").val()!=$("#nameNum").val()){
+  	    	  $(".reNameNum").html("新旧身份证号不能一样");
+  	          return ;
+  	      }
+    	    else if (!phoneReg.test(phone)) {  
+         	   
+    	        $(".phone").html("请输入有效的手机号码");
+    	        return ;  
+    	    }     
+     
+    	    else if($("#phone").val()==null||$("#phone").val()=="" ){
+    	    //alert("");
+    	    $(".phone").html("请输入电话号码");
+
+    	    return ;
+    	    }
+    	      
+
+     
+     
+     
      $.ajax({
          type: 'POST',
          url: ctx + '/savePCertify',
@@ -380,33 +418,66 @@
 
   
     $(".post").click(function(){
-    if($("#name").val()==null || $("#name").val()=="" ) {
-    //alert("");
-    $("#qsrm").html("请输入名字");
-
-    return ;
-    }
-    else  if($("#sfz").val()==null || $("#sfz").val()=="" ) {
-    //alert("");
-    $("#qsrmm").html("请输入身份证");
-
-    return ;
-    } else if($("#dh").val()==null||$("#dh").val()=="" ){
-    //alert("");
-    $("#qsrxmm").html("请输入电话号码");
-
-    return ;
-    }
-
-    else if($("#oldpassword").val()==$("#password").val() ){
-    //alert("");
-    $("#passd").html("新旧身份证号不能一样");
-    return ;
-    }
+    
 
 
 
     });
+    
+    
+  
+    
+    
+    
+    
+    $("#name").blur(function(){
+    	if($("#name").val()==null || $("#name").val()=="" ) {
+    	    //alert("");
+    	    $(".name").html("请输入名字");
+    	    return ;
+    	    }else{
+    	    	 $(".name").html("");
+    	    }
+    })
+    $("#nameNum").blur(function(){
+    	var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    	var card=document.getElementById("nameNum");
+    	if(reg.test(card) === false)  
+	    {  
+	        $(".nameNum").html("身份证输入不合法");
+	        return  false;  
+	    } else{
+	    	$(".nameNum").html("");
+	    } 
+    })
+    $("#nameNum").blur(function(){
+    if($("#nameNum").val()==null || $("#nameNum").val()=="" ) {
+	  
+	    $(".nameNum").html("请输入身份证");
+
+	    return ;
+	    }else{
+	    	$(".nameNum").html("");
+	    }
+    })
+     $("#reNameNum").blur(function(){
+    if($("#reNameNum").val()!=$("#nameNum").val()){
+	    	  $(".reNameNum").html("新旧身份证号不能一样");
+	          return ;
+	      }else{
+	    	  $(".reNameNum").html("");
+	      }
+     })
+       $("#phone").blur(function(){
+     if($("#phone").val()==null||$("#phone").val()=="" ){
+	    //alert("");
+	    $(".phone").html("请输入电话号码");
+
+	    return ;
+	    }else{
+	    	 $(".phone").html("");
+	    }
+       })
     </script>
 </body>
 </html>

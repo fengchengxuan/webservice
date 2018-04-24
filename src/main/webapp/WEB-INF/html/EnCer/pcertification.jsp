@@ -58,30 +58,34 @@
                         <div role="tabpanel" class="tab-pane fade in active" id="Section1">
                             <div class="thisPlatform">
                                 <div class="TPitem">
-                                    <span class="tpi-name">企业名称</span>
-                                    <input type="text" placeholder="" id="enterpriceName">
+                                    <span class="tpi-name" >企业名称</span>
+                                    <input type="text" placeholder="" id="enterpriceName" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=25 name="Numbers">
+                                    <span class="enterpriceName"></span>
                                 </div>
                                 <div  class="TPitem">
-                                    <span class="tpi-name">法人姓名</span>
-                                    <input type="text" placeholder="" id="corporateName">
+                                    <span class="tpi-name" >法人姓名</span>
+                                    <input type="text" placeholder="" id="corporateName" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=8 name="Numbers">
+                                    <span class="corporateName"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">申请人姓名</span>
-                                    <input type="text" placeholder="" id="appName">
+                                    <input type="text" placeholder="" id="appName" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=8 name="Numbers">
+                                    <span class="appName"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">固定电话</span>
                                     <input type="text" placeholder="" id="phone">
-                                    <span>固定号码格式不正确</span>
+                                    <span class="phone"></span>
                                 </div>
                                 <div  class="TPitem">
-                                    <span class="tpi-name">固定电话</span>
-                                    <input type="text" placeholder="" id="tel">
-                                    <span>手机号码格式不正确</span>
+                                    <span class="tpi-name">手机号码</span>
+                                    <input type="text" placeholder="" id="tel" maxlength="11">
+                                    <span class="tel"></span>
                                 </div>
                                 <div  class="TPitem">
                                     <span class="tpi-name">公司网址</span>
                                     <input type="text" placeholder="" id="website">
+                                    <span class="website"></span>
                                 </div>
                                 <div  class="TPimgitem">
                                     <span class="tpi-name">身份证正面</span>
@@ -191,6 +195,51 @@
 </script>
 <script type="text/javascript">
     function saveEnterCertify() {
+    	var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;  
+    	//电话  
+    	var tel = $.trim($('#tel').val()); 
+    	var website=$("#website").val();
+    	
+    	 if($("#enterpriceName").val()==null || $("#enterpriceName").val()=="" ) {
+     	    //alert("");
+     	    $(".enterpriceName").html("请输入企业名字");
+
+     	    return ;
+     	    }
+     	    else  if($("#corporateName").val()==null || $("#corporateName").val()=="" ) {
+     	  
+     	    $(".corporateName").html("请输入法人名字");
+
+     	    return ;
+     	    }
+     	    else if($("#appName").val()!=$("#appName").val()){
+   	    	  $(".appName").html("请输入名字不能为空");
+   	          return ;
+   	      }
+     	   
+     	    else if($("#phone").val()==null||$("#phone").val()=="" ){
+     	    //alert("");
+     	    $(".phone").html("请输入电话号码");
+
+     	    return ;
+     	    }
+     	   else if($("#tel").val()==null||$("#tel").val()=="" ){
+        	    //alert("");
+        	    $(".tel").html("请输入手机号码");
+
+        	    return ;
+        	    }else if (!phoneReg.test(tel)) {  
+        	   
+        	        $(".tel").html("请输入有效的手机号码");
+        	        return ;  
+        	    }  else  if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+        	             $('.website').html("请输入贵公司正确的网址");
+        	             return ; 
+        	         }
+        	 
+    
+    	
+    	
 
         $.ajax({
             type: 'POST',
@@ -202,17 +251,92 @@
                 if (msg.ok) {
                     if(!msg.flag){
                         alert("已经认证过了");
-                        location.reload();
+                       // location.reload();
                         return;
                     }
                     alert("成功");
-                    location.reload();
+                  //  location.reload();
                 } else {
                     alert("失败")
                 }
             }
         })
     }
+    
+    $("#enterpriceName").blur(function () { 
+    if($("#enterpriceName").val()==null || $("#enterpriceName").val()=="" ) {
+ 	    //alert("");
+ 	    $(".enterpriceName").html("请输入企业名字");
+
+ 	    return ;
+ 	    }else{
+ 	    	 $(".enterpriceName").html("");
+ 	    }
+    })
+    
+    $("#corporateName").blur(function () { 
+ 	    if($("#corporateName").val()==null || $("#corporateName").val()=="" ) {
+ 	  
+ 	    $(".corporateName").html("请输入法人名字");
+
+ 	    return ;
+ 	    }else{
+ 	    	 $(".corporateName").html("");
+ 	    }
+    })
+ 	    
+ 	     $("#appName").blur(function () { 
+ 	     if($("#appName").val()!=$("#appName").val()){
+	    	  $(".appName").html("请输入名字不能为空");
+	          return ;
+	      }else{
+	    	  $(".appName").html("");
+	      }
+ 	     })
+ 	    $("#phone").blur(function () { 
+ 	    if($("#phone").val()==null||$("#phone").val()=="" ){
+ 	    //alert("");
+ 	    $(".phone").html("请输入电话号码");
+
+ 	    return ;
+ 	    }else{
+ 	    	$(".phone").html("");
+ 	    }
+ 	    })
+ 	     $("#tel").blur(function () { 
+ 	 if($("#tel").val()==null||$("#tel").val()=="" ){
+    	    //alert("");
+    	    $(".tel").html("请输入手机号码");
+
+    	    return ;
+    	    }else{
+    	    	 $(".tel").html("");
+    	    }
+ 	     })
+ 	  $("#tel").blur(function () { 
+ 	 if (!phoneReg.test(tel)) {  
+    	   
+    	        $(".tel").html("请输入有效的手机号码");
+    	        return ;  
+    	    } else{
+    	    	$(".tel").html("");
+    	    }
+ 	  })
+    
+    $("#website").blur(function () { 
+    	var website=$("#website").val();
+        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+            $('.website').html("请输入贵公司正确的网址").css("color","red")
+        
+        }else{
+        	
+         $('.website').html("")
+        }
+        })
+    
+    
+    
+ 
 </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 $(".save").click(function(){
-
+	  var password=document.getElementById("password");
     if($("#oldpassword").val()==null || $("#oldpassword").val()=="" ) {
         //alert("");
         $("#qsrmm").html("请输入密码");
@@ -11,6 +11,13 @@ $(".save").click(function(){
 
         return ;
     }
+    else if((password.value).length!=0){
+        reg=/(\w){6,20}/;
+        if(!reg.test(password.value)){
+        $("#qsrxmm1").html("密码不合法");
+        return ;
+        }
+        }
     else if($("#password").val()!=$("#repassword").val() ){
         $("#passd").html("您输入的新密码与确认密码确认不一致");
 
@@ -74,16 +81,33 @@ $(function () {
 
     });
 
-    var password=document.getElementById("password");
-    password.onblur=function(){
-    if((password.value).length!=0){
-    reg=/(\w){6,20}/;
-    if(!reg.test(password.value)){
-    $("#qsrxmm1").html("密码不合法");
-    return ;
-    }
-    else{
-    $("#qsrxmm1").html("");
-    }
-    }
-    };
+$("#oldpassword").blur(function(){
+	
+  if($("#oldpassword").val()==null || $("#oldpassword").val()=="" ) {
+      //alert("");
+      $("#qsrmm").html("请输入密码");
+
+      return ;
+  }else{
+	  $("#qsrmm").html("");
+	  }
+  })
+ 
+  
+  
+  $("#password").blur(function(){
+	
+  if((password.value).length!=0){
+      reg=/(\w){6,20}/;
+      if(!reg.test(password.value)){
+      $("#qsrxmm1").html("密码不合法");
+      
+      }
+      else{
+    	  $("#qsrxmm1").html("");
+      }
+      }
+  
+  })
+
+  

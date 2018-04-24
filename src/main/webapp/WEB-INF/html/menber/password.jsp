@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="${ctx}/static/front/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/menber.css" type="text/css">
     <style>
+    #qsrxmm1{
+    line-height: 40px;
+    font-size:12px;
+    color:red;
+    }
     .mcontainer{
     width: 1210px;
     margin: 0 auto;
@@ -27,10 +32,13 @@
     /*float: right;*/
     /*margin-right: 285px;*/
     /*}*/
+    #tips span{
+    line-height:40px;}
     .pwd-item input{
     float: left;
     }
     #passd,#qsrmm,#qsrxmm{
+    line-height: 40px;
     font-size: 12px;
     margin-left: 5px;
     color: red;
@@ -52,14 +60,18 @@
                 <div class="pwd-input">
             <div class="pwd-item">
             <span class="setn">原始登录密码</span>
-            <input type="password" id="oldpassword" placeholder="">
+     
+       <form  autocomplete="off">    
+            
+			 <input type="text" class="demo" id="oldpassword"   name="password" onfocus="this.type='password'" autocomplete="off">
+      
             <div id="qsrmm"></div>
-            <span class="note" style="line-height: 40px">请您输入原登录密码，密码输入不对无法进行新密码更改</span>
+            <span class="note" style="line-height: 40px"></span>
             </div>
             <div class="pwd-item">
             <span class="setn" >设置登录密码</span>
             <input type="text" id="password" placeholder="">
-            <span class="note">请设置登录密码为数字+字母+特殊符号，请不要使用手机号或生日及常用的数字作为密码。</span>
+            <span class="note"></span>
             <div id="qsrxmm1"></div>
             <div id="qsrxmm"></div>
 
@@ -67,12 +79,15 @@
             <div class="pwd-item">
             <span class="setn" >确认登录密码</span>
             <input type="text" id="repassword" name="" placeholder="" maxlength="20">
+           </form> 
+            
+            
             <div id="tips"><span></span><span></span><span></span><span></span></div>
             <div id="passd"></div>
 
 
             <div class="note">
-            <span class="note" style="position: absolute;">您的密码强度不错，定期更改密码会更安全哦~</span>
+            <span class="note" style="position: absolute;"></span>
             </div>
             </div>
             </div>
