@@ -67,7 +67,8 @@ public class ApplyAction {
     public @ResponseBody FcUser getUserApply(HttpSession session){
 //        session.getAttribute("userName") ;
 //        return  applyService.userApplySerivce("11");
-        return userService.getUser(session.getAttribute("userName").toString());
+    	String username = ((FcUser)session.getAttribute("fcUser")).getUserName();
+        return userService.getUser(username);
     }
 
 

@@ -397,6 +397,8 @@
         var mHpone=$("#phonenumber").val();                //手机号码
         var email=$("#email").val();                  //邮箱
         var website=$("#website").val();             //公司网址
+        var url=document.getElementById("website").value;
+ 		var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
         var userQQ=$("#social").val();                //QQ微信
         var appContent=$("#appContent").val();       //申请需求
         if(company==null || company==""||address==null||address==""||website==null||website==""||appContent==null){
@@ -432,7 +434,7 @@
             }
         }
 
-        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+ 		if(!reg.test(url)){
             $('.website').html("请输入贵公司正确的网址").css("color","red")
             return ;
         }
@@ -511,16 +513,29 @@
              $('.email').html("请输入正确邮箱地址，亲").css("color","red")
        
         }else{
-		$('.email').html("正确");
+		$('.email').html("*星号代表此选项必填：请手动输入您公司/企业真企业邮箱或者负责人邮箱。").css('color','#666');
+	
             }
         });
         
          $("#website").blur(function () { 
-        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+         
+ 
+  
+        var url=document.getElementById("website").value;
+
+ 		var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
+
+ 		if(!reg.test(url)){
+        
+        
+        
+        
+        
             $('.website').html("请输入贵公司正确的网址").css("color","red")
         
         }else{
-         $('.website').html("正确")
+         $('.website').html("*星号代表此选项必填：请手动输入您公司/企业真实官网，无官方网址请填写无。").css("color","#666")
         }
         })
         </script>
@@ -556,23 +571,11 @@
         if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(mHpone))){   //手机判断
          $('.phonenumber').html("请输入正确的手机号码！").css("color","red");
             }else{
-		$('.phonenumber').html("正确");
+		$('.phonenumber').html("*星号代表此选项必填：请手动输入您公司/企业负责该项目的负责人手机电话。").css("color","#666");
            
             }
         });
         
-        
-     
-        
-     
-          
-        
-        
-        
-        
-            
-           
-     
 </script>
 </body>
 </html>

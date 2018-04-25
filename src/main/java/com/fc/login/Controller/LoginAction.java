@@ -1,10 +1,12 @@
 package com.fc.login.Controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -17,7 +19,11 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
@@ -26,6 +32,11 @@ import com.fc.util.CommentUtil;
 import com.fc.util.entity.*;
 import com.fc.util.service.AccountService;
 import com.fc.util.service.CommentService;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -149,7 +160,7 @@ public class LoginAction {
      *@return
      */
     @RequestMapping("logs")//登录
-    public @ResponseBody Map<String,Object>logs(HttpServletRequest request,String type ,String user,String password) {
+    public @ResponseBody Map<String,Object> logs(HttpServletRequest request,String type ,String user,String password) {
         HttpSession session = request.getSession(true);
         FcUser fcUser = null;
         fcUser = userService.loginUser("" ,user, "");
@@ -491,12 +502,16 @@ public class LoginAction {
     @RequestMapping("editvip")
     public  @ResponseBody  Map<String,Object> edit(@RequestParam(value = "evidence", required = false)MultipartFile file, HttpServletRequest request) {
         HttpSession session = request.getSession(true);
-        if(file.getSize() != 0 && file.getSize()<=1000000000){
+        Map<String, Object> fileMap = new HashMap<String, Object>();
+        FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+       
+        	if( file.getSize()>0 && file.getSize()>1024*10){ //文件大小限制为10kb
+        		map.put("data",false);
+        	}else {
             String fileName = file.getOriginalFilename();
             String name = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
             String extension = FilenameUtils.getExtension(fileName);
-            String url = request.getContextPath()+"/upload/"+name+ "." + extension;
-            String basePath = request.getContextPath() +url;
+            String url = "/upload/"+name+ "." + extension;
             String path = session.getServletContext().getRealPath("")+url;
             File targetFile = new File(path);
             if (!targetFile.exists()) {
@@ -508,11 +523,15 @@ public class LoginAction {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            session.setAttribute("parsePath",basePath);
-            map.put("msg",true);
-        }else{
-            map.put("msg",false);
+            session.setAttribute("parsePath",path);
+            if (fcUser != null) {
+            	fcUser.setProfilePhoto(fileName);
+            	session.setAttribute("fcUser", fcUser);
+            	userService.saveUser(fcUser);
+            } 
+            map.put("data",true);
         }
+        
         return map;
     }
 
@@ -660,6 +679,10 @@ public class LoginAction {
             if(fcuser.getAppTypeId()!=null){
                 map.put("appType", fcuser.getAppTypeId());
             }
+            if(fcuser.getProfilePhoto()!=null){
+                map.put("profilePhoto", fcuser.getProfilePhoto());
+            }
+            
             map.put("flag",true);
             return map;
         }
@@ -731,7 +754,7 @@ public class LoginAction {
 //            map.put("user",session.getAttribute("user").toString());
         	 map.put("user", user);
         }
-        if(session.getAttribute("user")!=null){
+        if(session.getAttribute("fcUser")!=null){
             map.put("flat",true);
         }else{
             map.put("flat",false);
@@ -1116,6 +1139,18 @@ public class LoginAction {
         }
         return map;
     }
-
+    
+    @RequestMapping("/updateProfile")
+    public @ResponseBody Map<String,Object> updateProfile(HttpSession session){
+    	String msg = session.getAttribute("err_msg")+"";
+    	if(msg.equals("file_over_size")) {
+    		map.put("errMsg", false);
+    	} else {
+    		map.put("errMsg", true);
+	    	FcUser fcUser = (FcUser)session.getAttribute("fcUser");
+	    	userService.saveUser(fcUser);
+    	}
+    	return map;
+    }
 }
 
