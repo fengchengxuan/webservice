@@ -682,8 +682,8 @@ public class LoginAction {
             if(fcUser.getAppTypeId()!=null){
                 map.put("appType", fcUser.getAppTypeId());
             }
-            if(fcuser.getProfilePhoto()!=null){
-                map.put("profilePhoto", fcuser.getProfilePhoto());
+            if(fcUser.getProfilePhoto()!=null){
+                map.put("profilePhoto", fcUser.getProfilePhoto());
             }
             
             map.put("flag",true);
