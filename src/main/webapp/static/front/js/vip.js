@@ -21,14 +21,7 @@ $(".save").click(function () {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	   var website=$("#web").val();
 	var email = document.getElementById('email').value;
 	var stablephone = document.getElementById('stablephone').value;
 	var phone1 = document.getElementById('address').value;
@@ -52,7 +45,15 @@ $(".save").click(function () {
 	    else if(email==""){
 	    $('.email').html('电子邮箱不能为空');
 	    return ;
-	    }
+	    }else if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+            //alert("");
+            $('.website').html('请输入贵公司正确的网址');
+            return ;
+        }
+
+	    
+	    
+	    
 	  
 
 	 

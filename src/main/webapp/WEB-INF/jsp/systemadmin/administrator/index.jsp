@@ -223,7 +223,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 </button>
             </div>
             <div class="modal-body" style="margin-left: 30px;font-family: '微软雅黑',sans-serif;font-size: 14px;">
-                <div>账号昵称<input id="addUserName" type="text" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="">
+                <div>账号昵称<input id="addUserName" type="text" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="" readonly>
                 </div>
                 <p style="font-size: 12px;color:red;margin-left: 85px;">昵称设置只能以英文或数字两者结合</p>
                 <div class="modal-body" style="margin-left: -15px;font-family: '微软雅黑',sans-serif;font-size: 14px;">
@@ -239,10 +239,11 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </select>
                     </label>
                 </div>
-                <div  style="margin: 20px 0">手机号码<input id="addPhoneNumber" type="text" placeholder="" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" value="例如：fengcheng" onfocus="this.value=''" onblur="if(this.value==''){this.value=' 例如：fengcheng'}">
+                <div  style="margin: 20px 0">手机号码<input id="addPhoneNumber" type="text"  style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px"  placeholder="例如：fengcheng">
                 </div>
                 <!--邮箱-->
-                <div><span style="margin-left:-20px;">邮箱/e-mail</span><input id="addEmail" type="text" placeholder="" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" value="例如：fengcheng" onfocus="this.value=''" onblur="if(this.value==''){this.value=' 例如：fengcheng'}">
+                <div><span style="margin-left:-20px;">邮箱/e-mail</span><input id="addEmail" type="text" placeholder="例如：fengcheng" style="width: 332px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px">
+                		<span></span>
                 </div>
                 <div style="margin-top: 30px;width: 432px;height: 160px;">
                     <div style="width: 76px;height: 170px;float: left;">权&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限</div>
@@ -284,7 +285,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 </button>
             </div>
             <div style="margin-left: 55px;font-family: '微软雅黑',sans-serif;font-size: 14px;" >
-                <div>账号昵称<input id="updateName" type="text" style="width: 270px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="">
+                <div>账号昵称<input id="updateName" type="text" style="width: 270px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 20px" placeholder="" >
                 </div>
                 <p style="font-size: 12px;color:red;margin-left: 85px;">昵称一旦设定不可修改</p>
                 <div style="margin-top:10px;color: #333;font-size: 16px;">账号等级
@@ -343,7 +344,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             </div>
             <form>
             <div class="modal-body" style="margin-left: 45px;font-family: '微软雅黑',sans-serif;font-size: 14px;">
-                <div><span style="letter-spacing: 9.5px;">账号昵称</span><input type="text" placeholder="" style="color: #666;width: 280px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 10px" name="loginName" id="loginName">
+                <div><span style="letter-spacing: 9.5px;">账号昵称</span><input type="text" placeholder="" style="color: #666;width: 280px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 10px" name="loginName" id="loginName" readonly>
                 </div>
                 <div style="margin-top: 44px;color: #666"><span style="letter-spacing:20px;">原密码</span><input type="password" placeholder="" style="width: 280px;height: 25px;border-radius: 4px;border: 1px #ccc solid; margin-left: 2px" id="password">
                     <p style="font-size: 12px;margin-left: 110px;color: red;">可填写原密码也可以不填写原密码</p>
@@ -528,7 +529,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
         </div><!-- /.modal-dialog -->
         <div style="position: fixed;left:0;top:0;z-index: -1;width: 100%;height: 1500px;background: rgba(0,0,0,0.5)"></div>
     </div><!-- /.modal -->
-
+</div>
 
 
 <%--删除提示--%>
@@ -694,6 +695,18 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
     });
     function addSubmit() {
         $("#clickId").is(':checked');
+        var addEmail=$("#addEmail").val();  
+        var mHpone=$("#addPhoneNumber").val();
+        if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(mHpone))){   //手机判断
+        	alert("请输入正确的手机号码！");
+            $('.addPhoneNumber').html("请输入正确的手机号码！").css("color","red";"font-size","12px");
+               return;
+           }
+        else if(!(/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/.test(addEmail))){  //邮箱判断
+              alert("请输入正确邮箱地址，亲");
+               $('.addEmail').html("请输入正确邮箱地址，亲").css("color","red";"font-size","12px")
+              return;
+          }
         $.ajax({
             url : '${ctx}/admin/addUser',
             type : 'POST',
@@ -1239,7 +1252,16 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             }
         });
     }
-
+//添加手机验证
+    $("#website").blur(function () { 
+   	 var website=$("#website").val(); 
+   if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+       $('.website').html("请输入贵公司正确的网址").css("color","red")
+   
+   }else{
+    $('.website').html("正确")
+   }
+   })
 
 </script>
 <script src="${ctx}/static/background/js/jquery-3.2.1.js" type="text/javascript"></script>

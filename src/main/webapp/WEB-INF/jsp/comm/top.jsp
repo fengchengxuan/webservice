@@ -1,7 +1,7 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ include file="/WEB-INF/jsp/taglib.jsp"%>
- <link rel="stylesheet" href="../../../static/background/css/bootstrap.min.css">
- <link rel="stylesheet" href="../../../static/background/css/top.css">
+ <link rel="stylesheet" href="${ctx}/static/background/css/bootstrap.min.css">
+ <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
  <style>
      .Progresspng img{
          height: 14px;

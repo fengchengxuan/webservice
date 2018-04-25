@@ -371,7 +371,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=false;fosa=tru
                                 <textarea placeholder=""></textarea>
                                 <p style="position: relative;left:90px;">可自定义评语</p>
                             </div>
-                             <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+                            
                             <button  style="margin:20px 0 0 150px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;">提交</button>
                         </form>
                     </div>

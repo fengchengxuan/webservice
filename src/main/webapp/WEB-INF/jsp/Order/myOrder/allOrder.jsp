@@ -19,6 +19,9 @@
                                  position: relative;
                                  left:-95px;
                              }
+     .artable{
+     width:979px;
+     }
 /*弹框*/
 .modal .draftartbox input ,.modal .draftartbox select,.modal .draftartbox textarea{
     margin-left: 15px;
@@ -224,7 +227,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                 <%--<th style="width: 105px;border-left: 1px solid #24a1e4">折扣/优惠券</th>--%>
                 <th style="width: 113px;border-left: 1px solid #24a1e4">订单实付金额</th>
                 <th style="width: 113px;border-left: 1px solid #24a1e4">订单状态</th>
-                <th style="width: 109px;border-left: 1px solid #24a1e4">备注</th>
+                <th style="width: 109px;border-left: 1px solid #24a1e4;border-right: 1px solid #24a1e4;">备注</th>
                 </tr>
                 </thead>
             </table>
