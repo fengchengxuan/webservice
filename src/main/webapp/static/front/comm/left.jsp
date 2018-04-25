@@ -97,7 +97,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var path='${sessionScope.path}';
-        $("#myImg").attr("src",path);
+        var source = "http://localhost:8989/fengcheng/upload/${sessionScope.fcUser.profilePhoto}";
+        $("#myImg").attr("src",source);
     })
 </script>
 

@@ -95,10 +95,14 @@
             width: 481px;
             height: 400px;
         }
+        #profile{
+        width: 80px;
+    height: 80px;
+    border-radius: 50%;}
     </style>
 </head>
 <body>
-<form action="${ctx}/uploadProfile" method="post" enctype="multipart/form-data">  
+<form id="profileForm" method="post" enctype="multipart/form-data"> 
 <div id="conbox" >
     <div class="box">
         <div class="box1">
@@ -113,15 +117,16 @@
         <div class="box-cent">
             <div class="setimg">
                 <div id="preview5" style="float: left;">
-
                     <span class="dui" id="imgOrder_dui" style="display: none;"></span>
-                    <img id="parseImg"  src="${profile_file}" alt=""/>
-
+                    <img id="parseImg" src="" alt=""/>
+					<div id="max">
+					
+					</div>
                 </div>
             </div>
         </div>
         <div class="box4">
-            <button>上传</button>
+            <button onclick="upload_profile()"> 上传</button>
             <button onclick="hidebox()">取消</button>
         </div>
     </div>
@@ -129,33 +134,27 @@
 </form>
 <div style="background-color: #ededed">
     <jsp:include page="/static/front/comm/top.jsp"/>
-
     <div class="mcontainer" id="nava">
         <jsp:include page="/static/front/comm/left.jsp"/>
-
         <form action="" id="myform" enctype="multipart/form-data" method="post">
         <div class="base-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;<a href="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;会员基本设置</span>
+                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;会员基本设置</span>
             </div>
             <div class="setting">
                 <div style="height:160px;">
                     <div class="setimg">
                         <div  style="float: left;height: 80px">
                             <a href="javascript:" class="file" onclick="showbox()">修改头像
-
                                 <input  name="evidence"  onchange="previewImage(this,5)"
                                         type="button"
                                         style="height:80px;"/>
-
                             </a>
                             <span class="dui"  style="display: none;"></span>
-                            <img id="profile_pig"   src="${ctx}/static/front/images/set-title.png" alt=""/>
-                            
+                            <img id="profile" alt=""/>
                         </div>
                     </div>
                 </div>
-
                 <div class="setb">
                     <div class="set-l">
                         <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false readonly></div>
@@ -204,7 +203,7 @@
                         </div>
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
-                            <select name="stype" id="stype">
+                            <select name="stype" id="appTypeId">
                                 <option value="法人">法人</option>
                                 <option value="股东">股东</option>
                                 <option value="项目负责人">项目负责人</option>
@@ -225,32 +224,28 @@
         </form>
     </div>
     <jsp:include page="/static/front/comm/footer.jsp"/>
-
 </div>
-
-
-
-
-
-
 <script src="${ctx}/static/background/js/jquery-3.2.1.js"></script>
 <script src="${ctx}/static/front/js/vip.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
 <script>
-
     function hidebox()
     {
         var mychar = document.getElementById("conbox").style.display ="none";
-
-
     }
     function showbox()
     {
         var mychar = document.getElementById("conbox").style.display ="block";
-
+        var hostport=document.location.host;
+        console.log("服务器ip端口"+hostport);
+        var source = hostport+"${ctx}"+"/upload/"+"${sessionScope.fcUser.profilePhoto}";
+        console.log("source: "+source);
+		console.log("thisDLoc:"+thisDLoc);
+        $("#parseImg").attr("src", source);
     }
 </script>
 <script language="javascript" type="text/javascript">
+	var profile_src;
     //图片预览功能
     function previewImage(file,imgNum)
     {
@@ -281,7 +276,6 @@
             reader.onload = function(evt){img.src = '';img.src = evt.target.result;
             };
             reader.readAsDataURL(file.files[0]);
-
         }
         else //
         {
@@ -295,7 +289,7 @@
             status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
             div.innerHTML = "<div id=divhead"+imgNum+" style='float:left;width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
         }
-     //   myshow (formData);
+        //myshow (formData);
     }
     function clacImgZoomParam( maxWidth, maxHeight, width, height ){
         var param = {top:0, left:0, width:width, height:height};
@@ -303,7 +297,6 @@
         {
             rateWidth = width / maxWidth;
             rateHeight = height / maxHeight;
-
             if( rateWidth > rateHeight )
             {
                 param.width =  maxWidth;
@@ -318,9 +311,12 @@
         param.top = Math.round((maxHeight - param.height) / 2);
         return param;
     }
+    
     $(document).ready(function () {
         var path='${sessionScope.path}';//图片
-        // $("#parseImg").attr("src",path);
+        var msg = '${sessionScope.msg}';
+        if(msg=="fileoversize") alert("图片太大无法上传");
+        //$("#parseImg").attr("src",path);
         $.ajax({
             url: '${ctx}/showUserInfo',
             type: 'POST',
@@ -328,7 +324,9 @@
             cache: false,
             success: function (data) {
                 if (data.flag) {
-                     var user=data.entity;
+                    var user=data.entity;
+                    var path = "http://localhost:8989/fengcheng/upload/";
+                    var source = path + user.profilePhoto;
                     $("#vipname").val(user.userName);
                     $("#phonenumber").val(user.tel);
                     $("#stablephone").val(user.phone);
@@ -346,8 +344,12 @@
                     if(data.appType!=null){
                         $("#stype").val(data.appType.appType);
                     }
-                   
-
+                    console.log("path:"+source);
+                    if( user.profilePhoto.length!=0 && user.profilePhoto!=null && user.profilePhoto!=""){
+                    	$("#profile").attr("src", source);
+                    } else {
+                    	$("#profile").attr("src", path+"set-title.png");
+                    }
                 }else {
                     window.location.href="${ctx}/login";
                     return;
@@ -355,8 +357,9 @@
             }
         })
     });
-
+    
 
 </script>
+
 </body>
 </html>
