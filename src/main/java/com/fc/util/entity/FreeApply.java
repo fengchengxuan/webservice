@@ -17,10 +17,8 @@ public class FreeApply extends Base {//免费申请表
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Column(name = "fan_id",length = 36)
     private String id;
-    @OneToOne
-    @Cascade(value = {org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "fcuser_id")
-    private FcUser fcUserId;//
+    @Column(name = "fcuser_id")
+    private String fcUserId;//
     @Column(name = "demand")
     private String demand;//需求
     
@@ -30,10 +28,11 @@ public class FreeApply extends Base {//免费申请表
 	public void setId(String id) {
 		this.id = id;
 	}
-	public FcUser getFcUserId() {
+	public String getFcUserId() {
 		return fcUserId;
 	}
-	public void setFcUserId(FcUser fcUserId) { 
+
+	public void setFcUserId(String fcUserId) {
 		this.fcUserId = fcUserId;
 	}
 	public String getDemand() {

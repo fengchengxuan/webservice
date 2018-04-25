@@ -331,7 +331,7 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
         $.ajax({
             url : '${ctx}/apply/showApply',
             type : 'POST',
-            data : "userName="+userName+"&company="+company+"&status="+status,
+          //  data : "userName="+userName+"&company="+company+"&status="+status,
             async:true,
             cache:false,
             dataType : 'json',
@@ -339,8 +339,8 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                 if(data!=null && data!=""){
                    var currentPage= $("#currentPage").text();
                    var totalNum= data.totalNum;
-                   var  list= data.applyList;
-                   applyList=list;
+                   var  list= data.list;
+                    applyList = data.applyList;
                    $("#totalNum").val(totalNum);
                    $("#totalNum").text("共"+totalNum+"页");
                     showData(currentPage,totalNum,list);
@@ -358,19 +358,35 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
         if(currentPage!=totalNum &&currentPage<totalNum) {       //当前页不等于总页数
             var strip=i+20;
             for (i;i < strip ; i++) {
+              var   isPassApp=""
+                if(list[i].isPassApp=="0"){
+                    isPassApp="申请中"
+                }else if(list[i].isPassApp=="1"){
+                    isPassApp="审核未通过"
+                }else if(list[i].isPassApp=="2"){
+                    isPassApp="审核通过"
+                }
                 var j = i + 1;
-                var showRow ="<li><span>"+list[i].id+"</span><span>"+list[i].userName+"</span><span>"+list[i].company+"</span>"+
-                "<span>"+list[i].createTime+"</span><span><a href=\"javascript:void(null)\" onclick=\"upDate("+i+")\">详细信息</a></span>"+
-                "<span>"+list[i].status+"</span></li>";
+                var showRow ="<li><span>"+j+"</span><span>"+list[i].userName+"</span><span>"+list[i].company+"</span>"+
+                "<span>"+list[i].fcd+"</span><span><a href=\"javascript:void(null)\" onclick=\"upDate('"+list[i].id+"')\">详细信息</a></span>"+
+                "<span>"+isPassApp+"</span></li>";
                 $("#show").append(showRow);
             }
         }
         if(currentPage==totalNum){   //当前页等于总页数
             for(i;i<list.length;i++){
                 var j = i + 1;
-                var showRow ="<li><span>"+list[i].id+"</span> <span>"+list[i].userName+"</span> <span>"+list[i].company+"</span>"+
-                "<span>"+list[i].createTime+"</span> <span><a href=\"javascript:void(null)\" onclick=\"upDate("+i+")\" >详细信息</a></span>"+
-                "<span>"+list[i].status+"</span></li>";
+                var   isPassApp=""
+                if(list[i].isPassApp=="0"){
+                    isPassApp="申请中"
+                }else if(list[i].isPassApp=="1"){
+                    isPassApp="审核未通过"
+                }else if(list[i].isPassApp=="2"){
+                    isPassApp="审核通过"
+                }
+                var showRow ="<li><span>"+j+"</span> <span>"+list[i].userName+"</span> <span>"+list[i].company+"</span>"+
+                "<span>"+list[i].fcd+"</span> <span><a href=\"javascript:void(null)\" onclick=\"upDate('"+list[i].id+"')\" >详细信息</a></span>"+
+                "<span>"+isPassApp+"</span></li>";
                 $("#show").append(showRow);
             }
         }
@@ -389,8 +405,8 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
         var company=$("#company").val();
         showApply(user,company,status);
     }
-    function upDate(data){//审核页面
-        window.location.href="${ctx}/admin/experience?id="+applyList[data].id+"&status="+applyList[data].status;
+    function upDate(id){//审核页面
+        window.location.href="${ctx}/admin/experience?id="+id;
     }
     $("#oldPage").click(function () {
         var currentPage= $("#currentPage").text();  //取当前页码

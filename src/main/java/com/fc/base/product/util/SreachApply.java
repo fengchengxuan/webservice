@@ -1,6 +1,7 @@
 package com.fc.base.product.util;
 
 import com.fc.base.product.entity.ProApplyEntity;
+import com.fc.base.user.entity.FcUser;
 
 import java.util.List;
 

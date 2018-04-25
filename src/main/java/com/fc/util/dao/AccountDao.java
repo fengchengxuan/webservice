@@ -19,14 +19,14 @@ public interface AccountDao {
 	//��ҵ��֤
 	void addEnterCertify(String enterpriceName, String corporateName, String appName, String phone, String tel, String website,String idPic, String holdIdPic, FcUser fcuserId);
 
-	SafeQusetion findSafeQusetion(String fcUserId);
+	List<SafeQusetion> findSafeQusetion(String fcUserId);
 	void saveSafeQuestion(SafeQusetion entity);
 	PersonCertify findPersonCertify(String id);
 	void savePersonCertify(PersonCertify personCertify);
 	EnterCertify findEnterCertify(String id);
 	void saveEnterCertify(EnterCertify enterCertify);
-	BillApp findBillApp(String id);
+	List<BillApp> findBillApp(String id);
 	void appBill(BillApp billApp);
-	BillSendAddr findBillSendAddr(String id);
+	List<BillSendAddr> findBillSendAddr(String id);
 	void appBillSendAddr(BillSendAddr billSendAddr);
 }

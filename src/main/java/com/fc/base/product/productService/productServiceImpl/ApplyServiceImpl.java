@@ -4,6 +4,8 @@ import com.fc.base.product.entity.ProApplyEntity;
 import com.fc.base.product.productDao.ApplyDao;
 import com.fc.base.product.productService.ApplyService;
 import com.fc.base.product.util.SreachApply;
+import com.fc.base.user.entity.FcUser;
+import com.fc.util.entity.FreeApply;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -94,5 +96,26 @@ public class ApplyServiceImpl  implements ApplyService{
     @Override
     public ProApplyEntity userApplySerivce(String userName) {
         return applyDao.userApplyDao(userName);
+    }
+
+    @Override
+    public FreeApply findFreeApply(String fcUserId) {
+
+        if(applyDao.findFreeApply(fcUserId).size()>0){
+            FreeApply freeApply= applyDao.findFreeApply(fcUserId).get(0);
+            return freeApply;
+        }else {
+           return null;
+        }
+    }
+
+    @Override
+    public void saveFreeApply(FreeApply freeApply) {
+        applyDao.saveFreeApply(freeApply);
+    }
+
+    @Override
+    public List<FcUser> findFreeApply() {
+        return  applyDao.findFreeApply();
     }
 }

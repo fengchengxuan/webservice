@@ -21,13 +21,13 @@ public interface AccountService {
 	void addPersonCertify(String name, String idNum, String reIdNum, String tel, String idPic, String holdIdPic, FcUser fcuserId);
 	//��ҵ��֤
 	void addEnterCertify(String enterpriceName, String corporateName, String appName, String phone, String tel, String website,String idPic, String holdIdPic, FcUser fcuserId);
-	SafeQusetion getSafeQusetion(String fcUserId);
+	List<SafeQusetion> getSafeQusetion(String fcUserId);
 	PersonCertify findPersonCertify(String id);
 	void savePersonCertify(PersonCertify personCertify);
 	EnterCertify findEnterCertify(String id);
 	void saveEnterCertify(EnterCertify enterCertify);
-	BillApp findBillApp(String id);
-	BillSendAddr findBillSendAddr(String id);
+	List<BillApp> findBillApp(String id);
+	List<BillSendAddr> findBillSendAddr(String id);
 	void appBillSendAddr(BillSendAddr billSendAddr);
 	void appBillSendAddr(String receiver,String city,String address,String mailCode,String phone,String tel,String id);
 

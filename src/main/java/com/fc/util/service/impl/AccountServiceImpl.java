@@ -66,7 +66,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public SafeQusetion getSafeQusetion(String fcUserId) {
+	public List<SafeQusetion> getSafeQusetion(String fcUserId) {
 		return accountDao.findSafeQusetion(fcUserId);
 	}
 
@@ -91,7 +91,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public BillApp findBillApp(String id) {
+	public List<BillApp> findBillApp(String id) {
 		return accountDao.findBillApp(id);
 	}
 
@@ -101,7 +101,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public BillSendAddr findBillSendAddr(String id) {
+	public List<BillSendAddr> findBillSendAddr(String id) {
 		return accountDao.findBillSendAddr(id);
 	}
 
@@ -119,7 +119,7 @@ public class AccountServiceImpl implements AccountService {
 		billSendAddr.setTel(tel);
 		billSendAddr.setMailCode(mailCode);
 		billSendAddr.setReceiver(receiver);
-		billSendAddr.setBaId(id);
+		billSendAddr.setFcUserId(id);
 		accountDao.appBillSendAddr(billSendAddr);
 	}
 }

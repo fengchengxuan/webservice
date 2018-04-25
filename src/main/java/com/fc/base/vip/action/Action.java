@@ -93,9 +93,6 @@ public class Action {
        if("true".equals(vip_management)){
            map.put("vip_management",true);
            for(String arr:list){
-               System.out.println(arr);
-               System.out.println(arr.substring(arr.length()-4,arr.length()));
-               System.out.println(arr.substring(0,arr.length()-5));
                vipService.deleteVipUser(arr.substring(0,arr.length()-5),arr.substring(arr.length()-4,arr.length()));
            }
        }

@@ -1,6 +1,8 @@
 package com.fc.base.product.entity;
 
 
+import com.fc.util.entity.BillApp;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;

@@ -1,6 +1,8 @@
 package com.fc.base.product.productDao;
 
 import com.fc.base.product.entity.ProApplyEntity;
+import com.fc.base.user.entity.FcUser;
+import com.fc.util.entity.FreeApply;
 
 import java.util.List;
 
@@ -14,5 +16,8 @@ public interface ApplyDao {
     public String upStatusDao(ProApplyEntity entity);//更改申请体验
     public List<ProApplyEntity> showHponeDao(String fHpone, String mHpone);//根据电话查询申请体验
     public ProApplyEntity userApplyDao(String userName);//显示用户的申请填写内容
+    List<FreeApply> findFreeApply(String fcUserId);
+    void saveFreeApply(FreeApply freeApply);
+    List<FcUser> findFreeApply();
 
 }

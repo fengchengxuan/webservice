@@ -7,10 +7,19 @@ import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
+import com.fc.base.contentadmin.artitle.entity.ArticleEntity;
+import com.fc.base.contentadmin.artitle.service.ArticleService;
 import com.fc.base.login.model.Permissions;
 import com.fc.base.login.model.User;
 import com.fc.base.login.service.IUserService;
 import com.fc.base.login.util.Util;
+import com.fc.base.user.Util.FcUserUtil;
+import com.fc.base.user.entity.FcUser;
+import com.fc.base.user.service.UserService;
+import com.fc.util.CommentUtil;
+import com.fc.util.entity.ArtComment;
+import com.fc.util.entity.FcComment;
+import com.fc.util.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -47,9 +56,18 @@ public class UserAction {
 
     @Autowired
     private IUserService userService;
+    
+    @Autowired
+    private UserService service;
+    
+    @Autowired
+    private CommentService commentService;
 
     @Autowired
     private Map<String,Object>map;
+
+    @Autowired
+    private ArticleService articleService;
 
     @ModelAttribute
     public void init(){
@@ -1337,4 +1355,151 @@ public class UserAction {
        List<User> list=userService.showUser(loginName,"","","","");
         return list;
     }
+
+    @RequestMapping("/articleComment")//新闻全查询
+    public @ResponseBody
+    CommentUtil showArticleComment(String artType){
+        List<FcComment> list= commentService.findComment(artType,"");//新闻评价
+        List<FcUser> list1=new ArrayList<>();                   //用户
+        List<ArticleEntity> list2=new ArrayList<>();
+        for(int i=0;i<list.size();i++){
+            list1.add(service.getUser(list.get(i).getFcuserId(),""));
+        }
+        for(int i=0;i<list.size();i++){
+            list2.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+        }
+        List<ArtComment> list3 =new ArrayList<>();
+        CommentUtil util=new CommentUtil();
+        for(int i=0;i<list.size();i++){
+            list3.add(util.getArtComment(list.get(i).getId(),list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
+
+        }
+        util.setAtrCommentsList(list3);
+        return util;
+    }
+    @RequestMapping("changeShowArticle")
+    public  @ResponseBody CommentUtil changeShowArticleComment(String artType,String userType,String commontType){
+
+        List<FcComment> list= commentService.findComment(artType,commontType);//新闻评价
+        List<FcComment> list1=new ArrayList<>();                               //筛选后的新闻评价
+        List<FcUser> list2=new ArrayList<>();                                 //用户
+        List<ArticleEntity> list3=new ArrayList<>();                          //新闻
+        CommentUtil util=new CommentUtil();
+        for(int i=0;i<list.size();i++){
+
+            if(service.getUser(list.get(i).getFcuserId(),"").getUserTypeId().equals(userType)){
+                list1.add(list.get(i));
+                list2.add(service.getUser(list.get(i).getFcuserId(),""));
+            }else if("".equals(userType)){
+                list1.add(list.get(i));
+                list2.add(service.getUser(list.get(i).getFcuserId(),""));
+            }
+        }
+        for(int i=0;i<list.size();i++){
+            list3.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+        }
+        List<ArtComment> list4 =new ArrayList<>();
+
+        for(int i=0;i<list1.size();i++){
+            list4.add(util.getArtComment(list1.get(i).getId(),list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
+        }
+        util.setAtrCommentsList(list4);
+        return util;
+    }
+    @RequestMapping("/deleteAllComment")
+    public @ResponseBody Map<String,Object> deleteAllComment(String[] listId){
+     for(String id:listId){
+      FcComment fcComment= commentService.findComment(id);
+      commentService.deleteComment(fcComment);
+     }
+     map.put("ok",true);
+        return map;
+    }
+    @RequestMapping("/updateComment")
+    public @ResponseBody Map<String,Object> updateComment(String artCommentId,String commontType,String content){
+         FcComment fcComment= commentService.findComment(artCommentId);
+         fcComment.setCommontType(commontType);
+         fcComment.setContent(content);
+         commentService.saveProComent(fcComment);
+        map.put("ok",true);
+        return map;
+    }
+    @RequestMapping("/fcOrDateComment")
+    public @ResponseBody CommentUtil getFcOfDateComment(){//返回文章列表
+        CommentUtil util=new CommentUtil();
+        CommentUtil util1 =  showArticleComment("3");
+        CommentUtil util2 =  showArticleComment("4");
+        List< ArtComment> list =new ArrayList<>();
+        if(util1.getAtrCommentsList().size()>0){
+          for(int i = 0;i<util1.getAtrCommentsList().size();i++){
+              list.add(util1.getAtrCommentsList().get(i));
+          }
+        }
+        if(util2.getAtrCommentsList().size()>0){
+            for(int i = 0;i<util2.getAtrCommentsList().size();i++){
+                list.add(util2.getAtrCommentsList().get(i));
+            }
+        }
+        util.setAtrCommentsList(list);
+        return util;
+    }
+    @RequestMapping("changefcOrDateComment")
+    public  @ResponseBody CommentUtil changeSfcOrDateComment(String userType,String commontType){
+        CommentUtil util= new CommentUtil();
+        CommentUtil util1=  changeShowArticleComment("3", userType, commontType);
+        CommentUtil util2=  changeShowArticleComment("4", userType, commontType);
+        List< ArtComment> list =new ArrayList<>();
+        if(util1.getAtrCommentsList().size()>0){
+            for(int i = 0;i<util1.getAtrCommentsList().size();i++){
+                list.add(util1.getAtrCommentsList().get(i));
+            }
+        }
+        if(util2.getAtrCommentsList().size()>0){
+            for(int i = 0;i<util2.getAtrCommentsList().size();i++){
+                list.add(util2.getAtrCommentsList().get(i));
+            }
+        }
+        util.setAtrCommentsList(list);
+       return util;
+    }
+    @RequestMapping("deleteComment")
+    public  @ResponseBody Map<String,Object> deleteComment(String id){
+        System.out.println(id);
+      FcComment fcComment =  commentService.findComment(id);
+        commentService.deleteComment(fcComment);
+        map.put("ok",true);
+        return map;
+
+    }
+
+    @RequestMapping("showFcUser")
+    public  @ResponseBody
+    FcUserUtil showFcUser(){
+        FcUserUtil fcUserUtil=new FcUserUtil();
+         List<FcUser> list=service.findList("","","");
+         fcUserUtil.setList(list);
+        return fcUserUtil ;
+
+    }
+    @RequestMapping("deleteFcUser")
+    public  @ResponseBody
+    Map<String, Object> deleteFcUser(String[] list){
+        for(String id :list){
+            FcUser fcUser= service.getUser(id,"");
+            if(fcUser!=null)
+            service.deleteFcUser(fcUser);
+        }
+        map.put("ok",true);
+        return map ;
+
+    }
+    @RequestMapping("conditionShow")
+    public  @ResponseBody
+    FcUserUtil conditionShowFcUser(String userType,String dimension,String status){
+        List<FcUser> list=service.findList("", userType, dimension,status);
+        FcUserUtil fcUserUtil=new FcUserUtil();
+        fcUserUtil.setList(list);
+        return fcUserUtil;
+    }
 }
+

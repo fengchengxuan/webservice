@@ -330,7 +330,7 @@ var  newCommontType="好评";
         var row=" <tr><td><input type=\"checkbox\" value='"+obj[i].id+"' placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
         "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
         "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
-        "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
+        "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td><a href=javascript:void(null) onclick=\"deleteComment('"+obj[i].id+"')\">删除</a></td></tr>"
         $("#showComment").append(row);
        }
         }else if(currentPage!=totalNum&&currentPage<totalNum){
@@ -352,7 +352,7 @@ var  newCommontType="好评";
                 var row=" <tr><td><input type=\"checkbox\" value='"+obj[i].id+"' placeholder=\"\" ng-checked=\"m\" style=\"position: relative;top: 2px;\">"+j+"</td>" +
                     "<td style=\"width:147px;\"><input type=\"text\" value="+obj[i].artTitle+" title=\"飞燕轻便系列防水防尘键盘鼠标新品上市\"  disabled=\"disabled\" style=\"background: #f5f5f5\"></td>" +
                     "<td>"+commenter+"</td><td>"+obj[i].user+"</td><td>"+obj[i].content+"</td>" +
-                    "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td>删除</td></tr>"
+                    "<td>"+commontType+"</td><td>"+obj[i].status+"</td><td><a href=javascript:void(null) onclick=\"deleteComment('"+obj[i].id+"')\">删除</a></td></tr>"
                 $("#showComment").append(row)
             }
          }
@@ -541,7 +541,7 @@ function deleteAll() {
             var checkboxAll=$("#showComment").find("input:checkbox:checked");
             if( checkboxAll.length==1){
                 for(var i=0;i<obj.length;i++){
-                    if(obj[i].id==checkboxAll[i].value){
+                    if(obj[i].id==checkboxAll.val()){
                         commentId = obj[i].id;
                         $("#changeNewsTitle").val(obj[i].artTitle);
                         var commenter;
@@ -563,7 +563,6 @@ function deleteAll() {
             }
         })
     function updateComment() {
-
         $.ajax({
             url : '${ctx}/admin/updateComment',
             type : 'POST',
@@ -574,6 +573,25 @@ function deleteAll() {
             success : function(data) {
                 if(data.ok){
                     alert("更改成功");
+                    location.reload();
+                }
+            }
+        });
+    }
+    function deleteComment(id) {
+            if(!confirm("确认删除吗？")){
+                return ;
+            }
+        $.ajax({
+            url : '${ctx}/admin/deleteComment',
+            type : 'POST',
+            data : "id="+id,
+            async:true,
+            cache:false,
+            dataType : 'json',
+            success : function(data) {
+                if(data.ok){
+                    alert("删除成功");
                     location.reload();
                 }
             }

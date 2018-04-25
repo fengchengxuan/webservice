@@ -387,24 +387,32 @@
 
     $(".confirm").click(function () {  //提交申请
         var userName='${sessionScope.user}';//用户名
-        
-        var industry=$("#industry").val();            //行业类型
-        var companyType=$("#companyType").val();      //公司类型
-        var application=$("#application").val() ;      //申请人
-        var company=$("#companyname").val() ;           //公司名称
+        var prodKindId=$("#prodKindId").val();            //行业类型
+        var comptypeId=$("#comptypeId").val();      //公司类型
+        var appTypeId=$("#appTypeId").val() ;      //申请人
+        var companyname=$("#companyname").val() ;           //公司名称
         var address=$("#address").val() ;             //经营地址
-        var fHpone = $("#stablephone").val();              //固定电话
-        var mHpone=$("#phonenumber").val();                //手机号码
+        var hpone = $("#stablephone").val();              //固定电话
+        var phonenumber=$("#phonenumber").val();                //手机号码
         var email=$("#email").val();                  //邮箱
         var website=$("#website").val();             //公司网址
         var url=document.getElementById("website").value;
  		var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
         var userQQ=$("#social").val();                //QQ微信
+        var web=$("#website").val();             //公司网址
+        var social=$("#social").val();                //QQ微信
         var appContent=$("#appContent").val();       //申请需求
-        if(company==null || company==""||address==null||address==""||website==null||website==""||appContent==null){
-            alert("请填写完整信息");
-            
-            return;
+       /* if(!(/^(0[0-9]{2,3}\/-)?([2-9][0-9]{6,7})+(\/-[0-9]{1,4})?$/.test(hpone))){
+
+           // return;
+        }
+
+       /* if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(phonenumber))){   //手机判断
+           // alert("请输入正确的手机号码！");
+           // return;
+        }
+       /* if(!(/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/.test(email))){  //邮箱判断
+            alert("请输入正确邮箱地址，亲");
         }else
        // if(!(/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/.test(fHpone))){
         //    alert("请输入正确的固定号码！")  ;
@@ -417,6 +425,7 @@
         if(!(/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+.[a-zA-Z]{2,4}$/.test(email))){  //邮箱判断
           //  alert("请输入正确邮箱地址，亲");
              $('.email').html("请输入正确邮箱地址，亲").css("color","red")
+
             return;
         }else
         if(/^[0-9]+.?[0-9]*$/.test(userQQ)){//是否全数字
@@ -437,72 +446,32 @@
  		if(!reg.test(url)){
             $('.website').html("请输入贵公司正确的网址").css("color","red")
             return ;
-        }
-        if(userName==null||userName==""){    //登录判断
-            //---------------------------
-            //匿名注册
-            $.ajax({
-                url : '${ctx}/anonymousLogin',
-                type : 'POST',
-                async:true,
-                cache:false,
-                dataType : 'json',
-                success : function(data) {
-                    if(data!=null && data!=""){
-                        if(data.flat){
-                            userName = data.user;
-                            $.ajax({
-                                url : '${ctx}/apply/proApply2',
-                                type : 'POST',
-                                data : "userName="+userName+"&industry="+industry+"&companyType="+companyType+"&application="+application+""
-                                +"&company="+company+"&address="+address+"&fHpone="+fHpone+"&mHpone="+mHpone+"&email="+email+"&website="+website+
-                                "&userQQ="+userQQ+"&appContent="+appContent,
-                                async:true,
-                                cache:false,
-                                dataType : 'json',
-                                success : function(data) {
-                                    if(data!=null && data!=""){
-                                        if(data[0]=="1001"){
-                                            alert("申请成功");
-                                            window.location.href="${ctx}/free";
-                                        }else if(data[0]=="已经没有名额了"){
-                                            alert(data[0]);
-                                            window.location.href="${ctx}/free";
-                                        }else{
-                                            alert(data[0]);
-                                        }
-                                    }
-                                }
-                            })
-                        }
-                    }
-                }
-            })
-        }else{//已经有账号存在
+        }*/
+       /* if(userName==null||userName==""){    //登录判断
+          */
             $.ajax({
                 url : '${ctx}/apply/proApply',
                 type : 'POST',
-                data : "userName="+userName+"&industry="+industry+"&companyType="+companyType+"&application="+application+""
-                +"&company="+company+"&address="+address+"&fHpone="+fHpone+"&mHpone="+mHpone+"&email="+email+"&website="+website+
-                "&userQQ="+userQQ+"&appContent="+appContent,
+                data : "&prodKindId="+prodKindId+"&comptypeId="+comptypeId+"&appTypeId="+appTypeId+""
+                +"&companyname="+companyname+"&address="+address+"&hpone="+hpone+"&phonenumber="+phonenumber+"&email="+email+"&web="+web+
+                "&social="+social+"&appContent="+appContent,
                 async:true,
                 cache:false,
                 dataType : 'json',
                 success : function(data) {
                     if(data!=null && data!=""){
-                        if(data[0]=="1001"){
+                        if(data.ok){
                             alert("申请成功");
                             window.location.href="${ctx}/free";
-                        }else if(data[0]=="已经没有名额了"){
-                            alert(data[0]);
-                            window.location.href="${ctx}/free";
                         }else{
-                            alert(data[0]);
+                            if(confirm("是否要登录")){
+                                window.location.href="${ctx}/login";
+                                }
+
                         }
                     }
                 }
             })
-        }
     });
 </script>
 <script>
