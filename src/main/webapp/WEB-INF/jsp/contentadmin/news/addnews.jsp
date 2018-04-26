@@ -92,8 +92,8 @@ newsa=false;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <div style="display: none" class="ddoli" id="ddoli">
                         <ul id="newsType">
                             <li style="line-height: 20px">新闻快报</li>
-                            <li>十二数据</li>
-                            <li>我们与峰程</li>
+                           <!--   <li>十二数据</li>-->
+                            <!-- <li>我们与峰程</li>-->
                         </ul>
                     </div>
                 </div>

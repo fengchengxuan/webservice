@@ -88,7 +88,13 @@
     </div>
     <div class="user" style="margin-top: 16px">
     <img src="${ctx}/static/front/images/password.jpg" alt="">
-    <input type="password"  placeholder="请您输入登录密码"  name="password" id="password" onkeyup="key()"/>
+     <input type="password" name="txtPassword"   style="display:none;" />
+    <input type="text" name="txtPassword" onfocus="this.type='password'"  autocomplete="off" placeholder="请输入密码"  name="password" id="password" onkeyup="key()" />
+
+
+
+    
+    
     </div>
     <input type="button" class="login" id="logins" value="登录">
     <span style="float: left;margin-left: 9px"><a style="color: #FA4F4F" href="#" onclick="showbox()">忘记密码</a></span>

@@ -191,7 +191,58 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">第三方品台认证</a></li>
                     </ul>
-
+                    <!-- Tab panes -->
+                    <div class="tab-content tabs">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                            <div class="thisPlatform">
+                                <div class="TPitem">
+                                    <span class="tpi-name">姓名</span>
+                                    <input type="text" placeholder="" id="name" "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=8 name="Numbers">
+                                    <span class="name"></span>
+                                </div>
+                                <div  class="TPitem">
+                                    <span class="tpi-name">身份证号码</span>
+                                    <input type="text" placeholder="" id="nameNum">
+                                    <span class="nameNum"></span>
+                                </div>
+                                <div  class="TPitem">
+                                    <span class="tpi-name">确认再次输入核对</span>
+                                    <input type="text" placeholder="" id="reNameNum">
+                                    <span class="reNameNum"></span>
+                                </div>
+                                <div  class="TPitem">
+                                    <span class="tpi-name">电话号码</span>
+                                    <input type="text" placeholder="" id="phone" onkeyup="value=value.replace(/[^\d]/g,'')">
+                                    <span class="phone"></span>
+                                </div>
+                                <div  class="TPimgitem">
+                                    <span class="tpi-name">身份证正面</span>
+                                    <div id="preview5" style="float: left;height: 80px">
+                                        <a href="javascript:" class="file" style="cursor: pointer">选择文件
+                                            <input style="margin-top:5px;float: left;height: 80px;width: 120px" id="st18" name="evidence" onchange="previewImage(this,5)" type="file"/>
+                                        </a>
+                                        <span class="dui" id="imgOrder_dui" style="display: none;"></span>
+                                        <img src="" alt="" id="imghead5" height="80px" width="120px" style="float:left;margin-left:18px;border: 1px solid red;display: none"/>
+                                    </div>
+                                    <img style="margin: -8px 0 0 44px;" src="${ctx}/static/front/images/sample-1.png" alt="">
+                                </div>
+                                <div  class="TPimgitem">
+                                    <span class="tpi-name">手持身份证照片</span>
+                                    <div id="preview2" style="float: left;height: 80px">
+                                        <a href="javascript:" class="file" style="cursor: pointer">选择文件
+                                            <input style="margin-top:5px;float: left;height: 80px;width: 120px" id="st182" name="evidence" onchange="previewImage(this,2)" type="file"/>
+                                        </a>
+                                        <span class="dui" id="imgOrder_dui2" style="display: none;"></span>
+                                        <img src="" alt="" id="imghead2" height="80px" width="120px" style="float:left;margin-left:18px;border: 1px solid red;display: none"/>
+                                    </div>
+                                    <img style="margin: -8px 0 0 42px;" src="${ctx}/static/front/images/sample-2.png" alt="">
+                                </div>
+                                <div  class="TPitem" style="margin-top: 40px">
+                                    <button style="cursor: pointer" onclick="savePersonCertify()">确认</button>
+                                </div>
+                            </div>
+                        </div>
+>>>>>>> e8e1d1dbc972a87c3d33f4b8c2eb0955204c89d5
                         <div role="tabpanel" class="tab-pane fade" id="Section2">
                             <div class="ThirdParty">
                                 <div><a href="" rel="nofollow"><img src="${ctx}/static/front/images/icon_1.png" alt=""></a></div>
@@ -277,10 +328,47 @@
 </script>
 <script type="text/javascript">
  function savePersonCertify() {
-     if($("#reNameNum").val()!=$("#nameNum").val()){
-         alert("身份证号不一致");
-         return ;
-     }
+	 var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;  
+ 	//电话  
+ 	var phone = $.trim($('#phone').val()); 
+	 
+	 
+ 	var regIdNo = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/; 
+	var idNo=document.getElementById("nameNum");
+     if($("#name").val()==null || $("#name").val()=="" ) {
+    	    //alert("");
+    	    $(".name").html("请输入名字");
+
+    	    return ;
+    	    }
+    	    
+    	    else  if($("#nameNum").val()==null || $("#nameNum").val()=="" ) {
+    	  
+    	    $(".nameNum").html("请输入身份证");
+
+    	    return ;
+    	    }
+    	    else if($("#reNameNum").val()!=$("#nameNum").val()){
+  	    	  $(".reNameNum").html("新旧身份证号不能一样");
+  	          return ;
+  	      }
+    	    else if (!phoneReg.test(phone)) {  
+         	   
+    	        $(".phone").html("请输入有效的手机号码");
+    	        return ;  
+    	    }     
+     
+    	    else if($("#phone").val()==null||$("#phone").val()=="" ){
+    	    //alert("");
+    	    $(".phone").html("请输入电话号码");
+
+    	    return ;
+    	    }
+    	      
+
+     
+     
+     
      $.ajax({
          type: 'POST',
          url: ctx + '/savePCertify',
@@ -330,33 +418,66 @@
 
   
     $(".post").click(function(){
-    if($("#name").val()==null || $("#name").val()=="" ) {
-    //alert("");
-    $("#qsrm").html("请输入名字");
-
-    return ;
-    }
-    else  if($("#sfz").val()==null || $("#sfz").val()=="" ) {
-    //alert("");
-    $("#qsrmm").html("请输入身份证");
-
-    return ;
-    } else if($("#dh").val()==null||$("#dh").val()=="" ){
-    //alert("");
-    $("#qsrxmm").html("请输入电话号码");
-
-    return ;
-    }
-
-    else if($("#oldpassword").val()==$("#password").val() ){
-    //alert("");
-    $("#passd").html("新旧身份证号不能一样");
-    return ;
-    }
+    
 
 
 
     });
+    
+    
+  
+    
+    
+    
+    
+    $("#name").blur(function(){
+    	if($("#name").val()==null || $("#name").val()=="" ) {
+    	    //alert("");
+    	    $(".name").html("请输入名字");
+    	    return ;
+    	    }else{
+    	    	 $(".name").html("");
+    	    }
+    })
+    $("#nameNum").blur(function(){
+    	var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    	var card=document.getElementById("nameNum");
+    	if(reg.test(card) === false)  
+	    {  
+	        $(".nameNum").html("身份证输入不合法");
+	        return  false;  
+	    } else{
+	    	$(".nameNum").html("");
+	    } 
+    })
+    $("#nameNum").blur(function(){
+    if($("#nameNum").val()==null || $("#nameNum").val()=="" ) {
+	  
+	    $(".nameNum").html("请输入身份证");
+
+	    return ;
+	    }else{
+	    	$(".nameNum").html("");
+	    }
+    })
+     $("#reNameNum").blur(function(){
+    if($("#reNameNum").val()!=$("#nameNum").val()){
+	    	  $(".reNameNum").html("新旧身份证号不能一样");
+	          return ;
+	      }else{
+	    	  $(".reNameNum").html("");
+	      }
+     })
+       $("#phone").blur(function(){
+     if($("#phone").val()==null||$("#phone").val()=="" ){
+	    //alert("");
+	    $(".phone").html("请输入电话号码");
+
+	    return ;
+	    }else{
+	    	 $(".phone").html("");
+	    }
+       })
     </script>
 </body>
 </html>

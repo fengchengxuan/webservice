@@ -101,7 +101,6 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                             <div style="display: none" class="ddoli" id="ddoli">
                                 <ul>
                                     <li style="border-top: none">十二数据</li>
-                                    <li>新闻快报</li>
                                     <li>我们与峰程</li>
                                 </ul>
                             </div>

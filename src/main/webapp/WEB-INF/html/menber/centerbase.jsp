@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="${ctx}/static/front/css/style.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/front/css/menber.css" type="text/css">
     <style>
-     .phonenumber,.email,.stablephone,.vipname,.address,.companyname{
+     .phonenumber,.email,.stablephone,.vipname,.address,.companyname,.website{
     float: right;
     font-size: 12px;
     color: red;
@@ -168,7 +168,7 @@
                         <div style="margin-top: 30px"><span>QQ/微信</span><input type="text" placeholder="" id="social"></div>
                     </div>
                     <div class="set-r">
-                        <div><span>公司名称</span><input type="text" placeholder="" id="companyname"></div>
+                        <div><span>公司名称</span><input type="text" placeholder="" id="companyname" onkeyup="value=value.replace(/[\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength="25"></div>
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
                             <select name="htype" id="htype">
@@ -211,6 +211,7 @@
                             </label>
                         </div>
                         <div style="margin-top: 30px"><span>公司网址</span><input type="text" placeholder="" id="web"></div>
+                        <div class="website"></div>
                     </div>
                     <div class="setll">
                         <div style="margin-top: 30px"><span>经营地址</span><input type="text" placeholder="" id="address"></div>
@@ -375,20 +376,50 @@
         }
         else if(phone==""){
 
-            $('.phonenumber').html('手机号码有误，请重填');
-            return ;
-        }
-        else if(stablephone==""){
-            $('.stablephone').html('电子邮箱不能为空');
-            return ;
-        }else if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
-            $('.email').html('电子邮箱错误');
-            return ;
-        }
-        else if(email==""){
-            $('.email').html('电子邮箱不能为空');
-            return ;
-        }
+<<<<<<< HEAD
+    <script>
+
+   $('#phonenumber').blur(function(){
+	   var phone = document.getElementById('phonenumber').value;
+	    if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+	    $('.phonenumber').html('手机号码有误，请重填');
+	  
+	    }else{
+	    	$('.phonenumber').html('');
+	    }
+    });
+   
+   $('#email').blur(function(){
+	   var email = document.getElementById('email').value;
+	   
+	   if(email==""){
+		    $('.email').html('电子邮箱不能为空');
+		 
+		    }else{
+		    	$('.email').html('');
+		    }
+   })
+   $('#email').blur(function(){
+	   var email = document.getElementById('email').value;
+  if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+	    $('.email').html('电子邮箱错误');
+	    }else{
+	    	 $('.email').html('');
+	    }
+   })
+   
+   
+
+
+  $('#web').blur(function(){
+	  var website=$("#web").val();
+	  if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+	    $('.website').html('网址错误');
+	    }else{
+	    	 $('.website').html('');
+	  
+	    }
+   });
 
 
         $.ajax({

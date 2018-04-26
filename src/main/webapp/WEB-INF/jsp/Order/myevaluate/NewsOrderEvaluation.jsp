@@ -515,7 +515,7 @@ function deleteAll() {
                                 <textarea placeholder="" id="changeContent"></textarea>
                                 <p style="position: relative;left:90px;">当来宾用户或会员用户提供评价为差评时或中评时，都可以随时进行修改并保存。</p>
                             </div>
-    <button style="margin:20px 0 0 35px;width:166px;height: 40px;border-radius:6px;border: 0;color:#fff;background: #2196d4;">添加到草稿</button>
+    
                             <input  style="margin:-38px 0 0 235px;width:166px;height: 40px; border-radius:6px;border: 0;color:#fff;background: #2196d4;text-align: center;line-height: 40px" onclick="updateComment()" value="提交"></input></div>
                         </form>
                     </div>

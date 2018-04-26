@@ -488,24 +488,21 @@
         });
         
          $("#website").blur(function () { 
-         
- 
-  
+
+        	 var website=$("#website").val(); 
+        if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
+
         var url=document.getElementById("website").value;
 
  		var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
 
  		if(!reg.test(url)){
         
-        
-        
-        
-        
             $('.website').html("请输入贵公司正确的网址").css("color","red")
         
         }else{
          $('.website').html("*星号代表此选项必填：请手动输入您公司/企业真实官网，无官方网址请填写无。").css("color","#666")
-        }
+        
         })
         </script>
 <script src="${ctx}/static/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>

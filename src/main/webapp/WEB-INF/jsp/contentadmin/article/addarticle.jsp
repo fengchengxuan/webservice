@@ -91,8 +91,7 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
                     <div class="Selected" id="Selected"><span style="font-size: 12px">选择文章发布类型</span>&nbsp;<img src="${ctx}/static/background/images/right-l.png" alt="下拉"></div>
                     <div style="display: none" class="ddoli" id="ddoli">
                         <ul>
-                            <li style="line-height: 20px">新闻</li>
-                            <li>十二数据</li>
+                            <li style="line-height: 20px">十二数据</li>
                             <li>我们与峰程</li>
                         </ul>
                     </div>
@@ -212,6 +211,8 @@ newsa=true;aticalea=false;consulta=true;allordera=true;myevaluatea=true;fosa=tru
         var artAbstract=$("#articleAbstract").val();//文章摘要
         var artType=$("#articleType").val();  //文章类型
         var   htmlText=ue.getContent();                //文章描述  htmlText
+        console.log("htmlText="+htmlText+"&artTitle="+artTitle+"&artKey="+artKey+"&artAbstract="+artAbstract+"&artType="+artType);
+
         $.ajax({
             url : '${ctx}/Article/add',
             type : 'POST',

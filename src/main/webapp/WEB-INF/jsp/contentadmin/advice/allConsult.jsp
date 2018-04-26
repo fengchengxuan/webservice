@@ -293,7 +293,7 @@ newsa=true;aticalea=true;consulta=false;allordera=true;myevaluatea=true;fosa=tru
                 </div>
             </div>
             <div class="darbtnbox">
-                <button style="margin:0 0 0 400px;width:91px;height: 36px; border-radius:6px;border: 0;color:#fff;background: rgb(24,147,211);" class="thisfresh" onclick="showadd()">添加</button>
+                <button style="width:91px;height: 36px; border-radius:6px;border: 0;color:#fff;background: rgb(24,147,211);" class="thisfresh" onclick="showadd()">确定添加</button>
             </div>
         </div>
     </div>
