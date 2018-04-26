@@ -516,6 +516,7 @@
         });
         
          $("#website").blur(function () { 
+        	 var website=$("#website").val(); 
         if(!(/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/.test(website))){
             $('.website').html("请输入贵公司正确的网址").css("color","red")
         
