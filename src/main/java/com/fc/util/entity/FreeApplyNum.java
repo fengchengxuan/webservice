@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "free_apply_num")
 public class FreeApplyNum extends Base {//免费申请表
+
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -25,10 +26,32 @@ public class FreeApplyNum extends Base {//免费申请表
     private int num;//开放名额
     @Column(name = "starttime")
     private Timestamp starttime;
-    @Column(name = "passNum") //审批中名额
+
+    @Column(name = "passNum") //审批通过名额
+
     private int passNum;
     @Column(name = "restNum")//剩下名额
     private int restNum;
+
+    private int authNum;// 审批中的名额
+
+    private String prodKindId;
+
+    public int getAuthNum() {
+        return authNum;
+    }
+
+    public void setAuthNum(int authNum) {
+        this.authNum = num - restNum - passNum;
+    }
+
+    public String getProdKindId() {
+        return prodKindId;
+    }
+
+    public void setProdKindId(String prodKindId) {
+        this.prodKindId = prodKindId;
+    }
 
     public String getId() {
         return id;

@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>打开网站</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/switch.css" type="text/css">
     <style>
         .list7{

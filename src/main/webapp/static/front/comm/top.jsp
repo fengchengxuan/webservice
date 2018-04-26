@@ -138,7 +138,7 @@
 </style>
 
 
-<div style="height: 146px;width: 100%;z-index: 9999;background: transparent;" class="hhmf" id="nava">
+<div style="height: 146px;width: 100%;z-index: 9999;background: #fff;" class="hhmf" id="nava">
 <div style="position: fixed;top: 0;height: 130px;width: 100%;z-index: 9999;box-shadow: 1px 1px 8px #999;background: #ededed;" class="hhmf-top">
 
     <a href="#1F" name="1F"></a>

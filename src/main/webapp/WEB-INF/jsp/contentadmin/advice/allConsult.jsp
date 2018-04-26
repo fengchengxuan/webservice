@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>全部咨询</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/navstyle.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/advice.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
@@ -109,7 +111,7 @@
     }
     .ddoli ul li{
         cursor: pointer;
-        height: 30px;
+        height: auto;
         line-height: 30px;
         text-align: center;
         background: #ffffff;
@@ -119,7 +121,7 @@
         padding: 0 10px;
     }
     #ddoli ul li{
-        width: 64px;
+        width: 73px;
     }
     #ddoli2 ul li{
         width: 130px;

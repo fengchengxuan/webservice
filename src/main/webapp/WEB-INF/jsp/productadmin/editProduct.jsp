@@ -7,6 +7,8 @@
     <title>修改产品</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/revnews.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/index.css" type="text/css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>.Selected{
         border-radius: 3px;
         padding-left: 4px;

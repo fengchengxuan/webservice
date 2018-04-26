@@ -85,19 +85,17 @@ $("#login").click(function(){
         data: $("#mainform").serialize(),
         dataType: 'json',
         async:true,
-        cache:false,
-        success: function (msg) {
-            if(msg.msg){
-                if (msg.data) {
-                    window.location.href= ctx +"/admin/hyperchannel";
-                } else {
-                    alert("用户名或者密码错误");
-                }
-            }else{
-                alert("您已经登录过了！");
+        cache:false,    
+	    success : function(data) {
+        	if(data.logined){
+            	alert("管理员用户已登录");
+            } else  if(data.failed){
+            	alert("用户名或者密码错误");
             }
-        }
-    })
+	        else {
+	        	window.location.href= ctx +"/admin/hyperchannel";
+	        }
+	    } })
 });
 
 

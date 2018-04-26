@@ -35,7 +35,7 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="rName-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;直达客服经理&nbsp;>&nbsp;投诉/建议/客服中心</span>
+                <span>首页&nbsp;>&nbsp;<a herf="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;直达客服经理&nbsp;>&nbsp;投诉/建议/客服中心</span>
             </div>
 
             <div class="poption">

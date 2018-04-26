@@ -7,6 +7,8 @@
     <title>草稿产品</title>
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/article.css" type="text/css">
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .list22{
             background: #3eb7f3;

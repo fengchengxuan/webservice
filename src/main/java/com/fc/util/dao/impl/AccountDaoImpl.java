@@ -76,12 +76,12 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 	}
 
 	@Override
-	public SafeQusetion findSafeQusetion(String fcUserId) {
+	public List<SafeQusetion> findSafeQusetion(String fcUserId) {
 		String hql="from SafeQusetion  where fcuserId = ?";
 		Object[]args = {fcUserId};
 		List<String> list= new ArrayList<>();
 		list.add( fcUserId);
-		return (SafeQusetion) super.findEntity(hql,args);
+		return (List<SafeQusetion>) super.findEntity(hql,args);
 	}
 
 	@Override
@@ -114,19 +114,19 @@ public class AccountDaoImpl extends BaseDao  implements AccountDao {
 	}
 
 	@Override
-	public BillApp findBillApp(String id) {
+	public List<BillApp> findBillApp(String id) {
 		String hql ="from BillApp where fcUser = ?" ;
 		Object []args={id};
 		List list = new ArrayList<>();
 		list.add(id);
-		return (BillApp)super.findEntity(hql,args);
+		return (List<BillApp>)super.findEntity(hql,args);
 	}
 
 	@Override
-	public BillSendAddr findBillSendAddr(String id) {
-		String hql ="from BillSendAddr where baId = ?" ;
+	public List<BillSendAddr> findBillSendAddr(String id) {
+		String hql ="from BillSendAddr where fcUserId = ?" ;
 		Object []args={id};
-		return (BillSendAddr)super.findEntity(hql,args);
+		return (List<BillSendAddr>)super.findEntity(hql,args);
 	}
 
 	@Override

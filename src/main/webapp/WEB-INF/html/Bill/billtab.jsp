@@ -40,7 +40,7 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="rName-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;票据管理</span>
+                <span>首页&nbsp;>&nbsp;<a herf="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;票据管理</span>
             </div>
             <div class="rName-choose">
                 <div class="rName-img">
@@ -256,14 +256,16 @@
             success : function(data) {
                 if(data.ok){
                     $("#showBill").empty();
-              var  app= data.billapp;
+              var appList= data.list;
               var billSendAddr= data.billSendAddr;
-              if(app!=null) {
-                  var row = "<tr><td>" + app.appType + "</td><td>" + app.billType + "</td>" +
-                      "<td>" + app.billTitle + "</td><td>" + billSendAddr.address + "</td>" +
-                      "<td>" + app.billCreateDate + "</td><td>" + billSendAddr.city + "</td></tr>";
+              if(appList!=null) {
+                  for(var i=0;i<appList.length;i++){
+                      var row = "<tr><td>" + appList[i].appType + "</td><td>" + appList[i].billType + "</td>" +
+                          "<td>" + appList[i].billTitle + "</td><td>" + billSendAddr.address + "</td>" +
+                          "<td>" + appList[i].billCreateDate + "</td><td>" + billSendAddr.city + "</td></tr>";
+                      $("#showBill").append(row);
+                  }
 
-                  $("#showBill").append(row);
               }
                 }
             } })

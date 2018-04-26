@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>全部会员</title>
+    <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <!--引用会员管理样式-->
     <link rel="stylesheet" href="${ctx}/static/background/css/Guest.css" type="text/css">
     <style>
-        .list35{
+        .35{
             background: #3eb7f3;
         }
-
-
         .select_model{    margin-left: 10px;
             height: 42px;
             position: relative;
@@ -312,19 +312,18 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
     $(document).ready(function () {
         $("#currentPage").val(1);
       $.ajax({
-            url : '${ctx}/vip/showAll',
+            url : '${ctx}/admin/showFcUser',
             type : 'POST',
-            data :"",
             async:true,
             cache:false,
             dataType : 'json',
             success : function(data) {
                 if(data!=null && data!=""){
-                    totalNum=data.totalNum;
-                     list =data.list;
+                  totalNum=data.totalNum;
+                    list =data.list;
                     $("#totalNum").text("共"+totalNum+"页");   //设值总页数
                     showUser(list,$("#currentPage").val(),totalNum);
-                   showpage($("#currentPage").val(),totalNum)
+                    showpage($("#currentPage").val(),totalNum)
                 }
             }
         })
@@ -335,32 +334,44 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
         var i=(currentPage-1)*20;
         if(currentPage==totalNum){
             for(i;i<list.length;i++){
+                var userStatus;
+                if(list[i].status=="0"){
+                    userStatus="正常";
+                }
+                var userType;
+                if(list[i].userTypeId=="0"){ userType="手机用户"}
                 var j=i+1;
                 var row="<tr style=\"width: 980px;\">" +
-                    "<td style=\"width: 45px;\"><input type=\"checkbox\" value=\""+list[i].userId+"|"+list[i].userType+"\" name=\"subBox\" readonly=\"readonly\" placeholder=\"\"></td>" +
+                    "<td style=\"width: 45px;\"><input type=\"checkbox\" value=\""+list[i].id+"\" name=\"subBox\" readonly=\"readonly\" placeholder=\"\"></td>" +
                     "<td style=\"width: 45px;\">"+j+"</td>" +
-                    "<td style=\"width: 92px;\">"+list[i].userType+"</td>"+
-                    "<td style=\"width:145px\">"+list[i].loginName+"</td>"+
-                    "<td style=\"width:198px\">"+list[i].registered+"</td>" +
-                    "<td style=\"width:145px\">"+list[i].home+"</td>" +
-                    "<td style=\"width:208px;\">"+list[i].dimension+"</td>" +
-                    "<td style=\"width:103px\">"+list[i].state+"</td>"+
+                    "<td style=\"width: 92px;\">"+userType+"</td>"+
+                    "<td style=\"width:145px\">"+list[i].userName+"</td>"+
+                    "<td style=\"width:198px\">"+list[i].regiTime+"</td>" +
+                    "<td style=\"width:145px\">"+list[i].location +"</td>" +
+                    "<td style=\"width:208px;\">"+list[i].userIntent+"</td>" +
+                    "<td style=\"width:103px\">"+userStatus+"</td>"+
                     "</tr>";
                 $("#Ulist").append(row);
             }
         }else if(currentPage<totalNum && currentPage>0){
             var end=i+20;
             for(i;i<end;i++){
+                var userStatus;
+                if(list[i].status=="0"){
+                    userStatus="正常";
+                }
+                var userType;
+                if(list[i].userTypeId=="0"){ userType="手机用户"}
                 var j=i+1;
                 var row="<tr style=\"width: 980px;\">" +
-                    "<td style=\"width: 45px;\"><input type=\"checkbox\" value=\""+list[i].userId+"|"+list[i].userType+"\" name=\"subBox\" readonly=\"readonly\" placeholder=\"\"></td>" +
+                    "<td style=\"width: 45px;\"><input type=\"checkbox\" value=\""+list[i].id+"\" name=\"subBox\" readonly=\"readonly\" placeholder=\"\"></td>" +
                     "<td style=\"width: 45px;\">"+j+"</td>" +
-                    "<td style=\"width: 92px;\">"+list[i].userType+"</td>" +
-                    "<td style=\"width:145px\">"+list[i].loginName+"</td>" +
-                    "<td style=\"width:198px\">"+list[i].registered+"</td>" +
-                    "<td style=\"width:145px\">"+list[i].home+"</td>" +
-                    "<td style=\"width:208px;\">"+list[i].dimension+"</td>" +
-                    "<td style=\"width:103px\">"+list[i].state+"</td>"+
+                    "<td style=\"width: 92px;\">"+list[i].userTypeId+"</td>" +
+                    "<td style=\"width:145px\">"+userType+"</td>" +
+                    "<td style=\"width:198px\">"+list[i].regiTime+"</td>" +
+                    "<td style=\"width:145px\">"+list[i].location+"</td>" +
+                    "<td style=\"width:208px;\">"+list[i].userIntent+"</td>" +
+                    "<td style=\"width:103px\">"+ userStatus+"</td>"+
                     "</tr>";
                 $("#Ulist").append(row);
             }
@@ -472,15 +483,15 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
     function showSomeUser(){
         reMovePage( $("#currentPage").val());
     $.ajax({
-        url : '${ctx}/vip/showSome',
+        url : '${ctx}/admin/conditionShow',
         type : 'POST',
-        data :"type="+$("#userType").val()+"&dimension="+ $("#dimension").val()+"&state="+ $("#state").val(),
+        data :"userType="+$("#userType").val()+"&dimension="+ $("#dimension").val()+"&status="+ $("#state").val(),
         async:true,
         cache:false,
         dataType : 'json',
         success : function(data) {
             if(data!=null && data!=""){
-                totalNum=data.totalNum;
+               totalNum=data.totalNum;
                 list =data.list;
                 reMovePage( $("#currentPage").val());
                 $("#totalNum").text("共"+totalNum+"页");
@@ -514,7 +525,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 list.push(proId);
             }
             $.ajax({
-                url : '${ctx}/vip/deleteAll',
+                url : '${ctx}/admin/deleteFcUser',
                 type : 'POST',
                 data : "list="+list,
                 async:true,
@@ -522,11 +533,10 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                 dataType : 'json',
                 success : function(data) {
                     if (data != null && data != ""){
-                        if(data.vip_management){
+                        if(data.ok){
+                            alert("成功");
                             var url=window.location.href;
                             window.location.href=url;
-                        }else{
-                            alert("您的权限不够")
                         }
                     }
                 }
@@ -573,20 +583,12 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     pagingSreach(value,newsType,systemId);
                 }
 
-
             });
         });
 
         $("#Selected").blur(function(){
             $("#ddoli").hide();
         });
-
-
-
-
-
-
-
 
         $("#Selected2").click(function(){
             var oldType= $(this).val();
@@ -612,11 +614,8 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     $("#currentPage").val(1);
                     pagingSreach(value,newsType,systemId);
                 }
-
-
             });
         });
-
         $("#Selected2").blur(function(){
             $("#ddoli2").hide();
         });

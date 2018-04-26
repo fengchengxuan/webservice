@@ -5,7 +5,10 @@
 
 <head>
     <meta charset="UTF-8">
+
     <title>体验跳转</title>
+     <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <style>
         .draftartbox div {
             margin-left: 166px;
@@ -206,18 +209,27 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
                 cache:false,
                 dataType : 'json',
                 success : function(data) {
+                    var  list= data.list;
+                    var   applyList = data.applyList;
+                    alert(list[0].comptypeId.compType)
+                    alert(applyList.length)
                     if(data!=null && data!=""){
-                       $("#user").text(data.userName);
-                       $("#companyType").text(data.companyType);
-                       $("#application").text(data.application);
-                       $("#company").text(data.company);
-                        $("#fHpone").text(data.fHpone);
-                        $("#mHpone").text(data.mHpone);
-                        $("#email").text(data.email);
-                        $("#website").text(data.website);
-                        $("#userQQ").text(data.userQQ);
-                        $("#appContent").text(data.appContent);
-                        $("#address").text(data.address)
+                      $("#user").text(list[0].userName);
+                      var companyType="";
+
+                        if(list[0].comptypeId.compType==""){
+                            companyType="";
+                        }
+                       $("#companyType").text(list[0].comptypeId.compType);
+                       $("#application").text(list[0].appTypeId.appType);
+                       $("#company").text(list[0].company);
+                        $("#fHpone").text(list[0].phone);
+                        $("#mHpone").text(list[0].tel);
+                        $("#email").text(list[0].email);
+                        $("#website").text(list[0].website);
+                        $("#userQQ").text(list[0].wechart);
+                        $("#appContent").text(applyList[0].demand);
+                        $("#address").text(list[0].operAddr);
                     }
                 }
             })
@@ -236,7 +248,6 @@ newsa=true;aticalea=true;consulta=false;allordera=false;myevaluatea=true;fosa=tr
      var  id= '${param.id}';
      var status='${param.status}';
         if(status!="申请中"){
-         alert("已经审核过了,不能重复审核");
          window.location.href="${ctx}/admin/allApply";
          return ;
         }

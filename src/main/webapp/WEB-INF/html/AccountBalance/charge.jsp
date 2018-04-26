@@ -39,7 +39,7 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="rName-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;账户余额</span>
+                <span>首页&nbsp;>&nbsp;<a src="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;账号档案&nbsp;>&nbsp;账户余额</span>
             </div>
             <div class="rName-choose">
                 <div class="rName-img">

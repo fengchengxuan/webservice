@@ -6,6 +6,9 @@
     position: relative;
     top: -6px;
 }
+.select_model .Selected span{
+	    white-space: nowrap;
+}
 body{
     font-family: '微软雅黑',sans-serif;
 }

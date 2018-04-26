@@ -95,9 +95,14 @@
             width: 481px;
             height: 400px;
         }
+        #profile{
+        width: 80px;
+    height: 80px;
+    border-radius: 50%;}
     </style>
 </head>
 <body>
+<form id="profileForm" method="post" enctype="multipart/form-data"> 
 <div id="conbox" >
     <div class="box">
         <div class="box1">
@@ -107,34 +112,30 @@
             </div>
         </div>
         <div class="box3">
-
                 <input id="st18" name="evidence"  onchange="previewImage(this,5)"  type="file" style="height:30px;"/>
-
-
         </div>
         <div class="box-cent">
             <div class="setimg">
                 <div id="preview5" style="float: left;">
-
                     <span class="dui" id="imgOrder_dui" style="display: none;"></span>
-                    <img id="parseImg"  src="${ctx}/static/front/images/set-title.png" alt=""/>
-
+                    <img id="parseImg" src="" alt=""/>
+					<div id="max">
+					
+					</div>
                 </div>
             </div>
         </div>
         <div class="box4">
-            <button>上传</button>
+            <button onclick="upload_profile()"> 上传</button>
             <button onclick="hidebox()">取消</button>
         </div>
     </div>
-
 </div>
+</form>
 <div style="background-color: #ededed">
     <jsp:include page="/static/front/comm/top.jsp"/>
-
     <div class="mcontainer" id="nava">
         <jsp:include page="/static/front/comm/left.jsp"/>
-
         <form action="" id="myform" enctype="multipart/form-data" method="post">
         <div class="base-main">
             <div class="way">
@@ -145,19 +146,15 @@
                     <div class="setimg">
                         <div  style="float: left;height: 80px">
                             <a href="javascript:" class="file" onclick="showbox()">修改头像
-
                                 <input  name="evidence"  onchange="previewImage(this,5)"
                                         type="button"
                                         style="height:80px;"/>
-
                             </a>
                             <span class="dui"  style="display: none;"></span>
-                            <img   src="${ctx}/static/front/images/set-title.png" alt=""/>
-                            
+                            <img id="profile" alt=""/>
                         </div>
                     </div>
                 </div>
-
                 <div class="setb">
                     <div class="set-l">
                         <div><span>会员名昵称</span><input type="text"  placeholder="" id="vipname" editable=false readonly></div>
@@ -175,18 +172,18 @@
                         <div style="margin-top: 30px"><span>行业类型</span>
                             <label>
                             <select name="htype" id="htype">
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="政府|非盈利机构">政府|非盈利机构</option>
-                                <option value="金融业">金融业</option>
-                                <option value="房地产|建筑业">房地产|建筑业</option>
-                                <option value="商业服务|个体">商业服务|个体</option>
-                                <option value="贸易|批发|零售|租赁业">贸易|批发|零售|租赁业</option>
-                                <option value="生产|加工|制造">生产|加工|制造</option>
-                                <option value="交通|运输|物流|仓储">交通|运输|物流|仓储</option>
-                                <option value="服务业|个体">服务业|个体</option>
-                                <option value="能源|矿产|环保">能源|矿产|环保</option>
-                                <option value="农|林|牧|渔|其他">农|林|牧|渔|其他</option>
-                                <option value="文化|传媒|娱乐|体育">文化|传媒|娱乐|体育</option>
+                                <option value="0">政府|非盈利机构</option>
+                                <option value="1">政府|非盈利机构</option>
+                                <option value="2">金融业</option>
+                                <option value="3">房地产|建筑业</option>
+                                <option value="4">商业服务|个体</option>
+                                <option value="5">贸易|批发|零售|租赁业</option>
+                                <option value="6">生产|加工|制造</option>
+                                <option value="7">交通|运输|物流|仓储</option>
+                                <option value="8">服务业|个体</option>
+                                <option value="9">能源|矿产|环保</option>
+                                <option value="10">农|林|牧|渔|其他</option>
+                                <option value="11">文化|传媒|娱乐|体育</option>
                             </select>
                             </label>
                         </div>
@@ -206,10 +203,10 @@
                         </div>
                         <div style="margin-top: 30px"><span>申请人类型 </span>
                             <label>
-                            <select name="stype" id="stype">
-                                <option value="法人">法人</option>
-                                <option value="股东">股东</option>
-                                <option value="项目负责人">项目负责人</option>
+                            <select name="stype" id="appTypeId">
+                                <option value="0">法人</option>
+                                <option value="1">股东</option>
+                                <option value="2">项目负责人</option>
                             </select>
                             </label>
                         </div>
@@ -228,32 +225,28 @@
         </form>
     </div>
     <jsp:include page="/static/front/comm/footer.jsp"/>
-
 </div>
-
-
-
-
-
-
 <script src="${ctx}/static/background/js/jquery-3.2.1.js"></script>
 <script src="${ctx}/static/front/js/vip.js" type="text/javascript"></script>
 <script src="${ctx}/static/front/js/angular.min.js" type="text/javascript"></script>
 <script>
-
     function hidebox()
     {
         var mychar = document.getElementById("conbox").style.display ="none";
-
-
     }
     function showbox()
     {
         var mychar = document.getElementById("conbox").style.display ="block";
-
+        var hostport=document.location.host;
+        console.log("服务器ip端口"+hostport);
+        var source = hostport+"${ctx}"+"/upload/"+"${sessionScope.fcUser.profilePhoto}";
+        console.log("source: "+source);
+		console.log("thisDLoc:"+thisDLoc);
+        $("#parseImg").attr("src", source);
     }
 </script>
 <script language="javascript" type="text/javascript">
+	var profile_src;
     //图片预览功能
     function previewImage(file,imgNum)
     {
@@ -284,7 +277,6 @@
             reader.onload = function(evt){img.src = '';img.src = evt.target.result;
             };
             reader.readAsDataURL(file.files[0]);
-
         }
         else //
         {
@@ -298,7 +290,7 @@
             status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
             div.innerHTML = "<div id=divhead"+imgNum+" style='float:left;width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
         }
-        myshow (formData);
+        //myshow (formData);
     }
     function clacImgZoomParam( maxWidth, maxHeight, width, height ){
         var param = {top:0, left:0, width:width, height:height};
@@ -306,7 +298,6 @@
         {
             rateWidth = width / maxWidth;
             rateHeight = height / maxHeight;
-
             if( rateWidth > rateHeight )
             {
                 param.width =  maxWidth;
@@ -321,9 +312,15 @@
         param.top = Math.round((maxHeight - param.height) / 2);
         return param;
     }
+
+    
     $(document).ready(function () {
         var path='${sessionScope.path}';//图片
-        // $("#parseImg").attr("src",path);
+        var msg = '${sessionScope.msg}';
+        if(msg=="fileoversize") alert("图片太大无法上传");
+        //$("#parseImg").attr("src",path);
+
+    function showDate() {
         $.ajax({
             url: '${ctx}/showUserInfo',
             type: 'POST',
@@ -331,7 +328,9 @@
             cache: false,
             success: function (data) {
                 if (data.flag) {
-                     var user=data.entity;
+                    var user=data.entity;
+                    var path = "http://localhost:8989/fengcheng/upload/";
+                    var source = path + user.profilePhoto;
                     $("#vipname").val(user.userName);
                     $("#phonenumber").val(user.tel);
                     $("#stablephone").val(user.phone);
@@ -347,22 +346,41 @@
                         $("#ctype").val(data.comptype.compType);
                     }
                     if(data.appType!=null){
-                        $("#stype").val(data.appType.appType);
+                        $("#appTypeId").val(data.appType.appType);
                     }
-
+                    console.log("path:"+source);
+                    if( user.profilePhoto.length!=0 && user.profilePhoto!=null && user.profilePhoto!=""){
+                    	$("#profile").attr("src", source);
+                    } else {
+                    	$("#profile").attr("src", path+"set-title.png");
+                    }
                 }else {
                     window.location.href="${ctx}/login";
                     return;
                 }
             }
         })
+    }
+    $(document).ready(function () {
+        var path='${sessionScope.path}';//图片
+        // $("#parseImg").attr("src",path);
+        showDate();
     });
 
-
 </script>
+    $(".save").click(function () {
 
+        var email = document.getElementById('email').value;
+        var stablephone = document.getElementById('stablephone').value;
+        var phone1 = document.getElementById('address').value;
+        var phone = document.getElementById('phonenumber').value;
+        if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+            $('.phonenumber').html('手机号码有误，请重填');
+            return ;
 
+        }else if(phone==""){
 
+<<<<<<< HEAD
     <script>
 
    $('#phonenumber').blur(function(){
@@ -405,10 +423,33 @@
 	    	 $('.website').html('');
 	  
 	    }
-   })
-    </script>
+   });
 
 
+        $.ajax({
+            url: ctx+'/updateUserInfo',
+            type: 'POST',
+            data: "vipName="+$("#vipname").val()+"&phonenumber="+$("#phonenumber").val()+"&stablephone="+$("#stablephone").val()+
+            "&email="+$("#email").val()+"&social="+$("#social").val()+"&companyname="+$("#companyname").val()+"&prodKindId="+$("#htype").val()
+            +"&comptypeId="+$("#ctype").val()+"&appTypeId="+$("#appTypeId").val()+"&web="+$("#web").val()+"&address="+$("#address").val(),
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+                console.log(data);
+                if (data.msg) {
+                    if (data.flag) {
+                        alert("设置成功!");
+                      //  window.location.href = ctx + "/vips";
+                    } else {
+                        alert("失败");
+                    }
+                }else {
+                    alert("您还未登录!");
+                }
+            }
+        })
+    });
+</script>
 
 </body>
 </html>

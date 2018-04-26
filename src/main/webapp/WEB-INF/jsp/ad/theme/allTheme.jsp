@@ -5,16 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <title>全部专题</title>
+    <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css">
     <style>
+    .list34{
+    	    background: #3eb7f3;
+    }
         table{
             border-collapse: collapse;
         }
         th,td{
             padding: 0;
-        }
-        select{
-            color: white;
         }
         tr:nth-of-type(even){
             background: #F5F5F5;
@@ -149,7 +151,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
             <div class="alltheme-box">
                 <div style="float: left" class="allzt">
                     <div class="tdel">
-                        <img src="../../../../static/background/images/the-del.jpg" alt="">
+                        <img src="${ctx}/static/background/images/the-del.jpg" alt="">
                     </div>
                     <div style="width: 310px;height: 420px;clear: both">
                         <div>服务标准:
@@ -178,18 +180,18 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </div>
 
                         <div>演示地址:
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
                         </div>
 
                         <div>
                         <span class="user-img">
                         客户形象照片:
                         </span>
-                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                            <img src="${ctx}/static/background/images/addall-titluser1.jpg" alt="">
                         </div>
 
                         <div>客户评价感言:
@@ -201,7 +203,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <span style="position: relative;left: 183px;top: -185px;">
                     <!--网站建设缩略图-->
                     </span>
-                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                        <img src="${ctx}/static/background/images/add-thimguser1.jpg" alt="">
                     </div>
                     <p>
                         <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>
@@ -213,7 +215,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
 
                 <div style="float: left" class="allzt">
                     <div class="tdel">
-                        <img src="../../../../static/background/images/the-del.jpg" alt="">
+                        <img src="${ctx}/static/background/images/the-del.jpg" alt="">
                     </div>
                     <div style="width: 310px;height: 420px;clear: both">
                         <div>服务标准:
@@ -242,18 +244,18 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </div>
 
                         <div>演示地址:
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
                         </div>
 
                         <div>
                             <span class="user-img">
                             客户形象照片:
                                 </span>
-                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                            <img src="${ctx}/static/background/images/addall-titluser1.jpg" alt="">
                         </div>
 
                         <div>客户评价感言:
@@ -265,7 +267,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <span style="position: relative;left: 183px;top: -185px;">
                     <!--网站建设缩略图-->
                     </span>
-                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                        <img src="${ctx}/static/background/images/add-thimguser1.jpg" alt="">
                     </div>
                     <p>
                         <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>
@@ -280,7 +282,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
 
                 <div style="float: left" class="allzt">
                     <div class="tdel">
-                        <img src="../../../../static/background/images/the-del.jpg" alt="">
+                        <img src="${ctx}/static/background/images/the-del.jpg" alt="">
                     </div>
                     <div style="width: 310px;height: 420px;clear: both">
                         <div>服务标准:
@@ -309,18 +311,18 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                         </div>
 
                         <div>演示地址:
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
-                            <img src="../../../../static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
+                            <img src="${ctx}/static/background/images/all-xing.jpg" alt="">
                         </div>
 
                         <div>
                             <span class="user-img">
                             客户形象照片:
                                 </span>
-                            <img src="../../../../static/background/images/addall-titluser1.jpg" alt="">
+                            <img src="${ctx}/static/background/images/addall-titluser1.jpg" alt="">
                         </div>
 
                         <div>客户评价感言:
@@ -332,7 +334,7 @@ newsa=true;aticalea=true;consulta=true;allordera=true;myevaluatea=true;fosa=true
                     <span style="position: relative;left: 183px;top: -185px;">
                     <!--网站建设缩略图-->
                     </span>
-                        <img src="../../../../static/background/images/add-thimguser1.jpg" alt="">
+                        <img src="${ctx}/static/background/images/add-thimguser1.jpg" alt="">
                     </div>
                     <p>
                         <button style="background: #1994d3;text-align: center;color: white;width: 144px;height: 36px;border: 0;margin: 192px  0 0 252px ">修改/保存</button>

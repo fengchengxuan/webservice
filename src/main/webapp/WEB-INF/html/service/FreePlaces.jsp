@@ -17,21 +17,18 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="rName-main" id="nava">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;直达客户经理&nbsp;>&nbsp;试客申请免费体验</span>
+                <span>首页&nbsp;>&nbsp;<a herf="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;直达客户经理&nbsp;>&nbsp;试客申请免费体验</span>
             </div>
             <div class="rName-choose">
                 <div class="free-choose">
                     <div class="Menubox">
-
                         <a id="menu1" onclick="setTab('menu',1,3)" class="hover"><div class="free-tab"><span>开放500名免费体验名额</span></div></a>
                         <a id="menu2" onclick="setTab('menu',2,3)"><div class="free-tab"><span>试客免费体验名额</span></div></a>
                         <a id="menu3" onclick="setTab('menu',3,3)"><div class="free-tab"><span>网络广告体验名额</span></div></a>
-
                     </div>
                 </div>
 
                 <div id="con_menu_1" class="hover">
-
                     <a href="${ctx}/free" target="_blank"><div class="free-jpg">
                         <img src="${ctx}/static/front/images/fff.jpg" alt="">
                     </div></a>

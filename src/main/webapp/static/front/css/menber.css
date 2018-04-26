@@ -95,7 +95,7 @@
     display: block;
 }
 
-/*会员基本设置*/
+/*浼氬憳鍩烘湰璁剧疆*/
 .base-main{
     width: 1000px;
     margin-left: 208px;
@@ -202,7 +202,7 @@
     background: white;
     border: none;
 }
-/*添加图片的样式*/
+/*娣诲姞鍥剧墖鐨勬牱寮�*/
 .file {
     width: 80px;
     height: 80px;
@@ -248,7 +248,7 @@
 }
 
 
-/*密保设置*/
+/*瀵嗕繚璁剧疆*/
 .security-main{
     width: 1000px;
     margin-left: 208px;
@@ -321,7 +321,7 @@
     border: none;
 }
 
-/*密码设置*/
+/*瀵嗙爜璁剧疆*/
 .pwd-main{
     width: 1000px;
     margin-left: 208px;

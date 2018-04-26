@@ -46,7 +46,7 @@
         <jsp:include page="${ctx}/static/front/comm/left.jsp"/>
         <div class="free-main">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;我的订单&nbsp;>&nbsp;付费清单</span>
+                <span>首页&nbsp;>&nbsp;<a herf="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;我的订单&nbsp;>&nbsp;付费清单</span>
             </div>
             <div class="freebox">
                 <div style="height: 15px"></div>

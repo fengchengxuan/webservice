@@ -66,7 +66,7 @@ public class BaseDao<T>{
 		}
 		List list=query.list();
 		if (list!=null && list.size()>0) {
-			return (T) list.get(0);
+			return (T) list;
 		}
 		return null;
 	}
@@ -146,6 +146,11 @@ public class BaseDao<T>{
 				query.setString(i,list.get(i));
 			}
 		}
+		return query.list();
+	}
+	public List<T> findList(String hql,String str){
+		Query query = createQuery(hql);
+		query.setString(0,str);
 		return query.list();
 	}
 }

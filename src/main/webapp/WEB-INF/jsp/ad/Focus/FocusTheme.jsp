@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>焦点或者闪屏-专题</title>
+    <link rel="stylesheet" href="${ctx}/static/front/css/bootstrap.min.css" type="text/css">
+   <link rel="stylesheet" href="${ctx}/static/background/css/top.css">
     <link rel="stylesheet" href="${ctx}/static/background/css/draftartic.css" type="text/css">
     <link rel="stylesheet" href="${ctx}/static/background/css/column1.css" type="text/css">
 </head>

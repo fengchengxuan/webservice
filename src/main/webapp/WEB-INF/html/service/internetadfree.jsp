@@ -17,7 +17,7 @@
         <jsp:include page="/static/front/comm/left.jsp"/>
         <div class="rName-main" id="nava">
             <div class="way">
-                <span>首页&nbsp;>&nbsp;会员中心&nbsp;>&nbsp;直达客户经理&nbsp;>&nbsp;网络广告体验名额</span>
+                <span>首页&nbsp;>&nbsp;<a herf="${ctx}/vips">会员中心</a>&nbsp;>&nbsp;直达客户经理&nbsp;>&nbsp;网络广告体验名额</span>
             </div>
             <div class="rName-choose">
                 <div class="free-choose">

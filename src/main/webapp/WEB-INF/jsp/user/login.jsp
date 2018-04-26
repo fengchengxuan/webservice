@@ -19,7 +19,7 @@
         #drag{
             border: 1px #ccc solid;
             position: relative;
-            z-index: 9;
+            z-index: 2;
             background-color: #e8e8e8;
             width: 203px;
             height: 20px;
