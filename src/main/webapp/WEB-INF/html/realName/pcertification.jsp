@@ -189,59 +189,9 @@
                 <div class="tab" role="tabpanel">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">本平台验证</a></li>
                         <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">第三方品台认证</a></li>
                     </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content tabs">
-                        <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                            <div class="thisPlatform">
-                                <div class="TPitem">
-                                    <span class="tpi-name">姓名</span>
-                                    <input type="text" placeholder="" id="name">
-                                </div>
-                                <div  class="TPitem">
-                                    <span class="tpi-name">身份证号码</span>
-                                    <input type="text" placeholder="" id="nameNum">
-                                    <span>身份证号码有误，请重新输入</span>
-                                </div>
-                                <div  class="TPitem">
-                                    <span class="tpi-name">确认再次输入核对</span>
-                                    <input type="text" placeholder="" id="reNameNum">
-                                    <span>两次输入的身份证号码不一致，请重新输入</span>
-                                </div>
-                                <div  class="TPitem">
-                                    <span class="tpi-name">电话号码</span>
-                                    <input type="text" placeholder="" id="phone">
-                                    <span>手机号码格式不正确</span>
-                                </div>
-                                <div  class="TPimgitem">
-                                    <span class="tpi-name">身份证正面</span>
-                                    <div id="preview5" style="float: left;height: 80px">
-                                        <a href="javascript:" class="file" style="cursor: pointer">选择文件
-                                            <input style="margin-top:5px;float: left;height: 80px;width: 120px" id="st18" name="evidence" onchange="previewImage(this,5)" type="file"/>
-                                        </a>
-                                        <span class="dui" id="imgOrder_dui" style="display: none;"></span>
-                                        <img src="" alt="" id="imghead5" height="80px" width="120px" style="float:left;margin-left:18px;border: 1px solid red;display: none"/>
-                                    </div>
-                                    <img style="margin: -8px 0 0 44px;" src="${ctx}/static/front/images/sample-1.png" alt="">
-                                </div>
-                                <div  class="TPimgitem">
-                                    <span class="tpi-name">手持身份证照片</span>
-                                    <div id="preview2" style="float: left;height: 80px">
-                                        <a href="javascript:" class="file" style="cursor: pointer">选择文件
-                                            <input style="margin-top:5px;float: left;height: 80px;width: 120px" id="st182" name="evidence" onchange="previewImage(this,2)" type="file"/>
-                                        </a>
-                                        <span class="dui" id="imgOrder_dui2" style="display: none;"></span>
-                                        <img src="" alt="" id="imghead2" height="80px" width="120px" style="float:left;margin-left:18px;border: 1px solid red;display: none"/>
-                                    </div>
-                                    <img style="margin: -8px 0 0 42px;" src="${ctx}/static/front/images/sample-2.png" alt="">
-                                </div>
-                                <div  class="TPitem" style="margin-top: 40px">
-                                    <button style="cursor: pointer" onclick="savePersonCertify()">确认</button>
-                                </div>
-                            </div>
-                        </div>
+
                         <div role="tabpanel" class="tab-pane fade" id="Section2">
                             <div class="ThirdParty">
                                 <div><a href="" rel="nofollow"><img src="${ctx}/static/front/images/icon_1.png" alt=""></a></div>

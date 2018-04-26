@@ -259,12 +259,22 @@
               var appList= data.list;
               var billSendAddr= data.billSendAddr;
               if(appList!=null) {
+              if(billSendAddr!=null) {
                   for(var i=0;i<appList.length;i++){
                       var row = "<tr><td>" + appList[i].appType + "</td><td>" + appList[i].billType + "</td>" +
                           "<td>" + appList[i].billTitle + "</td><td>" + billSendAddr.address + "</td>" +
                           "<td>" + appList[i].billCreateDate + "</td><td>" + billSendAddr.city + "</td></tr>";
                       $("#showBill").append(row);
                   }
+                 }
+                 else{
+                  for(var i=0;i<appList.length;i++){
+                      var row = "<tr><td>" + appList[i].appType + "</td><td>" + appList[i].billType + "</td>" +
+                          "<td>" + appList[i].billTitle + "</td><td>" + "" + "</td>" +
+                          "<td>" + appList[i].billCreateDate + "</td><td>" + "" + "</td></tr>";
+                      $("#showBill").append(row);
+                  }
+                 }
 
               }
                 }

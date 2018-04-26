@@ -62,9 +62,9 @@
                 <ul class="sul" ng-if="t4==true">
                     <li class="slm exslm cslm liskmf"><a class="slma skmf" href="${ctx}/FreePlaces">试客申请免费体验</a>
                         <ul class="tul extul ctul">
-                            <li class="tlm"><a style="margin: 0" href="${ctx}/fivehundredfree">开放500名免费体验名额</a></li>
+                            <!--<li class="tlm"><a style="margin: 0" href="${ctx}/fivehundredfree">开放500名免费体验名额</a></li>
                             <li class="tlm"><a style="margin: 0" href="${ctx}/tryforfree">试客免费体验名额</a></li>
-                            <li class="tlm"><a style="margin: 0" href="${ctx}/internetadfree">网络广告体验名额</a></li>
+                            <li class="tlm"><a style="margin: 0" href="${ctx}/internetadfree">网络广告体验名额</a></li>-->
                              <li class="tlm"><a style="margin: 0" href="">主营业务范围</a></li>
                         </ul>
                     </li>
@@ -96,9 +96,20 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        var path='${sessionScope.path}';
-        var source = "http://localhost:8989/fengcheng/upload/${sessionScope.fcUser.profilePhoto}";
-        $("#myImg").attr("src",source);
+       console.log("user:"+'${sessionScope.fcUser}');
+       if('${sessionScope.fcUser}'==null || '${sessionScope.fcUser}' == '') {
+            var hostport=document.location.host;
+            var path = "http://"+hostport+"${ctx}"+"/upload/";
+            var source = path + 'set-title.png';
+            console.log("source1 :"+source);
+            $("#myImg").attr("src",source);
+       } else {
+            var hostport=document.location.host;
+            var path = "http://"+hostport+"${ctx}"+"/upload/";
+            var source = path + '${sessionScope.fcUser.profilePhoto}';
+            console.log("source2 :"+source);
+            $("#myImg").attr("src",source);
+       }
     })
 </script>
 

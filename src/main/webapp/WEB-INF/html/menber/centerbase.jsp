@@ -238,9 +238,8 @@
         var mychar = document.getElementById("conbox").style.display ="block";
         var hostport=document.location.host;
         console.log("服务器ip端口"+hostport);
-        var source = hostport+"${ctx}"+"/upload/"+"${sessionScope.fcUser.profilePhoto}";
+        var source = "http://"+hostport+"${ctx}"+"/upload/"+"${sessionScope.fcUser.profilePhoto}";
         console.log("source: "+source);
-		console.log("thisDLoc:"+thisDLoc);
         $("#parseImg").attr("src", source);
     }
 </script>
@@ -312,13 +311,6 @@
         return param;
     }
 
-    
-    $(document).ready(function () {
-        var path='${sessionScope.path}';//图片
-        var msg = '${sessionScope.msg}';
-        if(msg=="fileoversize") alert("图片太大无法上传");
-        //$("#parseImg").attr("src",path);
-
     function showDate() {
         $.ajax({
             url: '${ctx}/showUserInfo',
@@ -328,9 +320,11 @@
             success: function (data) {
                 if (data.flag) {
                     var user=data.entity;
-                    var path = "http://localhost:8989/fengcheng/upload/";
+        			var hostport=document.location.host;
+        			var path = "http://"+hostport+"${ctx}"+"/upload/";
                     var source = path + user.profilePhoto;
                     $("#vipname").val(user.userName);
+                    console.log(user.userName);
                     $("#phonenumber").val(user.tel);
                     $("#stablephone").val(user.phone);
                     $("#email").val(user.email);
@@ -367,6 +361,7 @@
     });
 
 </script>
+<script>
     $(".save").click(function () {
 
         var email = document.getElementById('email').value;
@@ -377,7 +372,8 @@
             $('.phonenumber').html('手机号码有误，请重填');
             return ;
 
-        }else if(phone==""){
+        }
+        else if(phone==""){
 
             $('.phonenumber').html('手机号码有误，请重填');
             return ;

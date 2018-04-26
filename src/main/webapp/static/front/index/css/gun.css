@@ -121,7 +121,7 @@
 
 .wrap .blist .li.active{
     cursor: pointer;
-    background: url(/static/front/images/title12.png);
+    background: url("../../../../static/front/images/title12.png");
     color: white;
 
 }
